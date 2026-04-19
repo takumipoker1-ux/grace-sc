@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>店舗・求人一覧｜ナイトキャリア</title>
+  <meta name="description" content="六本木・新宿・上野エリアのキャバクラ・ラウンジ求人情報。時給・ノルマ・雰囲気など、求人サイトには載らないリアルな情報を掲載。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              mint:    '#a7f3d0',
+              mintDark:'#34d399',
+              pink:    '#fce7f3',
+              pinkDark:'#f472b6',
+              line:    '#06c755',
+              lineDark:'#05a847',
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .card-shadow { box-shadow: 0 4px 24px rgba(0,0,0,0.07); }
+    .tab-active { background: #34d399; color: white; }
+    .area-section { display: none; }
+    .area-section.active { display: block; }
+  </style>
+</head>
+<body class="font-sans text-gray-700 bg-gray-50">
+
+  <!-- ========== HEADER NAV ========== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
+    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+      <a href="/index.html" class="text-brand-mintDark font-bold text-base tracking-wide">ナイトキャリア</a>
+      <nav class="flex items-center gap-6 text-sm font-medium text-gray-600">
+        <a href="/index.html" class="hover:text-brand-mintDark transition-colors">トップ</a>
+        <a href="/stores/index.html" class="text-brand-mintDark font-bold transition-colors">店舗・求人</a>
+        <a href="/articles/index.html" class="hover:text-brand-mintDark transition-colors">記事</a>
+        <a href="/index.html#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-4 py-2 rounded-full transition-colors">LINE相談</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="pt-28 pb-12 px-6 bg-white border-b border-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <span class="text-brand-mintDark text-xs font-bold tracking-widest">STORES</span>
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mt-2 mb-3">店舗・求人一覧</h1>
+      <p class="text-sm text-gray-500 leading-relaxed">
+        実際に取材・調査した店舗のみを掲載しています。時給・ノルマ・雰囲気など、求人サイトには載らないリアルな情報を公開しています。<br />
+        気になる店舗はLINEからご相談ください。面接同行まで無料でサポートします。
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== AREA TABS ========== -->
+  <section class="py-10 px-6">
+    <div class="max-w-4xl mx-auto">
+
+      <!-- タブ -->
+      <div class="flex gap-3 mb-10 flex-wrap">
+        <button onclick="switchArea('roppongi')" id="tab-roppongi"
+          class="tab-active px-5 py-2 rounded-full text-sm font-bold transition-colors duration-150 border border-brand-mintDark">
+          六本木
+        </button>
+        <button onclick="switchArea('shinjuku')" id="tab-shinjuku"
+          class="bg-white text-gray-600 px-5 py-2 rounded-full text-sm font-bold transition-colors duration-150 border border-gray-200 hover:border-brand-mintDark hover:text-brand-mintDark">
+          新宿
+        </button>
+        <button onclick="switchArea('ueno')" id="tab-ueno"
+          class="bg-white text-gray-600 px-5 py-2 rounded-full text-sm font-bold transition-colors duration-150 border border-gray-200 hover:border-brand-mintDark hover:text-brand-mintDark">
+          上野
+        </button>
+      </div>
+
+      <!-- ========== 六本木 ========== -->
+      <div id="area-roppongi" class="area-section active">
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <!-- ファブリック7 -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">六本木</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">ファブリック7（セブン）</h2>
+              </div>
+              <span class="text-xs bg-green-50 text-brand-mintDark font-bold px-3 py-1 rounded-full border border-green-100 shrink-0">今が狙い目</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">時給水準</span>
+                <span class="font-bold text-gray-800">上昇中・高水準</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">実績</span>
+                <span class="font-bold text-gray-800">1日12〜15万が続出</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">採用幅</span>
+                <span class="font-bold text-gray-800">広め（清楚〜整形系）</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">未経験サポート</span>
+                <span class="font-bold text-brand-mintDark">◯ 手厚い</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">採用基準が緩めになっているバブル期。一度落ちた子も再チャレンジ推奨。歌舞伎町上がりでも十分チャンスあり。</p>
+            <div class="flex gap-2">
+              <a href="/stores/fabric7.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- 妃翠 -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">六本木</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">妃翠（ヒスイ）</h2>
+              </div>
+              <span class="text-xs bg-pink-50 text-pink-500 font-bold px-3 py-1 rounded-full border border-pink-100 shrink-0">ハイクラス</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">時給水準</span>
+                <span class="font-bold text-gray-800">トップクラス</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">採用基準</span>
+                <span class="font-bold text-gray-800">高め（顔面・スタイル・接客力）</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">キャンペーン</span>
+                <span class="font-bold text-brand-mintDark">◯ 今が狙い目</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">スペックのある子はビビらず本気で受けるべき店舗。キャンペーン中の今が条件的にも有利。</p>
+            <div class="flex gap-2">
+              <a href="/stores/hisui.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- ブルジュ -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">六本木</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">ブルジュ</h2>
+              </div>
+              <span class="text-xs bg-blue-50 text-blue-500 font-bold px-3 py-1 rounded-full border border-blue-100 shrink-0">安定狙い</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">時給水準</span>
+                <span class="font-bold text-gray-800">セブンと同等〜やや上</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">入店祝金</span>
+                <span class="font-bold text-brand-mintDark">◯ キャンペーンあり</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">採用幅</span>
+                <span class="font-bold text-gray-800">歌舞伎1万レベルでも可</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">妃翠が通らなかった場合の次点として最適。安定して稼ぎたい子に向いている。</p>
+            <div class="flex gap-2">
+              <a href="/stores/bourj.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- リリック東京 -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">六本木</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">リリック東京</h2>
+              </div>
+              <span class="text-xs bg-yellow-50 text-yellow-600 font-bold px-3 py-1 rounded-full border border-yellow-100 shrink-0">総合評価92点</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">フリー客数</span>
+                <span class="font-bold text-gray-800">六本木トップクラス</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">ノルマ</span>
+                <span class="font-bold text-brand-mintDark">◯ なし</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">黒服サポート</span>
+                <span class="font-bold text-brand-mintDark">◯ キャストファースト</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">相性</span>
+                <span class="font-bold text-gray-800">ルックス＋トーク力ある子</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">内装・客層ともに六本木ハイクラス。ガチ勝負の環境で稼ぎたい子向け。競争は激しいが黒服サポートは手厚い。</p>
+            <div class="flex gap-2">
+              <a href="/stores/lyric.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== 新宿 ========== -->
+      <div id="area-shinjuku" class="area-section">
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <!-- ファブリック -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">新宿</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">ファブリック</h2>
+              </div>
+              <span class="text-xs bg-green-50 text-brand-mintDark font-bold px-3 py-1 rounded-full border border-green-100 shrink-0">埋もれにくい</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">時給</span>
+                <span class="font-bold text-gray-800">〜1.5万円</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">服装</span>
+                <span class="font-bold text-brand-mintDark">◯ 私服OK</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">出勤</span>
+                <span class="font-bold text-brand-mintDark">◯ 週1〜OK</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">相性</span>
+                <span class="font-bold text-gray-800">清楚・高身長・仕事意識高め</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">埋もれにくい環境が強み。週1から始めたい・私服で働きたい子にも対応。</p>
+            <div class="flex gap-2">
+              <a href="/stores/fabric-shinjuku.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- ポセイドン -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">新宿</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">ポセイドン</h2>
+              </div>
+              <span class="text-xs bg-pink-50 text-pink-500 font-bold px-3 py-1 rounded-full border border-pink-100 shrink-0">爆発力あり</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">時給</span>
+                <span class="font-bold text-gray-800">〜1.5万円</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">同伴バック</span>
+                <span class="font-bold text-gray-800">変動大・爆発力あり</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">黒服フォロー</span>
+                <span class="font-bold text-brand-mintDark">◯ 手厚い</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">相性</span>
+                <span class="font-bold text-gray-800">ノリ良い・ワイワイ系</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">フリー多め・原石が爆伸びしやすい環境。客単価は異次元レベル。</p>
+            <div class="flex gap-2">
+              <a href="/stores/poseidon.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- ベネ -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">新宿</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">ベネ</h2>
+              </div>
+              <span class="text-xs bg-yellow-50 text-yellow-600 font-bold px-3 py-1 rounded-full border border-yellow-100 shrink-0">採用基準高め</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">時給</span>
+                <span class="font-bold text-gray-800">〜1.5万円</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">ボーナス</span>
+                <span class="font-bold text-brand-mintDark">◯ 高水準</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">客単価</span>
+                <span class="font-bold text-gray-800">異次元</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">相性</span>
+                <span class="font-bold text-gray-800">ノリ良い・ワイワイ系</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">採用基準は高めだが、通過できれば高収入が狙える。スペックに自信がある子向け。</p>
+            <div class="flex gap-2">
+              <a href="/stores/bene.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== 上野 ========== -->
+      <div id="area-ueno" class="area-section">
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <!-- バチェラー -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">上野</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">BACHELOR（バチェラー）</h2>
+              </div>
+              <span class="text-xs bg-green-50 text-brand-mintDark font-bold px-3 py-1 rounded-full border border-green-100 shrink-0">ノルマなし</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">体入時給</span>
+                <span class="font-bold text-gray-800">4,000円〜</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">保証期間</span>
+                <span class="font-bold text-gray-800">1〜2ヶ月</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">ノルマ</span>
+                <span class="font-bold text-brand-mintDark">◯ 一切なし</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">寮</span>
+                <span class="font-bold text-brand-mintDark">◯ あり</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">年齢</span>
+                <span class="font-bold text-gray-800">18〜30代前半</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">入店後ドレス2着プレゼントあり。タトゥー・リスカ跡も隠せれば可。週2からOKで始めやすい。</p>
+            <div class="flex gap-2">
+              <a href="/stores/bachelor.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- アトランティス -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">上野</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">アトランティス</h2>
+              </div>
+              <span class="text-xs bg-blue-50 text-blue-500 font-bold px-3 py-1 rounded-full border border-blue-100 shrink-0">創業2016年</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">本入時給</span>
+                <span class="font-bold text-gray-800">4,500円〜</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">保証期間</span>
+                <span class="font-bold text-gray-800">1〜2ヶ月</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">指名ノルマ</span>
+                <span class="font-bold text-brand-mintDark">◯ なし</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">年齢</span>
+                <span class="font-bold text-gray-800">19〜32歳</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">系列店（グレア・バチェラー・六華）あり。衣装無料。アフターバックは系列バー利用で小計20%。</p>
+            <div class="flex gap-2">
+              <a href="/stores/atlantis.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- BOND -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">上野</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">BOND（ボンド）</h2>
+              </div>
+              <span class="text-xs bg-green-50 text-brand-mintDark font-bold px-3 py-1 rounded-full border border-green-100 shrink-0">創業2008年</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">本入時給</span>
+                <span class="font-bold text-gray-800">4,500〜8,000円</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">給与</span>
+                <span class="font-bold text-brand-mintDark">◯ 週払い</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">寮</span>
+                <span class="font-bold text-brand-mintDark">◯ あり（日割4,000円前後）</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">年齢</span>
+                <span class="font-bold text-gray-800">18〜32歳</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">アットホームな雰囲気が特徴。カラオケあり。週払いで生活しやすい。</p>
+            <div class="flex gap-2">
+              <a href="/stores/bond.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- LIPPLE -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">上野</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">LIPPLE（リップル）</h2>
+              </div>
+              <span class="text-xs bg-yellow-50 text-yellow-600 font-bold px-3 py-1 rounded-full border border-yellow-100 shrink-0">創業2000年</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">時給</span>
+                <span class="font-bold text-gray-800">5,000〜10,000円（売上スライド）</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">ノルマ</span>
+                <span class="font-bold text-brand-mintDark">◯ 指名・出勤なし</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">保証期間</span>
+                <span class="font-bold text-gray-800">2ヶ月</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">年齢</span>
+                <span class="font-bold text-gray-800">20〜29歳</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">上野で20年以上の老舗。自社案内所あり。売上が上がるほど時給も伸びるスライド制。</p>
+            <div class="flex gap-2">
+              <a href="/stores/lipple.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- ゴッドファーザー -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">上野</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">ゴッドファーザー</h2>
+              </div>
+              <span class="text-xs bg-green-50 text-brand-mintDark font-bold px-3 py-1 rounded-full border border-green-100 shrink-0">創業2001年</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">時給</span>
+                <span class="font-bold text-gray-800">5,000〜20,000円</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">全ノルマ</span>
+                <span class="font-bold text-brand-mintDark">◯ 一切なし</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">保証期間</span>
+                <span class="font-bold text-gray-800">2ヶ月</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">年齢</span>
+                <span class="font-bold text-gray-800">20〜32歳</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">深夜営業なし・クリーン運営が特徴。系列店（一期一会六本木・祇園）あり。ノルマ一切なしで安心して働ける。</p>
+            <div class="flex gap-2">
+              <a href="/stores/godfather.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== BOTTOM CTA ========== -->
+  <section class="py-16 px-6 bg-gradient-to-br from-green-50 via-white to-pink-50 mt-4">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">気になる店舗はありましたか？</h2>
+      <p class="text-sm text-gray-500 leading-relaxed mb-8">
+        掲載していない店舗の情報もお伝えできます。<br />
+        「自分に合う店がどこかわからない」という方は、まずご相談ください。
+      </p>
+      <a href="/index.html#cta"
+        class="inline-flex items-center gap-3 bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold px-8 py-4 rounded-full shadow-lg transition-all duration-200">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.07 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+        </svg>
+        LINEで無料相談する
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="py-8 px-6 bg-gray-800 text-center">
+    <p class="text-gray-400 text-xs">© 2026 ナイトキャリア. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function switchArea(area) {
+      document.querySelectorAll('.area-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('[id^="tab-"]').forEach(el => {
+        el.classList.remove('tab-active');
+        el.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
+      });
+      document.getElementById('area-' + area).classList.add('active');
+      const tab = document.getElementById('tab-' + area);
+      tab.classList.add('tab-active');
+      tab.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
+    }
+  </script>
+
+</body>
+</html>
