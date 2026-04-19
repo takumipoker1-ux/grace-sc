@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRACE｜ナイトワーク専属エージェント</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold:     '#c9a96e',
+              goldLight:'#e8d5a3',
+              rose:     '#c4838a',
+              roseLight:'#e8b4b8',
+              dark:     '#0d0d0d',
+              charcoal: '#1a1a1a',
+              muted:    '#2a2520',
+              line:     '#C13584',
+              lineDark: '#833AB4',
+            }
+          },
+          fontFamily: {
+            sans:  ['"Noto Sans JP"', 'sans-serif'],
+            serif: ['"Noto Serif JP"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    h1, h2, h3 { font-family: 'Noto Serif JP', serif; }
+    .hero-bg {
+      background: linear-gradient(135deg, #0d0d0d 0%, #1a1510 60%, #1a1015 100%);
+    }
+    .card-shadow {
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+    .card-shadow-md {
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+    .section-alt {
+      background: #faf8f5;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-700 bg-white">
+
+  <!-- ========== HEADER NAV ========== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
+      <a href="/index.html" class="text-brand-gold font-serif font-semibold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE</a>
+      <nav class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
+        <a href="/index.html" class="hover:text-white transition-colors whitespace-nowrap">トップ</a>
+        <a href="/stores/index.html" class="hover:text-white transition-colors whitespace-nowrap">店舗・求人</a>
+        <a href="/articles/index.html" class="hover:text-white transition-colors whitespace-nowrap">記事</a>
+        <a href="#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded transition-colors whitespace-nowrap">Instagram相談</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero-bg min-h-screen flex flex-col justify-center items-center px-6 py-24 pt-32 text-center relative overflow-hidden">
+    <!-- 背景装飾 -->
+    <div class="absolute inset-0 pointer-events-none opacity-10">
+      <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-brand-gold blur-3xl"></div>
+      <div class="absolute bottom-1/3 right-1/4 w-48 h-48 rounded-full bg-brand-gold blur-3xl"></div>
+    </div>
+
+    <div class="max-w-2xl mx-auto relative z-10">
+      <!-- バッジ -->
+      <span class="inline-flex items-center gap-2 border border-brand-gold/40 text-brand-gold text-xs font-medium tracking-widest px-5 py-2 rounded mb-10">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+        GRACE — ナイトワーク専属エージェント
+      </span>
+
+      <!-- キャッチコピー -->
+      <h1 class="text-3xl md:text-5xl font-serif font-bold leading-snug text-white mb-6 tracking-wide">
+        もう、お店選びで<br class="hidden md:block" />
+        <span class="text-brand-gold">失敗しない。</span>
+      </h1>
+      <p class="text-lg md:text-xl font-light text-gray-300 mb-4 leading-relaxed">
+        データとプロのサポートで、<br />あなたに本当に合うお店を。
+      </p>
+
+      <!-- サブコピー -->
+      <p class="text-sm md:text-base text-gray-400 mb-12 leading-relaxed max-w-lg mx-auto">
+        ナイトワーク特有のトラブルやミスマッチをゼロへ。<br />
+        顔出し不要のInstagram無料相談からスタート。
+      </p>
+
+      <!-- CTA -->
+      <a href="https://www.instagram.com/?__pwa=1" target="_blank" rel="noopener"
+        class="inline-flex items-center gap-3 bg-brand-line hover:bg-brand-lineDark text-white text-base md:text-lg font-bold px-8 py-4 rounded shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+        Instagramで無料相談する
+      </a>
+
+      <p class="mt-4 text-xs text-gray-500">登録・相談・紹介まで、すべて無料です</p>
+    </div>
+
+    <!-- スクロール促進 -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-brand-gold/50">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========== PAIN POINTS ========== -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <div class="mb-14">
+        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— PROBLEM</p>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">
+          こんな不安は<br class="md:hidden" />ありませんか？
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5">
+        <!-- 求人サイト -->
+        <div class="bg-white rounded-xl p-8 card-shadow border border-gray-100">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-9 h-9 rounded bg-gray-100 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="font-serif font-bold text-gray-900">求人サイトで探したけど…</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-gold mt-0.5 shrink-0 font-bold">—</span>
+              情報が多すぎて、どこが本当にいいのか全然わからない
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-gold mt-0.5 shrink-0 font-bold">—</span>
+              「実際に入ったら条件が全然違った」という経験がある
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-gold mt-0.5 shrink-0 font-bold">—</span>
+              ノルマや雑費など、裏側のことは調べようがない
+            </li>
+          </ul>
+        </div>
+
+        <!-- 路上スカウト -->
+        <div class="bg-white rounded-xl p-8 card-shadow border border-gray-100">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-9 h-9 rounded bg-gray-100 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+              </svg>
+            </div>
+            <h3 class="font-serif font-bold text-gray-900">路上スカウトは怖い…</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-gold mt-0.5 shrink-0 font-bold">—</span>
+              実績もSNSもなく、信頼できるか判断できない
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-gold mt-0.5 shrink-0 font-bold">—</span>
+              強引に丸め込まれて、後で後悔しそうで不安
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-brand-gold mt-0.5 shrink-0 font-bold">—</span>
+              入店後に問題が起きても、誰も守ってくれなかった
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mt-10 text-gray-600 text-sm leading-relaxed border-l-2 border-brand-gold pl-4">
+        そのお悩み、<span class="font-bold text-gray-900">専属エージェントのぞの</span>がすべて解決します。
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== SCOUT TYPES ========== -->
+  <section class="py-24 px-6 section-alt">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-14">
+        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— SCOUT TYPES</p>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">スカウトの種類と特徴</h2>
+        <p class="text-gray-500 text-sm mt-3">どのスカウトにも良い面・悪い面があります。違いを知った上で、選んでください。</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- ①路上スカウト -->
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">01</div>
+            <h3 class="font-serif font-bold text-gray-900">路上スカウト</h3>
+          </div>
+          <div class="space-y-4 text-sm flex-1">
+            <div>
+              <p class="text-xs font-bold text-brand-gold mb-2 tracking-wide uppercase">Merit</p>
+              <ul class="space-y-1.5 text-gray-600">
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>フットワークが軽く、即日動いてくれることも多い</li>
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>直接会って話せるので人柄が見えやすい</li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-gray-400 mb-2 tracking-wide uppercase">Demerit</p>
+              <ul class="space-y-1.5 text-gray-500">
+                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>入店後は関係が切れる場合が多い</li>
+                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>実績・信頼の担保がなく強引なケースも</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ②求人サイト掲載型 -->
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">02</div>
+            <h3 class="font-serif font-bold text-gray-900">求人サイト掲載型</h3>
+          </div>
+          <div class="space-y-4 text-sm flex-1">
+            <div>
+              <p class="text-xs font-bold text-brand-gold mb-2 tracking-wide uppercase">Merit</p>
+              <ul class="space-y-1.5 text-gray-600">
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>選択肢が多く、自分のペースで比較できる</li>
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>掲載情報が整理されていて見やすい</li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-gray-400 mb-2 tracking-wide uppercase">Demerit</p>
+              <ul class="space-y-1.5 text-gray-500">
+                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>裏情報がなく条件の真偽を判断できない</li>
+                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>入店後のサポートはほぼない</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ③SNSスカウト -->
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">03</div>
+            <h3 class="font-serif font-bold text-gray-900">SNSスカウト（DM型）</h3>
+          </div>
+          <div class="space-y-4 text-sm flex-1">
+            <div>
+              <p class="text-xs font-bold text-brand-gold mb-2 tracking-wide uppercase">Merit</p>
+              <ul class="space-y-1.5 text-gray-600">
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>気軽に始められる・自宅から相談可能</li>
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>SNSの投稿で人柄・実績をある程度確認できる</li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-gray-400 mb-2 tracking-wide uppercase">Demerit</p>
+              <ul class="space-y-1.5 text-gray-500">
+                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>身元・実績が不明なアカウントも多い</li>
+                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>突然連絡が途絶えるリスクがある</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ④色管スカウト -->
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">04</div>
+            <h3 class="font-serif font-bold text-gray-900">色管スカウト</h3>
+          </div>
+          <div class="space-y-4 text-sm flex-1">
+            <div>
+              <p class="text-xs font-bold text-brand-gold mb-2 tracking-wide uppercase">Merit</p>
+              <ul class="space-y-1.5 text-gray-600">
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>親身に相談に乗ってくれる・孤独を感じにくい</li>
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>精神的に頼れる存在になってくれることもある</li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-gray-400 mb-2 tracking-wide uppercase">Demerit</p>
+              <ul class="space-y-1.5 text-gray-500">
+                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>恋愛・肉体関係で感情的に依存させる構造</li>
+                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>断れなくなる・辞めたくても辞められないケースも</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ⑤高還元スカウト -->
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">05</div>
+            <h3 class="font-serif font-bold text-gray-900">高還元スカウト</h3>
+          </div>
+          <div class="space-y-4 text-sm flex-1">
+            <div>
+              <p class="text-xs font-bold text-brand-gold mb-2 tracking-wide uppercase">Merit</p>
+              <ul class="space-y-1.5 text-gray-600">
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>キャッシュバックで初月の手取りが増えやすい</li>
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>目に見えるお得感があるので比較しやすい</li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-gray-400 mb-2 tracking-wide uppercase">Demerit</p>
+              <ul class="space-y-1.5 text-gray-500">
+                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>採算のため時給・条件が低い店を紹介されがち</li>
+                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>還元してもらっても月収が下がるケースもある</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ⑥GRACE -->
+        <div class="bg-brand-dark rounded-xl p-7 card-shadow-md border border-brand-gold/30 flex flex-col relative">
+          <div class="absolute top-4 right-4 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded tracking-wide">推奨</div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded bg-brand-gold/20 flex items-center justify-center shrink-0 text-xs font-bold text-brand-gold">06</div>
+            <h3 class="font-serif font-bold text-white">GRACE<br/><span class="text-xs font-sans font-normal text-brand-gold">専属エージェント型</span></h3>
+          </div>
+          <div class="space-y-4 text-sm flex-1">
+            <div>
+              <p class="text-xs font-bold text-brand-gold mb-2 tracking-wide uppercase">Merit</p>
+              <ul class="space-y-1.5 text-gray-300">
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>女の子ファーストで条件・店舗を厳選</li>
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>面接同行・入店後のトラブル対応まで一貫サポート</li>
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>指名・ブランディングのコンサルあり</li>
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>色管なし・還元なし・完全無料</li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-gray-500 mb-2 tracking-wide uppercase">Demerit</p>
+              <ul class="space-y-1.5 text-gray-500">
+                <li class="flex items-start gap-2"><span class="text-gray-600 shrink-0 mt-0.5">–</span>即日紹介ではなくヒアリング・面談のステップがある</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMPARISON ========== -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-14">
+        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— COMPARISON</p>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">何が違うのか</h2>
+        <p class="text-gray-500 text-sm mt-3">選択肢を並べると、差は一目瞭然です。</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-separate" style="border-spacing: 0;">
+          <thead>
+            <tr>
+              <th class="text-left px-5 py-4 text-gray-400 font-normal w-2/5"></th>
+              <th class="px-4 py-4 text-center text-gray-500 font-bold bg-gray-50 rounded-tl-lg border border-gray-100">求人サイト</th>
+              <th class="px-4 py-4 text-center text-gray-500 font-bold bg-gray-50 border-t border-b border-gray-100">路上スカウト</th>
+              <th class="px-4 py-4 text-center text-white font-bold bg-brand-muted rounded-tr-lg">GRACE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-5 py-4 text-gray-700 font-medium bg-white border-b border-gray-50">裏情報・実態の把握</td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-brand-gold font-bold text-base">△</span></td>
+              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20"><span class="text-brand-gold font-bold text-base">◯</span></td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 text-gray-700 font-medium bg-white border-b border-gray-50">面接への同行</td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-brand-gold font-bold text-base">◯</span></td>
+              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20"><span class="text-brand-gold font-bold text-base">◯</span></td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 text-gray-700 font-medium bg-white border-b border-gray-50">給与未払い・理不尽な扱いの防止</td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-brand-gold font-bold text-base">△</span></td>
+              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20"><span class="text-brand-gold font-bold text-base">◯</span></td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 text-gray-700 font-medium bg-white border-b border-gray-50">入店後のトラブル対応</td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-brand-gold font-bold text-base">△</span></td>
+              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20"><span class="text-brand-gold font-bold text-base">◯</span></td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 text-gray-700 font-medium bg-white border-b border-gray-50">強引な紹介がない</td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-brand-gold font-bold text-base">◯</span></td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
+              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20"><span class="text-brand-gold font-bold text-base">◯</span></td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 text-gray-700 font-medium bg-white border-b border-gray-50">個人情報の安全管理</td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-brand-gold font-bold text-base">◯</span></td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
+              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20"><span class="text-brand-gold font-bold text-base">◯</span></td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 text-gray-700 font-medium bg-white rounded-bl-lg">指名・ブランディングのサポート</td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
+              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
+              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20 rounded-br-lg"><span class="text-brand-gold font-bold text-base">◯</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-6 text-xs text-gray-400">◯ = 対応あり　△ = 場合による・ばらつきあり　✗ = 対応なし</p>
+    </div>
+  </section>
+
+  <!-- ========== SOLUTIONS ========== -->
+  <section class="py-24 px-6 section-alt">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-14">
+        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— PROMISE</p>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">私たちの3つの約束</h2>
+        <p class="text-gray-500 text-sm mt-3">あなたが安心して働ける環境を、全力でつくります。</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <!-- 約束1 -->
+        <div class="bg-white rounded-xl p-8 card-shadow border border-gray-100 hover:border-brand-gold/30 transition-colors duration-200">
+          <div class="text-brand-gold text-xs font-bold tracking-widest mb-4">01</div>
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-3">徹底したデータマッチング</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">
+            求人サイトには載らない独自の裏情報を保有。時給・ノルマ・雰囲気・客層まで、リアルなデータであなたにぴったりのお店を厳選します。
+          </p>
+        </div>
+
+        <!-- 約束2 -->
+        <div class="bg-white rounded-xl p-8 card-shadow border border-gray-100 hover:border-brand-gold/30 transition-colors duration-200">
+          <div class="text-brand-gold text-xs font-bold tracking-widest mb-4">02</div>
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-3">現場スタッフの面接同行</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">
+            面接には必ずスタッフが同行し、条件交渉から不当な扱いの防止まで完全サポート。一人で不安な思いをすることはありません。
+          </p>
+        </div>
+
+        <!-- 約束3 -->
+        <div class="bg-white rounded-xl p-8 card-shadow border border-gray-100 hover:border-brand-gold/30 transition-colors duration-200">
+          <div class="text-brand-gold text-xs font-bold tracking-widest mb-4">03</div>
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-3">無理な紹介は絶対にしない</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">
+            「早く決めて」とは絶対に言いません。あなたが心から納得できるまで、何度でも一緒に考えます。退店トラブルの対応も最後まで。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REWARD ========== -->
+  <section class="py-24 px-6 hero-bg relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none opacity-10">
+      <div class="absolute top-1/3 left-1/3 w-72 h-72 rounded-full bg-brand-gold blur-3xl"></div>
+    </div>
+    <div class="max-w-4xl mx-auto relative z-10">
+      <div class="mb-14">
+        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— REWARD</p>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-white">頑張った分だけ、返ってくる。</h2>
+        <p class="text-gray-400 text-sm mt-3">GRACEでは、努力している女の子を全力で応援します。</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+
+        <!-- 月100万シャンパン -->
+        <div class="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-brand-gold/40 transition-colors duration-200">
+          <div class="text-brand-gold text-2xl mb-4">🥂</div>
+          <h3 class="font-serif font-bold text-white text-lg mb-3">月売上100万突破<br/>シャンパンお祝い</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            月売上100万円を超えるたびに、ぞのが直接シャンパンを開けに行きます。100万・200万・300万…何度でも。頑張りを一緒に祝わせてください。
+          </p>
+          <p class="text-xs text-brand-gold mt-4 font-medium">毎月達成のたびに対象</p>
+        </div>
+
+        <!-- 友達紹介ボーナス -->
+        <div class="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-brand-gold/40 transition-colors duration-200">
+          <div class="text-brand-gold text-2xl mb-4">👯</div>
+          <h3 class="font-serif font-bold text-white text-lg mb-3">お友達紹介<br/>ボーナス</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            ご友人をご紹介いただき、本入店＆スカウトバック確定後に還元をお渡しします。信頼できる人を紹介してくれることへの、感謝の気持ちです。詳細はDMにて。
+          </p>
+          <p class="text-xs text-brand-gold mt-4 font-medium">本入店・バック確定後に適用</p>
+        </div>
+
+        <!-- シェア協力ギフト -->
+        <div class="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-brand-gold/40 transition-colors duration-200">
+          <div class="text-brand-gold text-2xl mb-4">✨</div>
+          <h3 class="font-serif font-bold text-white text-lg mb-3">匿名シェア協力<br/>ギフト</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            あなたの成功体験を（匿名で）シェアしていただける方へ、感謝の気持ちをお渡しします。Instagram投稿協力で美容ギフト券5,000〜8,000円相当、インタビュー記事対応で10,000円相当。
+          </p>
+          <p class="text-xs text-brand-gold mt-4 font-medium">SNS投稿 or 記事インタビューが対象</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS / PIE CHART ========== -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-14">
+        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— DATA</p>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">こんな方にご利用いただいています</h2>
+        <p class="text-gray-500 text-sm mt-3">ご依頼者の経験年数の割合（実績データ）</p>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center justify-center gap-16">
+
+        <!-- 円グラフ -->
+        <div class="relative w-56 h-56 shrink-0">
+          <canvas id="experienceChart"></canvas>
+        </div>
+
+        <!-- 凡例 -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-sm shrink-0" style="background:#c9a96e"></span>
+            <span class="text-sm text-gray-600">未経験 <span class="font-bold text-gray-900">20%</span></span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-sm shrink-0" style="background:#e8d5a3"></span>
+            <span class="text-sm text-gray-600">半年以内 <span class="font-bold text-gray-900">30%</span></span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-sm shrink-0" style="background:#c4838a"></span>
+            <span class="text-sm text-gray-600">1年以内 <span class="font-bold text-gray-900">30%</span></span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-sm shrink-0" style="background:#e8b4b8"></span>
+            <span class="text-sm text-gray-600">3年以内 <span class="font-bold text-gray-900">10%</span></span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-sm shrink-0" style="background:#e2e8f0"></span>
+            <span class="text-sm text-gray-600">それ以上 <span class="font-bold text-gray-900">10%</span></span>
+          </div>
+
+          <p class="text-xs text-gray-400 pt-2 leading-relaxed border-t border-gray-100">
+            未経験・経験浅めの方が全体の<span class="font-bold text-gray-600">80%</span>を占めています。<br />
+            はじめての方でも安心してご相談ください。
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('experienceChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['未経験', '半年以内', '1年以内', '3年以内', 'それ以上'],
+        datasets: [{
+          data: [20, 30, 30, 10, 10],
+          backgroundColor: ['#c9a96e', '#e8d5a3', '#c4838a', '#e8b4b8', '#e2e2e0'],
+          borderWidth: 0,
+          hoverOffset: 6,
+        }]
+      },
+      options: {
+        cutout: '68%',
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => ` ${ctx.label}：${ctx.parsed}%`
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+  <!-- ========== PROFILE ========== -->
+  <section class="py-24 px-6 section-alt">
+    <div class="max-w-3xl mx-auto">
+      <div class="mb-14">
+        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— AGENT</p>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">担当エージェントについて</h2>
+      </div>
+
+      <div class="bg-white rounded-xl p-10 card-shadow border border-gray-100">
+
+        <!-- 上部：アイコン＋名前 -->
+        <div class="flex flex-col items-center mb-10 pb-10 border-b border-gray-100">
+          <div class="w-24 h-24 rounded-full bg-gray-100 border border-gray-200 shadow-sm mb-5 flex flex-col items-center justify-center overflow-hidden">
+            <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+            <span class="text-xs text-gray-300 mt-1">似顔絵<br/>ここに</span>
+          </div>
+          <p class="text-xs text-brand-gold font-bold tracking-widest mb-1.5">SPECIALIST SCOUT AGENT</p>
+          <h3 class="text-xl font-serif font-bold text-gray-900">専属サポートスカウト：ぞの</h3>
+        </div>
+
+        <!-- 経歴ブロック -->
+        <div class="space-y-6 text-sm text-gray-600 leading-8">
+
+          <p>
+            はじめまして。「GRACE」専属サポートスカウトのぞのです。
+          </p>
+
+          <p>
+            私は1年間の浪人生活を経て大学へ進学し、現在は大学4年生として大学院への進学も視野に入れながら、学業と人材コンサルティング業を両立しています。大学で専門的に研究しているのは<span class="font-bold text-gray-900">「ブランド論」</span>。いかにしてロイヤル顧客（熱狂的なファン）を増やし、市場の中で自分だけのポジションを確立するかを追究しています。
+          </p>
+
+          <div class="bg-brand-charcoal rounded-lg p-6 border-l-4 border-brand-gold">
+            <p class="font-serif font-bold text-white mb-2">この知識が、夜の世界で武器になる。</p>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              水商売における「指名」とは、まさにロイヤル顧客の獲得そのものです。ルックスだけで競うレッドオーシャンで消耗するのではなく、<span class="font-bold text-white">「あなた自身の強みを活かして、どのポジションで勝つか」</span>を、感覚ではなく論理的な裏付けをもってコンサルティングします。
+            </p>
+          </div>
+
+          <hr class="border-gray-100" />
+
+          <div>
+            <p class="font-serif font-bold text-gray-900 mb-3">顔出しをしていない理由について</p>
+            <p>
+              私が似顔絵で活動しているのには明確な理由があります。現在、別事業として<span class="font-bold text-gray-900">福祉系スタートアップの起業</span>を進めており、すでに出資者もついている立場上、夜の業界で大々的に顔を出すことが難しい状況です。
+            </p>
+            <p class="mt-4">
+              しかしこれは裏を返せば、<span class="font-bold text-gray-900">「社会的な信用を背負って、責任あるビジネスをしている」</span>ということの証明でもあります。顔出しができなくとも、あなたのキャリアと安全を守る絶対的な味方として、最後まで責任を持ってサポートします。
+            </p>
+          </div>
+
+          <hr class="border-gray-100" />
+
+          <div>
+            <p class="font-serif font-bold text-gray-900 mb-3">私たちの約束</p>
+            <p>
+              特定の店舗との癒着や「この店に何人紹介しろ」といったノルマは一切ありません。だからこそ、入店後にトラブルが起きた際も<span class="font-bold text-gray-900">「100%あなたの味方」</span>として間に入り、徹底的に保護することができます。
+            </p>
+            <p class="mt-4">
+              「とりあえず面接に行かせる」ようなことはしません。あなたにとっての最適解のお店を厳選し、面接同行から入店後の<span class="font-bold text-gray-900">「指名の取り方（ブランディング）」</span>まで、誠実に伴走することをお約束します。
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FLOW ========== -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-14">
+        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— FLOW</p>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">ご利用の流れ</h2>
+        <p class="text-gray-500 text-sm mt-3">最短当日から動けます。すべて無料です。</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-5">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 text-center">
+          <div class="w-9 h-9 rounded border-2 border-brand-line text-brand-line font-bold text-sm flex items-center justify-center mx-auto mb-4">1</div>
+          <h4 class="font-serif font-bold text-gray-900 mb-2">Instagram DM</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">1分で完了。<br />名前・年齢・エリアだけでOK。</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 text-center">
+          <div class="w-9 h-9 rounded border-2 border-brand-gold text-brand-gold font-bold text-sm flex items-center justify-center mx-auto mb-4">2</div>
+          <h4 class="font-serif font-bold text-gray-900 mb-2">ヒアリング</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">希望条件の確認と写真提出。<br />AIとプロによる適正診断。</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 text-center">
+          <div class="w-9 h-9 rounded border-2 border-brand-gold text-brand-gold font-bold text-sm flex items-center justify-center mx-auto mb-4">3</div>
+          <h4 class="font-serif font-bold text-gray-900 mb-2">直接面談</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">候補店舗を提案。<br />不安を全て解消します。</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 text-center">
+          <div class="w-9 h-9 rounded border-2 border-brand-gold text-brand-gold font-bold text-sm flex items-center justify-center mx-auto mb-4">4</div>
+          <h4 class="font-serif font-bold text-gray-900 mb-2">面接同行・採用</h4>
+          <p class="text-xs text-gray-500 leading-relaxed">必ずスタッフが隣でサポート。<br />採用後も継続フォロー。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="py-24 px-6 section-alt">
+    <div class="max-w-2xl mx-auto">
+      <div class="mb-14">
+        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— FAQ</p>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">よくある質問</h2>
+      </div>
+
+      <div class="space-y-2" id="faq-list">
+
+        <!-- Q1 -->
+        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)"
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
+            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">登録・相談・紹介まで、本当に無料ですか？</span>
+            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+            <div class="pt-4">はい、完全無料です。私たちは「情報」を価値として提供するビジネスモデルのため、紹介料はお店側からいただく仕組みです。LINE登録・ヒアリング・面接同行・入店後のフォローまで、女の子側に費用は一切発生しません。</div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)"
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
+            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">未経験でも相談できますか？</span>
+            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+            <div class="pt-4">むしろ未経験の方こそ、ぜひ相談してください。経験がないと求人サイトの条件が相場通りなのか、盛られているのかの判断が難しいです。「時給〇〇円は高いの？」「この条件は普通？」といった素朴な疑問から、一緒に整理していきます。</div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)"
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
+            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">相談したら必ずお店を紹介されますか？</span>
+            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+            <div class="pt-4">相談だけで終わっても構いません。「話だけ聞いてみたい」「まだ迷っている」という状態で登録している方が大半です。こちらから強引に紹介したり、急かすことは絶対にしません。女の子ファーストで判断します。</div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)"
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
+            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">個人情報や写真はどう扱われますか？</span>
+            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+            <div class="pt-4">流出は絶対にありません。いただいた情報は店舗への紹介以外の目的では一切使用せず、紹介を進めない場合はすみやかに削除します。</div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)"
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
+            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">どのエリアのお店に対応していますか？</span>
+            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+            <div class="pt-4">紹介自体は全国対応しています。ただし面接同行は関東圏に限らせていただいています。関東圏外の方でも紹介・情報提供・オンラインでのサポートは行いますので、まずはご相談ください。</div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)"
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
+            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">顔出しをしていないスカウトは信頼できますか？</span>
+            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+            <div class="pt-4">信頼できるかどうかは、最終的にご自身で判断していただくものだと思っています。これまでの実績や発信している記事・コンテンツをぜひ見てみてください。その上でご連絡いただければ、誠実に対応します。</div>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)"
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
+            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">入店後にトラブルが起きた場合は対応してもらえますか？</span>
+            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+            <div class="pt-4">トラブルが起きたらすぐにInstagramのDMで連絡してください。条件の相違・退店トラブル・不当な扱いなど、入店後の問題にも100%あなたの味方として動きます。時間を置かず、早めのご連絡をお願いします。</div>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)"
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
+            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">スカウト経由と店にバレますか？</span>
+            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+            <div class="pt-4">はい、スカウト経由であることはお店側に伝わります。ただしこれはデメリットではなく、むしろ逆です。スカウト経由の子は「足元を見られにくい」ため、給与未払いや理不尽な扱いを受けるリスクが大幅に下がります。</div>
+          </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)"
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
+            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">年齢制限はありますか？</span>
+            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+            <div class="pt-4">30代前半まで対応しています。年齢によって合う店舗のタイプは変わりますが、年齢を強みにできるポジショニングも含めてご提案します。まずはご相談ください。</div>
+          </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)"
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
+            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">昼職と掛け持ちでも相談できますか？</span>
+            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+            <div class="pt-4">Wワークの方は多いです。身バレしない働き方の相談や、昼職への配慮があるお店の紹介も可能です。「絶対に職場にバレたくない」という方はその旨をヒアリング時にお伝えください。</div>
+          </div>
+        </div>
+
+        <!-- Q11 -->
+        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(this)"
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
+            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">どんなジャンルのお店を紹介してもらえますか？</span>
+            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+            <div class="pt-4">キャバクラ・ラウンジを中心にご紹介しています。希望条件（時給・エリア・雰囲気・客層など）をヒアリングした上で、あなたに合ったお店を厳選してご提案します。</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      const isOpen = !answer.classList.contains('hidden');
+      document.querySelectorAll('.faq-answer').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.faq-icon').forEach(el => el.style.transform = '');
+      if (!isOpen) {
+        answer.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+  </script>
+
+  <!-- ========== CLOSING CTA ========== -->
+  <section id="cta" class="py-24 px-6 hero-bg relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none opacity-10">
+      <div class="absolute bottom-0 right-1/4 w-72 h-72 rounded-full bg-brand-gold blur-3xl"></div>
+    </div>
+    <div class="max-w-xl mx-auto text-center relative z-10">
+      <p class="text-brand-gold text-xs font-medium tracking-widest mb-4">— FREE CONSULTATION</p>
+      <h2 class="text-2xl md:text-4xl font-serif font-bold text-white mt-3 mb-4 leading-snug">
+        まず、話だけでも<br />大丈夫です。
+      </h2>
+      <p class="text-gray-400 text-sm leading-relaxed mb-10">
+        DM1通・完全無料・顔出し不要。<br />
+        「まだ迷ってる」という状態でも、お気軽にどうぞ。<br />
+        強引な紹介は一切ありません。
+      </p>
+
+      <a href="https://www.instagram.com/?__pwa=1" target="_blank" rel="noopener"
+        class="inline-flex items-center gap-3 bg-brand-line hover:bg-brand-lineDark text-white text-base md:text-xl font-bold px-10 py-5 rounded shadow-xl transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+        Instagramで無料診断・相談をする
+      </a>
+
+      <p class="mt-6 text-xs text-gray-600">
+        ※お問い合わせはInstagramのDMにて
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="py-8 px-6 bg-brand-dark border-t border-white/5 text-center">
+    <p class="text-gray-600 text-xs tracking-widest">© 2026 GRACE. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
