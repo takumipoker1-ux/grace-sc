@@ -60,7 +60,7 @@
     <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
       <a href="/index.html" class="text-brand-gold font-serif font-semibold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE</a>
       <nav class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
-        <a href="/index.html" class="hover:text-white transition-colors whitespace-nowrap">トップ</a>
+        <a href="/index.html" class="hover:text-white transition-colors whitespace-nowrap hidden md:inline">トップ</a>
         <a href="/stores/index.html" class="hover:text-white transition-colors whitespace-nowrap">店舗・求人</a>
         <a href="/articles/index.html" class="hover:text-white transition-colors whitespace-nowrap">記事</a>
         <a href="https://www.instagram.com/sc_zono/" onclick="openInstagram(event)" class="ig-link bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded transition-colors whitespace-nowrap">Instagram相談</a>
@@ -196,10 +196,11 @@
         <p class="text-gray-500 text-sm mt-3">どのスカウトにも良い面・悪い面があります。違いを知った上で、選んでください。</p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <p class="text-xs text-gray-400 mb-4 md:hidden">← スワイプして比較できます</p>
+      <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth -mx-6 px-6 md:mx-0 md:px-0">
 
         <!-- ①路上スカウト -->
-        <div class="bg-white rounded-xl p-5 md:p-7 card-shadow border border-gray-100 flex flex-col">
+        <div class="w-72 shrink-0 snap-start md:w-auto bg-white rounded-xl p-5 md:p-7 card-shadow border border-gray-100 flex flex-col">
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">01</div>
             <h3 class="font-serif font-bold text-gray-900">路上スカウト</h3>
@@ -223,7 +224,7 @@
         </div>
 
         <!-- ②求人サイト掲載型 -->
-        <div class="bg-white rounded-xl p-5 md:p-7 card-shadow border border-gray-100 flex flex-col">
+        <div class="w-72 shrink-0 snap-start md:w-auto bg-white rounded-xl p-5 md:p-7 card-shadow border border-gray-100 flex flex-col">
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">02</div>
             <h3 class="font-serif font-bold text-gray-900">求人サイト掲載型</h3>
@@ -247,7 +248,7 @@
         </div>
 
         <!-- ③SNSスカウト -->
-        <div class="bg-white rounded-xl p-5 md:p-7 card-shadow border border-gray-100 flex flex-col">
+        <div class="w-72 shrink-0 snap-start md:w-auto bg-white rounded-xl p-5 md:p-7 card-shadow border border-gray-100 flex flex-col">
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">03</div>
             <h3 class="font-serif font-bold text-gray-900">SNSスカウト（DM型）</h3>
@@ -271,7 +272,7 @@
         </div>
 
         <!-- ④色管スカウト -->
-        <div class="bg-white rounded-xl p-5 md:p-7 card-shadow border border-gray-100 flex flex-col">
+        <div class="w-72 shrink-0 snap-start md:w-auto bg-white rounded-xl p-5 md:p-7 card-shadow border border-gray-100 flex flex-col">
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">04</div>
             <h3 class="font-serif font-bold text-gray-900">色管スカウト</h3>
@@ -295,7 +296,7 @@
         </div>
 
         <!-- ⑤高還元スカウト -->
-        <div class="bg-white rounded-xl p-5 md:p-7 card-shadow border border-gray-100 flex flex-col">
+        <div class="w-72 shrink-0 snap-start md:w-auto bg-white rounded-xl p-5 md:p-7 card-shadow border border-gray-100 flex flex-col">
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">05</div>
             <h3 class="font-serif font-bold text-gray-900">高還元スカウト</h3>
@@ -319,7 +320,7 @@
         </div>
 
         <!-- ⑥GRACE -->
-        <div class="bg-brand-dark rounded-xl p-7 card-shadow-md border border-brand-gold/30 flex flex-col relative">
+        <div class="w-72 shrink-0 snap-start md:w-auto bg-brand-dark rounded-xl p-7 card-shadow-md border border-brand-gold/30 flex flex-col relative">
           <div class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded tracking-wide">推奨</div>
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-brand-gold/20 flex items-center justify-center shrink-0 text-xs font-bold text-brand-gold">06</div>
@@ -357,7 +358,60 @@
         <p class="text-gray-500 text-sm mt-3">選択肢を並べると、差は一目瞭然です。</p>
       </div>
 
-      <div class="overflow-x-auto -mx-4 md:mx-0 px-4 md:px-0">
+      <!-- モバイル用縦レイアウト -->
+      <div class="block md:hidden space-y-0 border border-gray-100 rounded-xl overflow-hidden mb-6">
+        <div class="grid grid-cols-4 bg-gray-50 text-xs font-bold text-center border-b border-gray-100">
+          <div class="py-3 px-2 text-gray-400"></div>
+          <div class="py-3 px-1 text-gray-600 border-l border-gray-100">求人<br/>サイト</div>
+          <div class="py-3 px-1 text-gray-600 border-l border-gray-100">路上<br/>スカウト</div>
+          <div class="py-3 px-1 text-white font-bold bg-brand-muted border-l border-gray-100">GRACE</div>
+        </div>
+        <div class="grid grid-cols-4 text-xs text-center border-b border-gray-50">
+          <div class="py-3 px-2 text-gray-700 font-medium text-left leading-snug">裏情報・実態の把握</div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-gray-400 font-bold">✗</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-brand-gold font-bold">△</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center bg-brand-gold/5"><span class="text-brand-gold font-bold">◯</span></div>
+        </div>
+        <div class="grid grid-cols-4 text-xs text-center border-b border-gray-50">
+          <div class="py-3 px-2 text-gray-700 font-medium text-left leading-snug">面接への同行</div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-gray-400 font-bold">✗</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-brand-gold font-bold">◯</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center bg-brand-gold/5"><span class="text-brand-gold font-bold">◯</span></div>
+        </div>
+        <div class="grid grid-cols-4 text-xs text-center border-b border-gray-50">
+          <div class="py-3 px-2 text-gray-700 font-medium text-left leading-snug">給与未払い防止</div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-gray-400 font-bold">✗</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-brand-gold font-bold">△</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center bg-brand-gold/5"><span class="text-brand-gold font-bold">◯</span></div>
+        </div>
+        <div class="grid grid-cols-4 text-xs text-center border-b border-gray-50">
+          <div class="py-3 px-2 text-gray-700 font-medium text-left leading-snug">入店後のトラブル対応</div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-gray-400 font-bold">✗</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-brand-gold font-bold">△</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center bg-brand-gold/5"><span class="text-brand-gold font-bold">◯</span></div>
+        </div>
+        <div class="grid grid-cols-4 text-xs text-center border-b border-gray-50">
+          <div class="py-3 px-2 text-gray-700 font-medium text-left leading-snug">強引な紹介がない</div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-brand-gold font-bold">◯</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-gray-400 font-bold">✗</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center bg-brand-gold/5"><span class="text-brand-gold font-bold">◯</span></div>
+        </div>
+        <div class="grid grid-cols-4 text-xs text-center border-b border-gray-50">
+          <div class="py-3 px-2 text-gray-700 font-medium text-left leading-snug">個人情報の安全管理</div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-brand-gold font-bold">◯</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-gray-400 font-bold">✗</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center bg-brand-gold/5"><span class="text-brand-gold font-bold">◯</span></div>
+        </div>
+        <div class="grid grid-cols-4 text-xs text-center">
+          <div class="py-3 px-2 text-gray-700 font-medium text-left leading-snug">指名・ブランディング支援</div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-gray-400 font-bold">✗</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center"><span class="text-gray-400 font-bold">✗</span></div>
+          <div class="py-3 border-l border-gray-100 flex items-center justify-center bg-brand-gold/5"><span class="text-brand-gold font-bold">◯</span></div>
+        </div>
+      </div>
+
+      <!-- PC用テーブル -->
+      <div class="hidden md:block overflow-x-auto -mx-4 md:mx-0 px-4 md:px-0">
         <table class="w-full text-xs md:text-sm border-separate" style="border-spacing: 0; min-width: 320px;">
           <thead>
             <tr>
@@ -414,7 +468,7 @@
         </table>
       </div>
 
-      <p class="mt-6 text-xs text-gray-400">◯ = 対応あり　△ = 場合による・ばらつきあり　✗ = 対応なし</p>
+      <p class="mt-4 text-xs text-gray-400">◯ = 対応あり　△ = 場合による・ばらつきあり　✗ = 対応なし</p>
     </div>
   </section>
 
@@ -603,45 +657,27 @@
         </div>
 
         <!-- 経歴ブロック -->
-        <div class="space-y-6 text-sm text-gray-600 leading-8">
+        <div class="space-y-5 text-sm text-gray-600 leading-8">
 
           <p>
-            はじめまして。「GRACE」専属サポートスカウトのぞのです。
+            はじめまして。「GRACE」専属エージェントのぞのです。大学で<span class="font-bold text-gray-900">「ブランド論」</span>を専門に研究しており、ロイヤル顧客の獲得・自分だけのポジション確立を追究しています。
           </p>
 
-          <p>
-            私は1年間の浪人生活を経て大学へ進学し、現在は大学4年生として大学院への進学も視野に入れながら、学業と人材コンサルティング業を両立しています。大学で専門的に研究しているのは<span class="font-bold text-gray-900">「ブランド論」</span>。いかにしてロイヤル顧客（熱狂的なファン）を増やし、市場の中で自分だけのポジションを確立するかを追究しています。
-          </p>
-
-          <div class="bg-brand-charcoal rounded-lg p-6 border-l-4 border-brand-gold">
+          <div class="bg-brand-charcoal rounded-lg p-5 border-l-4 border-brand-gold">
             <p class="font-serif font-bold text-white mb-2">この知識が、夜の世界で武器になる。</p>
             <p class="text-gray-400 text-sm leading-relaxed">
-              水商売における「指名」とは、まさにロイヤル顧客の獲得そのものです。ルックスだけで競うレッドオーシャンで消耗するのではなく、<span class="font-bold text-white">「あなた自身の強みを活かして、どのポジションで勝つか」</span>を、感覚ではなく論理的な裏付けをもってコンサルティングします。
+              水商売の「指名」はロイヤル顧客の獲得そのもの。ルックスだけで競うのではなく、<span class="font-bold text-white">「あなたの強みでどのポジションで勝つか」</span>を論理的にコンサルします。
             </p>
           </div>
 
-          <hr class="border-gray-100" />
-
           <div>
-            <p class="font-serif font-bold text-gray-900 mb-3">顔出しをしていない理由について</p>
-            <p>
-              私が似顔絵で活動しているのには明確な理由があります。現在、別事業として<span class="font-bold text-gray-900">福祉系スタートアップの起業</span>を進めており、すでに出資者もついている立場上、夜の業界で大々的に顔を出すことが難しい状況です。
-            </p>
-            <p class="mt-4">
-              しかしこれは裏を返せば、<span class="font-bold text-gray-900">「社会的な信用を背負って、責任あるビジネスをしている」</span>ということの証明でもあります。顔出しができなくとも、あなたのキャリアと安全を守る絶対的な味方として、最後まで責任を持ってサポートします。
-            </p>
+            <p class="font-serif font-bold text-gray-900 mb-2">顔出しをしていない理由</p>
+            <p>別事業として<span class="font-bold text-gray-900">スタートアップの起業</span>を進めており、出資者がいる立場上、顔出しが難しい状況です。裏を返せば、<span class="font-bold text-gray-900">社会的な信用を背負って責任あるビジネスをしている</span>証明でもあります。</p>
           </div>
 
-          <hr class="border-gray-100" />
-
           <div>
-            <p class="font-serif font-bold text-gray-900 mb-3">私たちの約束</p>
-            <p>
-              特定の店舗との癒着や「この店に何人紹介しろ」といったノルマは一切ありません。だからこそ、入店後にトラブルが起きた際も<span class="font-bold text-gray-900">「100%あなたの味方」</span>として間に入り、徹底的に保護することができます。
-            </p>
-            <p class="mt-4">
-              「とりあえず面接に行かせる」ようなことはしません。あなたにとっての最適解のお店を厳選し、面接同行から入店後の<span class="font-bold text-gray-900">「指名の取り方（ブランディング）」</span>まで、誠実に伴走することをお約束します。
-            </p>
+            <p class="font-serif font-bold text-gray-900 mb-2">私たちの約束</p>
+            <p>特定店舗との癒着・ノルマは一切ありません。だからこそトラブル時も<span class="font-bold text-gray-900">「100%あなたの味方」</span>として動けます。面接同行から指名の取り方まで、最後まで誠実に伴走します。</p>
           </div>
 
         </div>
