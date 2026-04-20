@@ -7,17 +7,20 @@
   <meta name="description" content="キャバクラ・ラウンジの求人サイトに載っている時給や条件は、なぜ実態と違うのか。現役スカウトが求人広告のカラクリと、騙されないための見方を解説します。" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
+        tailwind.config = {
       theme: {
         extend: {
           colors: {
             brand: {
-              mint:    '#a7f3d0',
-              mintDark:'#34d399',
-              pink:    '#fce7f3',
-              pinkDark:'#f472b6',
-              line:    '#06c755',
-              lineDark:'#05a847',
+              gold:     '#c9a96e',
+              goldLight:'#e8d5a3',
+              rose:     '#c4838a',
+              roseLight:'#e8b4b8',
+              dark:     '#0d0d0d',
+              charcoal: '#1a1a1a',
+              muted:    '#2a2520',
+              line:     '#C13584',
+              lineDark: '#833AB4',
             }
           },
           fontFamily: {
@@ -73,14 +76,14 @@
 <body class="font-sans text-gray-700 bg-gray-50">
 
   <!-- ========== HEADER NAV ========== -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
-    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-      <a href="/index.html" class="text-brand-mintDark font-bold text-base tracking-wide">GRACE</a>
-      <nav class="flex items-center gap-6 text-sm font-medium text-gray-600">
-        <a href="/index.html" class="hover:text-brand-mintDark transition-colors">トップ</a>
-        <a href="/stores/index.html" class="hover:text-brand-mintDark transition-colors">店舗・求人</a>
-        <a href="/articles/index.html" class="text-brand-mintDark font-bold transition-colors">記事</a>
-        <a href="/index.html#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-4 py-2 rounded-full transition-colors">LINE相談</a>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
+      <a href="/index.html" class="text-brand-gold font-serif font-semibold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE</a>
+      <nav class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
+        <a href="/index.html" class="hover:text-white transition-colors whitespace-nowrap">トップ</a>
+        <a href="/stores/index.html" class="hover:text-white transition-colors whitespace-nowrap">店舗・求人</a>
+        <a href="/articles/index.html" class="hover:text-white transition-colors whitespace-nowrap">記事</a>
+        <a href="https://www.instagram.com/sc_zono/" onclick="openInstagram(event)" class="ig-link bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded transition-colors whitespace-nowrap">Instagram相談</a>
       </nav>
     </div>
   </header>
@@ -90,7 +93,7 @@
     <div class="max-w-2xl mx-auto">
       <div class="flex gap-2 mb-4">
         <span class="text-xs bg-red-50 text-red-400 font-bold px-3 py-1 rounded-full">業界知識</span>
-        <span class="text-xs bg-green-50 text-brand-mintDark font-bold px-3 py-1 rounded-full">未経験向け</span>
+        <span class="text-xs bg-green-50 text-brand-gold font-bold px-3 py-1 rounded-full">未経験向け</span>
       </div>
       <h1 class="text-xl md:text-2xl font-bold text-gray-800 leading-snug mb-4">
         求人サイトの時給・条件が<br />「9割盛られている」理由
@@ -235,7 +238,7 @@
       <!-- 筆者 -->
       <div class="mt-12 pt-8 border-t border-gray-100 flex items-center gap-4">
         <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-          <svg class="w-6 h-6 text-brand-mintDark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
           </svg>
         </div>
@@ -248,11 +251,11 @@
 
       <!-- 前後の記事 -->
       <div class="mt-10 grid grid-cols-2 gap-4">
-        <a href="/articles/index.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-mintDark transition-colors">
+        <a href="/articles/index.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-gold transition-colors">
           <span class="block text-gray-400 mb-1">← 記事一覧へ</span>
           <span class="font-bold text-gray-700">すべての記事を見る</span>
         </a>
-        <a href="#" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-mintDark transition-colors text-right">
+        <a href="#" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-gold transition-colors text-right">
           <span class="block text-gray-400 mb-1">次の記事 →</span>
           <span class="font-bold text-gray-700">エリア別の特徴と向いている人</span>
         </a>
@@ -262,7 +265,7 @@
   </section>
 
   <!-- ========== BOTTOM CTA ========== -->
-  <section class="py-16 px-6 bg-gradient-to-br from-green-50 via-white to-pink-50 mt-4">
+  <section class="py-16 px-6 bg-gradient-to-br from-brand-gold/5 via-white to-pink-50 mt-4">
     <div class="max-w-xl mx-auto text-center">
       <h2 class="text-xl font-bold text-gray-800 mb-3">「実際どうなのか」気になる店舗はありますか？</h2>
       <p class="text-sm text-gray-500 leading-relaxed mb-8">

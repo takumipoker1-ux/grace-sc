@@ -7,13 +7,25 @@
   <meta name="description" content="上野LIPPLE（リップル）の詳細求人情報。創業2000年の老舗・時給5,000〜10,000円（売上スライド）・指名ノルマなし。自社案内所あり。体入・面接サポート無料。" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
+        tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brand: { mint:'#a7f3d0', mintDark:'#34d399', pink:'#fce7f3', pinkDark:'#f472b6', line:'#06c755', lineDark:'#05a847' }
+            brand: {
+              gold:     '#c9a96e',
+              goldLight:'#e8d5a3',
+              rose:     '#c4838a',
+              roseLight:'#e8b4b8',
+              dark:     '#0d0d0d',
+              charcoal: '#1a1a1a',
+              muted:    '#2a2520',
+              line:     '#C13584',
+              lineDark: '#833AB4',
+            }
           },
-          fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          }
         }
       }
     }
@@ -24,23 +36,23 @@
 </head>
 <body class="font-sans text-gray-700 bg-gray-50">
 
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
-    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-      <a href="/index.html" class="text-brand-mintDark font-bold text-base tracking-wide">GRACE</a>
-      <nav class="flex items-center gap-6 text-sm font-medium text-gray-600">
-        <a href="/index.html" class="hover:text-brand-mintDark transition-colors">トップ</a>
-        <a href="/stores/index.html" class="text-brand-mintDark font-bold transition-colors">店舗・求人</a>
-        <a href="/articles/index.html" class="hover:text-brand-mintDark transition-colors">記事</a>
-        <a href="/index.html#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-4 py-2 rounded-full transition-colors">LINE相談</a>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
+      <a href="/index.html" class="text-brand-gold font-serif font-semibold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE</a>
+      <nav class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
+        <a href="/index.html" class="hover:text-white transition-colors whitespace-nowrap">トップ</a>
+        <a href="/stores/index.html" class="hover:text-white transition-colors whitespace-nowrap">店舗・求人</a>
+        <a href="/articles/index.html" class="hover:text-white transition-colors whitespace-nowrap">記事</a>
+        <a href="https://www.instagram.com/sc_zono/" onclick="openInstagram(event)" class="ig-link bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded transition-colors whitespace-nowrap">Instagram相談</a>
       </nav>
     </div>
   </header>
 
   <div class="pt-14 bg-white border-b border-gray-100">
     <div class="max-w-4xl mx-auto px-6 py-3 text-xs text-gray-400 flex items-center gap-2">
-      <a href="/index.html" class="hover:text-brand-mintDark">トップ</a>
+      <a href="/index.html" class="hover:text-brand-gold">トップ</a>
       <span>›</span>
-      <a href="/stores/index.html" class="hover:text-brand-mintDark">店舗・求人一覧</a>
+      <a href="/stores/index.html" class="hover:text-brand-gold">店舗・求人一覧</a>
       <span>›</span>
       <span class="text-gray-600">LIPPLE（リップル）</span>
     </div>
@@ -51,7 +63,7 @@
       <div class="flex items-start justify-between flex-wrap gap-4 mb-6">
         <div>
           <div class="flex items-center gap-3 mb-2">
-            <span class="text-xs text-brand-mintDark font-bold tracking-widest bg-green-50 px-3 py-1 rounded-full border border-green-100">上野</span>
+            <span class="text-xs text-brand-gold font-bold tracking-widest bg-green-50 px-3 py-1 rounded-full border border-green-100">上野</span>
             <span class="text-xs bg-yellow-50 text-yellow-600 font-bold px-3 py-1 rounded-full border border-yellow-100">創業2000年</span>
           </div>
           <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">LIPPLE（リップル）</h1>
@@ -70,7 +82,7 @@
         </div>
         <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
           <div class="text-xs text-gray-400 mb-1">ノルマ</div>
-          <div class="text-sm font-bold text-brand-mintDark">指名・出勤なし</div>
+          <div class="text-sm font-bold text-brand-gold">指名・出勤なし</div>
         </div>
         <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-100">
           <div class="text-xs text-gray-400 mb-1">保証期間</div>
@@ -89,7 +101,7 @@
       <div class="md:col-span-2 space-y-8">
 
         <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
-          <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><span class="text-brand-mintDark">▍</span>店舗の特徴</h2>
+          <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><span class="text-brand-gold">▍</span>店舗の特徴</h2>
           <p class="text-sm text-gray-600 leading-relaxed mb-4">
             創業2000年、上野で25年以上続く老舗。系列はリップル・wish/B&W本店・wish/B&W新店・オーシャンブルーの4店舗。自社案内所も持っており、集客基盤が安定しているのが強み。
           </p>
@@ -100,7 +112,7 @@
 
         <!-- 売上スライド制 -->
         <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
-          <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><span class="text-brand-mintDark">▍</span>売上スライド制（時給）</h2>
+          <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><span class="text-brand-gold">▍</span>売上スライド制（時給）</h2>
           <p class="text-xs text-gray-500 mb-4">月の売上に応じて時給が変わる仕組みです。</p>
           <div class="space-y-2 text-sm">
             <div class="flex justify-between py-2 border-b border-gray-50">
@@ -121,13 +133,13 @@
             </div>
             <div class="flex justify-between py-2">
               <span class="text-gray-500">売上 100万以上</span>
-              <span class="font-bold text-brand-mintDark">折半可能</span>
+              <span class="font-bold text-brand-gold">折半可能</span>
             </div>
           </div>
         </div>
 
         <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
-          <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><span class="text-brand-mintDark">▍</span>給与・バック詳細</h2>
+          <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><span class="text-brand-gold">▍</span>給与・バック詳細</h2>
           <div class="space-y-2 text-sm">
             <div class="flex justify-between py-2 border-b border-gray-50">
               <span class="text-gray-500">体入時給</span>
@@ -161,7 +173,7 @@
         </div>
 
         <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
-          <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><span class="text-brand-mintDark">▍</span>引かれもの・ペナルティ</h2>
+          <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2"><span class="text-brand-gold">▍</span>引かれもの・ペナルティ</h2>
           <div class="space-y-2 text-sm mb-5">
             <div class="flex justify-between py-2 border-b border-gray-50">
               <span class="text-gray-500">税金</span>
@@ -177,14 +189,14 @@
             </div>
             <div class="flex justify-between py-2">
               <span class="text-gray-500">衣装</span>
-              <span class="font-bold text-brand-mintDark">◯ 無料</span>
+              <span class="font-bold text-brand-gold">◯ 無料</span>
             </div>
           </div>
           <h3 class="text-sm font-bold text-gray-700 mb-3">ノルマ・ペナルティ</h3>
           <div class="space-y-2 text-sm">
             <div class="flex justify-between py-2 border-b border-gray-50">
               <span class="text-gray-500">指名・出勤ノルマ</span>
-              <span class="font-bold text-brand-mintDark">◯ なし</span>
+              <span class="font-bold text-brand-gold">◯ なし</span>
             </div>
             <div class="flex justify-between py-2 border-b border-gray-50">
               <span class="text-gray-500">イベント未出勤</span>
@@ -204,16 +216,16 @@
 
       <div class="space-y-6">
         <div class="bg-white rounded-2xl p-6 card-shadow border border-gray-100">
-          <h2 class="text-base font-bold text-gray-800 mb-4 flex items-center gap-2"><span class="text-brand-mintDark">◉</span>向いている子</h2>
+          <h2 class="text-base font-bold text-gray-800 mb-4 flex items-center gap-2"><span class="text-brand-gold">◉</span>向いている子</h2>
           <ul class="text-sm text-gray-600 space-y-3">
-            <li class="flex items-start gap-2"><span class="text-brand-mintDark font-bold shrink-0">◯</span>20〜29歳の年齢層</li>
-            <li class="flex items-start gap-2"><span class="text-brand-mintDark font-bold shrink-0">◯</span>稼ぐほど時給が上がる環境を望む</li>
-            <li class="flex items-start gap-2"><span class="text-brand-mintDark font-bold shrink-0">◯</span>指名・出勤ノルマなしで自由に働きたい</li>
-            <li class="flex items-start gap-2"><span class="text-brand-mintDark font-bold shrink-0">◯</span>老舗の安定した環境が好み</li>
+            <li class="flex items-start gap-2"><span class="text-brand-gold font-bold shrink-0">◯</span>20〜29歳の年齢層</li>
+            <li class="flex items-start gap-2"><span class="text-brand-gold font-bold shrink-0">◯</span>稼ぐほど時給が上がる環境を望む</li>
+            <li class="flex items-start gap-2"><span class="text-brand-gold font-bold shrink-0">◯</span>指名・出勤ノルマなしで自由に働きたい</li>
+            <li class="flex items-start gap-2"><span class="text-brand-gold font-bold shrink-0">◯</span>老舗の安定した環境が好み</li>
           </ul>
         </div>
 
-        <div class="bg-gradient-to-br from-green-50 to-white rounded-2xl p-6 border border-green-100">
+        <div class="bg-gradient-to-br from-brand-gold/5 to-white rounded-2xl p-6 border border-green-100">
           <p class="text-sm font-bold text-gray-800 mb-2">この店舗の詳細を聞く</p>
           <p class="text-xs text-gray-500 mb-4">スライド制の詳細・現在の在籍状況をお伝えします。</p>
           <a href="/index.html#cta" class="block text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINEで無料相談</a>
@@ -222,17 +234,17 @@
         <div class="bg-white rounded-2xl p-6 card-shadow border border-gray-100">
           <h3 class="text-sm font-bold text-gray-700 mb-3">上野の他の店舗</h3>
           <div class="space-y-2">
-            <a href="/stores/bachelor.html" class="block text-sm text-gray-600 hover:text-brand-mintDark py-1 border-b border-gray-50">BACHELOR（バチェラー）</a>
-            <a href="/stores/atlantis.html" class="block text-sm text-gray-600 hover:text-brand-mintDark py-1 border-b border-gray-50">アトランティス</a>
-            <a href="/stores/bond.html" class="block text-sm text-gray-600 hover:text-brand-mintDark py-1 border-b border-gray-50">BOND（ボンド）</a>
-            <a href="/stores/godfather.html" class="block text-sm text-gray-600 hover:text-brand-mintDark py-1">ゴッドファーザー</a>
+            <a href="/stores/bachelor.html" class="block text-sm text-gray-600 hover:text-brand-gold py-1 border-b border-gray-50">BACHELOR（バチェラー）</a>
+            <a href="/stores/atlantis.html" class="block text-sm text-gray-600 hover:text-brand-gold py-1 border-b border-gray-50">アトランティス</a>
+            <a href="/stores/bond.html" class="block text-sm text-gray-600 hover:text-brand-gold py-1 border-b border-gray-50">BOND（ボンド）</a>
+            <a href="/stores/godfather.html" class="block text-sm text-gray-600 hover:text-brand-gold py-1">ゴッドファーザー</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-14 px-6 bg-gradient-to-br from-green-50 via-white to-pink-50">
+  <section class="py-14 px-6 bg-gradient-to-br from-brand-gold/5 via-white to-pink-50">
     <div class="max-w-xl mx-auto text-center">
       <h2 class="text-xl font-bold text-gray-800 mb-2">体入・面接のサポートは無料</h2>
       <p class="text-sm text-gray-500 mb-7">条件交渉・同行対応まですべて無料。まずはLINEでご相談ください。</p>

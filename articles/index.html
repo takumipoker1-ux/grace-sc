@@ -7,17 +7,20 @@
   <meta name="description" content="キャバクラ・ラウンジで働く女性向けの情報記事。未経験の始め方・お店の選び方・稼ぎ方など、業界のリアルを発信しています。" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
+        tailwind.config = {
       theme: {
         extend: {
           colors: {
             brand: {
-              mint:    '#a7f3d0',
-              mintDark:'#34d399',
-              pink:    '#fce7f3',
-              pinkDark:'#f472b6',
-              line:    '#C13584',
-              lineDark:'#833AB4',
+              gold:     '#c9a96e',
+              goldLight:'#e8d5a3',
+              rose:     '#c4838a',
+              roseLight:'#e8b4b8',
+              dark:     '#0d0d0d',
+              charcoal: '#1a1a1a',
+              muted:    '#2a2520',
+              line:     '#C13584',
+              lineDark: '#833AB4',
             }
           },
           fontFamily: {
@@ -37,14 +40,14 @@
 <body class="font-sans text-gray-700 bg-gray-50">
 
   <!-- ========== HEADER NAV ========== -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur border-b border-white/10">
     <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
-      <a href="/index.html" class="text-emerald-600 font-bold text-sm md:text-base tracking-wide whitespace-nowrap shrink-0">GRACE</a>
-      <nav class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-gray-600">
-        <a href="/index.html" class="hover:text-emerald-600 transition-colors whitespace-nowrap">トップ</a>
-        <a href="/stores/index.html" class="hover:text-emerald-600 transition-colors whitespace-nowrap">店舗・求人</a>
-        <a href="/articles/index.html" class="text-emerald-600 font-bold transition-colors whitespace-nowrap">記事</a>
-        <a href="/index.html#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded-full transition-colors whitespace-nowrap">Instagram相談</a>
+      <a href="/index.html" class="text-brand-gold font-serif font-semibold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE</a>
+      <nav class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
+        <a href="/index.html" class="hover:text-white transition-colors whitespace-nowrap">トップ</a>
+        <a href="/stores/index.html" class="hover:text-white transition-colors whitespace-nowrap">店舗・求人</a>
+        <a href="/articles/index.html" class="hover:text-white transition-colors whitespace-nowrap">記事</a>
+        <a href="https://www.instagram.com/sc_zono/" onclick="openInstagram(event)" class="ig-link bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded transition-colors whitespace-nowrap">Instagram相談</a>
       </nav>
     </div>
   </header>
@@ -52,7 +55,7 @@
   <!-- ========== PAGE HERO ========== -->
   <section class="pt-28 pb-12 px-6 bg-white border-b border-gray-100">
     <div class="max-w-4xl mx-auto">
-      <span class="text-emerald-600 text-xs font-bold tracking-widest">ARTICLES</span>
+      <span class="text-brand-gold text-xs font-bold tracking-widest">ARTICLES</span>
       <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mt-2 mb-3">記事一覧</h1>
       <p class="text-sm text-gray-500 leading-relaxed">
         未経験からの始め方・お店の選び方・稼ぎ方まで、業界のリアルを発信しています。<br />
@@ -78,15 +81,15 @@
 
         <!-- 記事1 -->
         <a href="/articles/miken-yarubekikoto.html" data-category="未経験向け"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
-          <div class="h-36 bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
+          <div class="h-36 bg-gradient-to-br from-brand-gold/5 to-teal-50 flex items-center justify-center">
             <span class="text-4xl">🔰</span>
           </div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
-              <span class="text-xs bg-green-50 text-emerald-600 font-bold px-2 py-0.5 rounded-full">未経験向け</span>
+              <span class="text-xs bg-green-50 text-brand-gold font-bold px-2 py-0.5 rounded-full">未経験向け</span>
             </div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">キャバクラ未経験が最初にやるべきこと5選</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">キャバクラ未経験が最初にやるべきこと5選</h2>
             <p class="text-xs text-gray-500 leading-relaxed">「とりあえず求人サイトで探す」は一番損をする選択肢です。入店前に必ず知っておくべき5つのことをまとめました。</p>
             <p class="text-xs text-gray-400 mt-4">2026.03.28</p>
           </div>
@@ -94,16 +97,16 @@
 
         <!-- 記事2 -->
         <a href="/articles/kyujin-site-jouken.html" data-category="未経験向け 業界知識"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-pink-50 to-red-50 flex items-center justify-center">
             <span class="text-4xl">⚠️</span>
           </div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
-              <span class="text-xs bg-green-50 text-emerald-600 font-bold px-2 py-0.5 rounded-full">未経験向け</span>
+              <span class="text-xs bg-green-50 text-brand-gold font-bold px-2 py-0.5 rounded-full">未経験向け</span>
               <span class="text-xs bg-red-50 text-red-400 font-bold px-2 py-0.5 rounded-full">業界知識</span>
             </div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">求人サイトの条件が「9割盛られている」理由</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">求人サイトの条件が「9割盛られている」理由</h2>
             <p class="text-xs text-gray-500 leading-relaxed">「時給3万円！」「月収100万可能！」は嘘ではないが、あなたには関係ない話かもしれません。求人広告のカラクリを解説します。</p>
             <p class="text-xs text-gray-400 mt-4">2026.03.27</p>
           </div>
@@ -111,7 +114,7 @@
 
         <!-- 記事3 -->
         <a href="/articles/area-tokuchou.html" data-category="お店選び"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center">
             <span class="text-4xl">🏪</span>
           </div>
@@ -119,7 +122,7 @@
             <div class="flex gap-2 mb-3">
               <span class="text-xs bg-blue-50 text-blue-500 font-bold px-2 py-0.5 rounded-full">お店選び</span>
             </div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">六本木・新宿・上野、エリア別の特徴と向いている人</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">六本木・新宿・上野、エリア別の特徴と向いている人</h2>
             <p class="text-xs text-gray-500 leading-relaxed">エリアによって客層・時給相場・雰囲気は大きく変わります。自分に合うエリアを選ぶことが、最初の重要な判断です。</p>
             <p class="text-xs text-gray-400 mt-4">2026.03.26</p>
           </div>
@@ -127,7 +130,7 @@
 
         <!-- 記事4 -->
         <a href="/articles/tsuki-hyakuman.html" data-category="稼ぎ方"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-yellow-50 to-orange-50 flex items-center justify-center">
             <span class="text-4xl">💰</span>
           </div>
@@ -135,7 +138,7 @@
             <div class="flex gap-2 mb-3">
               <span class="text-xs bg-yellow-50 text-yellow-600 font-bold px-2 py-0.5 rounded-full">稼ぎ方</span>
             </div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">月100万稼げる子と稼げない子、何が違うのか</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">月100万稼げる子と稼げない子、何が違うのか</h2>
             <p class="text-xs text-gray-500 leading-relaxed">月収100万は「15人に1人」と言われます。ルックスだけじゃない、本当の差は何かをブランド論の視点から解説します。</p>
             <p class="text-xs text-gray-400 mt-4">2026.03.25</p>
           </div>
@@ -143,7 +146,7 @@
 
         <!-- 記事5 -->
         <a href="/articles/toraburu-taisei.html" data-category="業界知識"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center">
             <span class="text-4xl">🛡️</span>
           </div>
@@ -151,7 +154,7 @@
             <div class="flex gap-2 mb-3">
               <span class="text-xs bg-red-50 text-red-400 font-bold px-2 py-0.5 rounded-full">業界知識</span>
             </div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">給与未払い・退店トラブルの実態と対処法</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">給与未払い・退店トラブルの実態と対処法</h2>
             <p class="text-xs text-gray-500 leading-relaxed">ナイトワーク特有のトラブルは、知識があれば防げます。事前に知っておくべきリスクと、スカウト経由で守られる仕組みを解説。</p>
             <p class="text-xs text-gray-400 mt-4">2026.03.24</p>
           </div>
@@ -159,16 +162,16 @@
 
         <!-- 記事6 -->
         <a href="/articles/wwork.html" data-category="未経験向け お店選び"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
-          <div class="h-36 bg-gradient-to-br from-teal-50 to-green-50 flex items-center justify-center">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
+          <div class="h-36 bg-gradient-to-br from-brand-gold/5 to-green-50 flex items-center justify-center">
             <span class="text-4xl">💼</span>
           </div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
-              <span class="text-xs bg-green-50 text-emerald-600 font-bold px-2 py-0.5 rounded-full">未経験向け</span>
+              <span class="text-xs bg-green-50 text-brand-gold font-bold px-2 py-0.5 rounded-full">未経験向け</span>
               <span class="text-xs bg-blue-50 text-blue-500 font-bold px-2 py-0.5 rounded-full">お店選び</span>
             </div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">昼職しながらキャバクラ、Wワークの現実と注意点</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">昼職しながらキャバクラ、Wワークの現実と注意点</h2>
             <p class="text-xs text-gray-500 leading-relaxed">相談者の半数以上がWワーク。身バレしない働き方・スケジュール管理・確定申告まで、現実的な情報をまとめました。</p>
             <p class="text-xs text-gray-400 mt-4">2026.03.23</p>
           </div>
@@ -176,11 +179,11 @@
 
         <!-- 記事7 -->
         <a href="/articles/taiken-nagare.html" data-category="未経験向け"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
-          <div class="h-36 bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center"><span class="text-4xl">👗</span></div>
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
+          <div class="h-36 bg-gradient-to-br from-brand-gold/5 to-teal-50 flex items-center justify-center"><span class="text-4xl">👗</span></div>
           <div class="p-6">
-            <div class="flex gap-2 mb-3"><span class="text-xs bg-green-50 text-emerald-600 font-bold px-2 py-0.5 rounded-full">未経験向け</span></div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">キャバクラ体入の流れと当日の注意点</h2>
+            <div class="flex gap-2 mb-3"><span class="text-xs bg-green-50 text-brand-gold font-bold px-2 py-0.5 rounded-full">未経験向け</span></div>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">キャバクラ体入の流れと当日の注意点</h2>
             <p class="text-xs text-gray-500 leading-relaxed">服装・持ち物・当日の動き方・終わった後の判断まで。初めての体入で失敗しないための完全ガイド。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.01</p>
           </div>
@@ -188,11 +191,11 @@
 
         <!-- 記事8 -->
         <a href="/articles/mensetsu-ukaru.html" data-category="お店選び"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center"><span class="text-4xl">✅</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-blue-50 text-blue-500 font-bold px-2 py-0.5 rounded-full">お店選び</span></div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">キャバクラ面接で落ちる子・受かる子の違い</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">キャバクラ面接で落ちる子・受かる子の違い</h2>
             <p class="text-xs text-gray-500 leading-relaxed">面接で落ちる理由はルックスだけではない。準備と対応で通過率は変わります。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.02</p>
           </div>
@@ -200,11 +203,11 @@
 
         <!-- 記事9 -->
         <a href="/articles/scout-mikiburi.html" data-category="業界知識"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center"><span class="text-4xl">👀</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-red-50 text-red-400 font-bold px-2 py-0.5 rounded-full">業界知識</span></div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">スカウトに声をかけられたときの見極め方</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">スカウトに声をかけられたときの見極め方</h2>
             <p class="text-xs text-gray-500 leading-relaxed">信頼できるスカウトとそうでないスカウトの違いを現役スカウトが正直に解説。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.03</p>
           </div>
@@ -212,11 +215,11 @@
 
         <!-- 記事10 -->
         <a href="/articles/noruma-penalty.html" data-category="業界知識"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-gray-50 to-slate-100 flex items-center justify-center"><span class="text-4xl">📋</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-red-50 text-red-400 font-bold px-2 py-0.5 rounded-full">業界知識</span></div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">キャバクラのノルマ・ペナルティの相場と見極め方</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">キャバクラのノルマ・ペナルティの相場と見極め方</h2>
             <p class="text-xs text-gray-500 leading-relaxed">「ノルマなし」の店でも発生するペナルティの実態と、入店前に必ず確認すべき項目。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.04</p>
           </div>
@@ -224,11 +227,11 @@
 
         <!-- 記事11 -->
         <a href="/articles/shimei-3months.html" data-category="稼ぎ方"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-yellow-50 to-amber-50 flex items-center justify-center"><span class="text-4xl">📈</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-yellow-50 text-yellow-600 font-bold px-2 py-0.5 rounded-full">稼ぎ方</span></div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">指名を取るための最初の3ヶ月</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">指名を取るための最初の3ヶ月</h2>
             <p class="text-xs text-gray-500 leading-relaxed">月別の優先順位・固定客の作り方・やってはいけない失敗パターンを解説。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.05</p>
           </div>
@@ -236,11 +239,11 @@
 
         <!-- 記事12 -->
         <a href="/articles/kakuteishinkoku.html" data-category="業界知識"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-slate-50 to-gray-100 flex items-center justify-center"><span class="text-4xl">🧾</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-red-50 text-red-400 font-bold px-2 py-0.5 rounded-full">業界知識</span></div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">キャバ嬢の確定申告・税金まとめ</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">キャバ嬢の確定申告・税金まとめ</h2>
             <p class="text-xs text-gray-500 leading-relaxed">申告が必要な収入ライン・経費・住民税バレを防ぐ普通徴収の設定まで完全解説。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.06</p>
           </div>
@@ -248,14 +251,14 @@
 
         <!-- 記事13 -->
         <a href="/articles/cabaret-vs-lounge.html" data-category="未経験向け お店選び"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
-          <div class="h-36 bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center"><span class="text-4xl">🔀</span></div>
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
+          <div class="h-36 bg-gradient-to-br from-brand-gold/5 to-blue-50 flex items-center justify-center"><span class="text-4xl">🔀</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
-              <span class="text-xs bg-green-50 text-emerald-600 font-bold px-2 py-0.5 rounded-full">未経験向け</span>
+              <span class="text-xs bg-green-50 text-brand-gold font-bold px-2 py-0.5 rounded-full">未経験向け</span>
               <span class="text-xs bg-blue-50 text-blue-500 font-bold px-2 py-0.5 rounded-full">お店選び</span>
             </div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">キャバクラとラウンジの違いとは？自分に向いているのはどっちか</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">キャバクラとラウンジの違いとは？自分に向いているのはどっちか</h2>
             <p class="text-xs text-gray-500 leading-relaxed">時給・客層・ドレスコード・稼ぎ方まで徹底比較。どっちが自分に向いているかを判断する基準を現役スカウトが解説。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.16</p>
           </div>
@@ -263,13 +266,13 @@
 
         <!-- 記事14 -->
         <a href="/articles/uriage-ageru-mindset.html" data-category="稼ぎ方"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-orange-50 to-yellow-50 flex items-center justify-center"><span class="text-4xl">🧠</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
               <span class="text-xs bg-yellow-50 text-yellow-600 font-bold px-2 py-0.5 rounded-full">稼ぎ方</span>
             </div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">キャバクラで売上が上がらない本当の理由——テクニックより先に直すべきこと</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">キャバクラで売上が上がらない本当の理由——テクニックより先に直すべきこと</h2>
             <p class="text-xs text-gray-500 leading-relaxed">売上が伸びない子に共通する「セコいマインド」の正体。客はキャバ嬢の鏡——価値観が客層に直結する構造を解説。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.16</p>
           </div>
@@ -277,11 +280,11 @@
 
         <!-- 記事15 -->
         <a href="/articles/ueno-guide.html" data-category="お店選び"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
-          <div class="h-36 bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center"><span class="text-4xl">🗺️</span></div>
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
+          <div class="h-36 bg-gradient-to-br from-brand-gold/5 to-teal-50 flex items-center justify-center"><span class="text-4xl">🗺️</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-blue-50 text-blue-500 font-bold px-2 py-0.5 rounded-full">お店選び</span></div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">上野キャバクラ 完全ガイド｜エリア特性・稼ぎやすい店の選び方</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">上野キャバクラ 完全ガイド｜エリア特性・稼ぎやすい店の選び方</h2>
             <p class="text-xs text-gray-500 leading-relaxed">常連比率が高く指名がつきやすい上野エリアの特性を、スカウト目線で解説。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.10</p>
           </div>
@@ -289,11 +292,11 @@
 
         <!-- 記事16 -->
         <a href="/articles/kabukicho-guide.html" data-category="お店選び"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-red-50 to-pink-50 flex items-center justify-center"><span class="text-4xl">🌆</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-blue-50 text-blue-500 font-bold px-2 py-0.5 rounded-full">お店選び</span></div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">歌舞伎町の実態｜華やかさの裏にある条件と競争</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">歌舞伎町の実態｜華やかさの裏にある条件と競争</h2>
             <p class="text-xs text-gray-500 leading-relaxed">歌舞伎町の客層・競争の激しさ・稼げる子と稼げない子の差をリアルに解説。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.11</p>
           </div>
@@ -301,11 +304,11 @@
 
         <!-- 記事17 -->
         <a href="/articles/ikebukuro-guide.html" data-category="お店選び"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center"><span class="text-4xl">🏙️</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-blue-50 text-blue-500 font-bold px-2 py-0.5 rounded-full">お店選び</span></div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">池袋で稼ぐための条件整理｜初心者にも向いている理由</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">池袋で稼ぐための条件整理｜初心者にも向いている理由</h2>
             <p class="text-xs text-gray-500 leading-relaxed">初心者でも稼ぎやすい池袋エリアの特性と、選ぶべき店の条件を整理。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.12</p>
           </div>
@@ -313,11 +316,11 @@
 
         <!-- 記事18 -->
         <a href="/articles/shimei-tips.html" data-category="稼ぎ方"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-yellow-50 to-orange-50 flex items-center justify-center"><span class="text-4xl">⭐</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-yellow-50 text-yellow-600 font-bold px-2 py-0.5 rounded-full">稼ぎ方</span></div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">指名が取れない本当の理由と、変えるべき3つのこと</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">指名が取れない本当の理由と、変えるべき3つのこと</h2>
             <p class="text-xs text-gray-500 leading-relaxed">「頑張ってるのに指名が増えない」子に共通する原因を現役スカウトが分析。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.13</p>
           </div>
@@ -325,11 +328,11 @@
 
         <!-- 記事19 -->
         <a href="/articles/ijyu-checklist.html" data-category="お店選び"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
-          <div class="h-36 bg-gradient-to-br from-teal-50 to-green-50 flex items-center justify-center"><span class="text-4xl">📝</span></div>
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
+          <div class="h-36 bg-gradient-to-br from-brand-gold/5 to-green-50 flex items-center justify-center"><span class="text-4xl">📝</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-blue-50 text-blue-500 font-bold px-2 py-0.5 rounded-full">お店選び</span></div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">移籍前に確認すべき10のチェックリスト</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">移籍前に確認すべき10のチェックリスト</h2>
             <p class="text-xs text-gray-500 leading-relaxed">後悔しない移籍のために、入店前に必ず確認すべき10項目を網羅。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.14</p>
           </div>
@@ -337,11 +340,11 @@
 
         <!-- 記事20 -->
         <a href="/articles/hosho-shikumi.html" data-category="業界知識"
-          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-emerald-500 transition-colors duration-200 block group">
+          class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 hover:border-brand-gold transition-colors duration-200 block group">
           <div class="h-36 bg-gradient-to-br from-slate-50 to-gray-100 flex items-center justify-center"><span class="text-4xl">🔒</span></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-red-50 text-red-400 font-bold px-2 py-0.5 rounded-full">業界知識</span></div>
-            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">保証期間の仕組みと、切れた後に取るべき行動</h2>
+            <h2 class="font-bold text-gray-800 text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors">保証期間の仕組みと、切れた後に取るべき行動</h2>
             <p class="text-xs text-gray-500 leading-relaxed">保証が切れた後に稼ぎが落ちる前にやるべきことを、スカウト目線で解説。</p>
             <p class="text-xs text-gray-400 mt-4">2026.04.15</p>
           </div>
@@ -363,7 +366,7 @@
   </section>
 
   <!-- ========== BOTTOM CTA ========== -->
-  <section class="py-16 px-6 bg-gradient-to-br from-green-50 via-white to-pink-50 mt-4">
+  <section class="py-16 px-6 bg-gradient-to-br from-brand-gold/5 via-white to-pink-50 mt-4">
     <div class="max-w-xl mx-auto text-center">
       <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">記事を読んで気になったことはありませんか？</h2>
       <p class="text-sm text-gray-500 leading-relaxed mb-8">

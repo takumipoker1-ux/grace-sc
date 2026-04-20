@@ -7,7 +7,28 @@
   <meta name="description" content="キャバクラで指名を取れるようになるまでの最初の3ヶ月で何をすべきか。固定客の作り方・SNS活用・避けるべき行動を現役スカウトが解説します。" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: { colors: { brand: { mint:'#a7f3d0', mintDark:'#34d399', pink:'#fce7f3', pinkDark:'#f472b6', line:'#06c755', lineDark:'#05a847' } }, fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] } } } }
+        tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold:     '#c9a96e',
+              goldLight:'#e8d5a3',
+              rose:     '#c4838a',
+              roseLight:'#e8b4b8',
+              dark:     '#0d0d0d',
+              charcoal: '#1a1a1a',
+              muted:    '#2a2520',
+              line:     '#C13584',
+              lineDark: '#833AB4',
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -22,14 +43,14 @@
   </style>
 </head>
 <body class="font-sans text-gray-700 bg-gray-50">
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
-    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-      <a href="/index.html" class="text-brand-mintDark font-bold text-base tracking-wide">GRACE</a>
-      <nav class="flex items-center gap-6 text-sm font-medium text-gray-600">
-        <a href="/index.html" class="hover:text-brand-mintDark transition-colors">トップ</a>
-        <a href="/stores/index.html" class="hover:text-brand-mintDark transition-colors">店舗・求人</a>
-        <a href="/articles/index.html" class="text-brand-mintDark font-bold transition-colors">記事</a>
-        <a href="/index.html#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-4 py-2 rounded-full transition-colors">LINE相談</a>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
+      <a href="/index.html" class="text-brand-gold font-serif font-semibold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE</a>
+      <nav class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
+        <a href="/index.html" class="hover:text-white transition-colors whitespace-nowrap">トップ</a>
+        <a href="/stores/index.html" class="hover:text-white transition-colors whitespace-nowrap">店舗・求人</a>
+        <a href="/articles/index.html" class="hover:text-white transition-colors whitespace-nowrap">記事</a>
+        <a href="https://www.instagram.com/sc_zono/" onclick="openInstagram(event)" class="ig-link bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded transition-colors whitespace-nowrap">Instagram相談</a>
       </nav>
     </div>
   </header>
@@ -66,11 +87,11 @@
 
         <div class="bg-white rounded-2xl p-6 border border-gray-100 card-shadow space-y-3 my-4">
           <p class="text-sm font-bold text-gray-800">1ヶ月目にやること</p>
-          <div class="flex items-start gap-3 text-sm"><span class="text-brand-mintDark font-bold shrink-0">✓</span><span class="text-gray-600">黒服との関係を作る（フォローしてもらいやすくなる）</span></div>
-          <div class="flex items-start gap-3 text-sm"><span class="text-brand-mintDark font-bold shrink-0">✓</span><span class="text-gray-600">在籍の先輩から店のルールや客層を聞く</span></div>
-          <div class="flex items-start gap-3 text-sm"><span class="text-brand-mintDark font-bold shrink-0">✓</span><span class="text-gray-600">フリー客の名前・顔・話した内容をメモする</span></div>
-          <div class="flex items-start gap-3 text-sm"><span class="text-brand-mintDark font-bold shrink-0">✓</span><span class="text-gray-600">LINE交換できた客には翌日必ずお礼メッセージを送る</span></div>
-          <div class="flex items-start gap-3 text-sm"><span class="text-brand-mintDark font-bold shrink-0">✓</span><span class="text-gray-600">自分の「キャラクター」を一つ決める（聞き上手・天然・面白い等）</span></div>
+          <div class="flex items-start gap-3 text-sm"><span class="text-brand-gold font-bold shrink-0">✓</span><span class="text-gray-600">黒服との関係を作る（フォローしてもらいやすくなる）</span></div>
+          <div class="flex items-start gap-3 text-sm"><span class="text-brand-gold font-bold shrink-0">✓</span><span class="text-gray-600">在籍の先輩から店のルールや客層を聞く</span></div>
+          <div class="flex items-start gap-3 text-sm"><span class="text-brand-gold font-bold shrink-0">✓</span><span class="text-gray-600">フリー客の名前・顔・話した内容をメモする</span></div>
+          <div class="flex items-start gap-3 text-sm"><span class="text-brand-gold font-bold shrink-0">✓</span><span class="text-gray-600">LINE交換できた客には翌日必ずお礼メッセージを送る</span></div>
+          <div class="flex items-start gap-3 text-sm"><span class="text-brand-gold font-bold shrink-0">✓</span><span class="text-gray-600">自分の「キャラクター」を一つ決める（聞き上手・天然・面白い等）</span></div>
         </div>
 
         <p>1ヶ月目に指名が0でも焦らなくていいです。保証期間中はあなたが店を評価する時間でもあります。</p>
@@ -129,7 +150,7 @@
 
       <div class="mt-12 pt-8 border-t border-gray-100 flex items-center gap-4">
         <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-          <svg class="w-6 h-6 text-brand-mintDark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+          <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
         </div>
         <div>
           <p class="text-xs text-gray-400">この記事を書いた人</p>
@@ -138,11 +159,11 @@
         </div>
       </div>
       <div class="mt-10 grid grid-cols-2 gap-4">
-        <a href="/articles/noruma-penalty.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-mintDark transition-colors">
+        <a href="/articles/noruma-penalty.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-gold transition-colors">
           <span class="block text-gray-400 mb-1">← 前の記事</span>
           <span class="font-bold text-gray-700">ノルマ・ペナルティの相場と見極め方</span>
         </a>
-        <a href="/articles/kakuteishinkoku.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-mintDark transition-colors text-right">
+        <a href="/articles/kakuteishinkoku.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-gold transition-colors text-right">
           <span class="block text-gray-400 mb-1">次の記事 →</span>
           <span class="font-bold text-gray-700">キャバ嬢の確定申告・税金まとめ</span>
         </a>
@@ -150,7 +171,7 @@
     </div>
   </section>
 
-  <section class="py-16 px-6 bg-gradient-to-br from-green-50 via-white to-pink-50 mt-4">
+  <section class="py-16 px-6 bg-gradient-to-br from-brand-gold/5 via-white to-pink-50 mt-4">
     <div class="max-w-xl mx-auto text-center">
       <h2 class="text-xl font-bold text-gray-800 mb-3">指名が取れる環境に入ることが最初の一歩</h2>
       <p class="text-sm text-gray-500 leading-relaxed mb-8">フリーが多く・黒服サポートが手厚い・あなたのキャラに合う店を一緒に選びます。</p>

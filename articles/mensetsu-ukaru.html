@@ -7,7 +7,28 @@
   <meta name="description" content="キャバクラの面接で落ちる理由の9割は容姿と言われますが、実は準備と対応で通過率は変わります。現役スカウトが面接通過のポイントと落ちたときの対処法を解説。" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: { colors: { brand: { mint:'#a7f3d0', mintDark:'#34d399', pink:'#fce7f3', pinkDark:'#f472b6', line:'#06c755', lineDark:'#05a847' } }, fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] } } } }
+        tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold:     '#c9a96e',
+              goldLight:'#e8d5a3',
+              rose:     '#c4838a',
+              roseLight:'#e8b4b8',
+              dark:     '#0d0d0d',
+              charcoal: '#1a1a1a',
+              muted:    '#2a2520',
+              line:     '#C13584',
+              lineDark: '#833AB4',
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -22,14 +43,14 @@
   </style>
 </head>
 <body class="font-sans text-gray-700 bg-gray-50">
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
-    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-      <a href="/index.html" class="text-brand-mintDark font-bold text-base tracking-wide">GRACE</a>
-      <nav class="flex items-center gap-6 text-sm font-medium text-gray-600">
-        <a href="/index.html" class="hover:text-brand-mintDark transition-colors">トップ</a>
-        <a href="/stores/index.html" class="hover:text-brand-mintDark transition-colors">店舗・求人</a>
-        <a href="/articles/index.html" class="text-brand-mintDark font-bold transition-colors">記事</a>
-        <a href="/index.html#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-4 py-2 rounded-full transition-colors">LINE相談</a>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
+      <a href="/index.html" class="text-brand-gold font-serif font-semibold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE</a>
+      <nav class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
+        <a href="/index.html" class="hover:text-white transition-colors whitespace-nowrap">トップ</a>
+        <a href="/stores/index.html" class="hover:text-white transition-colors whitespace-nowrap">店舗・求人</a>
+        <a href="/articles/index.html" class="hover:text-white transition-colors whitespace-nowrap">記事</a>
+        <a href="https://www.instagram.com/sc_zono/" onclick="openInstagram(event)" class="ig-link bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded transition-colors whitespace-nowrap">Instagram相談</a>
       </nav>
     </div>
   </header>
@@ -38,7 +59,7 @@
     <div class="max-w-2xl mx-auto">
       <div class="flex gap-2 mb-4">
         <span class="text-xs bg-blue-50 text-blue-500 font-bold px-3 py-1 rounded-full">お店選び</span>
-        <span class="text-xs bg-green-50 text-brand-mintDark font-bold px-3 py-1 rounded-full">未経験向け</span>
+        <span class="text-xs bg-green-50 text-brand-gold font-bold px-3 py-1 rounded-full">未経験向け</span>
       </div>
       <h1 class="text-xl md:text-2xl font-bold text-gray-800 leading-snug mb-4">キャバクラ面接で落ちる子・受かる子の違い</h1>
       <div class="flex items-center gap-4 text-xs text-gray-400">
@@ -132,7 +153,7 @@
 
       <div class="mt-12 pt-8 border-t border-gray-100 flex items-center gap-4">
         <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-          <svg class="w-6 h-6 text-brand-mintDark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+          <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
         </div>
         <div>
           <p class="text-xs text-gray-400">この記事を書いた人</p>
@@ -141,11 +162,11 @@
         </div>
       </div>
       <div class="mt-10 grid grid-cols-2 gap-4">
-        <a href="/articles/taiken-nagare.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-mintDark transition-colors">
+        <a href="/articles/taiken-nagare.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-gold transition-colors">
           <span class="block text-gray-400 mb-1">← 前の記事</span>
           <span class="font-bold text-gray-700">体入の流れと当日の注意点</span>
         </a>
-        <a href="/articles/scout-mikiburi.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-mintDark transition-colors text-right">
+        <a href="/articles/scout-mikiburi.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-gold transition-colors text-right">
           <span class="block text-gray-400 mb-1">次の記事 →</span>
           <span class="font-bold text-gray-700">スカウトの見極め方</span>
         </a>
@@ -153,7 +174,7 @@
     </div>
   </section>
 
-  <section class="py-16 px-6 bg-gradient-to-br from-green-50 via-white to-pink-50 mt-4">
+  <section class="py-16 px-6 bg-gradient-to-br from-brand-gold/5 via-white to-pink-50 mt-4">
     <div class="max-w-xl mx-auto text-center">
       <h2 class="text-xl font-bold text-gray-800 mb-3">面接に同行します</h2>
       <p class="text-sm text-gray-500 leading-relaxed mb-8">タイプに合った店舗選びから面接同行・条件交渉まで、すべて無料でサポートします。</p>

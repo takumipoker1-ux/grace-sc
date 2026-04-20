@@ -7,7 +7,28 @@
   <meta name="description" content="路上やSNSでスカウトに声をかけられたとき、どう判断すればいいか。信頼できるスカウトとそうでないスカウトの見分け方を、現役スカウトが正直に解説します。" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { theme: { extend: { colors: { brand: { mint:'#a7f3d0', mintDark:'#34d399', pink:'#fce7f3', pinkDark:'#f472b6', line:'#06c755', lineDark:'#05a847' } }, fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] } } } }
+        tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold:     '#c9a96e',
+              goldLight:'#e8d5a3',
+              rose:     '#c4838a',
+              roseLight:'#e8b4b8',
+              dark:     '#0d0d0d',
+              charcoal: '#1a1a1a',
+              muted:    '#2a2520',
+              line:     '#C13584',
+              lineDark: '#833AB4',
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          }
+        }
+      }
+    }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -22,14 +43,14 @@
   </style>
 </head>
 <body class="font-sans text-gray-700 bg-gray-50">
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
-    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-      <a href="/index.html" class="text-brand-mintDark font-bold text-base tracking-wide">GRACE</a>
-      <nav class="flex items-center gap-6 text-sm font-medium text-gray-600">
-        <a href="/index.html" class="hover:text-brand-mintDark transition-colors">トップ</a>
-        <a href="/stores/index.html" class="hover:text-brand-mintDark transition-colors">店舗・求人</a>
-        <a href="/articles/index.html" class="text-brand-mintDark font-bold transition-colors">記事</a>
-        <a href="/index.html#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-4 py-2 rounded-full transition-colors">LINE相談</a>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
+      <a href="/index.html" class="text-brand-gold font-serif font-semibold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE</a>
+      <nav class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
+        <a href="/index.html" class="hover:text-white transition-colors whitespace-nowrap">トップ</a>
+        <a href="/stores/index.html" class="hover:text-white transition-colors whitespace-nowrap">店舗・求人</a>
+        <a href="/articles/index.html" class="hover:text-white transition-colors whitespace-nowrap">記事</a>
+        <a href="https://www.instagram.com/sc_zono/" onclick="openInstagram(event)" class="ig-link bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded transition-colors whitespace-nowrap">Instagram相談</a>
       </nav>
     </div>
   </header>
@@ -65,35 +86,35 @@
 
         <div class="bg-white rounded-2xl p-6 border border-gray-100 card-shadow space-y-4 my-6">
           <div class="flex gap-3 items-start">
-            <span class="text-brand-mintDark font-bold text-lg shrink-0">◯</span>
+            <span class="text-brand-gold font-bold text-lg shrink-0">◯</span>
             <div>
               <p class="font-bold text-gray-800 mb-1 text-sm">発信・実績が確認できる</p>
               <p class="text-xs text-gray-500 leading-relaxed">SNSで継続的に情報発信している、過去の紹介事例・記事がある。顔出しでなくても、活動の積み重ねが確認できるかどうかが重要です。</p>
             </div>
           </div>
           <div class="flex gap-3 items-start">
-            <span class="text-brand-mintDark font-bold text-lg shrink-0">◯</span>
+            <span class="text-brand-gold font-bold text-lg shrink-0">◯</span>
             <div>
               <p class="font-bold text-gray-800 mb-1 text-sm">急かさない・強引じゃない</p>
               <p class="text-xs text-gray-500 leading-relaxed">「今日決めないと枠がなくなる」「この店はすぐ埋まる」という焦らせ系のトークは危険信号。信頼できるスカウトは「考えていいです」と言える。</p>
             </div>
           </div>
           <div class="flex gap-3 items-start">
-            <span class="text-brand-mintDark font-bold text-lg shrink-0">◯</span>
+            <span class="text-brand-gold font-bold text-lg shrink-0">◯</span>
             <div>
               <p class="font-bold text-gray-800 mb-1 text-sm">店の悪い情報も教えてくれる</p>
               <p class="text-xs text-gray-500 leading-relaxed">「この店はノルマが厳しめ」「この時期は客が少ない」など、都合の悪い情報も開示できるスカウトは信頼できます。全部良い話しかしないスカウトは要注意。</p>
             </div>
           </div>
           <div class="flex gap-3 items-start">
-            <span class="text-brand-mintDark font-bold text-lg shrink-0">◯</span>
+            <span class="text-brand-gold font-bold text-lg shrink-0">◯</span>
             <div>
               <p class="font-bold text-gray-800 mb-1 text-sm">面接に同行してくれる</p>
               <p class="text-xs text-gray-500 leading-relaxed">「LINEで店を紹介するだけ」のスカウトと、「面接に一緒に来る」スカウトでは責任感がまったく違います。同行してくれるかどうかは重要な判断基準です。</p>
             </div>
           </div>
           <div class="flex gap-3 items-start">
-            <span class="text-brand-mintDark font-bold text-lg shrink-0">◯</span>
+            <span class="text-brand-gold font-bold text-lg shrink-0">◯</span>
             <div>
               <p class="font-bold text-gray-800 mb-1 text-sm">入店後も連絡が取れる</p>
               <p class="text-xs text-gray-500 leading-relaxed">紹介後に連絡が取れなくなるスカウトは紹介料だけが目的です。トラブル時に動いてくれるかどうかは、入店前に確認しておきましょう。</p>
@@ -126,11 +147,11 @@
 
         <h2>スカウトに連絡する前に確認すること</h2>
         <div class="bg-white rounded-2xl p-6 border border-gray-100 card-shadow my-4 space-y-2">
-          <div class="flex items-center gap-3 text-sm"><span class="text-brand-mintDark font-bold">✓</span><span class="text-gray-700">SNS・サイトで継続的な活動実績があるか</span></div>
-          <div class="flex items-center gap-3 text-sm"><span class="text-brand-mintDark font-bold">✓</span><span class="text-gray-700">面接同行をしているか</span></div>
-          <div class="flex items-center gap-3 text-sm"><span class="text-brand-mintDark font-bold">✓</span><span class="text-gray-700">入店後のフォローをしているか</span></div>
-          <div class="flex items-center gap-3 text-sm"><span class="text-brand-mintDark font-bold">✓</span><span class="text-gray-700">女の子側に費用を請求しないか</span></div>
-          <div class="flex items-center gap-3 text-sm"><span class="text-brand-mintDark font-bold">✓</span><span class="text-gray-700">急かす・強引なトークをしないか</span></div>
+          <div class="flex items-center gap-3 text-sm"><span class="text-brand-gold font-bold">✓</span><span class="text-gray-700">SNS・サイトで継続的な活動実績があるか</span></div>
+          <div class="flex items-center gap-3 text-sm"><span class="text-brand-gold font-bold">✓</span><span class="text-gray-700">面接同行をしているか</span></div>
+          <div class="flex items-center gap-3 text-sm"><span class="text-brand-gold font-bold">✓</span><span class="text-gray-700">入店後のフォローをしているか</span></div>
+          <div class="flex items-center gap-3 text-sm"><span class="text-brand-gold font-bold">✓</span><span class="text-gray-700">女の子側に費用を請求しないか</span></div>
+          <div class="flex items-center gap-3 text-sm"><span class="text-brand-gold font-bold">✓</span><span class="text-gray-700">急かす・強引なトークをしないか</span></div>
         </div>
 
         <div class="bg-green-50 border border-green-100 rounded-2xl p-6 mt-8">
@@ -146,7 +167,7 @@
 
       <div class="mt-12 pt-8 border-t border-gray-100 flex items-center gap-4">
         <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-          <svg class="w-6 h-6 text-brand-mintDark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+          <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
         </div>
         <div>
           <p class="text-xs text-gray-400">この記事を書いた人</p>
@@ -155,11 +176,11 @@
         </div>
       </div>
       <div class="mt-10 grid grid-cols-2 gap-4">
-        <a href="/articles/mensetsu-ukaru.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-mintDark transition-colors">
+        <a href="/articles/mensetsu-ukaru.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-gold transition-colors">
           <span class="block text-gray-400 mb-1">← 前の記事</span>
           <span class="font-bold text-gray-700">面接で落ちる子・受かる子の違い</span>
         </a>
-        <a href="/articles/noruma-penalty.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-mintDark transition-colors text-right">
+        <a href="/articles/noruma-penalty.html" class="bg-white rounded-xl p-4 border border-gray-100 card-shadow text-xs text-gray-500 hover:border-brand-gold transition-colors text-right">
           <span class="block text-gray-400 mb-1">次の記事 →</span>
           <span class="font-bold text-gray-700">ノルマ・ペナルティの相場と見極め方</span>
         </a>
@@ -167,7 +188,7 @@
     </div>
   </section>
 
-  <section class="py-16 px-6 bg-gradient-to-br from-green-50 via-white to-pink-50 mt-4">
+  <section class="py-16 px-6 bg-gradient-to-br from-brand-gold/5 via-white to-pink-50 mt-4">
     <div class="max-w-xl mx-auto text-center">
       <h2 class="text-xl font-bold text-gray-800 mb-3">実績・発信内容を見て判断してください</h2>
       <p class="text-sm text-gray-500 leading-relaxed mb-8">このサイトの記事・店舗情報が、信頼の判断材料になれば嬉しいです。</p>
