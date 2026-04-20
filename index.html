@@ -333,7 +333,8 @@
                 <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>女の子ファーストで条件・店舗を厳選</li>
                 <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>面接同行・入店後のトラブル対応まで一貫サポート</li>
                 <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>指名・ブランディングのコンサルあり</li>
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>色管なし・還元なし・完全無料</li>
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>完全無料・色管なし</li>
+                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>SB目的の店誘導なし・女の子ファースト</li>
               </ul>
             </div>
             <div>
@@ -494,9 +495,9 @@
         <!-- 約束2 -->
         <div class="bg-white rounded-xl p-6 md:p-8 card-shadow border border-gray-100 hover:border-brand-gold/30 transition-colors duration-200">
           <div class="text-brand-gold text-xs font-bold tracking-widest mb-4">02</div>
-          <h3 class="font-serif font-bold text-gray-900 text-lg mb-3">現場スタッフの面接同行</h3>
+          <h3 class="font-serif font-bold text-gray-900 text-lg mb-3">ぞのが面接に同行</h3>
           <p class="text-sm text-gray-500 leading-relaxed">
-            面接には必ずスタッフが同行し、条件交渉から不当な扱いの防止まで完全サポート。一人で不安な思いをすることはありません。
+            面接には必ずぞのが同行し、条件交渉から不当な扱いの防止まで完全サポート。一人で不安な思いをすることはありません。
           </p>
         </div>
 
@@ -544,6 +545,7 @@
             ご友人をご紹介いただき、本入店＆スカウトバック確定後に還元をお渡しします。信頼できる人を紹介してくれることへの、感謝の気持ちです。詳細はDMにて。
           </p>
           <p class="text-xs text-brand-gold mt-4 font-medium">本入店・バック確定後に適用</p>
+          <p class="text-xs text-gray-500 mt-2">※高還元スカウトのようなSBの女子還元とは異なります。あくまで紹介してくれた方への感謝のお礼です。</p>
         </div>
 
         <!-- シェア協力ギフト -->
@@ -560,82 +562,34 @@
     </div>
   </section>
 
-  <!-- ========== STATS / PIE CHART ========== -->
+  <!-- ========== WHO WE SERVE ========== -->
   <section class="py-14 md:py-24 px-6 bg-white">
     <div class="max-w-4xl mx-auto">
       <div class="mb-8 md:mb-14">
-        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— DATA</p>
+        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— FOR YOU</p>
         <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">こんな方にご利用いただいています</h2>
-        <p class="text-gray-500 text-sm mt-3">ご依頼者の経験年数の割合（実績データ）</p>
+        <p class="text-gray-500 text-sm mt-3">はじめての方から、お店を変えたい方まで。</p>
       </div>
 
-      <div class="flex flex-col md:flex-row items-center justify-center gap-16">
-
-        <!-- 円グラフ -->
-        <div class="relative w-56 h-56 shrink-0">
-          <canvas id="experienceChart"></canvas>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-white rounded-xl p-6 card-shadow border border-gray-100 text-center">
+          <div class="text-3xl mb-4">🔰</div>
+          <h3 class="font-serif font-bold text-gray-900 mb-2">未経験・はじめて</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">「何から始めればいいかわからない」という方が一番多いです。ゼロから一緒に考えます。</p>
         </div>
-
-        <!-- 凡例 -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <span class="w-3 h-3 rounded-sm shrink-0" style="background:#c9a96e"></span>
-            <span class="text-sm text-gray-600">未経験 <span class="font-bold text-gray-900">20%</span></span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="w-3 h-3 rounded-sm shrink-0" style="background:#e8d5a3"></span>
-            <span class="text-sm text-gray-600">半年以内 <span class="font-bold text-gray-900">30%</span></span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="w-3 h-3 rounded-sm shrink-0" style="background:#c4838a"></span>
-            <span class="text-sm text-gray-600">1年以内 <span class="font-bold text-gray-900">30%</span></span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="w-3 h-3 rounded-sm shrink-0" style="background:#e8b4b8"></span>
-            <span class="text-sm text-gray-600">3年以内 <span class="font-bold text-gray-900">10%</span></span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="w-3 h-3 rounded-sm shrink-0" style="background:#e2e8f0"></span>
-            <span class="text-sm text-gray-600">それ以上 <span class="font-bold text-gray-900">10%</span></span>
-          </div>
-
-          <p class="text-xs text-gray-400 pt-2 leading-relaxed border-t border-gray-100">
-            未経験・経験浅めの方が全体の<span class="font-bold text-gray-600">80%</span>を占めています。<br />
-            はじめての方でも安心してご相談ください。
-          </p>
+        <div class="bg-white rounded-xl p-6 card-shadow border border-gray-100 text-center">
+          <div class="text-3xl mb-4">💼</div>
+          <h3 class="font-serif font-bold text-gray-900 mb-2">昼職と掛け持ち</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">身バレしない働き方・職場に配慮のあるお店選びも込みでサポートします。</p>
         </div>
-
+        <div class="bg-white rounded-xl p-6 card-shadow border border-gray-100 text-center">
+          <div class="text-3xl mb-4">🔄</div>
+          <h3 class="font-serif font-bold text-gray-900 mb-2">お店を変えたい</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">「今の店が合わない」「もっと稼ぎたい」という方の移籍相談も歓迎です。</p>
+        </div>
       </div>
     </div>
   </section>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    const ctx = document.getElementById('experienceChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        labels: ['未経験', '半年以内', '1年以内', '3年以内', 'それ以上'],
-        datasets: [{
-          data: [20, 30, 30, 10, 10],
-          backgroundColor: ['#c9a96e', '#e8d5a3', '#c4838a', '#e8b4b8', '#e2e2e0'],
-          borderWidth: 0,
-          hoverOffset: 6,
-        }]
-      },
-      options: {
-        cutout: '68%',
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: ctx => ` ${ctx.label}：${ctx.parsed}%`
-            }
-          }
-        }
-      }
-    });
-  </script>
 
   <!-- ========== PROFILE ========== -->
   <section class="py-14 md:py-24 px-6 section-alt">
