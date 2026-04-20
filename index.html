@@ -34,6 +34,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     html { scroll-behavior: smooth; }
+    @media (max-width: 767px) {
+      p, li, td, span:not(.font-bold):not(.font-semibold) { font-weight: 400 !important; }
+    }
     .ig-link { cursor: pointer; }
     h1, h2, h3 { font-family: 'Noto Serif JP', serif; }
     .hero-bg {
@@ -85,7 +88,7 @@
         もう、お店選びで<br class="hidden md:block" />
         <span class="text-brand-gold whitespace-nowrap">失敗しない。</span>
       </h1>
-      <p class="text-lg md:text-xl font-light text-gray-300 mb-4 leading-relaxed">
+      <p class="text-lg md:text-xl md:font-light font-normal text-gray-300 mb-4 leading-relaxed">
         データとプロのサポートで、<br />あなたに本当に合うお店を。
       </p>
 
