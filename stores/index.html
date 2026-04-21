@@ -86,6 +86,10 @@
           class="bg-white text-gray-600 px-5 py-2 rounded-full text-sm font-bold transition-colors duration-150 border border-gray-200 hover:border-brand-mintDark hover:text-brand-mintDark">
           錦糸町
         </button>
+        <button onclick="switchArea('ikebukuro')" id="tab-ikebukuro"
+          class="bg-white text-gray-600 px-5 py-2 rounded-full text-sm font-bold transition-colors duration-150 border border-gray-200 hover:border-brand-mintDark hover:text-brand-mintDark">
+          池袋
+        </button>
       </div>
 
       <!-- ========== 六本木 ========== -->
@@ -756,6 +760,309 @@
           </div>
 
         </div>
+      </div>
+
+      <!-- ========== 池袋 ========== -->
+      <div id="area-ikebukuro" class="area-section">
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <!-- ビゼ池袋 -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">池袋</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">ビゼ（池袋）</h2>
+              </div>
+              <span class="text-xs bg-gray-100 text-gray-600 font-bold px-3 py-1 rounded-full border border-gray-200 shrink-0">大手グループ</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">体入時給</span>
+                <span class="font-bold text-gray-800">5,000円〜</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">保証期間</span>
+                <span class="font-bold text-gray-800">2ヶ月</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">送り</span>
+                <span class="font-bold text-brand-mintDark">◯ 23区内対応</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">寮</span>
+                <span class="font-bold text-brand-mintDark">◯ あり（空き次第）</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">XEE・ZOO等六本木系列の大手グループ。メイン14卓・VIP完備。系列店多数で移籍も相談しやすい。</p>
+            <div class="flex gap-2">
+              <a href="/stores/bize-ikebukuro.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- 池袋SEASIDE -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">池袋</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">池袋SEASIDE</h2>
+              </div>
+              <span class="text-xs bg-green-50 text-brand-mintDark font-bold px-3 py-1 rounded-full border border-green-100 shrink-0">年中無休</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">体入時給</span>
+                <span class="font-bold text-gray-800">4,000円〜</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">規模</span>
+                <span class="font-bold text-gray-800">メイン18卓・VIP8卓</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">定休日</span>
+                <span class="font-bold text-brand-mintDark">◯ なし（年中無休）</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">年齢</span>
+                <span class="font-bold text-gray-800">20〜30歳</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">池袋エリア最大級の大箱。年中無休で客付き安定。本腰入れて稼ぎたい子向け。同伴・アフターノルマあり。</p>
+            <div class="flex gap-2">
+              <a href="/stores/seaside-ikebukuro.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- red shoes -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">池袋</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">red shoes（レッドシューズ）</h2>
+              </div>
+              <span class="text-xs bg-gray-100 text-gray-600 font-bold px-3 py-1 rounded-full border border-gray-200 shrink-0">カラオケあり</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">体入時給</span>
+                <span class="font-bold text-gray-800">4,000円〜</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">VIP</span>
+                <span class="font-bold text-gray-800">7部屋</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">衣装代</span>
+                <span class="font-bold text-brand-mintDark">◯ 体入1ヶ月無料</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">年齢</span>
+                <span class="font-bold text-gray-800">20〜32歳</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">2020年開業。カラオケ8卓・VIP7部屋と設備充実。在籍3ヶ月以上で日払い上限10万まで拡大。</p>
+            <div class="flex gap-2">
+              <a href="/stores/red-shoes.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- ノックス -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">池袋</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">ノックス（元イブ）</h2>
+              </div>
+              <span class="text-xs bg-green-50 text-brand-mintDark font-bold px-3 py-1 rounded-full border border-green-100 shrink-0">ノルマ一切なし</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">体入時給</span>
+                <span class="font-bold text-gray-800">3,000円〜</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">ノルマ</span>
+                <span class="font-bold text-brand-mintDark">◯ 全てなし（自己申告制）</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">タトゥー・リスカ</span>
+                <span class="font-bold text-brand-mintDark">◯ 可</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">年齢</span>
+                <span class="font-bold text-gray-800">18〜35歳</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">2024年4月開業。ノルマ・ペナルティ全てなし・寮用意可・ヘアメイク無料。18歳から入店できる深夜店。</p>
+            <div class="flex gap-2">
+              <a href="/stores/nox.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- mezm -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">池袋</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">mezm（元キューブ）</h2>
+              </div>
+              <span class="text-xs bg-gray-100 text-gray-600 font-bold px-3 py-1 rounded-full border border-gray-200 shrink-0">18歳〜</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">体入時給</span>
+                <span class="font-bold text-gray-800">3,000円〜</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">売上バック</span>
+                <span class="font-bold text-brand-mintDark">◯ 最大40万</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">ノルマ</span>
+                <span class="font-bold text-brand-mintDark">◯ なし</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">年齢</span>
+                <span class="font-bold text-gray-800">18〜30歳</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">Edition・Club Venusと同グループ。売上バックが月最大40万の段階制。ノルマなし・タトゥー可・18歳〜。</p>
+            <div class="flex gap-2">
+              <a href="/stores/mezm.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- Club Venus -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">池袋</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">Club Venus（ビーナス）</h2>
+              </div>
+              <span class="text-xs bg-green-50 text-brand-mintDark font-bold px-3 py-1 rounded-full border border-green-100 shrink-0">ノルマ一切なし</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">体入時給</span>
+                <span class="font-bold text-gray-800">3,000円〜</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">ノルマ・ペナルティ</span>
+                <span class="font-bold text-brand-mintDark">◯ 全てなし</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">売上バック</span>
+                <span class="font-bold text-brand-mintDark">◯ 最大40万</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">年齢</span>
+                <span class="font-bold text-gray-800">20〜40歳</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">20〜40歳と池袋では年齢幅が広い。ノルマ・ペナルティ全てなし。小規模アットホームな深夜店。</p>
+            <div class="flex gap-2">
+              <a href="/stores/venus-ikebukuro.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- Kanaloa -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">池袋</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">Kanaloa（カナロア）</h2>
+              </div>
+              <span class="text-xs bg-gray-100 text-gray-600 font-bold px-3 py-1 rounded-full border border-gray-200 shrink-0">2024年新店</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">体入時給</span>
+                <span class="font-bold text-gray-800">3,000円〜</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">送り</span>
+                <span class="font-bold text-brand-mintDark">◯ 10km無料</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">タトゥー</span>
+                <span class="font-bold text-brand-mintDark">◯ ワンポイント可</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">年齢</span>
+                <span class="font-bold text-gray-800">18〜30歳</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">2024年10月開業の深夜新店。送り10km無料。新店ゆえ指名をつかむチャンスが大きい。ノックスと同系列。</p>
+            <div class="flex gap-2">
+              <a href="/stores/kanaloa.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+          <!-- パティーナ -->
+          <div class="bg-white rounded-2xl p-7 card-shadow border border-gray-100">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="text-xs text-brand-mintDark font-bold tracking-widest">池袋</span>
+                <h2 class="text-lg font-bold text-gray-800 mt-1">パティーナ（元マチルダ）</h2>
+              </div>
+              <span class="text-xs bg-pink-50 text-pink-500 font-bold px-3 py-1 rounded-full border border-pink-100 shrink-0">水着キャバ</span>
+            </div>
+            <div class="space-y-2 text-sm mb-5">
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">体入時給</span>
+                <span class="font-bold text-gray-800">4,000円〜</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">タトゥー</span>
+                <span class="font-bold text-brand-mintDark">◯ 可</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">年齢</span>
+                <span class="font-bold text-brand-mintDark">◯ 18〜25歳</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-50 pb-2">
+                <span class="text-gray-500">送り</span>
+                <span class="font-bold text-gray-800">都内〜川崎・横浜</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-5">池袋の水着キャバクラ。18歳〜・タトゥー可。翌4時（週末5時）まで稼働可能。送りが川崎・横浜まで対応。</p>
+            <div class="flex gap-2">
+              <a href="/stores/patina.html" class="flex-1 text-center border border-brand-mintDark text-brand-mintDark text-sm font-bold py-3 rounded-xl hover:bg-green-50 transition-colors">詳細を見る</a>
+              <a href="/index.html#cta" class="flex-1 text-center bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold py-3 rounded-xl transition-colors">LINE相談</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 池袋全店舗リンク -->
+        <div class="mt-8 bg-white rounded-2xl p-6 card-shadow border border-gray-100">
+          <h3 class="text-sm font-bold text-gray-700 mb-4">池袋エリア 全店舗一覧</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <a href="/stores/bize-ikebukuro.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">ビゼ（池袋）</a>
+            <a href="/stores/angel-feather.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">エンジェルフェザー池袋</a>
+            <a href="/stores/seaside-ikebukuro.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">池袋SEASIDE</a>
+            <a href="/stores/red-shoes.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">red shoes</a>
+            <a href="/stores/grande-ikebukuro.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">池袋グランデ</a>
+            <a href="/stores/fairy-ikebukuro.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">フェアリー（池袋）</a>
+            <a href="/stores/patina.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">パティーナ（水着キャバ）</a>
+            <a href="/stores/nox.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">ノックス（元イブ）</a>
+            <a href="/stores/ferris.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">CLUB Ferris（元クラブゼロ）</a>
+            <a href="/stores/gran-class.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">GRAN CLASS（元クラブハマー）</a>
+            <a href="/stores/kanaloa.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">Kanaloa（カナロア）</a>
+            <a href="/stores/hyakka.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">百華（元フォックス）</a>
+            <a href="/stores/airport-ikb.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">エアポートIKBビジネス</a>
+            <a href="/stores/mezm.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">mezm（元キューブ）</a>
+            <a href="/stores/edition.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">Edition（エディション）</a>
+            <a href="/stores/venus-ikebukuro.html" class="text-sm text-gray-600 hover:text-brand-mintDark py-2 border-b border-gray-50">Club Venus（ビーナス）</a>
+          </div>
+        </div>
+
       </div>
 
     </div>
