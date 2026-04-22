@@ -49,6 +49,10 @@
   <style>
     html { scroll-behavior: smooth; }
     h1, h2, h3 { font-family: 'Noto Serif JP', serif; }
+    /* 日本語の不自然な改行を防ぐ */
+    h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
+    .jp-keep { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
+    .jp-nobreak { display: inline-block; }
     .hero-bg {
       background: linear-gradient(135deg, #0d0d0d 0%, #1a1510 60%, #1a1015 100%);
     }
@@ -321,11 +325,13 @@
         </div>
 
         <!-- ⑤GRACE SELECTION -->
-        <div class="bg-brand-dark rounded-xl p-7 card-shadow-md border border-brand-gold/30 flex flex-col relative shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
-          <div class="absolute top-4 right-4 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded tracking-wide">当サービス</div>
+        <div class="bg-brand-dark rounded-xl p-7 card-shadow-md border border-brand-gold/30 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
+          <div class="mb-4">
+            <span class="inline-block bg-brand-gold text-white text-[10px] font-bold px-2.5 py-1 rounded tracking-widest">当サービス</span>
+          </div>
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-brand-gold/20 flex items-center justify-center shrink-0 text-xs font-bold text-brand-gold">05</div>
-            <h3 class="font-serif font-bold text-white">GRACE SELECTION<br/><span class="text-xs font-sans font-normal text-brand-gold">専属エージェント型</span></h3>
+            <h3 class="font-serif font-bold text-white jp-keep">GRACE SELECTION<br/><span class="text-xs font-sans font-normal text-brand-gold">専属エージェント型</span></h3>
           </div>
           <div class="space-y-4 text-sm flex-1">
             <div>
@@ -626,14 +632,11 @@
 
         <!-- 上部：アイコン＋名前 -->
         <div class="flex flex-col items-center mb-10 pb-10 border-b border-gray-100">
-          <div class="w-24 h-24 rounded-full bg-gray-100 border border-gray-200 shadow-sm mb-5 flex flex-col items-center justify-center overflow-hidden">
-            <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-            </svg>
-            <span class="text-xs text-gray-300 mt-1">似顔絵<br/>ここに</span>
+          <div class="w-28 h-28 rounded-full bg-brand-charcoal border-2 border-brand-gold/40 shadow-sm mb-5 overflow-hidden">
+            <img src="/assets/profile-avatar.jpg" alt="スカウトエージェント ぞの" class="w-full h-full object-cover" loading="lazy" />
           </div>
           <p class="text-xs text-brand-gold font-bold tracking-widest mb-1.5">SPECIALIST SCOUT AGENT</p>
-          <h3 class="text-xl font-serif font-bold text-gray-900">専属サポートスカウト：ぞの</h3>
+          <h3 class="text-xl font-serif font-bold text-gray-900 text-center">専属サポートスカウト<span class="jp-nobreak">：ぞの</span></h3>
         </div>
 
         <!-- 経歴ブロック -->
