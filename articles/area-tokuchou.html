@@ -20,7 +20,7 @@
       theme: {
         extend: {
           colors: {
-            brand: { mint:'#a7f3d0', mintDark:'#34d399', pink:'#fce7f3', pinkDark:'#f472b6', line:'#C13584', lineDark:'#833AB4' }
+            brand: { mint:'#a7f3d0', mintDark:'#34d399', gold:'#c9a96e', dark:'#0d0d0d', line:'#C13584', lineDark:'#833AB4' }
           },
           fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }
         }
@@ -28,10 +28,10 @@
     }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     html { scroll-behavior: smooth; }
-    .card-shadow { box-shadow: 0 4px 24px rgba(0,0,0,0.07); }
+    .card-shadow { box-shadow: 0 2px 20px rgba(0,0,0,0.5); }
     .article-body h2 { font-size:1.2rem; font-weight:700; color:#1f2937; margin-top:2.5rem; margin-bottom:1rem; padding-left:0.75rem; border-left:3px solid #34d399; }
     .article-body h3 { font-size:1rem; font-weight:700; color:#374151; margin-top:1.75rem; margin-bottom:0.75rem; }
     .article-body p { font-size:0.925rem; line-height:2; color:#4b5563; margin-bottom:1rem; }
@@ -40,17 +40,17 @@
     .article-body strong { color:#111827; font-weight:700; }
   </style>
 </head>
-<body class="font-sans text-gray-700 bg-gray-50">
+<body class="font-sans text-gray-200 bg-[#0d0d0d]">
 
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
-    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
-      <a href="/index.html" class="text-brand-mintDark font-bold text-base tracking-wide">GRACE SELECTION</a>
-      <nav class="flex items-center gap-6 text-sm font-medium text-gray-600">
-        <a href="/index.html" class="hover:text-brand-mintDark transition-colors">トップ</a>
-        <a href="/stores/index.html" class="hover:text-brand-mintDark transition-colors">店舗・求人</a>
-        <a href="/articles/index.html" class="text-brand-mintDark font-bold transition-colors">記事</a>
-        <a href="/about.html" class="hover:text-brand-mintDark transition-colors">ぞのとは</a>
-        <a href="/index.html#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-4 py-2 rounded-full transition-colors">Instagram相談</a>
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0d0d0d]/95 backdrop-blur border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
+      <a href="/index.html" class="text-[#c9a96e] font-bold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE SELECTION</a>
+      <nav class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
+        <a href="/index.html" class="hover:text-white transition-colors">トップ</a>
+        <a href="/stores/index.html" class="hover:text-white transition-colors">店舗・求人</a>
+        <a href="/articles/index.html" class="text-white font-bold transition-colors">記事</a>
+        <a href="/about.html" class="hover:text-white transition-colors">ぞのとは</a>
+        <a href="/index.html#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded transition-colors whitespace-nowrap">Instagram相談</a>
       </nav>
     </div>
   </header>
@@ -172,21 +172,21 @@
             <span class="w-8 h-8 rounded-full bg-brand-mintDark text-white text-sm font-bold flex items-center justify-center shrink-0">1</span>
             <div>
               <p class="font-bold text-gray-800 mb-1 text-sm">何を優先するか（時給 vs 安定 vs 客単価）</p>
-              <p class="text-xs text-gray-500 leading-relaxed">短期で稼ぎたいなら六本木・新宿。長く安定して働きたいなら上野。</p>
+              <p class="text-xs text-gray-400 leading-relaxed">短期で稼ぎたいなら六本木・新宿。長く安定して働きたいなら上野。</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
             <span class="w-8 h-8 rounded-full bg-brand-mintDark text-white text-sm font-bold flex items-center justify-center shrink-0">2</span>
             <div>
               <p class="font-bold text-gray-800 mb-1 text-sm">自分のキャラクターとエリアの客層が合うか</p>
-              <p class="text-xs text-gray-500 leading-relaxed">どれだけ良い店でも、自分のキャラが客層に合わないと指名が取れない。</p>
+              <p class="text-xs text-gray-400 leading-relaxed">どれだけ良い店でも、自分のキャラが客層に合わないと指名が取れない。</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
             <span class="w-8 h-8 rounded-full bg-brand-mintDark text-white text-sm font-bold flex items-center justify-center shrink-0">3</span>
             <div>
               <p class="font-bold text-gray-800 mb-1 text-sm">交通アクセスと出勤頻度</p>
-              <p class="text-xs text-gray-500 leading-relaxed">遠いエリアは交通費・終電・タクシー代がかさみ、実質的な収入が下がることがある。</p>
+              <p class="text-xs text-gray-400 leading-relaxed">遠いエリアは交通費・終電・タクシー代がかさみ、実質的な収入が下がることがある。</p>
             </div>
           </div>
         </div>
@@ -230,10 +230,10 @@
     </div>
   </section>
 
-  <section class="py-16 px-6 bg-gradient-to-br from-green-50 via-white to-pink-50 mt-4">
+  <section class="py-16 px-6 bg-[#111111] mt-4">
     <div class="max-w-xl mx-auto text-center">
       <h2 class="text-xl font-bold text-gray-800 mb-3">自分に合うエリア・お店を一緒に探しませんか？</h2>
-      <p class="text-sm text-gray-500 leading-relaxed mb-8">ヒアリングをもとに、あなたのキャラクターに合ったエリアとお店をご提案します。</p>
+      <p class="text-sm text-gray-400 leading-relaxed mb-8">ヒアリングをもとに、あなたのキャラクターに合ったエリアとお店をご提案します。</p>
       <a href="/index.html#cta" class="inline-flex items-center gap-3 bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold px-8 py-4 rounded-full shadow-lg transition-all duration-200">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
         Instagramで無料相談する
@@ -241,7 +241,7 @@
     </div>
   </section>
 
-  <footer class="py-8 px-6 bg-gray-800 text-center">
+  <footer class="py-8 px-6 bg-[#0a0a0a] text-center">
     <p class="text-gray-400 text-xs">© 2026 GRACE SELECTION. All rights reserved.</p>
   </footer>
 </body>
