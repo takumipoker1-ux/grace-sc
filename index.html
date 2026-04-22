@@ -204,18 +204,28 @@
   </section>
 
   <!-- ========== SCOUT TYPES ========== -->
-  <section class="py-24 px-6 section-alt">
+  <section class="py-24 section-alt">
     <div class="max-w-5xl mx-auto">
-      <div class="mb-14">
+      <div class="mb-8 px-6">
         <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— SCOUT TYPES</p>
         <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">スカウトの種類と特徴</h2>
         <p class="text-gray-500 text-sm mt-3">どのスカウトにも良い面・悪い面があります。違いを知った上で、選んでください。</p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- タブナビ（モバイルでスキップ用） -->
+      <div class="flex gap-2 px-6 mb-5 overflow-x-auto" style="scrollbar-width:none;-ms-overflow-style:none;">
+        <button onclick="scoutTab(0)" id="stab-0" class="stab active-stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#c9a96e;color:#fff;background:#c9a96e;">路上</button>
+        <button onclick="scoutTab(1)" id="stab-1" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#e5e7eb;color:#6b7280;background:transparent;">SNS</button>
+        <button onclick="scoutTab(2)" id="stab-2" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#e5e7eb;color:#6b7280;background:transparent;">色管</button>
+        <button onclick="scoutTab(3)" id="stab-3" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#e5e7eb;color:#6b7280;background:transparent;">高還元</button>
+        <button onclick="scoutTab(4)" id="stab-4" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#e5e7eb;color:#6b7280;background:transparent;">GRACE</button>
+      </div>
+
+      <!-- カルーセル（モバイル横スワイプ / デスクトップはグリッド） -->
+      <div id="scout-carousel" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 overflow-x-auto px-6 pb-4" style="scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;">
 
         <!-- ①路上スカウト -->
-        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col">
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">01</div>
             <h3 class="font-serif font-bold text-gray-900">路上スカウト</h3>
@@ -239,7 +249,7 @@
         </div>
 
         <!-- ②SNSスカウト -->
-        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col">
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">02</div>
             <h3 class="font-serif font-bold text-gray-900">SNSスカウト（DM型）</h3>
@@ -263,7 +273,7 @@
         </div>
 
         <!-- ③色管スカウト -->
-        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col">
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">03</div>
             <h3 class="font-serif font-bold text-gray-900">色管スカウト</h3>
@@ -287,7 +297,7 @@
         </div>
 
         <!-- ④高還元スカウト -->
-        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col">
+        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">04</div>
             <h3 class="font-serif font-bold text-gray-900">高還元スカウト</h3>
@@ -311,7 +321,7 @@
         </div>
 
         <!-- ⑤GRACE SELECTION -->
-        <div class="bg-brand-dark rounded-xl p-7 card-shadow-md border border-brand-gold/30 flex flex-col relative">
+        <div class="bg-brand-dark rounded-xl p-7 card-shadow-md border border-brand-gold/30 flex flex-col relative shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
           <div class="absolute top-4 right-4 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded tracking-wide">当サービス</div>
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-brand-gold/20 flex items-center justify-center shrink-0 text-xs font-bold text-brand-gold">05</div>
@@ -339,6 +349,35 @@
       </div>
     </div>
   </section>
+  <script>
+    (function(){
+      var car = document.getElementById('scout-carousel');
+      var tabs = document.querySelectorAll('.stab');
+      function setTab(i){
+        tabs.forEach(function(t,j){
+          if(i===j){
+            t.style.background='#c9a96e'; t.style.color='#fff'; t.style.borderColor='#c9a96e';
+          } else {
+            t.style.background='transparent'; t.style.color='#6b7280'; t.style.borderColor='#e5e7eb';
+          }
+        });
+      }
+      window.scoutTab = function(i){
+        var cards = car.querySelectorAll(':scope > div');
+        if(window.innerWidth < 768 && cards[i]){
+          car.scrollTo({left: cards[i].offsetLeft - 24, behavior:'smooth'});
+        }
+        setTab(i);
+      };
+      car.addEventListener('scroll', function(){
+        var cards = car.querySelectorAll(':scope > div');
+        if(!cards.length) return;
+        var cw = cards[0].offsetWidth + 20;
+        var active = Math.min(Math.round(car.scrollLeft / cw), cards.length-1);
+        setTab(active);
+      });
+    })();
+  </script>
 
   <!-- ========== COMPARISON ========== -->
   <section class="py-24 px-6 bg-white">
