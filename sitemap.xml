@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://grace-sc.com/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://grace-sc.com/articles/area-kyakusou-hikaku.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/area-tokuchou.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/cabaret-vs-lounge.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/hirusyoku-barenai.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -8,20 +9,27 @@
   <url><loc>https://grace-sc.com/articles/ijyu-checklist.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/ikebukuro-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://grace-sc.com/articles/iwaikin-kangen-wana.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/kabukicho-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://grace-sc.com/articles/kinshicho-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/kakuteishinkoku.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://grace-sc.com/articles/kinshicho-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://grace-sc.com/articles/kurofuku-rikai.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://grace-sc.com/articles/kyakutanka-jikyu.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/kyujin-site-jouken.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://grace-sc.com/articles/menhera-kouzou.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/mensetsu-ukaru.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/miken-yarubekikoto.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/noruma-penalty.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/saitama-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://grace-sc.com/articles/scout-kangen-kiken.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/scout-mikiburi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://grace-sc.com/articles/seko-mindset.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/shimei-3months.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/shimei-tips.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/taiken-nagare.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/toraburu-taisei.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/tsuki-hyakuman.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://grace-sc.com/articles/tsuzukeru-chikara.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/ueno-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/uriage-ageru-mindset.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://grace-sc.com/articles/wwork.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
