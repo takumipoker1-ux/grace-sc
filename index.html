@@ -134,8 +134,8 @@
   <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur border-b border-white/10">
     <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
       <a href="/index.html" class="text-brand-gold font-serif font-semibold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE SELECTION</a>
-      <nav class="flex items-center gap-3 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
-        <a href="/index.html" class="hover:text-white transition-colors whitespace-nowrap">トップ</a>
+      <nav class="flex items-center gap-2.5 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
+        <a href="/index.html" class="hover:text-white transition-colors whitespace-nowrap hidden sm:inline">トップ</a>
         <a href="/stores/index.html" class="hover:text-white transition-colors whitespace-nowrap">店舗・求人</a>
         <a href="/articles/index.html" class="hover:text-white transition-colors whitespace-nowrap">記事</a>
         <a href="/about.html" class="hover:text-white transition-colors whitespace-nowrap">ぞのとは</a>
@@ -451,8 +451,9 @@
         <p class="text-gray-500 text-sm mt-3">選択肢を並べると、差は一目瞭然です。</p>
       </div>
 
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm border-separate" style="border-spacing: 0;">
+      <p class="md:hidden text-xs text-gray-400 text-right mb-2">← スワイプして比較 →</p>
+      <div class="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+        <table class="w-full text-sm border-separate" style="border-spacing: 0; min-width: 600px;">
           <thead>
             <tr>
               <th class="text-left px-5 py-4 text-gray-400 font-normal w-2/5"></th>
