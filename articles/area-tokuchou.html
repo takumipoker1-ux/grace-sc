@@ -16,19 +16,7 @@
   <meta name="twitter:description" content="新宿・池袋・錦糸町・上野・六本木など、エリアごとのキャバクラの特徴・客層・稼ぎやすさを徹底比較。" />
   <link rel="canonical" href="https://grace-sc.com/articles/area-tokuchou.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>六本木・新宿・上野、キャバクラエリア別の特徴と向いている人【2026年版】｜GRACE SELECTION</title>  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: { mint:'#a7f3d0', mintDark:'#34d399', gold:'#c9a96e', dark:'#0d0d0d', line:'#C13584', lineDark:'#833AB4' }
-          },
-          fontFamily: { sans: ['"Noto Sans JP"', 'sans-serif'] }
-        }
-      }
-    }
-  </script>
+  <title>六本木・新宿・上野、キャバクラエリア別の特徴と向いている人【2026年版】｜GRACE SELECTION</title>  <link rel="stylesheet" href="/assets/tailwind.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -64,12 +52,31 @@
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#0d0d0d]/95 backdrop-blur border-b border-white/10">
     <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
       <a href="/index.html" class="text-[#c9a96e] font-bold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE SELECTION</a>
-      <nav class="flex items-center gap-2.5 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
+      <nav class="hidden sm:flex items-center gap-2.5 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
         <a href="/index.html" class="hover:text-white transition-colors hidden sm:inline">トップ</a>
         <a href="/stores/index.html" class="hover:text-white transition-colors">店舗・求人</a>
         <a href="/articles/index.html" class="text-white font-bold transition-colors">記事</a>
         <a href="/about.html" class="hover:text-white transition-colors">ぞのとは</a>
         <a href="/index.html#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded transition-colors whitespace-nowrap">Instagram相談</a>
+      </nav>
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="sm:hidden text-gray-300 p-2 -mr-2" aria-label="メニューを開く">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+    </div>
+  
+    <div id="mobile-menu" class="hidden sm:hidden fixed inset-0 z-[60] bg-[#0d0d0d]" onclick="if(event.target.id==='mobile-menu')toggleMobileMenu()">
+      <div class="flex justify-end p-3">
+        <button onclick="toggleMobileMenu()" class="text-gray-300 p-2" aria-label="閉じる">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="px-8 pt-4 flex flex-col gap-1 text-white text-base font-medium">
+        <a href="/index.html" class="py-4 border-b border-white/10 hover:text-[#c9a96e] transition-colors">トップ</a>
+        <a href="/stores/index.html" class="py-4 border-b border-white/10 hover:text-[#c9a96e] transition-colors">店舗・求人</a>
+        <a href="/articles/index.html" class="py-4 border-b border-white/10 hover:text-[#c9a96e] transition-colors">記事</a>
+        <a href="/about.html" class="py-4 border-b border-white/10 hover:text-[#c9a96e] transition-colors">ぞのとは</a>
+        <a href="/privacy.html" class="py-4 border-b border-white/10 text-gray-400 hover:text-[#c9a96e] transition-colors text-sm">プライバシーポリシー</a>
+        <a href="/index.html#cta" class="mt-6 bg-[#C13584] hover:bg-[#833AB4] text-white text-center font-bold py-4 rounded transition-colors">Instagramで相談する</a>
       </nav>
     </div>
   </header>

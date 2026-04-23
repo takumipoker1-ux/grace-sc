@@ -16,29 +16,7 @@
   <meta name="twitter:description" content="キャバクラ体入の流れ・お店選びのコツ・稼ぎ方まで現場スカウトが解説。" />
   <link rel="canonical" href="https://grace-sc.com/articles/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>記事一覧｜GRACE SELECTION</title>  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              mint:    '#a7f3d0',
-              mintDark:'#34d399',
-              gold:    '#c9a96e',
-              dark:    '#0d0d0d',
-              line:    '#C13584',
-              lineDark:'#833AB4',
-            }
-          },
-          fontFamily: {
-            sans: ['"Noto Sans JP"', 'sans-serif'],
-            serif: ['"Noto Serif JP"', 'serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <title>記事一覧｜GRACE SELECTION</title>  <link rel="stylesheet" href="/assets/tailwind.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -57,12 +35,31 @@
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#0d0d0d]/95 backdrop-blur border-b border-white/10">
     <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
       <a href="/index.html" class="text-[#c9a96e] font-bold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE SELECTION</a>
-      <nav class="flex items-center gap-2.5 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
+      <nav class="hidden sm:flex items-center gap-2.5 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
         <a href="/index.html" class="hover:text-white transition-colors whitespace-nowrap hidden sm:inline">トップ</a>
         <a href="/stores/index.html" class="hover:text-white transition-colors whitespace-nowrap">店舗・求人</a>
         <a href="/articles/index.html" class="text-white font-bold transition-colors whitespace-nowrap">記事</a>
         <a href="/about.html" class="hover:text-white transition-colors whitespace-nowrap">ぞのとは</a>
         <a href="/index.html#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded transition-colors whitespace-nowrap">Instagram相談</a>
+      </nav>
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="sm:hidden text-gray-300 p-2 -mr-2" aria-label="メニューを開く">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+    </div>
+  
+    <div id="mobile-menu" class="hidden sm:hidden fixed inset-0 z-[60] bg-[#0d0d0d]" onclick="if(event.target.id==='mobile-menu')toggleMobileMenu()">
+      <div class="flex justify-end p-3">
+        <button onclick="toggleMobileMenu()" class="text-gray-300 p-2" aria-label="閉じる">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="px-8 pt-4 flex flex-col gap-1 text-white text-base font-medium">
+        <a href="/index.html" class="py-4 border-b border-white/10 hover:text-[#c9a96e] transition-colors">トップ</a>
+        <a href="/stores/index.html" class="py-4 border-b border-white/10 hover:text-[#c9a96e] transition-colors">店舗・求人</a>
+        <a href="/articles/index.html" class="py-4 border-b border-white/10 hover:text-[#c9a96e] transition-colors">記事</a>
+        <a href="/about.html" class="py-4 border-b border-white/10 hover:text-[#c9a96e] transition-colors">ぞのとは</a>
+        <a href="/privacy.html" class="py-4 border-b border-white/10 text-gray-400 hover:text-[#c9a96e] transition-colors text-sm">プライバシーポリシー</a>
+        <a href="/index.html#cta" class="mt-6 bg-[#C13584] hover:bg-[#833AB4] text-white text-center font-bold py-4 rounded transition-colors">Instagramで相談する</a>
       </nav>
     </div>
   </header>
@@ -407,7 +404,7 @@
         <!-- 記事24: 還元スカウトの罠 -->
         <a href="/articles/scout-kangen-kiken.html" data-category="スカウト選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
-          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/scout-kangen-kiken.jpg" alt="" class="w-full h-full object-cover" /></div>
+          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/scout-kangen-kiken.webp" alt="" class="w-full h-full object-cover" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-[#c9a96e]/10 text-[#c9a96e] font-bold px-2 py-0.5 rounded-full">スカウト選び</span></div>
             <h2 class="font-bold text-white text-base leading-snug mb-2 group-hover:text-[#c9a96e] transition-colors">【知らないと損】"高還元スカウト"を選んだ子の3ヶ月後</h2>
@@ -419,7 +416,7 @@
         <!-- 記事25: 継続力 -->
         <a href="/articles/tsuzukeru-chikara.html" data-category="マインド"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
-          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/tsuzukeru-chikara.jpg" alt="" class="w-full h-full object-cover" /></div>
+          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/tsuzukeru-chikara.webp" alt="" class="w-full h-full object-cover" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-[#C13584]/10 text-[#C13584] font-bold px-2 py-0.5 rounded-full">マインド</span></div>
             <h2 class="font-bold text-white text-base leading-snug mb-2 group-hover:text-[#c9a96e] transition-colors">300人見てわかった、3年続く子がやってる"たった1つ"</h2>
@@ -431,7 +428,7 @@
         <!-- 記事26: セコいマインド -->
         <a href="/articles/seko-mindset.html" data-category="マインド"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
-          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/seko-mindset.jpg" alt="" class="w-full h-full object-cover" /></div>
+          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/seko-mindset.webp" alt="" class="w-full h-full object-cover" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-[#C13584]/10 text-[#C13584] font-bold px-2 py-0.5 rounded-full">マインド</span></div>
             <h2 class="font-bold text-white text-base leading-snug mb-2 group-hover:text-[#c9a96e] transition-colors">なぜ売上が上がらないのか。答えは"この感覚"だった</h2>
@@ -443,7 +440,7 @@
         <!-- 記事27: 黒服 -->
         <a href="/articles/kurofuku-rikai.html" data-category="現場の知恵"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
-          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/kurofuku-rikai.jpg" alt="" class="w-full h-full object-cover" /></div>
+          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/kurofuku-rikai.webp" alt="" class="w-full h-full object-cover" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">現場の知恵</span></div>
             <h2 class="font-bold text-white text-base leading-snug mb-2 group-hover:text-[#c9a96e] transition-colors">"使えない黒服"と働く子の損失は、月10万を超える</h2>
@@ -455,7 +452,7 @@
         <!-- 記事28: メンヘラ構造 -->
         <a href="/articles/menhera-kouzou.html" data-category="マインド"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
-          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/menhera-kouzou.jpg" alt="" class="w-full h-full object-cover" /></div>
+          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/menhera-kouzou.webp" alt="" class="w-full h-full object-cover" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-[#C13584]/10 text-[#C13584] font-bold px-2 py-0.5 rounded-full">マインド</span></div>
             <h2 class="font-bold text-white text-base leading-snug mb-2 group-hover:text-[#c9a96e] transition-colors">メンヘラな子が業界を去る理由は、根性論じゃない</h2>
@@ -467,7 +464,7 @@
         <!-- 記事29: 客単価と時給 -->
         <a href="/articles/kyakutanka-jikyu.html" data-category="業界知識"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
-          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/kyakutanka-jikyu.jpg" alt="" class="w-full h-full object-cover" /></div>
+          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/kyakutanka-jikyu.webp" alt="" class="w-full h-full object-cover" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-[#C13584]/10 text-[#C13584] font-bold px-2 py-0.5 rounded-full">業界知識</span></div>
             <h2 class="font-bold text-white text-base leading-snug mb-2 group-hover:text-[#c9a96e] transition-colors">時給4,000円の裏側。"客単価"で9割決まる事実</h2>
@@ -479,7 +476,7 @@
         <!-- 記事30: エリア客層比較 -->
         <a href="/articles/area-kyakusou-hikaku.html" data-category="お店選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
-          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/area-kyakusou-hikaku.jpg" alt="" class="w-full h-full object-cover" /></div>
+          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/area-kyakusou-hikaku.webp" alt="" class="w-full h-full object-cover" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">お店選び</span></div>
             <h2 class="font-bold text-white text-base leading-snug mb-2 group-hover:text-[#c9a96e] transition-colors">【エリア比較】新宿・上野・歌舞伎町で稼げる子は違う</h2>
@@ -491,7 +488,7 @@
         <!-- 記事31: 祝い金の罠 -->
         <a href="/articles/iwaikin-kangen-wana.html" data-category="スカウト選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
-          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/iwaikin-kangen-wana.jpg" alt="" class="w-full h-full object-cover" /></div>
+          <div class="h-36 overflow-hidden"><img src="/assets/thumbnails/iwaikin-kangen-wana.webp" alt="" class="w-full h-full object-cover" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-[#c9a96e]/10 text-[#c9a96e] font-bold px-2 py-0.5 rounded-full">スカウト選び</span></div>
             <h2 class="font-bold text-white text-base leading-snug mb-2 group-hover:text-[#c9a96e] transition-colors">"祝い金20万"の罠。ほとんどの子がもらえない真実</h2>
