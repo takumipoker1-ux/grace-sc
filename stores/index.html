@@ -93,19 +93,43 @@
       <div class="bg-gradient-to-b from-[#0f1518] to-[#0a0f12] border border-white/10 rounded-2xl p-3 md:p-5 overflow-hidden">
         <div class="relative w-full">
           <svg viewBox="0 0 540 410" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-            <!-- region hint backgrounds -->
-            <rect x="20" y="15" width="450" height="125" rx="14" fill="#1a2a3a" fill-opacity="0.35" stroke="#4A90E2" stroke-opacity="0.25" stroke-dasharray="3 3" />
-            <text x="40" y="35" fill="#4A90E2" font-size="11" font-weight="700" opacity="0.7" class="select-none">埼玉</text>
+            <defs>
+              <linearGradient id="gSaitama" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1e3550" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#152538" stop-opacity="0.55"/>
+              </linearGradient>
+              <linearGradient id="gTokyo" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#262626" stop-opacity="0.85"/>
+                <stop offset="100%" stop-color="#1a1a1a" stop-opacity="0.7"/>
+              </linearGradient>
+              <linearGradient id="gWest" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1c3525" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#142a1c" stop-opacity="0.55"/>
+              </linearGradient>
+              <linearGradient id="gBay" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1a3a55" stop-opacity="0.45"/>
+                <stop offset="100%" stop-color="#0e2438" stop-opacity="0.35"/>
+              </linearGradient>
+            </defs>
 
-            <rect x="200" y="155" width="320" height="240" rx="14" fill="#1a1a1a" fill-opacity="0.45" stroke="#ffffff" stroke-opacity="0.1" stroke-dasharray="3 3" />
-            <text x="495" y="175" fill="#fff" font-size="11" font-weight="700" opacity="0.5" text-anchor="end" class="select-none">東京23区</text>
+            <!-- 東京湾 (Tokyo Bay) -->
+            <path d="M 470,205 Q 520,235 530,290 Q 535,360 510,405 L 380,405 Q 410,380 425,335 Q 445,290 460,250 Q 465,225 470,205 Z" fill="url(#gBay)" stroke="#4A90E2" stroke-opacity="0.3" stroke-width="0.8" />
+            <text x="495" y="340" fill="#4A90E2" font-size="9" font-weight="700" opacity="0.6" text-anchor="middle" class="select-none" transform="rotate(75 495 340)">東 京 湾</text>
 
-            <rect x="20" y="200" width="170" height="190" rx="14" fill="#142a1a" fill-opacity="0.4" stroke="#5BB47A" stroke-opacity="0.22" stroke-dasharray="3 3" />
-            <text x="35" y="220" fill="#5BB47A" font-size="11" font-weight="700" opacity="0.7" class="select-none">西東京</text>
+            <!-- 埼玉県 (rough outline, north blob with bumpy southern border touching Tokyo) -->
+            <path d="M 30,15 Q 100,5 200,8 Q 280,5 360,12 Q 440,8 510,18 Q 505,55 495,90 Q 485,120 470,140 Q 450,148 425,142 Q 395,140 370,135 L 350,128 Q 330,135 305,128 L 280,120 Q 255,128 230,118 L 210,135 Q 185,128 165,115 L 145,108 Q 120,118 95,105 L 80,90 Q 55,80 35,60 Q 25,40 30,15 Z" fill="url(#gSaitama)" stroke="#4A90E2" stroke-opacity="0.45" stroke-width="1.2" />
+            <text x="55" y="33" fill="#4A90E2" font-size="12" font-weight="800" opacity="0.85" class="select-none">埼玉</text>
 
-            <!-- Tokyo Bay hint -->
-            <path d="M 410,395 Q 470,360 510,395 L 510,395 Z" fill="#4A90E2" fill-opacity="0.15" />
-            <text x="475" y="385" fill="#4A90E2" font-size="9" font-weight="600" opacity="0.5" text-anchor="middle" class="select-none">東京湾</text>
+            <!-- 東京23区 (rough outline, central blob) -->
+            <path d="M 165,150 Q 200,138 240,142 Q 280,138 320,145 Q 360,140 400,148 Q 440,150 470,160 Q 478,180 472,205 Q 465,235 450,260 Q 440,290 425,320 Q 405,355 375,380 Q 350,398 320,400 Q 285,400 250,392 Q 215,383 190,365 Q 175,335 172,305 Q 168,275 170,245 Q 165,210 165,180 Q 162,162 165,150 Z" fill="url(#gTokyo)" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.2" />
+            <text x="465" y="172" fill="#fff" font-size="11" font-weight="800" opacity="0.55" text-anchor="end" class="select-none">東京23区</text>
+
+            <!-- 山手線 hint (subtle inner ring) -->
+            <ellipse cx="320" cy="245" rx="80" ry="55" fill="none" stroke="#7fbf6f" stroke-opacity="0.18" stroke-width="0.8" stroke-dasharray="2 4" />
+
+            <!-- 西東京 (separate blob to the west) -->
+            <path d="M 18,210 Q 60,200 110,205 Q 150,210 175,225 Q 178,255 172,285 Q 168,320 158,355 Q 138,375 110,378 Q 75,378 50,368 Q 25,355 15,330 Q 12,295 14,265 Q 14,232 18,210 Z" fill="url(#gWest)" stroke="#5BB47A" stroke-opacity="0.45" stroke-width="1.2" />
+            <text x="35" y="225" fill="#5BB47A" font-size="11" font-weight="800" opacity="0.8" class="select-none">西東京</text>
 
             <!-- pins -->
     <g class="map-pin cursor-pointer" data-tab="saitama" data-label="川越">
@@ -181,8 +205,8 @@
       <text x="415" y="166" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" style="paint-order:stroke;stroke:#0d0d0d;stroke-width:2.5;stroke-linejoin:round" class="pointer-events-none select-none">北千住</text>
     </g>
     <g class="map-pin cursor-pointer" data-tab="tokyoother" data-label="竹ノ塚">
-      <circle cx="430" cy="145" r="6" fill="#8A8A8A" stroke="#0d0d0d" stroke-width="1.5" class="transition-all" />
-      <text x="430" y="136" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" style="paint-order:stroke;stroke:#0d0d0d;stroke-width:2.5;stroke-linejoin:round" class="pointer-events-none select-none">竹ノ塚</text>
+      <circle cx="425" cy="158" r="6" fill="#8A8A8A" stroke="#0d0d0d" stroke-width="1.5" class="transition-all" />
+      <text x="425" y="149" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" style="paint-order:stroke;stroke:#0d0d0d;stroke-width:2.5;stroke-linejoin:round" class="pointer-events-none select-none">竹ノ塚</text>
     </g>
     <g class="map-pin cursor-pointer" data-tab="tokyoother" data-label="西日暮里">
       <circle cx="380" cy="200" r="6" fill="#8A8A8A" stroke="#0d0d0d" stroke-width="1.5" class="transition-all" />
@@ -201,8 +225,8 @@
       <text x="430" y="241" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" style="paint-order:stroke;stroke:#0d0d0d;stroke-width:2.5;stroke-linejoin:round" class="pointer-events-none select-none">錦糸町</text>
     </g>
     <g class="map-pin cursor-pointer" data-tab="tokyoother" data-label="小岩">
-      <circle cx="500" cy="250" r="6" fill="#8A8A8A" stroke="#0d0d0d" stroke-width="1.5" class="transition-all" />
-      <text x="500" y="241" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" style="paint-order:stroke;stroke:#0d0d0d;stroke-width:2.5;stroke-linejoin:round" class="pointer-events-none select-none">小岩</text>
+      <circle cx="465" cy="240" r="6" fill="#8A8A8A" stroke="#0d0d0d" stroke-width="1.5" class="transition-all" />
+      <text x="465" y="231" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" style="paint-order:stroke;stroke:#0d0d0d;stroke-width:2.5;stroke-linejoin:round" class="pointer-events-none select-none">小岩</text>
     </g>
     <g class="map-pin cursor-pointer" data-tab="central" data-label="赤坂">
       <circle cx="320" cy="270" r="6" fill="#E26060" stroke="#0d0d0d" stroke-width="1.5" class="transition-all" />
