@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  <rect x="0" y="0" width="6" height="630" fill="#c9a96e"/>
+  <text x="80" y="100" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="20" letter-spacing="6" fill="#c9a96e" font-weight="500">— SCOUT SELECTION</text>
+  <text x="80" y="290" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic Medium','Meiryo',sans-serif" font-size="64" font-weight="700" fill="#ffffff">移籍の</text>
+  <text x="80" y="368" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic Medium','Meiryo',sans-serif" font-size="64" font-weight="700" fill="#c9a96e">ベストタイミング5パターン</text>
+  <text x="80" y="438" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="22" fill="#9ca3af" font-weight="400">夜職で移籍を考える時、どのタイミングが最適か。動くべき5つのパターンと、</text>
+  <line x1="80" y1="555" x2="200" y2="555" stroke="#c9a96e" stroke-width="2"/>
+  <text x="80" y="595" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="18" fill="#c9a96e" letter-spacing="2" font-weight="500">GRACE SELECTION ｜ grace-sc.com</text>
+</svg>
