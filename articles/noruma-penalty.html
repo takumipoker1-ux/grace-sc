@@ -190,8 +190,11 @@
       </div>
 
       <div class="mt-12 pt-8 border-t border-white/10 flex items-center gap-4">
-        <div class="w-12 h-12 rounded-full bg-brand-mintDark/20 flex items-center justify-center shrink-0">
-          <svg class="w-6 h-6 text-brand-mintDark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-brand-mintDark/40">
+          <picture>
+            <source srcset="/assets/profile-avatar.webp" type="image/webp" />
+            <img src="/assets/profile-avatar.jpg" alt="ぞの" class="w-full h-full object-cover" loading="lazy" />
+          </picture>
         </div>
         <div>
           <p class="text-xs text-gray-400">この記事を書いた人</p>
@@ -226,8 +229,11 @@
   <section class="py-12 px-6 bg-[#0d0d0d] border-y border-white/10">
     <div class="max-w-2xl mx-auto">
       <div class="flex items-start gap-5">
-        <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-[#c9a96e] to-[#a8884f] border-2 border-[#c9a96e]/40 flex items-center justify-center">
-          <span class="text-[#0d0d0d] font-serif font-bold text-2xl md:text-3xl">Z</span>
+        <div class="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-[#c9a96e]/40">
+          <picture>
+            <source srcset="/assets/profile-avatar.webp" type="image/webp" />
+            <img src="/assets/profile-avatar.jpg" alt="ぞの" class="w-full h-full object-cover" loading="lazy" />
+          </picture>
         </div>
         <div class="flex-1 min-w-0">
           <p class="text-[#c9a96e] text-[10px] font-bold tracking-widest mb-1">&mdash; WRITTEN BY</p>
