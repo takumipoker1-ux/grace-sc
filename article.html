@@ -26,7 +26,6 @@
     h1, h2, h3 { font-family: 'Noto Serif JP', serif; }
     h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
     .jp-keep { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
-    .hero-bg { background: linear-gradient(135deg, #0d0d0d 0%, #1a1510 60%, #1a1015 100%); }
     .article-body h1 { font-size:1.5rem; font-weight:700; color:#fff; margin-top:2rem; margin-bottom:1.25rem; }
     .article-body h2 { font-size:1.2rem; font-weight:700; color:#fff; margin-top:2.5rem; margin-bottom:1rem; padding-left:0.75rem; border-left:3px solid #c9a96e; }
     .article-body h3 { font-size:1rem; font-weight:700; color:#e5e5e5; margin-top:1.75rem; margin-bottom:0.75rem; }
@@ -41,6 +40,15 @@
     .article-body hr { border-color:#27272a; margin:2rem 0; }
     .article-body code { background:#1f1f1f; color:#e5e5e5; padding:0.125rem 0.375rem; border-radius:0.25rem; font-size:0.85rem; }
     .article-body a { color:#c9a96e; text-decoration:underline; }
+
+    .teaser-wrapper { position: relative; }
+    .teaser-fade {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 240px;
+      background: linear-gradient(to bottom, rgba(13,13,13,0) 0%, rgba(13,13,13,0.9) 60%, rgba(13,13,13,1) 100%);
+      pointer-events: none;
+    }
     .x-btn {
       background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
       border: 1px solid rgba(255,255,255,0.15);
@@ -97,26 +105,24 @@
     </div>
   </header>
 
-  <!-- LOCKED STATE -->
-  <section id="locked-state" class="hero-bg min-h-screen flex flex-col justify-center items-center px-6 py-24 pt-32 text-center relative overflow-hidden hidden">
-    <div class="absolute inset-0 pointer-events-none opacity-10">
-      <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[#c9a96e] blur-3xl"></div>
-      <div class="absolute bottom-1/3 right-1/4 w-48 h-48 rounded-full bg-[#c9a96e] blur-3xl"></div>
+  <!-- LOCKED STATE (記事プレビュー型) -->
+  <section id="locked-state" class="hidden pt-24 pb-0 px-6 bg-[#0d0d0d]">
+    <div class="max-w-2xl mx-auto">
+      <div class="flex gap-2 mb-4">
+        <span class="text-xs bg-[#c9a96e]/10 text-[#c9a96e] font-bold px-3 py-1 rounded-full border border-[#c9a96e]/20">LIMITED</span>
+      </div>
+      <h1 id="locked-title" class="text-2xl md:text-3xl font-bold text-white mb-3 jp-keep leading-snug">読み込み中...</h1>
+      <p id="locked-subtitle" class="text-sm text-gray-400 mb-8"></p>
+
+      <div class="teaser-wrapper">
+        <div id="teaser-body" class="article-body pb-32"></div>
+        <div class="teaser-fade"></div>
+      </div>
     </div>
 
-    <div class="max-w-xl mx-auto relative z-10">
-      <span class="inline-flex items-center gap-2 border border-[#c9a96e]/40 text-[#c9a96e] text-xs font-medium tracking-widest px-5 py-2 rounded mb-10 whitespace-nowrap">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#c9a96e] shrink-0"></span>
-        <span>LIMITED ARTICLE</span>
-      </span>
-
-      <h1 id="locked-title" class="text-2xl md:text-3xl font-serif font-bold leading-snug text-white mb-4 tracking-wide jp-keep">読み込み中...</h1>
-      <p id="locked-subtitle" class="text-sm text-gray-400 mb-10 leading-relaxed"></p>
-
-      <p class="text-sm md:text-base text-gray-300 mb-8 leading-relaxed">
-        下のボタンから X（旧 Twitter）にログインしてください。<br class="hidden md:inline" />
-        指定の投稿が自動でリポストされ、記事本文が表示されます。
-      </p>
+    <div class="max-w-2xl mx-auto -mt-16 relative z-10 text-center pb-20">
+      <p class="text-[#c9a96e] text-sm font-bold tracking-widest mb-2">— ここから先はリポストで読めます —</p>
+      <p class="text-xs text-gray-500 mb-6">X（旧Twitter）でログイン → 指定の投稿が自動でリポストされ、続きが表示されます</p>
 
       <button id="unlock-btn"
         class="x-btn inline-flex items-center gap-3 text-white text-sm md:text-base font-bold px-7 py-4 rounded shadow-lg">
@@ -124,7 +130,7 @@
         X でログインしてアンロック
       </button>
 
-      <p class="mt-6 text-xs text-gray-500 leading-relaxed">
+      <p class="mt-5 text-xs text-gray-500 leading-relaxed">
         ※「リポストする権限」が求められます。<br />
         ※ ご利用後にXのプロフィールから連携解除も可能です。
       </p>
@@ -140,11 +146,14 @@
   <section id="unlocked-state" class="pt-24 pb-10 px-6 bg-[#0d0d0d] hidden">
     <div class="max-w-2xl mx-auto">
       <div class="flex gap-2 mb-4">
-        <span class="text-xs bg-[#c9a96e]/10 text-[#c9a96e] font-bold px-3 py-1 rounded-full border border-[#c9a96e]/20">LIMITED</span>
+        <span class="text-xs bg-[#c9a96e]/10 text-[#c9a96e] font-bold px-3 py-1 rounded-full border border-[#c9a96e]/20">UNLOCKED</span>
       </div>
-      <h1 id="unlocked-title" class="text-2xl md:text-3xl font-bold text-white mb-3 jp-keep"></h1>
+      <h1 id="unlocked-title" class="text-2xl md:text-3xl font-bold text-white mb-3 jp-keep leading-snug"></h1>
       <p id="unlocked-subtitle" class="text-sm text-gray-400 mb-8"></p>
-      <div id="article-body" class="article-body"></div>
+
+      <div id="full-teaser" class="article-body"></div>
+      <div id="full-body" class="article-body"></div>
+
       <p class="mt-10 text-center">
         <button id="forget-btn" class="text-xs text-gray-500 hover:text-gray-300 underline">このブラウザのアンロックを解除する</button>
       </p>
@@ -226,7 +235,7 @@
       } catch (e) { return null; }
     }
 
-    async function fetchArticle(articleId, token) {
+    async function fetchArticleBody(articleId, token) {
       try {
         const res = await fetch(`${API_BASE}/api/content?id=${encodeURIComponent(articleId)}`, {
           headers: { 'Authorization': `Bearer ${token}` },
@@ -242,19 +251,34 @@
       }
     }
 
-    function paintLockedHeader(meta) {
+    function paintLockedScreen(meta) {
       if (!meta) {
         $('locked-title').textContent = '限定記事';
         return;
       }
       $('locked-title').textContent = meta.title || '限定記事';
       if (meta.subtitle) $('locked-subtitle').textContent = meta.subtitle;
-    }
-    function paintUnlockedHeader(meta) {
-      if (!meta) return;
-      $('unlocked-title').textContent = meta.title || '限定記事';
-      if (meta.subtitle) $('unlocked-subtitle').textContent = meta.subtitle;
       document.title = `${meta.title}｜GRACE SELECTION`;
+      if (meta.teaser) {
+        $('teaser-body').innerHTML = marked.parse(meta.teaser);
+      } else {
+        // teaser無し: フェード隠す（全文ゲート時の旧挙動）
+        $('teaser-body').innerHTML = '';
+        document.querySelector('.teaser-fade')?.classList.add('hidden');
+      }
+    }
+
+    function paintUnlockedScreen(meta, body) {
+      if (meta) {
+        $('unlocked-title').textContent = meta.title || '限定記事';
+        if (meta.subtitle) $('unlocked-subtitle').textContent = meta.subtitle;
+        document.title = `${meta.title}｜GRACE SELECTION`;
+      }
+      // teaser + body を地続きに表示
+      if (meta && meta.teaser) {
+        $('full-teaser').innerHTML = marked.parse(meta.teaser);
+      }
+      $('full-body').innerHTML = marked.parse(body);
     }
 
     async function init() {
@@ -274,38 +298,36 @@
         localStorage.setItem(STORAGE_KEY, hashParams.token);
         history.replaceState(null, '', `${window.location.pathname}?id=${encodeURIComponent(articleId)}`);
       }
-      if (hashParams.unlock_error) {
+      const errFromHash = hashParams.unlock_error;
+      if (errFromHash) {
         history.replaceState(null, '', `${window.location.pathname}?id=${encodeURIComponent(articleId)}`);
-        const meta = await fetchMeta(articleId);
-        paintLockedHeader(meta);
-        showLocked(hashParams.unlock_error);
-        return;
       }
 
       const meta = await fetchMeta(articleId);
-      paintLockedHeader(meta);
-      paintUnlockedHeader(meta);
 
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored) {
-        const result = await fetchArticle(articleId, stored);
+        const result = await fetchArticleBody(articleId, stored);
         if (result.body) {
-          $('article-body').innerHTML = marked.parse(result.body);
+          paintUnlockedScreen(meta, result.body);
           showUnlocked();
           return;
         }
         if (result.error === 'not_unlocked') {
-          // 既存トークンはあるがこの記事はまだアンロックされてない
+          // トークンはあるがこの記事はまだ
+          paintLockedScreen(meta);
           showLocked();
           return;
         }
         // 失敗時はトークン破棄してロック状態
         localStorage.removeItem(STORAGE_KEY);
+        paintLockedScreen(meta);
         showLocked(result.error);
         return;
       }
 
-      showLocked();
+      paintLockedScreen(meta);
+      showLocked(errFromHash || null);
     }
 
     document.addEventListener('DOMContentLoaded', () => {
