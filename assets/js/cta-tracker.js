@@ -29,9 +29,9 @@
     var href = a.getAttribute('href') || '';
     var text = (a.textContent || '').trim().slice(0, 40);
 
-    if (text.indexOf('Instagram相談') !== -1) {
+    if (text.indexOf('LINE') !== -1 && text.indexOf('相談') !== -1) {
       send('cta_click', {
-        cta_label: 'instagram_soudan',
+        cta_label: 'line_soudan',
         cta_position: a.closest('header') ? 'header' : 'page',
         page_path: location.pathname
       });
