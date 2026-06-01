@@ -65,6 +65,11 @@ const periodLabel = fmtPeriod(data.period);
 const prevLabel = data.prevPeriod ? fmtPeriod(data.prevPeriod) : '';
 const storeCount = data.stores.length;
 
+// データ投入済 / 準備中 で分割
+const liveStores = data.stores.filter((s) => s.rankers.length);
+const pendingStores = data.stores.filter((s) => !s.rankers.length);
+const region = data.region || '';
+
 // ---- 部品テンプレート -------------------------------------------------------
 function shareBtn(text) {
   const url = `${SITE}/ranking/`;
@@ -148,8 +153,52 @@ function storeBlock(s) {
         </div>`;
 }
 
-// エリアタブ
-const areas = [...new Set(data.stores.map((s) => s.area))];
+// 掲載準備中の店舗（コンパクトなグリッド・エリア別）
+function pendingSection() {
+  if (!pendingStores.length) return '';
+  const areasP = [...new Set(pendingStores.map((s) => s.area))];
+  const groups = areasP
+    .map((a) => {
+      const items = pendingStores
+        .filter((s) => s.area === a)
+        .map(
+          (s) =>
+            `<a href="${esc(s.storePage)}" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">${esc(
+              s.storeName
+            )}</a>`
+        )
+        .join('\n            ');
+      return `
+        <div>
+          <h3 class="text-xs font-bold text-[#c9a96e] mb-2 tracking-wider">${esc(a)} <span class="text-gray-600 font-normal">${
+        pendingStores.filter((s) => s.area === a).length
+      }</span></h3>
+          <div class="grid grid-cols-1 gap-1.5">
+            ${items}
+          </div>
+        </div>`;
+    })
+    .join('\n');
+  return `
+  <section class="py-10 px-6 border-t border-white/10 bg-[#0f0f0f]">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-2xl">🗓️</span>
+        <div>
+          <span class="text-gray-400 text-[10px] md:text-xs font-extrabold tracking-widest">COMING SOON</span>
+          <h2 class="text-lg md:text-xl font-bold text-white">掲載準備中の店舗</h2>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 mb-5">${region}主要エリアの掲載予定店舗。順次ランキングを反映していきます（全${storeCount}店舗対応）。</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-5">
+        ${groups}
+      </div>
+    </div>
+  </section>`;
+}
+
+// エリアタブ（データ投入済の店があるエリアのみ）
+const areas = [...new Set(liveStores.map((s) => s.area))];
 const areaTabs = ['すべて', ...areas]
   .map(
     (a, i) =>
@@ -257,12 +306,14 @@ ${sampleBanner}
   <section class="pt-24 sm:pt-28 pb-10 px-6 bg-gradient-to-b from-[#15110a] to-[#0d0d0d] border-b border-white/10">
     <div class="max-w-4xl mx-auto text-center">
       <span class="text-[#c9a96e] text-xs font-bold tracking-[0.3em]">GRACE RANKING</span>
-      <h1 class="text-2xl md:text-4xl font-bold text-white mt-3 mb-3">${periodLabel} キャバ嬢ランキング</h1>
+      <h1 class="text-2xl md:text-4xl font-bold text-white mt-3 mb-3">${periodLabel} ${region}キャバ嬢ランキング</h1>
       <p class="text-sm text-gray-400 leading-relaxed max-w-2xl mx-auto">
-        主要エリアの${storeCount}店舗の月間ランキングを独自集計。${prevLabel ? `${prevLabel}からの` : ''}順位変動・急上昇・NEWランクインを一覧でチェックできます。
+        ${region}主要エリアの${storeCount}店舗を網羅。${prevLabel ? `${prevLabel}からの` : ''}順位変動・急上昇・NEWランクインを独自集計でチェックできます。
       </p>
       <div class="flex items-center justify-center gap-2 mt-5 text-[11px] text-gray-500">
-        <span>更新日 ${esc(data.updatedAt || data.period)}</span><span>·</span><span>${storeCount}店舗掲載</span>
+        <span>更新日 ${esc(data.updatedAt || data.period)}</span><span>·</span><span>${storeCount}店舗対応</span>${
+  liveStores.length ? `<span>·</span><span>今月${liveStores.length}店掲載</span>` : ''
+}
       </div>
       <div class="mt-5 flex justify-center">
         ${shareBtn(heroPost)}
@@ -324,10 +375,12 @@ ${sampleBanner}
         ${areaTabs}
       </div>
       <div class="grid md:grid-cols-2 gap-5" id="store-grid">
-        ${data.stores.map(storeBlock).join('\n')}
+        ${liveStores.length ? liveStores.map(storeBlock).join('\n') : '<p class="text-sm text-gray-500 col-span-2 py-8 text-center">ランキングデータを準備中です。</p>'}
       </div>
     </div>
   </section>
+
+  ${pendingSection()}
 
   <!-- CTA -->
   <section class="py-14 px-6 bg-[#111111] border-t border-white/10">

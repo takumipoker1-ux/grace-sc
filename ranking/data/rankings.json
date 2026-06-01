@@ -3,8 +3,909 @@
   "prevPeriod": "2026-05",
   "updatedAt": "2026-06-01",
   "sample": true,
+  "region": "東京",
   "_note": "各店公式サイトの月間ランキングを転記する。name=源氏名, rank=今月順位, prevRank=先月順位(圏外/新規はnull)。sampleをfalseにすると注意バナーが消える。更新したら scripts/build-ranking.js を実行して ranking/index.html を再生成する。",
   "stores": [
+    {
+      "storeId": "charme",
+      "storeName": "Charme（シャルム）（元デザイア）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/charme.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "bacheron",
+      "storeName": "club BACHERON（バシュロン）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/bacheron.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "eterna",
+      "storeName": "ETERNA（エテルナ）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/eterna.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "lealys",
+      "storeName": "LEALYS TOKYO（リアリストウキョウ）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/lealys.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "nexus-shinjuku",
+      "storeName": "NEXUS（ネクサス）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/nexus-shinjuku.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "otto",
+      "storeName": "otto（オット）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/otto.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "club-r-shinjuku",
+      "storeName": "R（アール）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/club-r-shinjuku.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "asian-club",
+      "storeName": "アジアンクラブ",
+      "area": "歌舞伎町",
+      "storePage": "/stores/asian-club.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "anela",
+      "storeName": "アネラ（元ソムニオ）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/anela.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "vixy",
+      "storeName": "ヴィクシー（元ドンフィン）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/vixy.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "wave-shinjuku",
+      "storeName": "ウェーブ（元イロハ）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/wave-shinjuku.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "velluge",
+      "storeName": "ヴェルージュ （元ディアレスト）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/velluge.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "orange-terrace",
+      "storeName": "オレンジテラス（新宿）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/orange-terrace.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "club-aoi",
+      "storeName": "クラブアオイ",
+      "area": "歌舞伎町",
+      "storePage": "/stores/club-aoi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "globe-shinjuku",
+      "storeName": "グローブ",
+      "area": "歌舞伎町",
+      "storePage": "/stores/globe-shinjuku.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "guest-morning",
+      "storeName": "ゲストモーニング（元レヴューモーニング）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/guest-morning.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "gentlemans-club",
+      "storeName": "ジェントルマンズクラブ",
+      "area": "歌舞伎町",
+      "storePage": "/stores/gentlemans-club.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "cellix",
+      "storeName": "セリュックス",
+      "area": "歌舞伎町",
+      "storePage": "/stores/cellix.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "selene-shinjuku",
+      "storeName": "セレネ（新宿）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/selene-shinjuku.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "solomon",
+      "storeName": "ソロモン（元フォーセンス）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/solomon.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "dearest",
+      "storeName": "ディアレスト",
+      "area": "歌舞伎町",
+      "storePage": "/stores/dearest.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "now-shinjuku",
+      "storeName": "ナウ（元アンジュ）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/now-shinjuku.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "highschool-nana",
+      "storeName": "ハイスクールナナプラザ",
+      "area": "歌舞伎町",
+      "storePage": "/stores/highschool-nana.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "fabric-lounge-shinjuku",
+      "storeName": "ファブリックラウンジ新宿",
+      "area": "歌舞伎町",
+      "storePage": "/stores/fabric-lounge-shinjuku.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "bene-tokyo",
+      "storeName": "ベネ東京",
+      "area": "歌舞伎町",
+      "storePage": "/stores/bene-tokyo.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "poseidon-shinjuku",
+      "storeName": "ポセイドン新宿",
+      "area": "歌舞伎町",
+      "storePage": "/stores/poseidon-shinjuku.html",
+      "officialUrl": "",
+      "rankers": [
+        {
+          "name": "れいな",
+          "rank": 1,
+          "prevRank": 2
+        },
+        {
+          "name": "さく",
+          "rank": 2,
+          "prevRank": 1
+        },
+        {
+          "name": "ひなの",
+          "rank": 3,
+          "prevRank": 7
+        },
+        {
+          "name": "まりな",
+          "rank": 4,
+          "prevRank": null
+        },
+        {
+          "name": "ゆいな",
+          "rank": 5,
+          "prevRank": 3
+        }
+      ]
+    },
+    {
+      "storeId": "kalmia-morning",
+      "storeName": "朝KALMIA（カルミア）（元朝アネラ）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/kalmia-morning.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "now-morning",
+      "storeName": "朝ナウ（元朝シェルター）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/now-morning.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "kalmia-night",
+      "storeName": "夜カルミア（元:夜スパークル）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/kalmia-night.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "rinno-kaze",
+      "storeName": "倫乃風（りんのかぜ）",
+      "area": "歌舞伎町",
+      "storePage": "/stores/rinno-kaze.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "fabric-shinjuku",
+      "storeName": "ファブリック（新宿）",
+      "area": "新宿",
+      "storePage": "/stores/fabric-shinjuku.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "bene",
+      "storeName": "ベネ",
+      "area": "新宿",
+      "storePage": "/stores/bene.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "poseidon",
+      "storeName": "ポセイドン",
+      "area": "新宿",
+      "storePage": "/stores/poseidon.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "rotta-kagurazaka",
+      "storeName": "ロッタ",
+      "area": "新宿",
+      "storePage": "/stores/rotta-kagurazaka.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "usagi-kagurazaka",
+      "storeName": "神楽坂うさぎ",
+      "area": "新宿",
+      "storePage": "/stores/usagi-kagurazaka.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "tatsumi-kagurazaka",
+      "storeName": "辰巳",
+      "area": "新宿",
+      "storePage": "/stores/tatsumi-kagurazaka.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "chocho-kagurazaka",
+      "storeName": "蝶蝶（ちょうちょう）",
+      "area": "新宿",
+      "storePage": "/stores/chocho-kagurazaka.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "burj-roppongi",
+      "storeName": "BURJ",
+      "area": "六本木",
+      "storePage": "/stores/burj-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "daytona-roppongi",
+      "storeName": "DAYTONA",
+      "area": "六本木",
+      "storePage": "/stores/daytona-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "nova-roppongi",
+      "storeName": "NOVA roppongi",
+      "area": "六本木",
+      "storePage": "/stores/nova-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "nrg-roppongi",
+      "storeName": "NRG",
+      "area": "六本木",
+      "storePage": "/stores/nrg-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "prima-tokyo",
+      "storeName": "prima tokyo（プリマトウキョウ）",
+      "area": "六本木",
+      "storePage": "/stores/prima-tokyo.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "smile-roppongi",
+      "storeName": "SMILE",
+      "area": "六本木",
+      "storePage": "/stores/smile-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "unjour-tokyo",
+      "storeName": "UNJOUR東京（アンジュール）",
+      "area": "六本木",
+      "storePage": "/stores/unjour-tokyo.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "xee-roppongi",
+      "storeName": "XEE（ジー）",
+      "area": "六本木",
+      "storePage": "/stores/xee-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "zoo-roppongi",
+      "storeName": "ZOO",
+      "area": "六本木",
+      "storePage": "/stores/zoo-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "ariel-roppongi",
+      "storeName": "アリエル",
+      "area": "六本木",
+      "storePage": "/stores/ariel-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "bene-roppongi",
+      "storeName": "ヴェネ東京六本木",
+      "area": "六本木",
+      "storePage": "/stores/bene-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "jungle-second",
+      "storeName": "ジャングルセカンド",
+      "area": "六本木",
+      "storePage": "/stores/jungle-second.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "jungle-tokyo",
+      "storeName": "ジャングルトウキョウ",
+      "area": "六本木",
+      "storePage": "/stores/jungle-tokyo.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "sweet-roppongi",
+      "storeName": "スイート",
+      "area": "六本木",
+      "storePage": "/stores/sweet-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "chic-roppongi",
+      "storeName": "チック",
+      "area": "六本木",
+      "storePage": "/stores/chic-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "baron-roppongi",
+      "storeName": "バロン",
+      "area": "六本木",
+      "storePage": "/stores/baron-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "fabric-roppongi",
+      "storeName": "ファブリック",
+      "area": "六本木",
+      "storePage": "/stores/fabric-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "fabric7",
+      "storeName": "ファブリック7（セブン）",
+      "area": "六本木",
+      "storePage": "/stores/fabric7.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "fabric7-roppongi",
+      "storeName": "ファブリックROPPONGI7（ロッポンギセブン）",
+      "area": "六本木",
+      "storePage": "/stores/fabric7-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "bourj",
+      "storeName": "ブルジュ",
+      "area": "六本木",
+      "storePage": "/stores/bourj.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "poseidon-roppongi",
+      "storeName": "ポセイドン",
+      "area": "六本木",
+      "storePage": "/stores/poseidon-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "muselerva",
+      "storeName": "ミュゼルヴァ",
+      "area": "六本木",
+      "storePage": "/stores/muselerva.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "lalah-roppongi",
+      "storeName": "ララァ",
+      "area": "六本木",
+      "storePage": "/stores/lalah-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "rio-roppongi",
+      "storeName": "リオ六本木店",
+      "area": "六本木",
+      "storePage": "/stores/rio-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "liric-tokyo",
+      "storeName": "リリック東京",
+      "area": "六本木",
+      "storePage": "/stores/liric-tokyo.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "lyric",
+      "storeName": "リリック東京",
+      "area": "六本木",
+      "storePage": "/stores/lyric.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "lucra-roppongi",
+      "storeName": "ルクラ",
+      "area": "六本木",
+      "storePage": "/stores/lucra-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "red-dragon",
+      "storeName": "レッドドラゴン",
+      "area": "六本木",
+      "storePage": "/stores/red-dragon.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "nrg-morning",
+      "storeName": "朝NRG",
+      "area": "六本木",
+      "storePage": "/stores/nrg-morning.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "daytona-morning",
+      "storeName": "朝デイトナ",
+      "area": "六本木",
+      "storePage": "/stores/daytona-morning.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "kisui-roppongi",
+      "storeName": "妃翠",
+      "area": "六本木",
+      "storePage": "/stores/kisui-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "hisui",
+      "storeName": "妃翠（ヒスイ）",
+      "area": "六本木",
+      "storePage": "/stores/hisui.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "bijinchaya-roppongi",
+      "storeName": "美人茶屋",
+      "area": "六本木",
+      "storePage": "/stores/bijinchaya-roppongi.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "club-77",
+      "storeName": "77（セブンティーセブン）",
+      "area": "銀座",
+      "storePage": "/stores/club-77.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "club-s-ginza",
+      "storeName": "CLUB S（クラブエス）（元クラブレイ）",
+      "area": "銀座",
+      "storePage": "/stores/club-s-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "aria-ginza",
+      "storeName": "アリア",
+      "area": "銀座",
+      "storePage": "/stores/aria-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "efka-ginza",
+      "storeName": "エフカ",
+      "area": "銀座",
+      "storePage": "/stores/efka-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "club-gin",
+      "storeName": "クラブ銀",
+      "area": "銀座",
+      "storePage": "/stores/club-gin.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "coterie-ginza",
+      "storeName": "コーテリー",
+      "area": "銀座",
+      "storePage": "/stores/coterie-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "paradi-ginza",
+      "storeName": "パラディ（元エベラ）",
+      "area": "銀座",
+      "storePage": "/stores/paradi-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "milano-ginza",
+      "storeName": "ミラノクラブ",
+      "area": "銀座",
+      "storePage": "/stores/milano-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "monolith-ginza",
+      "storeName": "モノリス（元レーヴル）",
+      "area": "銀座",
+      "storePage": "/stores/monolith-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "lavie-ginza",
+      "storeName": "ラヴィエ銀座（元ジラフ）",
+      "area": "銀座",
+      "storePage": "/stores/lavie-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "rouge-ginza",
+      "storeName": "ルージュ",
+      "area": "銀座",
+      "storePage": "/stores/rouge-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "kuroneko-ginza",
+      "storeName": "ロイヤルラウンジKuroneko（クロネコ）",
+      "area": "銀座",
+      "storePage": "/stores/kuroneko-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "hibiki-ginza",
+      "storeName": "響",
+      "area": "銀座",
+      "storePage": "/stores/hibiki-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "chic-ginza",
+      "storeName": "銀座チック",
+      "area": "銀座",
+      "storePage": "/stores/chic-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "luxsa-ginza",
+      "storeName": "銀座ルクサ",
+      "area": "銀座",
+      "storePage": "/stores/luxsa-ginza.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "venus-ikebukuro",
+      "storeName": "Club Venus（ビーナス）",
+      "area": "池袋",
+      "storePage": "/stores/venus-ikebukuro.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "edition",
+      "storeName": "Edition（エディション）",
+      "area": "池袋",
+      "storePage": "/stores/edition.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "gran-class",
+      "storeName": "GRAN CLASS -TOKYO-（元クラブハマー）",
+      "area": "池袋",
+      "storePage": "/stores/gran-class.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "kanaloa",
+      "storeName": "Kanaloa（カナロア）",
+      "area": "池袋",
+      "storePage": "/stores/kanaloa.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "mezm",
+      "storeName": "mezm（元キューブ）",
+      "area": "池袋",
+      "storePage": "/stores/mezm.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "red-shoes",
+      "storeName": "red shoes（レッドシューズ）",
+      "area": "池袋",
+      "storePage": "/stores/red-shoes.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "airport-ikb",
+      "storeName": "エアポートIKBビジネス",
+      "area": "池袋",
+      "storePage": "/stores/airport-ikb.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "angel-feather",
+      "storeName": "エンジェルフェザー池袋",
+      "area": "池袋",
+      "storePage": "/stores/angel-feather.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "nox",
+      "storeName": "ノックス（元イブ）",
+      "area": "池袋",
+      "storePage": "/stores/nox.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "patina",
+      "storeName": "パティーナ（元マチルダ）",
+      "area": "池袋",
+      "storePage": "/stores/patina.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "bize-ikebukuro",
+      "storeName": "ビゼ（池袋）",
+      "area": "池袋",
+      "storePage": "/stores/bize-ikebukuro.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "fairy-ikebukuro",
+      "storeName": "フェアリー（池袋）",
+      "area": "池袋",
+      "storePage": "/stores/fairy-ikebukuro.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "ferris",
+      "storeName": "池袋CLUB Ferris（元クラブゼロ）",
+      "area": "池袋",
+      "storePage": "/stores/ferris.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "seaside-ikebukuro",
+      "storeName": "池袋SEASIDE",
+      "area": "池袋",
+      "storePage": "/stores/seaside-ikebukuro.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "grande-ikebukuro",
+      "storeName": "池袋グランデ",
+      "area": "池袋",
+      "storePage": "/stores/grande-ikebukuro.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "hyakka",
+      "storeName": "百華（元フォックス）",
+      "area": "池袋",
+      "storePage": "/stores/hyakka.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "bachelor",
+      "storeName": "BACHELOR（バチェラー）",
+      "area": "上野",
+      "storePage": "/stores/bachelor.html",
+      "officialUrl": "",
+      "rankers": [
+        {
+          "name": "ましろ",
+          "rank": 1,
+          "prevRank": 3
+        },
+        {
+          "name": "ひより",
+          "rank": 2,
+          "prevRank": 1
+        },
+        {
+          "name": "ことね",
+          "rank": 3,
+          "prevRank": null
+        },
+        {
+          "name": "あおい",
+          "rank": 4,
+          "prevRank": 4
+        },
+        {
+          "name": "ゆめ",
+          "rank": 5,
+          "prevRank": 6
+        }
+      ]
+    },
+    {
+      "storeId": "bond",
+      "storeName": "BOND（ボンド）",
+      "area": "上野",
+      "storePage": "/stores/bond.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "club-sen",
+      "storeName": "CLUB千（クラブセン）",
+      "area": "上野",
+      "storePage": "/stores/club-sen.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "lipple",
+      "storeName": "LIPPLE（リップル）",
+      "area": "上野",
+      "storePage": "/stores/lipple.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "liric-ueno",
+      "storeName": "LIRIC TOKYO UENO（リリック トウキョウウエノ）",
+      "area": "上野",
+      "storePage": "/stores/liric-ueno.html",
+      "officialUrl": "",
+      "rankers": []
+    },
     {
       "storeId": "atlantis",
       "storeName": "アトランティス",
@@ -12,54 +913,226 @@
       "storePage": "/stores/atlantis.html",
       "officialUrl": "",
       "rankers": [
-        { "name": "あいり", "rank": 1, "prevRank": 1 },
-        { "name": "ゆな",   "rank": 2, "prevRank": 5 },
-        { "name": "せな",   "rank": 3, "prevRank": null },
-        { "name": "みお",   "rank": 4, "prevRank": 2 },
-        { "name": "りん",   "rank": 5, "prevRank": 4 }
+        {
+          "name": "あいり",
+          "rank": 1,
+          "prevRank": 1
+        },
+        {
+          "name": "ゆな",
+          "rank": 2,
+          "prevRank": 5
+        },
+        {
+          "name": "せな",
+          "rank": 3,
+          "prevRank": null
+        },
+        {
+          "name": "みお",
+          "rank": 4,
+          "prevRank": 2
+        },
+        {
+          "name": "りん",
+          "rank": 5,
+          "prevRank": 4
+        }
       ]
     },
     {
-      "storeId": "bachelor",
-      "storeName": "バチェラー",
+      "storeId": "epic-ueno",
+      "storeName": "エピック",
       "area": "上野",
-      "storePage": "/stores/bachelor.html",
+      "storePage": "/stores/epic-ueno.html",
       "officialUrl": "",
-      "rankers": [
-        { "name": "ましろ", "rank": 1, "prevRank": 3 },
-        { "name": "ひより", "rank": 2, "prevRank": 1 },
-        { "name": "ことね", "rank": 3, "prevRank": null },
-        { "name": "あおい", "rank": 4, "prevRank": 4 },
-        { "name": "ゆめ",   "rank": 5, "prevRank": 6 }
-      ]
+      "rankers": []
     },
     {
-      "storeId": "poseidon-shinjuku",
-      "storeName": "ポセイドン新宿",
-      "area": "新宿",
-      "storePage": "/stores/poseidon-shinjuku.html",
+      "storeId": "crash-ueno",
+      "storeName": "クラッシュ",
+      "area": "上野",
+      "storePage": "/stores/crash-ueno.html",
       "officialUrl": "",
-      "rankers": [
-        { "name": "れいな", "rank": 1, "prevRank": 2 },
-        { "name": "さく",   "rank": 2, "prevRank": 1 },
-        { "name": "ひなの", "rank": 3, "prevRank": 7 },
-        { "name": "まりな", "rank": 4, "prevRank": null },
-        { "name": "ゆいな", "rank": 5, "prevRank": 3 }
-      ]
+      "rankers": []
+    },
+    {
+      "storeId": "fairy-ueno",
+      "storeName": "クラブ フェアリー",
+      "area": "上野",
+      "storePage": "/stores/fairy-ueno.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "ren-ueno",
+      "storeName": "クラブ蓮(レン)上野",
+      "area": "上野",
+      "storePage": "/stores/ren-ueno.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "grancru-ueno",
+      "storeName": "グランクリュ（上野）",
+      "area": "上野",
+      "storePage": "/stores/grancru-ueno.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "godfather",
+      "storeName": "ゴッドファーザー",
+      "area": "上野",
+      "storePage": "/stores/godfather.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "bize-ueno",
+      "storeName": "ビゼ（上野）",
+      "area": "上野",
+      "storePage": "/stores/bize-ueno.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "luxor-ueno",
+      "storeName": "ルクソール",
+      "area": "上野",
+      "storePage": "/stores/luxor-ueno.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "ray-ueno",
+      "storeName": "レイ",
+      "area": "上野",
+      "storePage": "/stores/ray-ueno.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "capone-ueno",
+      "storeName": "上野club Capone（クラブ カポネ）",
+      "area": "上野",
+      "storePage": "/stores/capone-ueno.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "mint-ueno",
+      "storeName": "上野MINT（ミント）",
+      "area": "上野",
+      "storePage": "/stores/mint-ueno.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "themis-ueno",
+      "storeName": "上野THEMIS（テミス）",
+      "area": "上野",
+      "storePage": "/stores/themis-ueno.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "bijinchaya-ueno",
+      "storeName": "美人茶屋上野",
+      "area": "上野",
+      "storePage": "/stores/bijinchaya-ueno.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "rokka-ueno",
+      "storeName": "六華（ろっか）",
+      "area": "上野",
+      "storePage": "/stores/rokka-ueno.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "bianca",
+      "storeName": "club Bianca（クラブビアンカ）",
+      "area": "錦糸町",
+      "storePage": "/stores/bianca.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "garimpo",
+      "storeName": "GARIMPO（ガリンポ）",
+      "area": "錦糸町",
+      "storePage": "/stores/garimpo.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "viola",
+      "storeName": "ヴィオラ",
+      "area": "錦糸町",
+      "storePage": "/stores/viola.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "regalia",
+      "storeName": "クラブレガリア",
+      "area": "錦糸町",
+      "storePage": "/stores/regalia.html",
+      "officialUrl": "",
+      "rankers": []
     },
     {
       "storeId": "ren-kinshicho",
-      "storeName": "クラブ蓮",
+      "storeName": "クラブ蓮（レン）錦糸町",
       "area": "錦糸町",
       "storePage": "/stores/ren-kinshicho.html",
       "officialUrl": "",
       "rankers": [
-        { "name": "あんな", "rank": 1, "prevRank": 1 },
-        { "name": "もえ",   "rank": 2, "prevRank": 4 },
-        { "name": "ねね",   "rank": 3, "prevRank": 2 },
-        { "name": "らら",   "rank": 4, "prevRank": null },
-        { "name": "みき",   "rank": 5, "prevRank": 5 }
+        {
+          "name": "あんな",
+          "rank": 1,
+          "prevRank": 1
+        },
+        {
+          "name": "もえ",
+          "rank": 2,
+          "prevRank": 4
+        },
+        {
+          "name": "ねね",
+          "rank": 3,
+          "prevRank": 2
+        },
+        {
+          "name": "らら",
+          "rank": 4,
+          "prevRank": null
+        },
+        {
+          "name": "みき",
+          "rank": 5,
+          "prevRank": 5
+        }
       ]
+    },
+    {
+      "storeId": "victoria",
+      "storeName": "ビクトリア",
+      "area": "錦糸町",
+      "storePage": "/stores/victoria.html",
+      "officialUrl": "",
+      "rankers": []
+    },
+    {
+      "storeId": "rebel",
+      "storeName": "レブル",
+      "area": "錦糸町",
+      "storePage": "/stores/rebel.html",
+      "officialUrl": "",
+      "rankers": []
     }
   ]
 }
