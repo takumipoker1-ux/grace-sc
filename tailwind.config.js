@@ -4,6 +4,7 @@ module.exports = {
     './*.html',
     './articles/*.html',
     './stores/*.html',
+    './ranking/*.html',
   ],
   theme: {
     extend: {

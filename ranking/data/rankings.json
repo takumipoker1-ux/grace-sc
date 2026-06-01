@@ -1,0 +1,65 @@
+{
+  "period": "2026-06",
+  "prevPeriod": "2026-05",
+  "updatedAt": "2026-06-01",
+  "sample": true,
+  "_note": "各店公式サイトの月間ランキングを転記する。name=源氏名, rank=今月順位, prevRank=先月順位(圏外/新規はnull)。sampleをfalseにすると注意バナーが消える。更新したら scripts/build-ranking.js を実行して ranking/index.html を再生成する。",
+  "stores": [
+    {
+      "storeId": "atlantis",
+      "storeName": "アトランティス",
+      "area": "上野",
+      "storePage": "/stores/atlantis.html",
+      "officialUrl": "",
+      "rankers": [
+        { "name": "あいり", "rank": 1, "prevRank": 1 },
+        { "name": "ゆな",   "rank": 2, "prevRank": 5 },
+        { "name": "せな",   "rank": 3, "prevRank": null },
+        { "name": "みお",   "rank": 4, "prevRank": 2 },
+        { "name": "りん",   "rank": 5, "prevRank": 4 }
+      ]
+    },
+    {
+      "storeId": "bachelor",
+      "storeName": "バチェラー",
+      "area": "上野",
+      "storePage": "/stores/bachelor.html",
+      "officialUrl": "",
+      "rankers": [
+        { "name": "ましろ", "rank": 1, "prevRank": 3 },
+        { "name": "ひより", "rank": 2, "prevRank": 1 },
+        { "name": "ことね", "rank": 3, "prevRank": null },
+        { "name": "あおい", "rank": 4, "prevRank": 4 },
+        { "name": "ゆめ",   "rank": 5, "prevRank": 6 }
+      ]
+    },
+    {
+      "storeId": "poseidon-shinjuku",
+      "storeName": "ポセイドン新宿",
+      "area": "新宿",
+      "storePage": "/stores/poseidon-shinjuku.html",
+      "officialUrl": "",
+      "rankers": [
+        { "name": "れいな", "rank": 1, "prevRank": 2 },
+        { "name": "さく",   "rank": 2, "prevRank": 1 },
+        { "name": "ひなの", "rank": 3, "prevRank": 7 },
+        { "name": "まりな", "rank": 4, "prevRank": null },
+        { "name": "ゆいな", "rank": 5, "prevRank": 3 }
+      ]
+    },
+    {
+      "storeId": "ren-kinshicho",
+      "storeName": "クラブ蓮",
+      "area": "錦糸町",
+      "storePage": "/stores/ren-kinshicho.html",
+      "officialUrl": "",
+      "rankers": [
+        { "name": "あんな", "rank": 1, "prevRank": 1 },
+        { "name": "もえ",   "rank": 2, "prevRank": 4 },
+        { "name": "ねね",   "rank": 3, "prevRank": 2 },
+        { "name": "らら",   "rank": 4, "prevRank": null },
+        { "name": "みき",   "rank": 5, "prevRank": 5 }
+      ]
+    }
+  ]
+}
