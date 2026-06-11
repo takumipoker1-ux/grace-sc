@@ -46,13 +46,13 @@
 
   <header class="fixed top-0 left-0 right-0 z-50 bg-[#0d0d0d]/95 backdrop-blur border-b border-white/10">
     <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
-      <a href="/index.html" class="text-[#c9a96e] font-bold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0">GRACE SELECTION</a>
+      <a href="/index.html" class="text-[#c9a96e] font-bold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0 py-3">GRACE SELECTION</a>
       <nav class="hidden sm:flex items-center gap-2.5 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
-        <a href="/index.html" class="hover:text-white transition-colors hidden sm:inline">トップ</a>
-        <a href="/stores/index.html" class="hover:text-white transition-colors">店舗・求人</a>
+        <a href="/index.html" class="py-2 hover:text-white transition-colors hidden sm:inline">トップ</a>
+        <a href="/stores/index.html" class="py-2 hover:text-white transition-colors">店舗・求人</a>
         <a href="/ranking/" class="text-white font-bold transition-colors">ランキング</a>
-        <a href="/articles/index.html" class="hover:text-white transition-colors">記事</a>
-        <a href="/about.html" class="hover:text-white transition-colors">ぞのとは</a>
+        <a href="/articles/index.html" class="py-2 hover:text-white transition-colors">記事</a>
+        <a href="/about.html" class="py-2 hover:text-white transition-colors">ぞのとは</a>
         <a href="/index.html#cta" class="bg-brand-line hover:bg-brand-lineDark text-white text-xs font-bold px-3 py-1.5 md:px-4 md:py-2 rounded transition-colors whitespace-nowrap">LINE相談</a>
       </nav>
       <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="sm:hidden text-gray-300 p-2 -mr-2" aria-label="メニューを開く">
@@ -77,7 +77,7 @@
     </nav>
   </div>
 
-  <div class="bg-amber-500/10 border-b border-amber-500/30">
+  <div class="mt-14 bg-amber-500/10 border-b border-amber-500/30">
     <div class="max-w-4xl mx-auto px-6 py-2.5 text-center text-[11px] text-amber-300/90">
       ⚠ これはサンプルデータです。各店公式サイトの実データを <code>ranking/data/rankings.json</code> に転記し、<code>"sample": false</code> にすると本番表示になります。
     </div>
@@ -94,7 +94,7 @@
         <span>更新日 2026-06-01</span><span>·</span><span>128店舗対応</span><span>·</span><span>今月4店掲載</span>
       </div>
       <div class="mt-5 flex justify-center">
-        <a href="https://twitter.com/intent/tweet?text=2026%E5%B9%B46%E6%9C%88%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%82%92%E6%9B%B4%E6%96%B0%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%F0%9F%8F%86%20%E6%80%A5%E4%B8%8A%E6%98%87%E3%83%BBNEW%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%A4%E3%83%B3%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%EF%BC%81%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E3%82%AD%E3%83%A3%E3%83%90%E3%82%AF%E3%83%A9&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+        <a href="https://twitter.com/intent/tweet?text=2026%E5%B9%B46%E6%9C%88%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%82%92%E6%9B%B4%E6%96%B0%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%F0%9F%8F%86%20%E6%80%A5%E4%B8%8A%E6%98%87%E3%83%BBNEW%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%A4%E3%83%B3%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%EF%BC%81%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E3%82%AD%E3%83%A3%E3%83%90%E3%82%AF%E3%83%A9&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -125,7 +125,7 @@
           </div>
           <div class="flex items-center justify-between mt-auto pt-1">
             <a href="/stores/poseidon-shinjuku.html" class="text-[11px] text-[#c9a96e] hover:text-[#e8d5a3] transition-colors">店舗を見る →</a>
-            <a href="https://twitter.com/intent/tweet?text=%E3%83%9D%E3%82%BB%E3%82%A4%E3%83%89%E3%83%B3%E6%96%B0%E5%AE%BF%E3%81%AE%E3%81%B2%E3%81%AA%E3%81%AE%E3%81%8C%E5%85%88%E6%9C%887%E4%BD%8D%E2%86%92%E4%BB%8A%E6%9C%883%E4%BD%8D%E3%81%AB%E6%80%A5%E4%B8%8A%E6%98%87%F0%9F%93%88%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+            <a href="https://twitter.com/intent/tweet?text=%E3%83%9D%E3%82%BB%E3%82%A4%E3%83%89%E3%83%B3%E6%96%B0%E5%AE%BF%E3%81%AE%E3%81%B2%E3%81%AA%E3%81%AE%E3%81%8C%E5%85%88%E6%9C%887%E4%BD%8D%E2%86%92%E4%BB%8A%E6%9C%883%E4%BD%8D%E3%81%AB%E6%80%A5%E4%B8%8A%E6%98%87%F0%9F%93%88%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -143,7 +143,7 @@
           </div>
           <div class="flex items-center justify-between mt-auto pt-1">
             <a href="/stores/atlantis.html" class="text-[11px] text-[#c9a96e] hover:text-[#e8d5a3] transition-colors">店舗を見る →</a>
-            <a href="https://twitter.com/intent/tweet?text=%E3%82%A2%E3%83%88%E3%83%A9%E3%83%B3%E3%83%86%E3%82%A3%E3%82%B9%E3%81%AE%E3%82%86%E3%81%AA%E3%81%8C%E5%85%88%E6%9C%885%E4%BD%8D%E2%86%92%E4%BB%8A%E6%9C%882%E4%BD%8D%E3%81%AB%E6%80%A5%E4%B8%8A%E6%98%87%F0%9F%93%88%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+            <a href="https://twitter.com/intent/tweet?text=%E3%82%A2%E3%83%88%E3%83%A9%E3%83%B3%E3%83%86%E3%82%A3%E3%82%B9%E3%81%AE%E3%82%86%E3%81%AA%E3%81%8C%E5%85%88%E6%9C%885%E4%BD%8D%E2%86%92%E4%BB%8A%E6%9C%882%E4%BD%8D%E3%81%AB%E6%80%A5%E4%B8%8A%E6%98%87%F0%9F%93%88%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -161,7 +161,7 @@
           </div>
           <div class="flex items-center justify-between mt-auto pt-1">
             <a href="/stores/bachelor.html" class="text-[11px] text-[#c9a96e] hover:text-[#e8d5a3] transition-colors">店舗を見る →</a>
-            <a href="https://twitter.com/intent/tweet?text=BACHELOR%EF%BC%88%E3%83%90%E3%83%81%E3%82%A7%E3%83%A9%E3%83%BC%EF%BC%89%E3%81%AE%E3%81%BE%E3%81%97%E3%82%8D%E3%81%8C%E5%85%88%E6%9C%883%E4%BD%8D%E2%86%92%E4%BB%8A%E6%9C%881%E4%BD%8D%E3%81%AB%E6%80%A5%E4%B8%8A%E6%98%87%F0%9F%93%88%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+            <a href="https://twitter.com/intent/tweet?text=BACHELOR%EF%BC%88%E3%83%90%E3%83%81%E3%82%A7%E3%83%A9%E3%83%BC%EF%BC%89%E3%81%AE%E3%81%BE%E3%81%97%E3%82%8D%E3%81%8C%E5%85%88%E6%9C%883%E4%BD%8D%E2%86%92%E4%BB%8A%E6%9C%881%E4%BD%8D%E3%81%AB%E6%80%A5%E4%B8%8A%E6%98%87%F0%9F%93%88%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -179,7 +179,7 @@
           </div>
           <div class="flex items-center justify-between mt-auto pt-1">
             <a href="/stores/ren-kinshicho.html" class="text-[11px] text-[#c9a96e] hover:text-[#e8d5a3] transition-colors">店舗を見る →</a>
-            <a href="https://twitter.com/intent/tweet?text=%E3%82%AF%E3%83%A9%E3%83%96%E8%93%AE%EF%BC%88%E3%83%AC%E3%83%B3%EF%BC%89%E9%8C%A6%E7%B3%B8%E7%94%BA%E3%81%AE%E3%82%82%E3%81%88%E3%81%8C%E5%85%88%E6%9C%884%E4%BD%8D%E2%86%92%E4%BB%8A%E6%9C%882%E4%BD%8D%E3%81%AB%E6%80%A5%E4%B8%8A%E6%98%87%F0%9F%93%88%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E9%8C%A6%E7%B3%B8%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+            <a href="https://twitter.com/intent/tweet?text=%E3%82%AF%E3%83%A9%E3%83%96%E8%93%AE%EF%BC%88%E3%83%AC%E3%83%B3%EF%BC%89%E9%8C%A6%E7%B3%B8%E7%94%BA%E3%81%AE%E3%82%82%E3%81%88%E3%81%8C%E5%85%88%E6%9C%884%E4%BD%8D%E2%86%92%E4%BB%8A%E6%9C%882%E4%BD%8D%E3%81%AB%E6%80%A5%E4%B8%8A%E6%98%87%F0%9F%93%88%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E9%8C%A6%E7%B3%B8%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -197,7 +197,7 @@
           </div>
           <div class="flex items-center justify-between mt-auto pt-1">
             <a href="/stores/poseidon-shinjuku.html" class="text-[11px] text-[#c9a96e] hover:text-[#e8d5a3] transition-colors">店舗を見る →</a>
-            <a href="https://twitter.com/intent/tweet?text=%E3%83%9D%E3%82%BB%E3%82%A4%E3%83%89%E3%83%B3%E6%96%B0%E5%AE%BF%E3%81%AE%E3%82%8C%E3%81%84%E3%81%AA%E3%81%8C%E5%85%88%E6%9C%882%E4%BD%8D%E2%86%92%E4%BB%8A%E6%9C%881%E4%BD%8D%E3%81%AB%E6%80%A5%E4%B8%8A%E6%98%87%F0%9F%93%88%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+            <a href="https://twitter.com/intent/tweet?text=%E3%83%9D%E3%82%BB%E3%82%A4%E3%83%89%E3%83%B3%E6%96%B0%E5%AE%BF%E3%81%AE%E3%82%8C%E3%81%84%E3%81%AA%E3%81%8C%E5%85%88%E6%9C%882%E4%BD%8D%E2%86%92%E4%BB%8A%E6%9C%881%E4%BD%8D%E3%81%AB%E6%80%A5%E4%B8%8A%E6%98%87%F0%9F%93%88%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -215,7 +215,7 @@
           </div>
           <div class="flex items-center justify-between mt-auto pt-1">
             <a href="/stores/bachelor.html" class="text-[11px] text-[#c9a96e] hover:text-[#e8d5a3] transition-colors">店舗を見る →</a>
-            <a href="https://twitter.com/intent/tweet?text=BACHELOR%EF%BC%88%E3%83%90%E3%83%81%E3%82%A7%E3%83%A9%E3%83%BC%EF%BC%89%E3%81%AE%E3%82%86%E3%82%81%E3%81%8C%E5%85%88%E6%9C%886%E4%BD%8D%E2%86%92%E4%BB%8A%E6%9C%885%E4%BD%8D%E3%81%AB%E6%80%A5%E4%B8%8A%E6%98%87%F0%9F%93%88%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+            <a href="https://twitter.com/intent/tweet?text=BACHELOR%EF%BC%88%E3%83%90%E3%83%81%E3%82%A7%E3%83%A9%E3%83%BC%EF%BC%89%E3%81%AE%E3%82%86%E3%82%81%E3%81%8C%E5%85%88%E6%9C%886%E4%BD%8D%E2%86%92%E4%BB%8A%E6%9C%885%E4%BD%8D%E3%81%AB%E6%80%A5%E4%B8%8A%E6%98%87%F0%9F%93%88%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -248,7 +248,7 @@
           </div>
           <div class="flex items-center justify-between mt-auto pt-1">
             <a href="/stores/bachelor.html" class="text-[11px] text-[#c9a96e] hover:text-[#e8d5a3] transition-colors">店舗を見る →</a>
-            <a href="https://twitter.com/intent/tweet?text=BACHELOR%EF%BC%88%E3%83%90%E3%83%81%E3%82%A7%E3%83%A9%E3%83%BC%EF%BC%89%E3%81%AE2026%E5%B9%B46%E6%9C%88%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AB%E3%80%8C%E3%81%93%E3%81%A8%E3%81%AD%E3%80%8D%E3%81%8CNEW%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%A4%E3%83%B3%E2%9C%A8%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+            <a href="https://twitter.com/intent/tweet?text=BACHELOR%EF%BC%88%E3%83%90%E3%83%81%E3%82%A7%E3%83%A9%E3%83%BC%EF%BC%89%E3%81%AE2026%E5%B9%B46%E6%9C%88%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AB%E3%80%8C%E3%81%93%E3%81%A8%E3%81%AD%E3%80%8D%E3%81%8CNEW%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%A4%E3%83%B3%E2%9C%A8%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -266,7 +266,7 @@
           </div>
           <div class="flex items-center justify-between mt-auto pt-1">
             <a href="/stores/atlantis.html" class="text-[11px] text-[#c9a96e] hover:text-[#e8d5a3] transition-colors">店舗を見る →</a>
-            <a href="https://twitter.com/intent/tweet?text=%E3%82%A2%E3%83%88%E3%83%A9%E3%83%B3%E3%83%86%E3%82%A3%E3%82%B9%E3%81%AE2026%E5%B9%B46%E6%9C%88%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AB%E3%80%8C%E3%81%9B%E3%81%AA%E3%80%8D%E3%81%8CNEW%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%A4%E3%83%B3%E2%9C%A8%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+            <a href="https://twitter.com/intent/tweet?text=%E3%82%A2%E3%83%88%E3%83%A9%E3%83%B3%E3%83%86%E3%82%A3%E3%82%B9%E3%81%AE2026%E5%B9%B46%E6%9C%88%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AB%E3%80%8C%E3%81%9B%E3%81%AA%E3%80%8D%E3%81%8CNEW%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%A4%E3%83%B3%E2%9C%A8%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -284,7 +284,7 @@
           </div>
           <div class="flex items-center justify-between mt-auto pt-1">
             <a href="/stores/poseidon-shinjuku.html" class="text-[11px] text-[#c9a96e] hover:text-[#e8d5a3] transition-colors">店舗を見る →</a>
-            <a href="https://twitter.com/intent/tweet?text=%E3%83%9D%E3%82%BB%E3%82%A4%E3%83%89%E3%83%B3%E6%96%B0%E5%AE%BF%E3%81%AE2026%E5%B9%B46%E6%9C%88%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AB%E3%80%8C%E3%81%BE%E3%82%8A%E3%81%AA%E3%80%8D%E3%81%8CNEW%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%A4%E3%83%B3%E2%9C%A8%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+            <a href="https://twitter.com/intent/tweet?text=%E3%83%9D%E3%82%BB%E3%82%A4%E3%83%89%E3%83%B3%E6%96%B0%E5%AE%BF%E3%81%AE2026%E5%B9%B46%E6%9C%88%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AB%E3%80%8C%E3%81%BE%E3%82%8A%E3%81%AA%E3%80%8D%E3%81%8CNEW%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%A4%E3%83%B3%E2%9C%A8%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -302,7 +302,7 @@
           </div>
           <div class="flex items-center justify-between mt-auto pt-1">
             <a href="/stores/ren-kinshicho.html" class="text-[11px] text-[#c9a96e] hover:text-[#e8d5a3] transition-colors">店舗を見る →</a>
-            <a href="https://twitter.com/intent/tweet?text=%E3%82%AF%E3%83%A9%E3%83%96%E8%93%AE%EF%BC%88%E3%83%AC%E3%83%B3%EF%BC%89%E9%8C%A6%E7%B3%B8%E7%94%BA%E3%81%AE2026%E5%B9%B46%E6%9C%88%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AB%E3%80%8C%E3%82%89%E3%82%89%E3%80%8D%E3%81%8CNEW%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%A4%E3%83%B3%E2%9C%A8%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E9%8C%A6%E7%B3%B8%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+            <a href="https://twitter.com/intent/tweet?text=%E3%82%AF%E3%83%A9%E3%83%96%E8%93%AE%EF%BC%88%E3%83%AC%E3%83%B3%EF%BC%89%E9%8C%A6%E7%B3%B8%E7%94%BA%E3%81%AE2026%E5%B9%B46%E6%9C%88%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AB%E3%80%8C%E3%82%89%E3%82%89%E3%80%8D%E3%81%8CNEW%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%A4%E3%83%B3%E2%9C%A8%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E9%8C%A6%E7%B3%B8%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -323,10 +323,10 @@
         </div>
       </div>
       <div class="flex flex-wrap gap-2 mb-6">
-        <button class="area-tab tab-active text-xs font-bold px-4 py-1.5 rounded-full border transition-colors" data-area="すべて" onclick="filterArea(this,'すべて')">すべて</button>
-        <button class="area-tab tab-inactive text-xs font-bold px-4 py-1.5 rounded-full border transition-colors" data-area="歌舞伎町" onclick="filterArea(this,'歌舞伎町')">歌舞伎町</button>
-        <button class="area-tab tab-inactive text-xs font-bold px-4 py-1.5 rounded-full border transition-colors" data-area="上野" onclick="filterArea(this,'上野')">上野</button>
-        <button class="area-tab tab-inactive text-xs font-bold px-4 py-1.5 rounded-full border transition-colors" data-area="錦糸町" onclick="filterArea(this,'錦糸町')">錦糸町</button>
+        <button class="area-tab tab-active text-xs font-bold px-4 py-2 rounded-full border transition-colors" data-area="すべて" onclick="filterArea(this,'すべて')">すべて</button>
+        <button class="area-tab tab-inactive text-xs font-bold px-4 py-2 rounded-full border transition-colors" data-area="歌舞伎町" onclick="filterArea(this,'歌舞伎町')">歌舞伎町</button>
+        <button class="area-tab tab-inactive text-xs font-bold px-4 py-2 rounded-full border transition-colors" data-area="上野" onclick="filterArea(this,'上野')">上野</button>
+        <button class="area-tab tab-inactive text-xs font-bold px-4 py-2 rounded-full border transition-colors" data-area="錦糸町" onclick="filterArea(this,'錦糸町')">錦糸町</button>
       </div>
       <div class="grid md:grid-cols-2 gap-5" id="store-grid">
         
@@ -337,7 +337,7 @@
               <h3 class="text-base font-bold text-white truncate">ポセイドン新宿</h3>
             </div>
             <div class="flex items-center gap-2 shrink-0">
-              <a href="https://twitter.com/intent/tweet?text=2026%E5%B9%B46%E6%9C%88%E3%81%AE%E3%83%9D%E3%82%BB%E3%82%A4%E3%83%89%E3%83%B3%E6%96%B0%E5%AE%BF(%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA)%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0TOP3%F0%9F%8F%86%201%E4%BD%8D%E3%82%8C%E3%81%84%E3%81%AA%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+              <a href="https://twitter.com/intent/tweet?text=2026%E5%B9%B46%E6%9C%88%E3%81%AE%E3%83%9D%E3%82%BB%E3%82%A4%E3%83%89%E3%83%B3%E6%96%B0%E5%AE%BF(%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA)%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0TOP3%F0%9F%8F%86%201%E4%BD%8D%E3%82%8C%E3%81%84%E3%81%AA%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -386,7 +386,7 @@
               <h3 class="text-base font-bold text-white truncate">BACHELOR（バチェラー）</h3>
             </div>
             <div class="flex items-center gap-2 shrink-0">
-              <a href="https://twitter.com/intent/tweet?text=2026%E5%B9%B46%E6%9C%88%E3%81%AEBACHELOR%EF%BC%88%E3%83%90%E3%83%81%E3%82%A7%E3%83%A9%E3%83%BC%EF%BC%89(%E4%B8%8A%E9%87%8E)%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0TOP3%F0%9F%8F%86%201%E4%BD%8D%E3%81%BE%E3%81%97%E3%82%8D%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+              <a href="https://twitter.com/intent/tweet?text=2026%E5%B9%B46%E6%9C%88%E3%81%AEBACHELOR%EF%BC%88%E3%83%90%E3%83%81%E3%82%A7%E3%83%A9%E3%83%BC%EF%BC%89(%E4%B8%8A%E9%87%8E)%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0TOP3%F0%9F%8F%86%201%E4%BD%8D%E3%81%BE%E3%81%97%E3%82%8D%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -435,7 +435,7 @@
               <h3 class="text-base font-bold text-white truncate">アトランティス</h3>
             </div>
             <div class="flex items-center gap-2 shrink-0">
-              <a href="https://twitter.com/intent/tweet?text=2026%E5%B9%B46%E6%9C%88%E3%81%AE%E3%82%A2%E3%83%88%E3%83%A9%E3%83%B3%E3%83%86%E3%82%A3%E3%82%B9(%E4%B8%8A%E9%87%8E)%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0TOP3%F0%9F%8F%86%201%E4%BD%8D%E3%81%82%E3%81%84%E3%82%8A%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+              <a href="https://twitter.com/intent/tweet?text=2026%E5%B9%B46%E6%9C%88%E3%81%AE%E3%82%A2%E3%83%88%E3%83%A9%E3%83%B3%E3%83%86%E3%82%A3%E3%82%B9(%E4%B8%8A%E9%87%8E)%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0TOP3%F0%9F%8F%86%201%E4%BD%8D%E3%81%82%E3%81%84%E3%82%8A%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E4%B8%8A%E9%87%8E&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -484,7 +484,7 @@
               <h3 class="text-base font-bold text-white truncate">クラブ蓮（レン）錦糸町</h3>
             </div>
             <div class="flex items-center gap-2 shrink-0">
-              <a href="https://twitter.com/intent/tweet?text=2026%E5%B9%B46%E6%9C%88%E3%81%AE%E3%82%AF%E3%83%A9%E3%83%96%E8%93%AE%EF%BC%88%E3%83%AC%E3%83%B3%EF%BC%89%E9%8C%A6%E7%B3%B8%E7%94%BA(%E9%8C%A6%E7%B3%B8%E7%94%BA)%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0TOP3%F0%9F%8F%86%201%E4%BD%8D%E3%81%82%E3%82%93%E3%81%AA%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E9%8C%A6%E7%B3%B8%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-1.5 rounded-full transition-colors">
+              <a href="https://twitter.com/intent/tweet?text=2026%E5%B9%B46%E6%9C%88%E3%81%AE%E3%82%AF%E3%83%A9%E3%83%96%E8%93%AE%EF%BC%88%E3%83%AC%E3%83%B3%EF%BC%89%E9%8C%A6%E7%B3%B8%E7%94%BA(%E9%8C%A6%E7%B3%B8%E7%94%BA)%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0TOP3%F0%9F%8F%86%201%E4%BD%8D%E3%81%82%E3%82%93%E3%81%AA%20%23%E3%82%AD%E3%83%A3%E3%83%90%E5%AC%A2%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%20%23%E9%8C%A6%E7%B3%B8%E7%94%BA&url=https%3A%2F%2Fgrace-sc.com%2Franking%2F" target="_blank" rel="noopener" class="share-x inline-flex items-center gap-1.5 text-xs font-bold text-white bg-black hover:bg-gray-800 border border-white/20 px-3 py-2 rounded-full transition-colors">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         ポスト
       </a>
@@ -545,166 +545,166 @@
         <div>
           <h3 class="text-xs font-bold text-[#c9a96e] mb-2 tracking-wider">歌舞伎町 <span class="text-gray-600 font-normal">29</span></h3>
           <div class="grid grid-cols-1 gap-1.5">
-            <a href="/stores/charme.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">Charme（シャルム）（元デザイア）</a>
-            <a href="/stores/bacheron.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">club BACHERON（バシュロン）</a>
-            <a href="/stores/eterna.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ETERNA（エテルナ）</a>
-            <a href="/stores/lealys.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">LEALYS TOKYO（リアリストウキョウ）</a>
-            <a href="/stores/nexus-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">NEXUS（ネクサス）</a>
-            <a href="/stores/otto.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">otto（オット）</a>
-            <a href="/stores/club-r-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">R（アール）</a>
-            <a href="/stores/asian-club.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">アジアンクラブ</a>
-            <a href="/stores/anela.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">アネラ（元ソムニオ）</a>
-            <a href="/stores/vixy.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ヴィクシー（元ドンフィン）</a>
-            <a href="/stores/wave-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ウェーブ（元イロハ）</a>
-            <a href="/stores/velluge.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ヴェルージュ （元ディアレスト）</a>
-            <a href="/stores/orange-terrace.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">オレンジテラス（新宿）</a>
-            <a href="/stores/club-aoi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">クラブアオイ</a>
-            <a href="/stores/globe-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">グローブ</a>
-            <a href="/stores/guest-morning.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ゲストモーニング（元レヴューモーニング）</a>
-            <a href="/stores/gentlemans-club.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ジェントルマンズクラブ</a>
-            <a href="/stores/cellix.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">セリュックス</a>
-            <a href="/stores/selene-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">セレネ（新宿）</a>
-            <a href="/stores/solomon.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ソロモン（元フォーセンス）</a>
-            <a href="/stores/dearest.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ディアレスト</a>
-            <a href="/stores/now-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ナウ（元アンジュ）</a>
-            <a href="/stores/highschool-nana.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ハイスクールナナプラザ</a>
-            <a href="/stores/fabric-lounge-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ファブリックラウンジ新宿</a>
-            <a href="/stores/bene-tokyo.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ベネ東京</a>
-            <a href="/stores/kalmia-morning.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">朝KALMIA（カルミア）（元朝アネラ）</a>
-            <a href="/stores/now-morning.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">朝ナウ（元朝シェルター）</a>
-            <a href="/stores/kalmia-night.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">夜カルミア（元:夜スパークル）</a>
-            <a href="/stores/rinno-kaze.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">倫乃風（りんのかぜ）</a>
+            <a href="/stores/charme.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">Charme（シャルム）（元デザイア）</a>
+            <a href="/stores/bacheron.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">club BACHERON（バシュロン）</a>
+            <a href="/stores/eterna.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ETERNA（エテルナ）</a>
+            <a href="/stores/lealys.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">LEALYS TOKYO（リアリストウキョウ）</a>
+            <a href="/stores/nexus-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">NEXUS（ネクサス）</a>
+            <a href="/stores/otto.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">otto（オット）</a>
+            <a href="/stores/club-r-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">R（アール）</a>
+            <a href="/stores/asian-club.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">アジアンクラブ</a>
+            <a href="/stores/anela.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">アネラ（元ソムニオ）</a>
+            <a href="/stores/vixy.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ヴィクシー（元ドンフィン）</a>
+            <a href="/stores/wave-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ウェーブ（元イロハ）</a>
+            <a href="/stores/velluge.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ヴェルージュ （元ディアレスト）</a>
+            <a href="/stores/orange-terrace.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">オレンジテラス（新宿）</a>
+            <a href="/stores/club-aoi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">クラブアオイ</a>
+            <a href="/stores/globe-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">グローブ</a>
+            <a href="/stores/guest-morning.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ゲストモーニング（元レヴューモーニング）</a>
+            <a href="/stores/gentlemans-club.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ジェントルマンズクラブ</a>
+            <a href="/stores/cellix.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">セリュックス</a>
+            <a href="/stores/selene-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">セレネ（新宿）</a>
+            <a href="/stores/solomon.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ソロモン（元フォーセンス）</a>
+            <a href="/stores/dearest.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ディアレスト</a>
+            <a href="/stores/now-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ナウ（元アンジュ）</a>
+            <a href="/stores/highschool-nana.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ハイスクールナナプラザ</a>
+            <a href="/stores/fabric-lounge-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ファブリックラウンジ新宿</a>
+            <a href="/stores/bene-tokyo.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ベネ東京</a>
+            <a href="/stores/kalmia-morning.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">朝KALMIA（カルミア）（元朝アネラ）</a>
+            <a href="/stores/now-morning.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">朝ナウ（元朝シェルター）</a>
+            <a href="/stores/kalmia-night.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">夜カルミア（元:夜スパークル）</a>
+            <a href="/stores/rinno-kaze.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">倫乃風（りんのかぜ）</a>
           </div>
         </div>
 
         <div>
           <h3 class="text-xs font-bold text-[#c9a96e] mb-2 tracking-wider">新宿 <span class="text-gray-600 font-normal">7</span></h3>
           <div class="grid grid-cols-1 gap-1.5">
-            <a href="/stores/fabric-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ファブリック（新宿）</a>
-            <a href="/stores/bene.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ベネ</a>
-            <a href="/stores/poseidon.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ポセイドン</a>
-            <a href="/stores/rotta-kagurazaka.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ロッタ</a>
-            <a href="/stores/usagi-kagurazaka.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">神楽坂うさぎ</a>
-            <a href="/stores/tatsumi-kagurazaka.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">辰巳</a>
-            <a href="/stores/chocho-kagurazaka.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">蝶蝶（ちょうちょう）</a>
+            <a href="/stores/fabric-shinjuku.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ファブリック（新宿）</a>
+            <a href="/stores/bene.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ベネ</a>
+            <a href="/stores/poseidon.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ポセイドン</a>
+            <a href="/stores/rotta-kagurazaka.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ロッタ</a>
+            <a href="/stores/usagi-kagurazaka.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">神楽坂うさぎ</a>
+            <a href="/stores/tatsumi-kagurazaka.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">辰巳</a>
+            <a href="/stores/chocho-kagurazaka.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">蝶蝶（ちょうちょう）</a>
           </div>
         </div>
 
         <div>
           <h3 class="text-xs font-bold text-[#c9a96e] mb-2 tracking-wider">六本木 <span class="text-gray-600 font-normal">33</span></h3>
           <div class="grid grid-cols-1 gap-1.5">
-            <a href="/stores/burj-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">BURJ</a>
-            <a href="/stores/daytona-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">DAYTONA</a>
-            <a href="/stores/nova-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">NOVA roppongi</a>
-            <a href="/stores/nrg-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">NRG</a>
-            <a href="/stores/prima-tokyo.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">prima tokyo（プリマトウキョウ）</a>
-            <a href="/stores/smile-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">SMILE</a>
-            <a href="/stores/unjour-tokyo.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">UNJOUR東京（アンジュール）</a>
-            <a href="/stores/xee-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">XEE（ジー）</a>
-            <a href="/stores/zoo-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ZOO</a>
-            <a href="/stores/ariel-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">アリエル</a>
-            <a href="/stores/bene-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ヴェネ東京六本木</a>
-            <a href="/stores/jungle-second.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ジャングルセカンド</a>
-            <a href="/stores/jungle-tokyo.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ジャングルトウキョウ</a>
-            <a href="/stores/sweet-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">スイート</a>
-            <a href="/stores/chic-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">チック</a>
-            <a href="/stores/baron-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">バロン</a>
-            <a href="/stores/fabric-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ファブリック</a>
-            <a href="/stores/fabric7.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ファブリック7（セブン）</a>
-            <a href="/stores/fabric7-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ファブリックROPPONGI7（ロッポンギセブン）</a>
-            <a href="/stores/bourj.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ブルジュ</a>
-            <a href="/stores/poseidon-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ポセイドン</a>
-            <a href="/stores/muselerva.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ミュゼルヴァ</a>
-            <a href="/stores/lalah-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ララァ</a>
-            <a href="/stores/rio-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">リオ六本木店</a>
-            <a href="/stores/liric-tokyo.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">リリック東京</a>
-            <a href="/stores/lyric.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">リリック東京</a>
-            <a href="/stores/lucra-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ルクラ</a>
-            <a href="/stores/red-dragon.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">レッドドラゴン</a>
-            <a href="/stores/nrg-morning.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">朝NRG</a>
-            <a href="/stores/daytona-morning.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">朝デイトナ</a>
-            <a href="/stores/kisui-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">妃翠</a>
-            <a href="/stores/hisui.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">妃翠（ヒスイ）</a>
-            <a href="/stores/bijinchaya-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">美人茶屋</a>
+            <a href="/stores/burj-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">BURJ</a>
+            <a href="/stores/daytona-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">DAYTONA</a>
+            <a href="/stores/nova-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">NOVA roppongi</a>
+            <a href="/stores/nrg-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">NRG</a>
+            <a href="/stores/prima-tokyo.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">prima tokyo（プリマトウキョウ）</a>
+            <a href="/stores/smile-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">SMILE</a>
+            <a href="/stores/unjour-tokyo.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">UNJOUR東京（アンジュール）</a>
+            <a href="/stores/xee-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">XEE（ジー）</a>
+            <a href="/stores/zoo-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ZOO</a>
+            <a href="/stores/ariel-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">アリエル</a>
+            <a href="/stores/bene-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ヴェネ東京六本木</a>
+            <a href="/stores/jungle-second.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ジャングルセカンド</a>
+            <a href="/stores/jungle-tokyo.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ジャングルトウキョウ</a>
+            <a href="/stores/sweet-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">スイート</a>
+            <a href="/stores/chic-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">チック</a>
+            <a href="/stores/baron-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">バロン</a>
+            <a href="/stores/fabric-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ファブリック</a>
+            <a href="/stores/fabric7.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ファブリック7（セブン）</a>
+            <a href="/stores/fabric7-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ファブリックROPPONGI7（ロッポンギセブン）</a>
+            <a href="/stores/bourj.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ブルジュ</a>
+            <a href="/stores/poseidon-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ポセイドン</a>
+            <a href="/stores/muselerva.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ミュゼルヴァ</a>
+            <a href="/stores/lalah-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ララァ</a>
+            <a href="/stores/rio-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">リオ六本木店</a>
+            <a href="/stores/liric-tokyo.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">リリック東京</a>
+            <a href="/stores/lyric.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">リリック東京</a>
+            <a href="/stores/lucra-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ルクラ</a>
+            <a href="/stores/red-dragon.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">レッドドラゴン</a>
+            <a href="/stores/nrg-morning.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">朝NRG</a>
+            <a href="/stores/daytona-morning.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">朝デイトナ</a>
+            <a href="/stores/kisui-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">妃翠</a>
+            <a href="/stores/hisui.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">妃翠（ヒスイ）</a>
+            <a href="/stores/bijinchaya-roppongi.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">美人茶屋</a>
           </div>
         </div>
 
         <div>
           <h3 class="text-xs font-bold text-[#c9a96e] mb-2 tracking-wider">銀座 <span class="text-gray-600 font-normal">15</span></h3>
           <div class="grid grid-cols-1 gap-1.5">
-            <a href="/stores/club-77.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">77（セブンティーセブン）</a>
-            <a href="/stores/club-s-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">CLUB S（クラブエス）（元クラブレイ）</a>
-            <a href="/stores/aria-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">アリア</a>
-            <a href="/stores/efka-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">エフカ</a>
-            <a href="/stores/club-gin.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">クラブ銀</a>
-            <a href="/stores/coterie-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">コーテリー</a>
-            <a href="/stores/paradi-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">パラディ（元エベラ）</a>
-            <a href="/stores/milano-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ミラノクラブ</a>
-            <a href="/stores/monolith-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">モノリス（元レーヴル）</a>
-            <a href="/stores/lavie-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ラヴィエ銀座（元ジラフ）</a>
-            <a href="/stores/rouge-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ルージュ</a>
-            <a href="/stores/kuroneko-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ロイヤルラウンジKuroneko（クロネコ）</a>
-            <a href="/stores/hibiki-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">響</a>
-            <a href="/stores/chic-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">銀座チック</a>
-            <a href="/stores/luxsa-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">銀座ルクサ</a>
+            <a href="/stores/club-77.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">77（セブンティーセブン）</a>
+            <a href="/stores/club-s-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">CLUB S（クラブエス）（元クラブレイ）</a>
+            <a href="/stores/aria-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">アリア</a>
+            <a href="/stores/efka-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">エフカ</a>
+            <a href="/stores/club-gin.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">クラブ銀</a>
+            <a href="/stores/coterie-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">コーテリー</a>
+            <a href="/stores/paradi-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">パラディ（元エベラ）</a>
+            <a href="/stores/milano-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ミラノクラブ</a>
+            <a href="/stores/monolith-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">モノリス（元レーヴル）</a>
+            <a href="/stores/lavie-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ラヴィエ銀座（元ジラフ）</a>
+            <a href="/stores/rouge-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ルージュ</a>
+            <a href="/stores/kuroneko-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ロイヤルラウンジKuroneko（クロネコ）</a>
+            <a href="/stores/hibiki-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">響</a>
+            <a href="/stores/chic-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">銀座チック</a>
+            <a href="/stores/luxsa-ginza.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">銀座ルクサ</a>
           </div>
         </div>
 
         <div>
           <h3 class="text-xs font-bold text-[#c9a96e] mb-2 tracking-wider">池袋 <span class="text-gray-600 font-normal">16</span></h3>
           <div class="grid grid-cols-1 gap-1.5">
-            <a href="/stores/venus-ikebukuro.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">Club Venus（ビーナス）</a>
-            <a href="/stores/edition.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">Edition（エディション）</a>
-            <a href="/stores/gran-class.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">GRAN CLASS -TOKYO-（元クラブハマー）</a>
-            <a href="/stores/kanaloa.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">Kanaloa（カナロア）</a>
-            <a href="/stores/mezm.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">mezm（元キューブ）</a>
-            <a href="/stores/red-shoes.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">red shoes（レッドシューズ）</a>
-            <a href="/stores/airport-ikb.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">エアポートIKBビジネス</a>
-            <a href="/stores/angel-feather.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">エンジェルフェザー池袋</a>
-            <a href="/stores/nox.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ノックス（元イブ）</a>
-            <a href="/stores/patina.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">パティーナ（元マチルダ）</a>
-            <a href="/stores/bize-ikebukuro.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ビゼ（池袋）</a>
-            <a href="/stores/fairy-ikebukuro.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">フェアリー（池袋）</a>
-            <a href="/stores/ferris.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">池袋CLUB Ferris（元クラブゼロ）</a>
-            <a href="/stores/seaside-ikebukuro.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">池袋SEASIDE</a>
-            <a href="/stores/grande-ikebukuro.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">池袋グランデ</a>
-            <a href="/stores/hyakka.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">百華（元フォックス）</a>
+            <a href="/stores/venus-ikebukuro.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">Club Venus（ビーナス）</a>
+            <a href="/stores/edition.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">Edition（エディション）</a>
+            <a href="/stores/gran-class.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">GRAN CLASS -TOKYO-（元クラブハマー）</a>
+            <a href="/stores/kanaloa.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">Kanaloa（カナロア）</a>
+            <a href="/stores/mezm.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">mezm（元キューブ）</a>
+            <a href="/stores/red-shoes.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">red shoes（レッドシューズ）</a>
+            <a href="/stores/airport-ikb.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">エアポートIKBビジネス</a>
+            <a href="/stores/angel-feather.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">エンジェルフェザー池袋</a>
+            <a href="/stores/nox.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ノックス（元イブ）</a>
+            <a href="/stores/patina.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">パティーナ（元マチルダ）</a>
+            <a href="/stores/bize-ikebukuro.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ビゼ（池袋）</a>
+            <a href="/stores/fairy-ikebukuro.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">フェアリー（池袋）</a>
+            <a href="/stores/ferris.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">池袋CLUB Ferris（元クラブゼロ）</a>
+            <a href="/stores/seaside-ikebukuro.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">池袋SEASIDE</a>
+            <a href="/stores/grande-ikebukuro.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">池袋グランデ</a>
+            <a href="/stores/hyakka.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">百華（元フォックス）</a>
           </div>
         </div>
 
         <div>
           <h3 class="text-xs font-bold text-[#c9a96e] mb-2 tracking-wider">上野 <span class="text-gray-600 font-normal">18</span></h3>
           <div class="grid grid-cols-1 gap-1.5">
-            <a href="/stores/bond.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">BOND（ボンド）</a>
-            <a href="/stores/club-sen.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">CLUB千（クラブセン）</a>
-            <a href="/stores/lipple.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">LIPPLE（リップル）</a>
-            <a href="/stores/liric-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">LIRIC TOKYO UENO（リリック トウキョウウエノ）</a>
-            <a href="/stores/epic-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">エピック</a>
-            <a href="/stores/crash-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">クラッシュ</a>
-            <a href="/stores/fairy-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">クラブ フェアリー</a>
-            <a href="/stores/ren-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">クラブ蓮(レン)上野</a>
-            <a href="/stores/grancru-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">グランクリュ（上野）</a>
-            <a href="/stores/godfather.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ゴッドファーザー</a>
-            <a href="/stores/bize-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ビゼ（上野）</a>
-            <a href="/stores/luxor-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ルクソール</a>
-            <a href="/stores/ray-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">レイ</a>
-            <a href="/stores/capone-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">上野club Capone（クラブ カポネ）</a>
-            <a href="/stores/mint-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">上野MINT（ミント）</a>
-            <a href="/stores/themis-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">上野THEMIS（テミス）</a>
-            <a href="/stores/bijinchaya-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">美人茶屋上野</a>
-            <a href="/stores/rokka-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">六華（ろっか）</a>
+            <a href="/stores/bond.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">BOND（ボンド）</a>
+            <a href="/stores/club-sen.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">CLUB千（クラブセン）</a>
+            <a href="/stores/lipple.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">LIPPLE（リップル）</a>
+            <a href="/stores/liric-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">LIRIC TOKYO UENO（リリック トウキョウウエノ）</a>
+            <a href="/stores/epic-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">エピック</a>
+            <a href="/stores/crash-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">クラッシュ</a>
+            <a href="/stores/fairy-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">クラブ フェアリー</a>
+            <a href="/stores/ren-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">クラブ蓮(レン)上野</a>
+            <a href="/stores/grancru-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">グランクリュ（上野）</a>
+            <a href="/stores/godfather.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ゴッドファーザー</a>
+            <a href="/stores/bize-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ビゼ（上野）</a>
+            <a href="/stores/luxor-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ルクソール</a>
+            <a href="/stores/ray-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">レイ</a>
+            <a href="/stores/capone-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">上野club Capone（クラブ カポネ）</a>
+            <a href="/stores/mint-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">上野MINT（ミント）</a>
+            <a href="/stores/themis-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">上野THEMIS（テミス）</a>
+            <a href="/stores/bijinchaya-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">美人茶屋上野</a>
+            <a href="/stores/rokka-ueno.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">六華（ろっか）</a>
           </div>
         </div>
 
         <div>
           <h3 class="text-xs font-bold text-[#c9a96e] mb-2 tracking-wider">錦糸町 <span class="text-gray-600 font-normal">6</span></h3>
           <div class="grid grid-cols-1 gap-1.5">
-            <a href="/stores/bianca.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">club Bianca（クラブビアンカ）</a>
-            <a href="/stores/garimpo.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">GARIMPO（ガリンポ）</a>
-            <a href="/stores/viola.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ヴィオラ</a>
-            <a href="/stores/regalia.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">クラブレガリア</a>
-            <a href="/stores/victoria.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ビクトリア</a>
-            <a href="/stores/rebel.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-1.5 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">レブル</a>
+            <a href="/stores/bianca.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">club Bianca（クラブビアンカ）</a>
+            <a href="/stores/garimpo.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">GARIMPO（ガリンポ）</a>
+            <a href="/stores/viola.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ヴィオラ</a>
+            <a href="/stores/regalia.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">クラブレガリア</a>
+            <a href="/stores/victoria.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">ビクトリア</a>
+            <a href="/stores/rebel.html" class="block text-xs text-gray-400 hover:text-[#c9a96e] py-2 px-3 bg-white/[0.02] rounded-lg border border-white/5 truncate transition-colors">レブル</a>
           </div>
         </div>
       </div>
@@ -714,10 +714,10 @@
   <!-- CTA -->
   <section class="py-14 px-6 bg-[#111111] border-t border-white/10">
     <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-xl font-bold text-white mb-2">ランキング上位を狙える店を紹介します</h2>
+      <h2 class="text-xl font-bold text-white mb-2">ランキング上位を狙える店を<span class="whitespace-nowrap">紹介します</span></h2>
       <p class="text-sm text-gray-400 mb-7">「稼げる箱で上を目指したい」——あなたに合う店舗の条件交渉・体入同行まで一貫対応。まずはLINEで相談を。</p>
       <a href="/index.html#cta" class="inline-flex items-center gap-3 bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold px-8 py-4 rounded-full shadow-lg transition-all">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
         LINEで相談する
       </a>
     </div>
