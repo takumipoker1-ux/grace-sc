@@ -7,6 +7,8 @@ OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "assets", "thumbn
 
 # slug: (一字, カテゴリ)
 META = {
+    "advice-shusha-sentaku":  ("択", "考え方"),
+    "roppongi-guide":         ("六", "エリアガイド"),
     "daigakusei-scout-kachi": ("選", "スカウトの見極め"),
     "joukyou-junbi":          ("都", "はじめての夜職"),
     "iseki-timing":           ("移", "移籍・キャリア"),
