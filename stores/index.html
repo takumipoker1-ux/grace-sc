@@ -261,9 +261,9 @@
           <div class="text-2xl md:text-3xl mb-2 leading-none" style="color:#666">●</div>
           <div class="text-sm md:text-base font-extrabold" style="color:#9ca3af">千葉<br/><span class="text-[11px] font-normal opacity-70">準備中</span></div>
         </button>
-        <button onclick="" class="region-tile cursor-not-allowed rounded-xl p-5 md:p-6 border-2 transition-all hover:scale-105 active:scale-95" style="background:#1a1a1a;border-color:#333;">
-          <div class="text-2xl md:text-3xl mb-2 leading-none" style="color:#666">●</div>
-          <div class="text-sm md:text-base font-extrabold" style="color:#9ca3af">神奈川<br/><span class="text-[11px] font-normal opacity-70">準備中</span></div>
+        <button onclick="mapJumpTab('kanagawa')" class="region-tile cursor-pointer rounded-xl p-5 md:p-6 border-2 transition-all hover:scale-105 active:scale-95" style="background:linear-gradient(135deg, #A06BE022 0%, #A06BE011 100%);border-color:#A06BE044;">
+          <div class="text-2xl md:text-3xl mb-2 leading-none" style="color:#A06BE0">●</div>
+          <div class="text-sm md:text-base font-extrabold" style="color:#A06BE0">神奈川</div>
         </button>
       </div>
     </div>
@@ -304,9 +304,9 @@
           class="tab-inactive px-5 py-2 rounded-full text-sm font-bold transition-colors duration-150 border">
           千葉<span class="ml-1 text-[11px] text-gray-500">準備中</span>
         </button>
-        <button onclick="switchArea('kanagawa')" id="tab-kanagawa" data-soon="1"
+        <button onclick="switchArea('kanagawa')" id="tab-kanagawa"
           class="tab-inactive px-5 py-2 rounded-full text-sm font-bold transition-colors duration-150 border">
-          神奈川<span class="ml-1 text-[11px] text-gray-500">準備中</span>
+          神奈川
         </button>
       </div>
       <!-- 時給フィルター -->
@@ -3970,10 +3970,574 @@
       </div>
       <!-- ========== 神奈川 ========== -->
       <div id="area-kanagawa" class="area-section">
-        <div class="bg-[#111] rounded-2xl p-8 border border-white/10 text-center">
-          <p class="text-sm text-gray-400 mb-2">📍 神奈川エリア</p>
-          <p class="text-base font-bold text-white mb-2">準備中</p>
-          <p class="text-xs text-gray-500">神奈川エリアの店舗情報は準備中です。<br/>気になる店舗があればLINEからお問い合わせください。</p>
+        <div class="mt-2 bg-[#111] rounded-2xl p-5 border border-white/10 mb-4">
+          <h3 class="text-sm font-bold text-gray-300 mb-4">関内エリア 全店舗一覧（13店舗）</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <!-- Lechelle（レシェル） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">Lechelle（レシェル）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- Salon de CLUB（サロンドクラブ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">Salon de CLUB（サロンドクラブ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- 関内カルネ -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">関内カルネ</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- AMAN -YOKOHAMA-（アマン横浜） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">AMAN -YOKOHAMA-（アマン横浜）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- Grand Chariot（グランシャリオ横浜） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">Grand Chariot（グランシャリオ横浜）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- 関内 Pixy（ピクシー） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">関内 Pixy（ピクシー）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- President Dachs（プレジデントダックス） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">President Dachs（プレジデントダックス）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- ダックスクイーン -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">ダックスクイーン</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- LUXE（ラグゼ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="low">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">LUXE（ラグゼ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給2,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- 関内Ruxe（リュクス） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="low">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">関内Ruxe（リュクス）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給2,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- Ravi（ラヴィ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">Ravi（ラヴィ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- 関内テラス -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="high">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">関内テラス</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給5,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- CLUB DOUBLE KANNAI（ダブル） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">CLUB DOUBLE KANNAI（ダブル）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="mt-2 bg-[#111] rounded-2xl p-5 border border-white/10 mb-4">
+          <h3 class="text-sm font-bold text-gray-300 mb-4">福富町エリア 全店舗一覧（5店舗）</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <!-- CLUB RICH（クラブリッチ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">CLUB RICH（クラブリッチ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- CLUB LINK（クラブリンク） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">CLUB LINK（クラブリンク）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- プティ -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">プティ</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- ロイヤル -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">ロイヤル</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- Club アルファ -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">Club アルファ</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="mt-2 bg-[#111] rounded-2xl p-5 border border-white/10 mb-4">
+          <h3 class="text-sm font-bold text-gray-300 mb-4">本厚木エリア 全店舗一覧（11店舗）</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <!-- DOLCE（ドルチェ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">DOLCE（ドルチェ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- modern（モダン） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">modern（モダン）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- stylish CLUB AMS（アムス） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">stylish CLUB AMS（アムス）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- L（エル） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">L（エル）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- Club La Beaute（ラボーテ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">Club La Beaute（ラボーテ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- クラブエクセレント厚木 -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="low">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">クラブエクセレント厚木</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給2,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- CLUB Jerusabem（エルサレム） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">CLUB Jerusabem（エルサレム）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- Club Luna（クラブルナ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">Club Luna（クラブルナ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- レインフォレスト -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">レインフォレスト</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- snack LOKI（ロキ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="low">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">snack LOKI（ロキ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給2,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- BUBBLE（バブル） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="low">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">BUBBLE（バブル）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給2,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="mt-2 bg-[#111] rounded-2xl p-5 border border-white/10 mb-4">
+          <h3 class="text-sm font-bold text-gray-300 mb-4">大和エリア 全店舗一覧（6店舗）</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <!-- Club FORT（クラブフォート） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">Club FORT（クラブフォート）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- Mandarin Club（マンダリン） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="low">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">Mandarin Club（マンダリン）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給2,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- クラブマーベラス -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">クラブマーベラス</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- 大和garden（ガーデン） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">大和garden（ガーデン）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- ルジェ -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">ルジェ</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- La Vie en Rose（ラヴィアンローズ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">La Vie en Rose（ラヴィアンローズ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="mt-2 bg-[#111] rounded-2xl p-5 border border-white/10 mb-4">
+          <h3 class="text-sm font-bold text-gray-300 mb-4">橋本エリア 全店舗一覧（2店舗）</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <!-- キアラ -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">キアラ</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- EDEN（エデン） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">EDEN（エデン）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/stores/eden-hashimoto.html" class="flex-1 text-center text-xs text-[#c9a96e] border border-[#c9a96e]/30 py-2.5 rounded-lg hover:bg-[#c9a96e]/10 transition-colors">詳細</a>
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">相談</a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="mt-2 bg-[#111] rounded-2xl p-5 border border-white/10 mb-4">
+          <h3 class="text-sm font-bold text-gray-300 mb-4">溝の口エリア 全店舗一覧（3店舗）</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <!-- ALUMA（アルマ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">ALUMA（アルマ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- 溝の口ゴールド -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">溝の口ゴールド</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,500円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- Club Fantasia（ファンタジア） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">Club Fantasia（ファンタジア）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="mt-2 bg-[#111] rounded-2xl p-5 border border-white/10 mb-4">
+          <h3 class="text-sm font-bold text-gray-300 mb-4">桜木町エリア 全店舗一覧（2店舗）</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <!-- 桜木町SEASIDE（シーサイド） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">桜木町SEASIDE（シーサイド）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- LEAP（リープ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">LEAP（リープ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給3,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="mt-2 bg-[#111] rounded-2xl p-5 border border-white/10 mb-4">
+          <h3 class="text-sm font-bold text-gray-300 mb-4">大船エリア 全店舗一覧（2店舗）</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <!-- Gran sista kamakura（グランシスタ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">Gran sista kamakura（グランシスタ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          <!-- AMAN.KAMAKURA（アマン カマクラ） -->
+          <div class="store-card bg-[#1a1a1a] rounded-xl p-4 border border-white/10 flex flex-col gap-2" data-rate="mid">
+            <div class="flex items-start justify-between gap-1 mb-0.5">
+              <h3 class="text-sm font-bold text-white leading-snug">AMAN.KAMAKURA（アマン カマクラ）</h3>
+            </div>
+            <div class="flex flex-wrap gap-1">
+              <span class="text-[11px] bg-white/5 text-gray-400 px-2 py-0.5 rounded-full whitespace-nowrap">時給4,000円〜</span>
+            </div>
+            <div class="flex gap-1.5 mt-auto pt-1">
+              <a href="/index.html#cta" class="flex-1 text-center text-xs text-white bg-brand-line hover:bg-brand-lineDark py-2.5 rounded-lg font-bold transition-colors">体入相談する</a>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
     </div>
