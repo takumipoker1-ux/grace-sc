@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="8cl4YxoX6uv3bSQEvPaARV7hEWi9UCSmJHhUnHwQvYY" />
-  <meta name="description" content="300店舗を自分の足で見てきたナイトワーク専属エージェント。数字だけでなく店長や女の子の話も聞いた上で、その人に合うお店を選んで提案する。" />
+  <meta name="description" content="求人票に載らないことを300店以上知っているナイトワーク専属エージェント。実際の客入り・スタッフの質・辞めた子の理由まで、この目で確かめた情報から、あなたに合うお店を選んで提案する。" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="GRACE SELECTION｜ナイトワーク専属エージェント" />
-  <meta property="og:description" content="300店舗を自分の足で見てきたナイトワーク専属エージェント。数字だけでなく店長や女の子の話も聞いた上で、その人に合うお店を選んで提案する。" />
+  <meta property="og:description" content="求人票に載らないことを300店以上知っているナイトワーク専属エージェント。実際の客入り・スタッフの質・辞めた子の理由まで、この目で確かめた情報から、あなたに合うお店を選んで提案する。" />
   <meta property="og:url" content="https://grace-sc.com/" />
   <meta property="og:site_name" content="GRACE SELECTION" />
   <meta property="og:locale" content="ja_JP" />
@@ -14,32 +14,116 @@
   <meta name="twitter:image" content="https://grace-sc.com/assets/ogp.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="GRACE SELECTION｜ナイトワーク専属エージェント" />
-  <meta name="twitter:description" content="300店舗を自分の足で見てきたナイトワーク専属エージェント。数字だけでなく店長や女の子の話も聞いた上で、その人に合うお店を選んで提案する。" />
+  <meta name="twitter:description" content="求人票に載らないことを300店以上知っているナイトワーク専属エージェント。実際の客入り・スタッフの質・辞めた子の理由まで、この目で確かめた情報から、あなたに合うお店を選んで提案する。" />
   <link rel="canonical" href="https://grace-sc.com/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GRACE SELECTION｜ナイトワーク専属エージェント</title>
   <link rel="stylesheet" href="/assets/tailwind.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
     html { scroll-behavior: smooth; }
-    h1, h2, h3 { font-family: 'Noto Serif JP', serif; }
+    h1, h2, h3 { font-family: 'Shippori Mincho', 'Noto Serif JP', serif; }
     /* 日本語の不自然な改行を防ぐ */
     h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
     .jp-keep { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
     .jp-nobreak { display: inline-block; }
-    .hero-bg {
-      background: linear-gradient(135deg, #0d0d0d 0%, #1a1510 60%, #1a1015 100%);
+
+    /* ===== 夜の記録：デザイントークン ===== */
+    body { background: #0b0f16; }
+    .mincho { font-family: 'Shippori Mincho', 'Noto Serif JP', serif; }
+    .amber { color: #d9a441; }
+    .mist { color: #6e7686; }
+    .fog { color: #b7bcc6; }
+
+    .night-hero {
+      background:
+        radial-gradient(ellipse 420px 280px at 78% 92%, rgba(217,164,65,.13), transparent 70%),
+        radial-gradient(ellipse 360px 240px at 12% 85%, rgba(140,90,120,.09), transparent 70%),
+        linear-gradient(180deg, #07090e 0%, #0c1017 60%, #10141d 100%);
     }
-    .card-shadow {
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    .night-mid  { background: linear-gradient(180deg, #10141d 0%, #0b0f16 100%); }
+    .night-flat { background: #0b0f16; }
+    .night-soft { background: #0e1219; }
+    .night-final {
+      background:
+        radial-gradient(ellipse 380px 240px at 50% 100%, rgba(217,164,65,.10), transparent 70%),
+        linear-gradient(180deg, #0b0f16 0%, #07090e 100%);
     }
-    .card-shadow-md {
-      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    .film-bar { height: clamp(22px, 3.5vw, 40px); background: #000; }
+
+    .scene-label { font-size: 11px; letter-spacing: .34em; color: #6e7686; }
+    .subtitle { font-family: 'Shippori Mincho', 'Noto Serif JP', serif; font-weight: 500; letter-spacing: .12em; }
+    /* ヒーロー見出し：13文字×字間が320〜430px幅で溢れないようvw連動 */
+    .hero-h1 { font-size: clamp(20px, 5.9vw, 42px); letter-spacing: .06em; line-height: 2; }
+    @media (min-width: 768px) { .hero-h1 { letter-spacing: .14em; } }
+
+    .card-n { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09); border-radius: .75rem; }
+    .card-n-hover { transition: border-color .25s; }
+    .card-n-hover:hover { border-color: rgba(217,164,65,.4); }
+
+    /* ===== 面接の記録（紙） ===== */
+    .kiroku-glow { position: relative; padding: 26px; }
+    .kiroku-glow::before {
+      content: ""; position: absolute; inset: -8%;
+      background: radial-gradient(ellipse 60% 55% at 50% 42%, rgba(217,164,65,.14), transparent 70%);
+      pointer-events: none;
     }
-    .section-alt {
-      background: #faf8f5;
+    .kiroku {
+      position: relative;
+      background: #efeade; color: #24211b; border: 1px solid #cfc7b2;
+      box-shadow: 0 18px 60px rgba(0,0,0,.55);
+      padding: 24px 24px 18px;
     }
+    .kiroku::after {
+      content: "ぞの"; position: absolute; top: 16px; right: 18px;
+      font-family: 'Shippori Mincho', serif; color: #b93a32; border: 2px solid #b93a32;
+      border-radius: 50%; width: 46px; height: 46px; display: grid; place-items: center;
+      font-size: 15px; font-weight: 700; transform: rotate(8deg); opacity: 0;
+    }
+    .kiroku h3 { font-size: 14px; letter-spacing: .14em; margin: 0 0 4px; color: #57523f; font-weight: 600; }
+    .kiroku .k-no { font-size: 11px; color: #8c8577; margin: 0 0 14px; letter-spacing: .08em; }
+    .k-table { width: 100%; border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+    .k-table th { text-align: left; font-weight: 400; font-size: 10.5px; letter-spacing: .1em; color: #8c8577; border-bottom: 1px solid #cfc7b2; padding: 4px 6px; }
+    .k-table td { border-bottom: 1px dashed #d5cdb8; padding: 9px 6px; vertical-align: top; }
+    .k-table .k-memo { color: #57523f; line-height: 1.6; }
+    .k-note { font-size: 10.5px; color: #8c8577; margin: 12px 2px 0; letter-spacing: .05em; }
+
+    /* ===== ジワッと出る演出（JS有効時のみ） ===== */
+    /* blurはテキスト系（.rv-blur）だけ。大きなブロックはフェードのみ＝GPU負荷対策 */
+    html.rv-init .rv {
+      opacity: 0;
+      transform: translateY(14px);
+      transition:
+        opacity .7s ease var(--d, 0s),
+        transform .7s ease var(--d, 0s),
+        filter .7s ease var(--d, 0s);
+    }
+    html.rv-init .rv-blur { filter: blur(6px); }
+    html.rv-init tr.rv { transform: none; filter: none; transition: opacity .55s ease var(--d, 0s); }
+    html.rv-init .on .rv { opacity: 1; transform: none; filter: none; }
+    html.rv-init .on .kiroku::after {
+      animation: stamp .4s cubic-bezier(.2, 1.5, .4, 1) 1.8s both;
+    }
+    html:not(.rv-init) .kiroku::after { opacity: .85; transform: rotate(8deg); }
+    @keyframes stamp {
+      from { opacity: 0; transform: rotate(24deg) scale(1.7); }
+      to   { opacity: .85; transform: rotate(8deg) scale(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html.rv-init .rv { opacity: 1 !important; transform: none !important; filter: none !important; transition: none !important; }
+      html.rv-init .kiroku::after, html.rv-init .on .kiroku::after { animation: none !important; opacity: .85; transform: rotate(8deg); }
+    }
+
+    /* ===== 比較表（夜） ===== */
+    .cmp-head { background: rgba(255,255,255,.05); color: #b7bcc6; border: 1px solid rgba(255,255,255,.08); }
+    .cmp-head-g { background: rgba(217,164,65,.16); color: #f0e3c8; }
+    .cmp-label { color: #d5d8de; border-bottom: 1px solid rgba(255,255,255,.06); }
+    .cmp-cell { background: rgba(255,255,255,.02); border-left: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); }
+    .cmp-cell-g { background: rgba(217,164,65,.07); border-left: 1px solid rgba(217,164,65,.2); border-bottom: 1px solid rgba(217,164,65,.15); }
+    .mark-ok { color: #d9a441; font-weight: 700; }
+    .mark-mid { color: #8d7a4e; font-weight: 700; }
+    .mark-ng { color: #444c5c; font-weight: 700; }
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -111,13 +195,14 @@
     gtag('config', 'G-E0HBTZW846');
   </script>
   <script src="/assets/js/cta-tracker.js" defer></script>
+  <script>document.documentElement.classList.add('rv-init');</script>
 </head>
-<body class="font-sans text-gray-700 bg-white">
+<body class="font-sans text-gray-300 night-flat">
 
   <!-- ========== HEADER NAV ========== -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur border-b border-white/10">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-black/85 backdrop-blur border-b border-white/10">
     <div class="max-w-5xl mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-2">
-      <a href="/index.html" class="text-brand-gold font-serif font-semibold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0 py-3">GRACE SELECTION</a>
+      <a href="/index.html" class="amber mincho font-semibold text-sm md:text-base tracking-widest whitespace-nowrap shrink-0 py-3">GRACE SELECTION</a>
       <nav class="hidden sm:flex items-center gap-2.5 md:gap-6 text-xs md:text-sm font-medium text-gray-300">
         <a href="/index.html" class="py-2 hover:text-white transition-colors whitespace-nowrap hidden sm:inline">トップ</a>
         <a href="/stores/index.html" class="py-2 hover:text-white transition-colors whitespace-nowrap">店舗・求人</a>
@@ -131,284 +216,301 @@
     </div>
   </header>
 
-    <div id="mobile-menu" class="hidden sm:hidden fixed inset-0 z-[60] bg-[#0d0d0d]" onclick="if(event.target.id==='mobile-menu')toggleMobileMenu()">
+    <div id="mobile-menu" class="hidden sm:hidden fixed inset-0 z-[60] bg-[#07090e]" onclick="if(event.target.id==='mobile-menu')toggleMobileMenu()">
       <div class="flex justify-end p-3">
         <button onclick="toggleMobileMenu()" class="text-gray-300 p-2" aria-label="閉じる">
           <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
       <nav class="px-8 pt-4 flex flex-col gap-1 text-white text-base font-medium">
-        <a href="/index.html" class="py-4 border-b border-white/10 hover:text-[#c9a96e] transition-colors">トップ</a>
-        <a href="/stores/index.html" class="py-4 border-b border-white/10 hover:text-[#c9a96e] transition-colors">店舗・求人</a>
-        <a href="/articles/index.html" class="py-4 border-b border-white/10 hover:text-[#c9a96e] transition-colors">記事</a>
-        <a href="/about.html" class="py-4 border-b border-white/10 hover:text-[#c9a96e] transition-colors">ぞのとは</a>
-        <a href="/privacy.html" class="py-4 border-b border-white/10 text-gray-400 hover:text-[#c9a96e] transition-colors text-sm">プライバシーポリシー</a>
+        <a href="/index.html" class="py-4 border-b border-white/10 hover:text-[#d9a441] transition-colors">トップ</a>
+        <a href="/stores/index.html" class="py-4 border-b border-white/10 hover:text-[#d9a441] transition-colors">店舗・求人</a>
+        <a href="/articles/index.html" class="py-4 border-b border-white/10 hover:text-[#d9a441] transition-colors">記事</a>
+        <a href="/about.html" class="py-4 border-b border-white/10 hover:text-[#d9a441] transition-colors">ぞのとは</a>
+        <a href="/privacy.html" class="py-4 border-b border-white/10 text-gray-400 hover:text-[#d9a441] transition-colors text-sm">プライバシーポリシー</a>
         <a href="/index.html#cta" class="mt-6 bg-brand-line hover:bg-brand-lineDark text-white text-center font-bold py-4 rounded transition-colors">LINEで相談する</a>
       </nav>
     </div>
 
-  <!-- ========== HERO ========== -->
-  <section class="hero-bg min-h-screen flex flex-col justify-center items-center px-6 py-24 pt-32 text-center relative overflow-hidden">
-    <!-- 背景装飾 -->
-    <div class="absolute inset-0 pointer-events-none opacity-10">
-      <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-brand-gold blur-3xl"></div>
-      <div class="absolute bottom-1/3 right-1/4 w-48 h-48 rounded-full bg-brand-gold blur-3xl"></div>
-    </div>
+  <!-- ========== SCENE 01 / HERO ========== -->
+  <section class="night-hero min-h-screen flex flex-col justify-center items-center px-6 py-24 pt-32 text-center relative overflow-hidden rv-group">
+    <div class="film-bar absolute top-14 left-0 right-0"></div>
 
     <div class="max-w-2xl mx-auto relative z-10">
-      <!-- バッジ -->
-      <span class="inline-flex items-center gap-2 border border-brand-gold/40 text-brand-gold text-xs font-medium tracking-widest px-5 py-2 rounded mb-10 whitespace-nowrap">
-        <span class="w-1.5 h-1.5 rounded-full bg-brand-gold shrink-0"></span>
-        <span class="sm:hidden">NIGHTWORK AGENT</span>
-        <span class="hidden sm:inline">GRACE SELECTION ー ナイトワーク専属エージェント</span>
-      </span>
+      <p class="scene-label mb-9 rv rv-blur">SCENE 01 ── 歌舞伎町 1:00 AM</p>
 
-      <!-- キャッチコピー -->
-      <h1 class="text-3xl md:text-5xl font-serif font-bold leading-snug text-white mb-6 tracking-wide text-center">
-        もう、お店選びで<br />
-        <span class="text-brand-gold">失敗しない。</span>
+      <h1 class="subtitle hero-h1 text-white mb-4 rv rv-blur" style="--d:.3s">
+        求人票に載らないことを、<br />
+        300店以上知ってます。
       </h1>
-      <p class="text-lg md:text-xl font-light text-gray-300 mb-4 leading-relaxed">
-        300店舗を自分の足で見てきました。<br class="hidden md:block" />数字だけでなく、店長や女の子の話も<span class="whitespace-nowrap">聞いた上です。</span>
+
+      <p class="subtitle text-sm md:text-lg fog mb-12 rv rv-blur" style="--d:.9s; line-height:2.4;">
+        実際の客入り、スタッフの質、辞めた子の理由。<br class="hidden md:block" />
+        数字より、<span class="amber">この目で見てきたこと</span>を話します。
       </p>
 
-      <!-- サブコピー -->
-      <p class="text-sm md:text-base text-gray-400 mb-12 leading-relaxed max-w-lg mx-auto">
-        その中から、その人に合いそうなお店を選んで<span class="whitespace-nowrap">提案します。</span><br class="hidden md:block" />
-        条件が合わない時は、その場ではっきり<span class="whitespace-nowrap">「行かない方がいい」</span>と伝えます。<br class="hidden md:block" />
-        LINEは顔出し不要。紹介の前に電話で一度話します。
-      </p>
+      <div class="rv" style="--d:1.5s">
+        <a href="https://line.me/ti/p/_7nv0bKuRC" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-3 bg-brand-line hover:bg-brand-lineDark text-white text-base md:text-lg font-bold px-8 py-4 rounded shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+          LINEで相談する
+        </a>
+        <p class="mt-4 text-xs mist">最短当日から動けます</p>
+      </div>
 
-      <!-- CTA -->
-      <a href="https://line.me/ti/p/_7nv0bKuRC" target="_blank" rel="noopener"
-        class="inline-flex items-center gap-3 bg-brand-line hover:bg-brand-lineDark text-white text-base md:text-lg font-bold px-8 py-4 rounded shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-        </svg>
-        LINEで相談する
-      </a>
-
-      <p class="mt-4 text-xs text-gray-500">最短当日から動けます</p>
+      <p class="scene-label mt-12 rv rv-blur" style="--d:1.8s; font-size:10px;">GRACE SELECTION ── NIGHTWORK AGENT</p>
     </div>
 
     <!-- スクロール促進 -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-brand-gold/50">
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/20">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
       </svg>
     </div>
   </section>
 
-  <!-- ========== PAIN POINTS ========== -->
-  <section class="py-24 px-6 bg-white">
+  <!-- ========== SCENE 02 / 面接の記録 ========== -->
+  <section class="night-mid py-24 px-6 rv-group">
+    <div class="max-w-2xl mx-auto flex flex-col items-center">
+      <p class="scene-label mb-9 rv rv-blur">SCENE 02 ── 面接の記録</p>
+      <h2 class="subtitle text-xl md:text-2xl text-white text-center mb-3 rv rv-blur" style="--d:.25s; letter-spacing:.14em;">面接には、一緒に行きます。</h2>
+      <p class="text-sm mist text-center mb-10 rv rv-blur" style="--d:.5s">先月同行した面接の一部です。条件が話と違えば、その場で断ります。</p>
+
+      <div class="kiroku-glow w-full rv" style="--d:.75s">
+        <div class="kiroku">
+          <h3 class="mincho">面接の記録</h3>
+          <p class="k-no">2026年5月 ── 同行分より</p>
+          <table class="k-table">
+            <thead>
+              <tr><th>日付</th><th>店舗</th><th>メモ</th></tr>
+            </thead>
+            <tbody>
+              <tr class="rv" style="--d:1s"><td>05.12</td><td>歌舞伎町・K店</td><td class="k-memo">未経験の子に同行。その場で体入の日まで決まった</td></tr>
+              <tr class="rv" style="--d:1.2s"><td>05.14</td><td>新宿・M店</td><td class="k-memo">昼職と掛け持ち希望。週2の条件で通した</td></tr>
+              <tr class="rv" style="--d:1.4s"><td>05.20</td><td>錦糸町・R店</td><td class="k-memo">提示された時給が事前の話と違った。その場で断って帰った</td></tr>
+              <tr class="rv" style="--d:1.6s"><td>05.27</td><td>池袋・T店</td><td class="k-memo">人見知りの子。店長に先に伝えて、話しやすい面接にしてもらった</td></tr>
+            </tbody>
+          </table>
+          <p class="k-note rv" style="--d:1.8s">※店名はイニシャルで伏せています</p>
+        </div>
+      </div>
+
+      <p class="scene-label mt-10 rv rv-blur" style="--d:2.2s; letter-spacing:.12em;">どの店に行くかは、あなたの話を聞いてから決めます。</p>
+    </div>
+  </section>
+
+  <!-- ========== SCENE 03 / PAIN POINTS ========== -->
+  <section class="night-flat py-24 px-6 rv-group">
     <div class="max-w-3xl mx-auto">
       <div class="mb-14">
-        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— PROBLEM</p>
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">
+        <p class="scene-label mb-4 rv rv-blur">SCENE 03 ── よくある不安</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">
           こんな不安は<br class="md:hidden" />ありませんか？
         </h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-5">
+      <div class="grid md:grid-cols-2 gap-5 rv" style="--d:.3s">
         <!-- 求人サイト -->
-        <div class="bg-white rounded-xl p-8 card-shadow border border-gray-100">
+        <div class="card-n p-8">
           <div class="flex items-center gap-3 mb-5">
-            <div class="w-9 h-9 rounded bg-gray-100 flex items-center justify-center shrink-0">
-              <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-9 h-9 rounded bg-white/5 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 mist" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
             </div>
-            <h3 class="font-serif font-bold text-gray-900">求人サイトで探したけど…</h3>
+            <h3 class="font-bold text-white">求人サイトで探したけど…</h3>
           </div>
-          <ul class="space-y-3 text-sm text-gray-600">
+          <ul class="space-y-3 text-sm fog">
             <li class="flex items-start gap-2.5">
-              <span class="text-brand-gold mt-0.5 shrink-0 font-bold">—</span>
+              <span class="amber mt-0.5 shrink-0 font-bold">—</span>
               情報が多すぎて、どこが本当にいいのか全然わからない
             </li>
             <li class="flex items-start gap-2.5">
-              <span class="text-brand-gold mt-0.5 shrink-0 font-bold">—</span>
+              <span class="amber mt-0.5 shrink-0 font-bold">—</span>
               「実際に入ったら条件が全然違った」という経験がある
             </li>
             <li class="flex items-start gap-2.5">
-              <span class="text-brand-gold mt-0.5 shrink-0 font-bold">—</span>
+              <span class="amber mt-0.5 shrink-0 font-bold">—</span>
               ノルマや雑費など、裏側のことは調べようがない
             </li>
           </ul>
         </div>
 
         <!-- 路上スカウト -->
-        <div class="bg-white rounded-xl p-8 card-shadow border border-gray-100">
+        <div class="card-n p-8">
           <div class="flex items-center gap-3 mb-5">
-            <div class="w-9 h-9 rounded bg-gray-100 flex items-center justify-center shrink-0">
-              <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-9 h-9 rounded bg-white/5 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 mist" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
               </svg>
             </div>
-            <h3 class="font-serif font-bold text-gray-900">路上スカウトは怖い…</h3>
+            <h3 class="font-bold text-white">路上スカウトは怖い…</h3>
           </div>
-          <ul class="space-y-3 text-sm text-gray-600">
+          <ul class="space-y-3 text-sm fog">
             <li class="flex items-start gap-2.5">
-              <span class="text-brand-gold mt-0.5 shrink-0 font-bold">—</span>
+              <span class="amber mt-0.5 shrink-0 font-bold">—</span>
               実績もSNSもなく、信頼できるか判断できない
             </li>
             <li class="flex items-start gap-2.5">
-              <span class="text-brand-gold mt-0.5 shrink-0 font-bold">—</span>
+              <span class="amber mt-0.5 shrink-0 font-bold">—</span>
               強引に丸め込まれて、後で後悔しそうで不安
             </li>
             <li class="flex items-start gap-2.5">
-              <span class="text-brand-gold mt-0.5 shrink-0 font-bold">—</span>
+              <span class="amber mt-0.5 shrink-0 font-bold">—</span>
               入店後に問題が起きても、誰も守ってくれなかった
             </li>
           </ul>
         </div>
       </div>
 
-      <p class="mt-10 text-gray-600 text-sm leading-relaxed border-l-2 border-brand-gold pl-4">
-        そのお悩み、<span class="font-bold text-gray-900">専属エージェントのぞの</span>がすべて解決します。
+      <p class="mt-10 fog text-sm leading-relaxed border-l-2 pl-4 rv" style="--d:.45s; border-color:#d9a441;">
+        そのお悩み、<span class="font-bold text-white">専属エージェントのぞの</span>がすべて解決します。
       </p>
     </div>
   </section>
 
-  <!-- ========== SCOUT TYPES ========== -->
-  <section class="py-24 section-alt">
+  <!-- ========== SCENE 04 / SCOUT TYPES ========== -->
+  <section class="night-soft py-24 rv-group">
     <div class="max-w-5xl mx-auto">
       <div class="mb-8 px-6">
-        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— SCOUT TYPES</p>
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">スカウトの種類と特徴</h2>
-        <p class="text-gray-500 text-sm mt-3">どのスカウトにも良い面・悪い面があります。違いを知った上で、選んでください。</p>
+        <p class="scene-label mb-4 rv rv-blur">SCENE 04 ── スカウトの見分け方</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">スカウトの種類と特徴</h2>
+        <p class="mist text-sm mt-3 rv rv-blur" style="--d:.3s">どのスカウトにも良い面・悪い面があります。違いを知った上で、選んでください。</p>
       </div>
 
       <!-- タブナビ（モバイルでスキップ用） -->
       <div class="flex gap-2 px-6 mb-5 overflow-x-auto" style="scrollbar-width:none;-ms-overflow-style:none;">
-        <button onclick="scoutTab(0)" id="stab-0" class="stab active-stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#c9a96e;color:#fff;background:#c9a96e;">路上</button>
-        <button onclick="scoutTab(1)" id="stab-1" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#e5e7eb;color:#6b7280;background:transparent;">SNS</button>
-        <button onclick="scoutTab(2)" id="stab-2" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#e5e7eb;color:#6b7280;background:transparent;">色管</button>
-        <button onclick="scoutTab(3)" id="stab-3" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#e5e7eb;color:#6b7280;background:transparent;">高還元</button>
-        <button onclick="scoutTab(4)" id="stab-4" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#e5e7eb;color:#6b7280;background:transparent;">GRACE</button>
+        <button onclick="scoutTab(0)" id="stab-0" class="stab active-stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#d9a441;color:#0b0f16;background:#d9a441;">路上</button>
+        <button onclick="scoutTab(1)" id="stab-1" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">SNS</button>
+        <button onclick="scoutTab(2)" id="stab-2" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">色管</button>
+        <button onclick="scoutTab(3)" id="stab-3" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">高還元</button>
+        <button onclick="scoutTab(4)" id="stab-4" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">GRACE</button>
       </div>
 
       <!-- カルーセル（モバイル横スワイプ / デスクトップはグリッド） -->
-      <div id="scout-carousel" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 overflow-x-auto px-6 pb-4" style="scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;">
+      <div id="scout-carousel" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 overflow-x-auto px-6 pb-4 rv" style="--d:.3s; scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;">
 
         <!-- ①路上スカウト -->
-        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
+        <div class="card-n p-7 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
           <div class="flex items-center gap-3 mb-5">
-            <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">01</div>
-            <h3 class="font-serif font-bold text-gray-900">路上スカウト</h3>
+            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center shrink-0 text-xs font-bold mist">01</div>
+            <h3 class="font-bold text-white">路上スカウト</h3>
           </div>
           <div class="space-y-4 text-sm flex-1">
             <div>
-              <p class="text-xs font-bold text-brand-gold mb-2 tracking-wide uppercase">Merit</p>
-              <ul class="space-y-1.5 text-gray-600">
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>フットワークが軽く、即日動いてくれることも多い</li>
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>直接会って話せるので人柄が見えやすい</li>
+              <p class="text-xs font-bold amber mb-2 tracking-wide uppercase">Merit</p>
+              <ul class="space-y-1.5 fog">
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>フットワークが軽く、即日動いてくれることも多い</li>
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>直接会って話せるので人柄が見えやすい</li>
               </ul>
             </div>
             <div>
-              <p class="text-xs font-bold text-gray-400 mb-2 tracking-wide uppercase">Demerit</p>
+              <p class="text-xs font-bold mist mb-2 tracking-wide uppercase">Demerit</p>
               <ul class="space-y-1.5 text-gray-500">
-                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>入店後は関係が切れる場合が多い</li>
-                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>実績・信頼の担保がなく強引なケースも</li>
+                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>入店後は関係が切れる場合が多い</li>
+                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>実績・信頼の担保がなく強引なケースも</li>
               </ul>
             </div>
           </div>
         </div>
 
         <!-- ②SNSスカウト -->
-        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
+        <div class="card-n p-7 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
           <div class="flex items-center gap-3 mb-5">
-            <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">02</div>
-            <h3 class="font-serif font-bold text-gray-900">SNSスカウト（DM型）</h3>
+            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center shrink-0 text-xs font-bold mist">02</div>
+            <h3 class="font-bold text-white">SNSスカウト（DM型）</h3>
           </div>
           <div class="space-y-4 text-sm flex-1">
             <div>
-              <p class="text-xs font-bold text-brand-gold mb-2 tracking-wide uppercase">Merit</p>
-              <ul class="space-y-1.5 text-gray-600">
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>気軽に始められる・自宅から相談可能</li>
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>SNSの投稿で人柄・実績をある程度確認できる</li>
+              <p class="text-xs font-bold amber mb-2 tracking-wide uppercase">Merit</p>
+              <ul class="space-y-1.5 fog">
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>気軽に始められる・自宅から相談可能</li>
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>SNSの投稿で人柄・実績をある程度確認できる</li>
               </ul>
             </div>
             <div>
-              <p class="text-xs font-bold text-gray-400 mb-2 tracking-wide uppercase">Demerit</p>
+              <p class="text-xs font-bold mist mb-2 tracking-wide uppercase">Demerit</p>
               <ul class="space-y-1.5 text-gray-500">
-                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>身元・実績が不明なアカウントも多い</li>
-                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>突然連絡が途絶えるリスクがある</li>
+                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>身元・実績が不明なアカウントも多い</li>
+                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>突然連絡が途絶えるリスクがある</li>
               </ul>
             </div>
           </div>
         </div>
 
         <!-- ③色管スカウト -->
-        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
+        <div class="card-n p-7 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
           <div class="flex items-center gap-3 mb-5">
-            <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">03</div>
-            <h3 class="font-serif font-bold text-gray-900">色管スカウト</h3>
+            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center shrink-0 text-xs font-bold mist">03</div>
+            <h3 class="font-bold text-white">色管スカウト</h3>
           </div>
           <div class="space-y-4 text-sm flex-1">
             <div>
-              <p class="text-xs font-bold text-brand-gold mb-2 tracking-wide uppercase">Merit</p>
-              <ul class="space-y-1.5 text-gray-600">
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>親身に相談に乗ってくれる・孤独を感じにくい</li>
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>精神的に頼れる存在になってくれることもある</li>
+              <p class="text-xs font-bold amber mb-2 tracking-wide uppercase">Merit</p>
+              <ul class="space-y-1.5 fog">
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>親身に相談に乗ってくれる・孤独を感じにくい</li>
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>精神的に頼れる存在になってくれることもある</li>
               </ul>
             </div>
             <div>
-              <p class="text-xs font-bold text-gray-400 mb-2 tracking-wide uppercase">Demerit</p>
+              <p class="text-xs font-bold mist mb-2 tracking-wide uppercase">Demerit</p>
               <ul class="space-y-1.5 text-gray-500">
-                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>恋愛・肉体関係で感情的に依存させる構造</li>
-                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>断れなくなる・辞めたくても辞められないケースも</li>
+                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>恋愛・肉体関係で感情的に依存させる構造</li>
+                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>断れなくなる・辞めたくても辞められないケースも</li>
               </ul>
             </div>
           </div>
         </div>
 
         <!-- ④高還元スカウト -->
-        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
+        <div class="card-n p-7 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
           <div class="flex items-center gap-3 mb-5">
-            <div class="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 text-xs font-bold text-gray-500">04</div>
-            <h3 class="font-serif font-bold text-gray-900">高還元スカウト</h3>
+            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center shrink-0 text-xs font-bold mist">04</div>
+            <h3 class="font-bold text-white">高還元スカウト</h3>
           </div>
           <div class="space-y-4 text-sm flex-1">
             <div>
-              <p class="text-xs font-bold text-brand-gold mb-2 tracking-wide uppercase">Merit</p>
-              <ul class="space-y-1.5 text-gray-600">
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>キャッシュバックで初月の手取りが増えやすい</li>
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>目に見えるお得感があるので比較しやすい</li>
+              <p class="text-xs font-bold amber mb-2 tracking-wide uppercase">Merit</p>
+              <ul class="space-y-1.5 fog">
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>キャッシュバックで初月の手取りが増えやすい</li>
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>目に見えるお得感があるので比較しやすい</li>
               </ul>
             </div>
             <div>
-              <p class="text-xs font-bold text-gray-400 mb-2 tracking-wide uppercase">Demerit</p>
+              <p class="text-xs font-bold mist mb-2 tracking-wide uppercase">Demerit</p>
               <ul class="space-y-1.5 text-gray-500">
-                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>採算のため時給・条件が低い店を紹介されがち</li>
-                <li class="flex items-start gap-2"><span class="text-gray-300 shrink-0 mt-0.5">✗</span>還元してもらっても月収が下がるケースもある</li>
+                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>採算のため時給・条件が低い店を紹介されがち</li>
+                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>還元してもらっても月収が下がるケースもある</li>
               </ul>
             </div>
           </div>
         </div>
 
         <!-- ⑤GRACE SELECTION -->
-        <div class="bg-brand-dark rounded-xl p-7 card-shadow-md border border-brand-gold/30 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
+        <div class="rounded-xl p-7 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start; background:rgba(217,164,65,.07); border:1px solid rgba(217,164,65,.35);">
           <div class="mb-4">
-            <span class="inline-block bg-brand-gold text-white text-[11px] font-bold px-2.5 py-1 rounded tracking-widest">当サービス</span>
+            <span class="inline-block text-[11px] font-bold px-2.5 py-1 rounded tracking-widest" style="background:#d9a441;color:#0b0f16;">当サービス</span>
           </div>
           <div class="flex items-center gap-3 mb-5">
-            <div class="w-8 h-8 rounded bg-brand-gold/20 flex items-center justify-center shrink-0 text-xs font-bold text-brand-gold">05</div>
-            <h3 class="font-serif font-bold text-white jp-keep">GRACE SELECTION<br/><span class="text-xs font-sans font-normal text-brand-gold">専属エージェント型</span></h3>
+            <div class="w-8 h-8 rounded flex items-center justify-center shrink-0 text-xs font-bold amber" style="background:rgba(217,164,65,.15);">05</div>
+            <h3 class="font-bold text-white jp-keep">GRACE SELECTION<br/><span class="text-xs font-sans font-normal amber">専属エージェント型</span></h3>
           </div>
           <div class="space-y-4 text-sm flex-1">
             <div>
-              <p class="text-xs font-bold text-brand-gold mb-2 tracking-wide uppercase">Merit</p>
+              <p class="text-xs font-bold amber mb-2 tracking-wide uppercase">Merit</p>
               <ul class="space-y-1.5 text-gray-300">
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>女の子ファーストで条件・店舗を厳選</li>
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>面接同行・入店後のトラブル対応まで一貫サポート</li>
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>指名・ブランディングのコンサルあり</li>
-                <li class="flex items-start gap-2"><span class="text-brand-gold shrink-0 mt-0.5">◯</span>色管なし・還元なし</li>
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>女の子ファーストで条件・店舗を厳選</li>
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>面接同行・入店後のトラブル対応まで一貫サポート</li>
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>指名・ブランディングのコンサルあり</li>
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>色管なし・還元なし</li>
               </ul>
             </div>
             <div>
-              <p class="text-xs font-bold text-gray-500 mb-2 tracking-wide uppercase">Demerit</p>
+              <p class="text-xs font-bold mist mb-2 tracking-wide uppercase">Demerit</p>
               <ul class="space-y-1.5 text-gray-500">
-                <li class="flex items-start gap-2"><span class="text-gray-600 shrink-0 mt-0.5">–</span>本人の要望を正確に汲むため電話面談が必須。少し手間に感じるかもしれません</li>
+                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">–</span>本人の要望を正確に汲むため電話面談が必須。少し手間に感じるかもしれません</li>
               </ul>
             </div>
           </div>
@@ -424,9 +526,9 @@
       function setTab(i){
         tabs.forEach(function(t,j){
           if(i===j){
-            t.style.background='#c9a96e'; t.style.color='#fff'; t.style.borderColor='#c9a96e';
+            t.style.background='#d9a441'; t.style.color='#0b0f16'; t.style.borderColor='#d9a441';
           } else {
-            t.style.background='transparent'; t.style.color='#6b7280'; t.style.borderColor='#e5e7eb';
+            t.style.background='transparent'; t.style.color='#9aa1af'; t.style.borderColor='#2a3140';
           }
         });
       }
@@ -447,110 +549,110 @@
     })();
   </script>
 
-  <!-- ========== COMPARISON ========== -->
-  <section class="py-24 px-6 bg-white">
+  <!-- ========== SCENE 05 / COMPARISON ========== -->
+  <section class="night-flat py-24 px-6 rv-group">
     <div class="max-w-4xl mx-auto">
       <div class="mb-14">
-        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— COMPARISON</p>
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">何が違うのか</h2>
-        <p class="text-gray-500 text-sm mt-3">選択肢を並べると、差は一目瞭然です。</p>
+        <p class="scene-label mb-4 rv rv-blur">SCENE 05 ── 並べてみる</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">何が違うのか</h2>
+        <p class="mist text-sm mt-3 rv rv-blur" style="--d:.3s">選択肢を並べると、差は一目瞭然です。</p>
       </div>
 
-      <p class="md:hidden text-xs text-gray-400 text-right mb-2">← スワイプして比較 →</p>
-      <div class="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+      <p class="md:hidden text-xs mist text-right mb-2">← スワイプして比較 →</p>
+      <div class="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 rv" style="--d:.3s">
         <table class="w-full text-sm border-separate" style="border-spacing: 0; min-width: 600px;">
           <thead>
             <tr>
-              <th class="text-left px-5 py-4 text-gray-400 font-normal w-2/5"></th>
-              <th class="px-4 py-4 text-center text-gray-500 font-bold bg-gray-50 rounded-tl-lg border border-gray-100">求人サイト</th>
-              <th class="px-4 py-4 text-center text-gray-500 font-bold bg-gray-50 border-t border-b border-gray-100">路上スカウト</th>
-              <th class="px-4 py-4 text-center text-white font-bold bg-brand-muted rounded-tr-lg">GRACE SELECTION</th>
+              <th class="text-left px-5 py-4 mist font-normal w-2/5"></th>
+              <th class="cmp-head px-4 py-4 text-center font-bold rounded-tl-lg">求人サイト</th>
+              <th class="cmp-head px-4 py-4 text-center font-bold">路上スカウト</th>
+              <th class="cmp-head cmp-head-g px-4 py-4 text-center font-bold rounded-tr-lg">GRACE SELECTION</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="px-5 py-4 text-gray-700 font-medium bg-white border-b border-gray-50">裏情報・実態の把握</td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-brand-gold font-bold text-base">△</span></td>
-              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20"><span class="text-brand-gold font-bold text-base">◯</span></td>
+              <td class="cmp-label px-5 py-4 font-medium">裏情報・実態の把握</td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-mid text-base">△</span></td>
+              <td class="cmp-cell-g px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
             </tr>
             <tr>
-              <td class="px-5 py-4 text-gray-700 font-medium bg-white border-b border-gray-50">面接への同行</td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-brand-gold font-bold text-base">◯</span></td>
-              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20"><span class="text-brand-gold font-bold text-base">◯</span></td>
+              <td class="cmp-label px-5 py-4 font-medium">面接への同行</td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
+              <td class="cmp-cell-g px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
             </tr>
             <tr>
-              <td class="px-5 py-4 text-gray-700 font-medium bg-white border-b border-gray-50">給与未払い・理不尽な扱いの防止</td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-brand-gold font-bold text-base">△</span></td>
-              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20"><span class="text-brand-gold font-bold text-base">◯</span></td>
+              <td class="cmp-label px-5 py-4 font-medium">給与未払い・理不尽な扱いの防止</td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-mid text-base">△</span></td>
+              <td class="cmp-cell-g px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
             </tr>
             <tr>
-              <td class="px-5 py-4 text-gray-700 font-medium bg-white border-b border-gray-50">入店後のトラブル対応</td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-brand-gold font-bold text-base">△</span></td>
-              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20"><span class="text-brand-gold font-bold text-base">◯</span></td>
+              <td class="cmp-label px-5 py-4 font-medium">入店後のトラブル対応</td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-mid text-base">△</span></td>
+              <td class="cmp-cell-g px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
             </tr>
             <tr>
-              <td class="px-5 py-4 text-gray-700 font-medium bg-white border-b border-gray-50">強引な紹介がない</td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-brand-gold font-bold text-base">◯</span></td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
-              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20"><span class="text-brand-gold font-bold text-base">◯</span></td>
+              <td class="cmp-label px-5 py-4 font-medium">強引な紹介がない</td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
+              <td class="cmp-cell-g px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
             </tr>
             <tr>
-              <td class="px-5 py-4 text-gray-700 font-medium bg-white border-b border-gray-50">個人情報の安全管理</td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-brand-gold font-bold text-base">◯</span></td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
-              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20"><span class="text-brand-gold font-bold text-base">◯</span></td>
+              <td class="cmp-label px-5 py-4 font-medium">個人情報の安全管理</td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
+              <td class="cmp-cell-g px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
             </tr>
             <tr>
-              <td class="px-5 py-4 text-gray-700 font-medium bg-white rounded-bl-lg">指名・ブランディングのサポート</td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
-              <td class="px-4 py-4 text-center bg-gray-50 border-l border-b border-gray-100"><span class="text-gray-300 font-bold text-base">✗</span></td>
-              <td class="px-4 py-4 text-center bg-brand-gold/5 border-l border-b border-brand-gold/20 rounded-br-lg"><span class="text-brand-gold font-bold text-base">◯</span></td>
+              <td class="cmp-label px-5 py-4 font-medium rounded-bl-lg">指名・ブランディングのサポート</td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
+              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
+              <td class="cmp-cell-g px-4 py-4 text-center rounded-br-lg"><span class="mark-ok text-base">◯</span></td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p class="mt-6 text-xs text-gray-400">◯ = 対応あり　△ = 場合による・ばらつきあり　✗ = 対応なし</p>
+      <p class="mt-6 text-xs mist">◯ = 対応あり　△ = 場合による・ばらつきあり　✗ = 対応なし</p>
     </div>
   </section>
 
-  <!-- ========== SOLUTIONS ========== -->
-  <section class="py-24 px-6 section-alt">
+  <!-- ========== SCENE 06 / SOLUTIONS ========== -->
+  <section class="night-soft py-24 px-6 rv-group">
     <div class="max-w-4xl mx-auto">
       <div class="mb-14">
-        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— PROMISE</p>
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">3つの約束</h2>
-        <p class="text-gray-500 text-sm mt-3">言葉ではなく、機能と体制で示しています。</p>
+        <p class="scene-label mb-4 rv rv-blur">SCENE 06 ── 約束</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">3つの約束</h2>
+        <p class="mist text-sm mt-3 rv rv-blur" style="--d:.3s">言葉ではなく、機能と体制で示しています。</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-5">
+      <div class="grid md:grid-cols-3 gap-5 rv" style="--d:.3s">
         <!-- 約束1 -->
-        <div class="bg-white rounded-xl p-8 card-shadow border border-gray-100 hover:border-brand-gold/30 transition-colors duration-200">
-          <div class="text-brand-gold text-xs font-bold tracking-widest mb-4">01</div>
-          <h3 class="font-serif font-bold text-gray-900 text-lg mb-3">独自データでの店選び</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">
+        <div class="card-n card-n-hover p-8">
+          <div class="amber text-xs font-bold tracking-widest mb-4">01</div>
+          <h3 class="font-bold text-white text-lg mb-3">独自データでの店選び</h3>
+          <p class="text-sm fog leading-relaxed">
             求人サイトに載らない裏情報を持っています。時給・店舗側の数字目標・雰囲気・客層まで、自分で見てきた実データから、その人に合いそうなお店を絞り込みます。
           </p>
         </div>
 
         <!-- 約束2 -->
-        <div class="bg-white rounded-xl p-8 card-shadow border border-gray-100 hover:border-brand-gold/30 transition-colors duration-200">
-          <div class="text-brand-gold text-xs font-bold tracking-widest mb-4">02</div>
-          <h3 class="font-serif font-bold text-gray-900 text-lg mb-3">面接同行</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">
+        <div class="card-n card-n-hover p-8">
+          <div class="amber text-xs font-bold tracking-widest mb-4">02</div>
+          <h3 class="font-bold text-white text-lg mb-3">面接同行</h3>
+          <p class="text-sm fog leading-relaxed">
             面接には基本的にぞの自身が同行します。条件交渉から不当な扱いの防止まで、その場で対応します。
           </p>
         </div>
 
         <!-- 約束3 -->
-        <div class="bg-white rounded-xl p-8 card-shadow border border-gray-100 hover:border-brand-gold/30 transition-colors duration-200">
-          <div class="text-brand-gold text-xs font-bold tracking-widest mb-4">03</div>
-          <h3 class="font-serif font-bold text-gray-900 text-lg mb-3">無理な紹介はしない</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">
+        <div class="card-n card-n-hover p-8">
+          <div class="amber text-xs font-bold tracking-widest mb-4">03</div>
+          <h3 class="font-bold text-white text-lg mb-3">無理な紹介はしない</h3>
+          <p class="text-sm fog leading-relaxed">
             「早く決めて」と急かすことはしません。条件が合わない・向いていないと感じた時は、その場ではっきり伝えます。退店トラブルの対応も最後まで。
           </p>
         </div>
@@ -558,64 +660,61 @@
     </div>
   </section>
 
-  <!-- ========== REWARD ========== -->
-  <section class="py-24 px-6 hero-bg relative overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none opacity-10">
-      <div class="absolute top-1/3 left-1/3 w-72 h-72 rounded-full bg-brand-gold blur-3xl"></div>
-    </div>
+  <!-- ========== SCENE 07 / REWARD ========== -->
+  <section class="night-hero py-24 px-6 relative overflow-hidden rv-group">
     <div class="max-w-4xl mx-auto relative z-10">
       <div class="mb-14">
-        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— REWARD</p>
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-white">頑張った分だけ、返ってくる。</h2>
-        <p class="text-gray-400 text-sm mt-3">GRACE SELECTION では、結果を出している女の子に対して具体的なお祝いを用意しています。</p>
+        <p class="scene-label mb-4 rv rv-blur">SCENE 07 ── お祝い</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">頑張った分だけ、返ってくる。</h2>
+        <p class="text-gray-400 text-sm mt-3 rv rv-blur" style="--d:.3s">GRACE SELECTION では、結果を出している女の子に対して具体的なお祝いを用意しています。</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-5">
+      <div class="grid md:grid-cols-3 gap-5 rv" style="--d:.3s">
 
         <!-- 月100万シャンパン -->
-        <div class="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-brand-gold/40 transition-colors duration-200">
-          <div class="text-brand-gold text-2xl mb-4">🥂</div>
-          <h3 class="font-serif font-bold text-white text-lg mb-3">月売上100万突破<br/>シャンパンお祝い</h3>
+        <div class="card-n card-n-hover p-8">
+          <div class="text-2xl mb-4">🥂</div>
+          <h3 class="font-bold text-white text-lg mb-3">月売上100万突破<br/>シャンパンお祝い</h3>
           <p class="text-sm text-gray-400 leading-relaxed">
             月売上100万円を突破したら、ぞのが直接シャンパンを開けに行きます。達成したときは一緒に祝わせてください。
           </p>
-          <p class="text-xs text-brand-gold mt-4 font-medium">達成時にお祝いに行きます</p>
+          <p class="text-xs amber mt-4 font-medium">達成時にお祝いに行きます</p>
         </div>
 
         <!-- 友達紹介ボーナス -->
-        <div class="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-brand-gold/40 transition-colors duration-200">
-          <div class="text-brand-gold text-2xl mb-4">👯</div>
-          <h3 class="font-serif font-bold text-white text-lg mb-3">お友達紹介<br/>ボーナス</h3>
+        <div class="card-n card-n-hover p-8">
+          <div class="text-2xl mb-4">👯</div>
+          <h3 class="font-bold text-white text-lg mb-3">お友達紹介<br/>ボーナス</h3>
           <p class="text-sm text-gray-400 leading-relaxed">
             ご友人をご紹介いただき、本入店が確定した時点でお礼をお渡しします。信頼できる人を紹介してくれることへの、感謝の気持ちです。詳細はDMにて。
           </p>
-          <p class="text-xs text-brand-gold mt-4 font-medium">本入店確定後に適用</p>
+          <p class="text-xs amber mt-4 font-medium">本入店確定後に適用</p>
         </div>
 
         <!-- シェア協力ギフト -->
-        <div class="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-brand-gold/40 transition-colors duration-200">
-          <div class="text-brand-gold text-2xl mb-4">✨</div>
-          <h3 class="font-serif font-bold text-white text-lg mb-3">匿名シェア協力<br/>ギフト</h3>
+        <div class="card-n card-n-hover p-8">
+          <div class="text-2xl mb-4">✨</div>
+          <h3 class="font-bold text-white text-lg mb-3">匿名シェア協力<br/>ギフト</h3>
           <p class="text-sm text-gray-400 leading-relaxed">
             あなたの成功体験を（匿名で）シェアしていただける方へ、感謝の気持ちをお渡しします。Instagram投稿協力で美容ギフト券5,000〜8,000円相当、インタビュー記事対応で10,000円相当。
           </p>
-          <p class="text-xs text-brand-gold mt-4 font-medium">SNS投稿 or 記事インタビューが対象</p>
+          <p class="text-xs amber mt-4 font-medium">SNS投稿 or 記事インタビューが対象</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ========== STATS / PIE CHART ========== -->
-  <section class="py-24 px-6 bg-white">
+  <!-- ========== SCENE 08 / STATS / PIE CHART ========== -->
+  <section class="night-flat py-24 px-6 rv-group">
     <div class="max-w-4xl mx-auto">
       <div class="mb-14">
-        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— DATA</p>
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">こんな方にご利用いただいています</h2>
-        <p class="text-gray-500 text-sm mt-3">ご依頼者の経験年数の割合（実績データ）</p>
+        <p class="scene-label mb-4 rv rv-blur">SCENE 08 ── 相談する人たち</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">こんな方にご利用いただいています</h2>
+        <p class="mist text-sm mt-3 rv rv-blur" style="--d:.3s">ご依頼者の経験年数の割合（実績データ）</p>
       </div>
 
-      <div class="flex flex-col md:flex-row items-center justify-center gap-16">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-16 rv" style="--d:.3s">
 
         <!-- 円グラフ -->
         <div class="relative w-56 h-56 shrink-0">
@@ -626,27 +725,27 @@
         <div class="space-y-4">
           <div class="flex items-center gap-3">
             <span class="w-3 h-3 rounded-sm shrink-0" style="background:#c9a96e"></span>
-            <span class="text-sm text-gray-600">未経験 <span class="font-bold text-gray-900">20%</span></span>
+            <span class="text-sm fog">未経験 <span class="font-bold text-white">20%</span></span>
           </div>
           <div class="flex items-center gap-3">
             <span class="w-3 h-3 rounded-sm shrink-0" style="background:#e8d5a3"></span>
-            <span class="text-sm text-gray-600">半年以内 <span class="font-bold text-gray-900">30%</span></span>
+            <span class="text-sm fog">半年以内 <span class="font-bold text-white">30%</span></span>
           </div>
           <div class="flex items-center gap-3">
             <span class="w-3 h-3 rounded-sm shrink-0" style="background:#c4838a"></span>
-            <span class="text-sm text-gray-600">1年以内 <span class="font-bold text-gray-900">30%</span></span>
+            <span class="text-sm fog">1年以内 <span class="font-bold text-white">30%</span></span>
           </div>
           <div class="flex items-center gap-3">
             <span class="w-3 h-3 rounded-sm shrink-0" style="background:#e8b4b8"></span>
-            <span class="text-sm text-gray-600">3年以内 <span class="font-bold text-gray-900">10%</span></span>
+            <span class="text-sm fog">3年以内 <span class="font-bold text-white">10%</span></span>
           </div>
           <div class="flex items-center gap-3">
             <span class="w-3 h-3 rounded-sm shrink-0" style="background:#e2e8f0"></span>
-            <span class="text-sm text-gray-600">それ以上 <span class="font-bold text-gray-900">10%</span></span>
+            <span class="text-sm fog">それ以上 <span class="font-bold text-white">10%</span></span>
           </div>
 
-          <p class="text-xs text-gray-400 pt-2 leading-relaxed border-t border-gray-100">
-            未経験・経験浅めの方が全体の<span class="font-bold text-gray-600">80%</span>を占めています。<br />
+          <p class="text-xs mist pt-2 leading-relaxed border-t border-white/10">
+            未経験・経験浅めの方が全体の<span class="font-bold fog">80%</span>を占めています。<br />
             はじめての方からの相談が多いです。
           </p>
         </div>
@@ -683,64 +782,64 @@
     });
   </script>
 
-  <!-- ========== PROFILE ========== -->
-  <section class="py-24 px-6 section-alt">
+  <!-- ========== SCENE 09 / PROFILE ========== -->
+  <section class="night-soft py-24 px-6 rv-group">
     <div class="max-w-3xl mx-auto">
       <div class="mb-14">
-        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— AGENT</p>
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">担当エージェントについて</h2>
+        <p class="scene-label mb-4 rv rv-blur">SCENE 09 ── 担当</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">担当エージェントについて</h2>
       </div>
 
-      <div class="bg-white rounded-xl p-10 card-shadow border border-gray-100">
+      <div class="card-n p-10 rv" style="--d:.3s">
 
         <!-- 上部：アイコン＋名前 -->
-        <div class="flex flex-col items-center mb-10 pb-10 border-b border-gray-100">
-          <div class="w-28 h-28 rounded-full bg-brand-charcoal border-2 border-brand-gold/40 shadow-sm mb-5 overflow-hidden">
+        <div class="flex flex-col items-center mb-10 pb-10 border-b border-white/10">
+          <div class="w-28 h-28 rounded-full bg-black/40 shadow-sm mb-5 overflow-hidden" style="border:2px solid rgba(217,164,65,.4);">
             <img src="/assets/profile-avatar.webp" alt="スカウトエージェント ぞの" class="w-full h-full object-cover" loading="lazy" />
           </div>
-          <p class="text-xs text-brand-gold font-bold tracking-widest mb-1.5">SPECIALIST SCOUT AGENT</p>
-          <h3 class="text-xl font-serif font-bold text-gray-900 text-center">専属サポートスカウト<span class="jp-nobreak">：ぞの</span></h3>
+          <p class="text-xs amber font-bold tracking-widest mb-1.5">SPECIALIST SCOUT AGENT</p>
+          <h3 class="text-xl font-bold text-white text-center">専属サポートスカウト<span class="jp-nobreak">：ぞの</span></h3>
         </div>
 
         <!-- 経歴ブロック -->
-        <div class="space-y-6 text-sm text-gray-600 leading-8">
+        <div class="space-y-6 text-sm fog leading-8">
 
           <p>
             はじめまして。「GRACE SELECTION」専属サポートスカウトのぞのです。
           </p>
 
           <p>
-            私は1年間の浪人生活を経て大学へ進学し、現在は大学4年生として大学院への進学も視野に入れながら、学業と人材コンサルティング業を両立しています。大学で専門的に研究しているのは<span class="font-bold text-gray-900">「ブランド論」</span>。いかにしてロイヤル顧客（熱狂的なファン）を増やし、市場の中で自分だけのポジションを確立するかを追究しています。
+            私は1年間の浪人生活を経て大学へ進学し、現在は大学4年生として大学院への進学も視野に入れながら、学業と人材コンサルティング業を両立しています。大学で専門的に研究しているのは<span class="font-bold text-white">「ブランド論」</span>。いかにしてロイヤル顧客（熱狂的なファン）を増やし、市場の中で自分だけのポジションを確立するかを追究しています。
           </p>
 
-          <div class="bg-brand-charcoal rounded-lg p-6 border-l-4 border-brand-gold">
-            <p class="font-serif font-bold text-white mb-2">この知識が、夜の世界で武器になる。</p>
+          <div class="rounded-lg p-6 bg-black/40" style="border-left:4px solid #d9a441;">
+            <p class="mincho font-bold text-white mb-2">この知識が、夜の世界で武器になる。</p>
             <p class="text-gray-400 text-sm leading-relaxed">
               水商売における「指名」とは、まさにロイヤル顧客の獲得そのものです。ルックスだけで競うレッドオーシャンで消耗するのではなく、<span class="font-bold text-white">「あなた自身の強みを活かして、どのポジションで勝つか」</span>を、感覚ではなく論理的な裏付けをもってコンサルティングします。
             </p>
           </div>
 
-          <hr class="border-gray-100" />
+          <hr class="border-white/10" />
 
           <div>
-            <p class="font-serif font-bold text-gray-900 mb-3">顔出しをしていない理由について</p>
+            <p class="mincho font-bold text-white mb-3">顔出しをしていない理由について</p>
             <p>
-              別事業で<span class="font-bold text-gray-900">福祉系スタートアップの立ち上げ</span>に関わっていて、出資者もついている立場上、夜の業界で顔を出すのは難しい状況です。
+              別事業で<span class="font-bold text-white">福祉系スタートアップの立ち上げ</span>に関わっていて、出資者もついている立場上、夜の業界で顔を出すのは難しい状況です。
             </p>
             <p class="mt-4">
               不利を承知でこの仕事を続けているのは、僕にとって意味のある仕事だからです。
             </p>
           </div>
 
-          <hr class="border-gray-100" />
+          <hr class="border-white/10" />
 
           <div>
-            <p class="font-serif font-bold text-gray-900 mb-3">「100%味方」とは言わない</p>
+            <p class="mincho font-bold text-white mb-3">「100%味方」とは言わない</p>
             <p>
               よく聞く言葉ですが、僕は自分から言うのは違うかなと思っています。
             </p>
             <p class="mt-4">
-              代わりにやっているのは、特定店舗と癒着しないこと。そして店舗側から<span class="font-bold text-gray-900">「毎月◯人入れろ」と数字を背負わされる関係</span>を持たないこと。トラブルが起きた時に相談者側に立てるのは、約束ではなく、この関係性の話です。
+              代わりにやっているのは、特定店舗と癒着しないこと。そして店舗側から<span class="font-bold text-white">「毎月◯人入れろ」と数字を背負わされる関係</span>を持たないこと。トラブルが起きた時に相談者側に立てるのは、約束ではなく、この関係性の話です。
             </p>
           </div>
 
@@ -749,193 +848,193 @@
     </div>
   </section>
 
-  <!-- ========== FLOW ========== -->
-  <section class="py-24 px-6 bg-white">
+  <!-- ========== SCENE 10 / FLOW ========== -->
+  <section class="night-flat py-24 px-6 rv-group">
     <div class="max-w-4xl mx-auto">
       <div class="mb-14">
-        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— FLOW</p>
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">ご利用の流れ</h2>
-        <p class="text-gray-500 text-sm mt-3">最短当日から動けます。</p>
+        <p class="scene-label mb-4 rv rv-blur">SCENE 10 ── 相談の流れ</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">ご利用の流れ</h2>
+        <p class="mist text-sm mt-3 rv rv-blur" style="--d:.3s">最短当日から動けます。</p>
       </div>
 
-      <div class="grid md:grid-cols-4 gap-5">
+      <div class="grid md:grid-cols-4 gap-5 rv" style="--d:.3s">
         <!-- Step 1 -->
-        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 text-center">
+        <div class="card-n p-7 text-center">
           <div class="w-9 h-9 rounded border-2 border-brand-line text-brand-line font-bold text-sm flex items-center justify-center mx-auto mb-4">1</div>
-          <h4 class="font-serif font-bold text-gray-900 mb-2">LINEで一言</h4>
-          <p class="text-xs text-gray-500 leading-relaxed">「○○エリアで探してます」<br />くらいの一言でOK。</p>
+          <h4 class="mincho font-bold text-white mb-2">LINEで一言</h4>
+          <p class="text-xs mist leading-relaxed">「○○エリアで探してます」<br />くらいの一言でOK。</p>
         </div>
 
         <!-- Step 2 -->
-        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 text-center">
-          <div class="w-9 h-9 rounded border-2 border-brand-gold text-brand-gold font-bold text-sm flex items-center justify-center mx-auto mb-4">2</div>
-          <h4 class="font-serif font-bold text-gray-900 mb-2">ヒアリング</h4>
-          <p class="text-xs text-gray-500 leading-relaxed">フォーマットと写真を送付。<br />その後、電話面談を必ず行います。</p>
+        <div class="card-n p-7 text-center">
+          <div class="w-9 h-9 rounded font-bold text-sm flex items-center justify-center mx-auto mb-4 amber" style="border:2px solid #d9a441;">2</div>
+          <h4 class="mincho font-bold text-white mb-2">ヒアリング</h4>
+          <p class="text-xs mist leading-relaxed">フォーマットと写真を送付。<br />その後、電話面談を必ず行います。</p>
         </div>
 
         <!-- Step 3 -->
-        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 text-center">
-          <div class="w-9 h-9 rounded border-2 border-brand-gold text-brand-gold font-bold text-sm flex items-center justify-center mx-auto mb-4">3</div>
-          <h4 class="font-serif font-bold text-gray-900 mb-2">店舗へ問い合わせ</h4>
-          <p class="text-xs text-gray-500 leading-relaxed">条件に相違がないか確認。<br />OKなら面接日程を調整します。</p>
+        <div class="card-n p-7 text-center">
+          <div class="w-9 h-9 rounded font-bold text-sm flex items-center justify-center mx-auto mb-4 amber" style="border:2px solid #d9a441;">3</div>
+          <h4 class="mincho font-bold text-white mb-2">店舗へ問い合わせ</h4>
+          <p class="text-xs mist leading-relaxed">条件に相違がないか確認。<br />OKなら面接日程を調整します。</p>
         </div>
 
         <!-- Step 4 -->
-        <div class="bg-white rounded-xl p-7 card-shadow border border-gray-100 text-center">
-          <div class="w-9 h-9 rounded border-2 border-brand-gold text-brand-gold font-bold text-sm flex items-center justify-center mx-auto mb-4">4</div>
-          <h4 class="font-serif font-bold text-gray-900 mb-2">面接（基本同行）</h4>
-          <p class="text-xs text-gray-500 leading-relaxed">都内近郊・日程が合えば<br />基本的に面接同行します。</p>
+        <div class="card-n p-7 text-center">
+          <div class="w-9 h-9 rounded font-bold text-sm flex items-center justify-center mx-auto mb-4 amber" style="border:2px solid #d9a441;">4</div>
+          <h4 class="mincho font-bold text-white mb-2">面接（基本同行）</h4>
+          <p class="text-xs mist leading-relaxed">都内近郊・日程が合えば<br />基本的に面接同行します。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== FAQ ========== -->
-  <section class="py-24 px-6 section-alt">
+  <!-- ========== SCENE 11 / FAQ ========== -->
+  <section class="night-soft py-24 px-6 rv-group">
     <div class="max-w-2xl mx-auto">
       <div class="mb-14">
-        <p class="text-brand-gold text-xs font-medium tracking-widest mb-3">— FAQ</p>
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">よくある質問</h2>
+        <p class="scene-label mb-4 rv rv-blur">SCENE 11 ── よくある質問</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">よくある質問</h2>
       </div>
 
-      <div class="space-y-2" id="faq-list">
+      <div class="space-y-2 rv" style="--d:.3s" id="faq-list">
 
         <!-- Q2 -->
-        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+        <div class="card-n overflow-hidden">
           <button onclick="toggleFaq(this)"
-            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
-            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">未経験でも相談できますか？</span>
-            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors duration-150">
+            <span class="font-medium text-gray-100 text-sm md:text-base pr-4">未経験でも相談できますか？</span>
+            <svg class="faq-icon w-4 h-4 amber shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+          <div class="faq-answer hidden px-6 pb-6 text-sm fog leading-relaxed border-t border-white/5">
             <div class="pt-4">むしろ未経験の方こそ、ぜひ相談してください。経験がないと求人サイトの条件が相場通りなのか、盛られているのかの判断が難しいです。「時給〇〇円は高いの？」「この条件は普通？」といった素朴な疑問から、一緒に整理していきます。</div>
           </div>
         </div>
 
         <!-- Q3 -->
-        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+        <div class="card-n overflow-hidden">
           <button onclick="toggleFaq(this)"
-            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
-            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">相談したら必ずお店を紹介されますか？</span>
-            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors duration-150">
+            <span class="font-medium text-gray-100 text-sm md:text-base pr-4">相談したら必ずお店を紹介されますか？</span>
+            <svg class="faq-icon w-4 h-4 amber shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+          <div class="faq-answer hidden px-6 pb-6 text-sm fog leading-relaxed border-t border-white/5">
             <div class="pt-4">相談だけで終わっても構いません。「話だけ聞いてみたい」「まだ迷っている」という状態で登録している方が大半です。こちらから強引に紹介したり、急かしたりはしません。女の子ファーストで判断します。</div>
           </div>
         </div>
 
         <!-- Q4 -->
-        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+        <div class="card-n overflow-hidden">
           <button onclick="toggleFaq(this)"
-            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
-            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">個人情報や写真はどう扱われますか？</span>
-            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors duration-150">
+            <span class="font-medium text-gray-100 text-sm md:text-base pr-4">個人情報や写真はどう扱われますか？</span>
+            <svg class="faq-icon w-4 h-4 amber shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+          <div class="faq-answer hidden px-6 pb-6 text-sm fog leading-relaxed border-t border-white/5">
             <div class="pt-4">流出しないよう厳重に管理しています。いただいた情報は店舗への紹介以外の目的では一切使用せず、紹介を進めない場合はすみやかに削除します。</div>
           </div>
         </div>
 
         <!-- Q5 -->
-        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+        <div class="card-n overflow-hidden">
           <button onclick="toggleFaq(this)"
-            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
-            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">どのエリアのお店に対応していますか？</span>
-            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors duration-150">
+            <span class="font-medium text-gray-100 text-sm md:text-base pr-4">どのエリアのお店に対応していますか？</span>
+            <svg class="faq-icon w-4 h-4 amber shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+          <div class="faq-answer hidden px-6 pb-6 text-sm fog leading-relaxed border-t border-white/5">
             <div class="pt-4">紹介自体は全国対応しています。面接同行は都内近郊で、こちらの日程が空いている場合に基本的に対応します。それ以外のエリア・日程の方も、紹介・情報提供・オンラインでのサポートは行いますので、まずはご相談ください。</div>
           </div>
         </div>
 
         <!-- Q6 -->
-        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+        <div class="card-n overflow-hidden">
           <button onclick="toggleFaq(this)"
-            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
-            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">顔出しをしていないスカウトは信頼できますか？</span>
-            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors duration-150">
+            <span class="font-medium text-gray-100 text-sm md:text-base pr-4">顔出しをしていないスカウトは信頼できますか？</span>
+            <svg class="faq-icon w-4 h-4 amber shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+          <div class="faq-answer hidden px-6 pb-6 text-sm fog leading-relaxed border-t border-white/5">
             <div class="pt-4">信頼できるかどうかは、最終的にご自身で判断していただくものだと思っています。これまでの実績や発信している記事・コンテンツをぜひ見てみてください。その上でご連絡いただければ、聞かれたことには率直に答えます。</div>
           </div>
         </div>
 
         <!-- Q7 -->
-        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+        <div class="card-n overflow-hidden">
           <button onclick="toggleFaq(this)"
-            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
-            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">入店後にトラブルが起きた場合は対応してもらえますか？</span>
-            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors duration-150">
+            <span class="font-medium text-gray-100 text-sm md:text-base pr-4">入店後にトラブルが起きた場合は対応してもらえますか？</span>
+            <svg class="faq-icon w-4 h-4 amber shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+          <div class="faq-answer hidden px-6 pb-6 text-sm fog leading-relaxed border-t border-white/5">
             <div class="pt-4">トラブルが起きたらすぐにLINEでご連絡してください。条件の相違・退店トラブル・不当な扱いなど、入店後の問題にも相談者側に立って動きます。特定店舗との癒着もノルマもないので、お店側の事情に縛られず動けます。時間を置かず、早めのご連絡をお願いします。</div>
           </div>
         </div>
 
         <!-- Q8 -->
-        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+        <div class="card-n overflow-hidden">
           <button onclick="toggleFaq(this)"
-            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
-            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">スカウト経由と店にバレますか？</span>
-            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors duration-150">
+            <span class="font-medium text-gray-100 text-sm md:text-base pr-4">スカウト経由と店にバレますか？</span>
+            <svg class="faq-icon w-4 h-4 amber shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+          <div class="faq-answer hidden px-6 pb-6 text-sm fog leading-relaxed border-t border-white/5">
             <div class="pt-4">はい、スカウト経由であることはお店側に伝わります。ただしこれはデメリットではなく、むしろ逆です。スカウト経由の子は「足元を見られにくい」ため、給与未払いや理不尽な扱いを受けるリスクが大幅に下がります。</div>
           </div>
         </div>
 
         <!-- Q9 -->
-        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+        <div class="card-n overflow-hidden">
           <button onclick="toggleFaq(this)"
-            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
-            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">年齢制限はありますか？</span>
-            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors duration-150">
+            <span class="font-medium text-gray-100 text-sm md:text-base pr-4">年齢制限はありますか？</span>
+            <svg class="faq-icon w-4 h-4 amber shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+          <div class="faq-answer hidden px-6 pb-6 text-sm fog leading-relaxed border-t border-white/5">
             <div class="pt-4">30代前半まで対応しています。年齢によって合う店舗のタイプは変わりますが、年齢を強みにできるポジショニングも含めてご提案します。まずはご相談ください。</div>
           </div>
         </div>
 
         <!-- Q10 -->
-        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+        <div class="card-n overflow-hidden">
           <button onclick="toggleFaq(this)"
-            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
-            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">昼職と掛け持ちでも相談できますか？</span>
-            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors duration-150">
+            <span class="font-medium text-gray-100 text-sm md:text-base pr-4">昼職と掛け持ちでも相談できますか？</span>
+            <svg class="faq-icon w-4 h-4 amber shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+          <div class="faq-answer hidden px-6 pb-6 text-sm fog leading-relaxed border-t border-white/5">
             <div class="pt-4">Wワークの方は多いです。身バレしない働き方の相談や、昼職への配慮があるお店の紹介も可能です。「絶対に職場にバレたくない」という方はその旨をヒアリング時にお伝えください。</div>
           </div>
         </div>
 
         <!-- Q11 -->
-        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden">
+        <div class="card-n overflow-hidden">
           <button onclick="toggleFaq(this)"
-            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-150">
-            <span class="font-medium text-gray-900 text-sm md:text-base pr-4">どんなジャンルのお店を紹介してもらえますか？</span>
-            <svg class="faq-icon w-4 h-4 text-brand-gold shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors duration-150">
+            <span class="font-medium text-gray-100 text-sm md:text-base pr-4">どんなジャンルのお店を紹介してもらえますか？</span>
+            <svg class="faq-icon w-4 h-4 amber shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
-          <div class="faq-answer hidden px-6 pb-6 text-sm text-gray-600 leading-relaxed border-t border-gray-50">
+          <div class="faq-answer hidden px-6 pb-6 text-sm fog leading-relaxed border-t border-white/5">
             <div class="pt-4">キャバクラ・ラウンジを中心にご紹介しています。希望条件（時給・エリア・雰囲気・客層など）をヒアリングした上で、あなたに合ったお店を厳選してご提案します。</div>
           </div>
         </div>
@@ -958,36 +1057,35 @@
     }
   </script>
 
-  <!-- ========== CLOSING CTA ========== -->
-  <section id="cta" class="py-24 px-6 hero-bg relative overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none opacity-10">
-      <div class="absolute bottom-0 right-1/4 w-72 h-72 rounded-full bg-brand-gold blur-3xl"></div>
-    </div>
+  <!-- ========== FINAL SCENE / CLOSING CTA ========== -->
+  <section id="cta" class="night-final py-24 px-6 relative overflow-hidden rv-group">
     <div class="max-w-xl mx-auto text-center relative z-10">
-      <p class="text-brand-gold text-xs font-medium tracking-widest mb-4">— FREE CONSULTATION</p>
-      <h2 class="text-2xl md:text-4xl font-serif font-bold text-white mt-3 mb-4 leading-snug">
-        LINEで一言ください。
+      <p class="scene-label mb-8 rv rv-blur">FINAL SCENE ── あなたの番</p>
+      <h2 class="subtitle text-2xl md:text-3xl text-white mb-6 rv rv-blur" style="--d:.3s; line-height:2.1;">
+        次にここに書くのは、<br />あなたの面接です。
       </h2>
-      <p class="text-gray-400 text-sm leading-relaxed mb-10">
+      <p class="text-gray-400 text-sm leading-relaxed mb-10 rv rv-blur" style="--d:.6s">
         顔出しはいりません。<br />
         ただ、紹介する前に必ず電話で30分くらい話します。<br />
         条件が合わない・向いていないと感じたら、その場で「行かない方がいい」とはっきり言います。
       </p>
 
-      <a href="https://line.me/ti/p/_7nv0bKuRC" target="_blank" rel="noopener"
-        class="inline-flex items-center gap-3 bg-brand-line hover:bg-brand-lineDark text-white text-base md:text-xl font-bold px-10 py-5 rounded shadow-xl transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
-        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-        </svg>
-        LINEで相談する
-      </a>
+      <div class="rv" style="--d:.9s">
+        <a href="https://line.me/ti/p/_7nv0bKuRC" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-3 bg-brand-line hover:bg-brand-lineDark text-white text-base md:text-xl font-bold px-10 py-5 rounded shadow-xl transition-all duration-200 hover:shadow-2xl hover:-translate-y-1">
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+          LINEで相談する
+        </a>
 
-      <p class="mt-6 text-xs text-gray-600">
-        ※お問い合わせはLINEからお気軽に
-      </p>
+        <p class="mt-6 text-xs mist">
+          最短当日から動けます ── ※お問い合わせはLINEからお気軽に
+        </p>
+      </div>
 
-      <div class="mt-8 border-t border-white/10 pt-8">
-        <p class="text-gray-500 text-xs mb-4">他のチャンネルでも繋がれます</p>
+      <div class="mt-8 border-t border-white/10 pt-8 rv" style="--d:1.1s">
+        <p class="mist text-xs mb-4">他のチャンネルでも繋がれます</p>
         <div class="flex flex-wrap gap-3 justify-center">
           <a href="https://instagram.com/sc_zono" target="_blank" rel="noopener"
             class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white text-sm font-bold px-5 py-2.5 rounded-full transition-all duration-200 border border-white/20">
@@ -1008,11 +1106,32 @@
     </div>
   </section>
 
+  <div class="film-bar"></div>
+
   <!-- ========== FOOTER ========== -->
-  <footer class="py-8 px-6 bg-brand-dark border-t border-white/5 text-center">
+  <footer class="py-8 px-6 border-t border-white/5 text-center" style="background:#07090e;">
     <nav class="mb-3"><a href="/privacy.html" class="text-gray-500 hover:text-gray-300 text-xs transition-colors">プライバシーポリシー</a></nav>
     <p class="text-gray-600 text-xs tracking-widest">© 2026 GRACE SELECTION. All rights reserved.</p>
   </footer>
 
-<script>function toggleMobileMenu(){var m=document.getElementById("mobile-menu");m.classList.toggle("hidden");document.body.style.overflow=m.classList.contains("hidden")?"":"hidden";}</script></body>
+<script>function toggleMobileMenu(){var m=document.getElementById("mobile-menu");m.classList.toggle("hidden");document.body.style.overflow=m.classList.contains("hidden")?"":"hidden";}</script>
+<script>
+  (function () {
+    var groups = document.querySelectorAll('.rv-group');
+    if (!('IntersectionObserver' in window)) {
+      groups.forEach(function (g) { g.classList.add('on'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('on');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    groups.forEach(function (g) { io.observe(g); });
+  })();
+</script>
+</body>
 </html>
