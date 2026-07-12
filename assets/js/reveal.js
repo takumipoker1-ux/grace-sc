@@ -23,6 +23,8 @@
     section.__rvEls = els;
   });
 
+  // threshold は使わない：縦長セクション（店舗一覧等）だと「◯%表示」に永遠に達しないため、
+  // 1pxでも画面に入ったら発火させる
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) {
@@ -30,9 +32,17 @@
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { rootMargin: '0px 0px -40px 0px' });
 
   sections.forEach(function (s) {
     if (s.__rvEls) io.observe(s);
   });
+
+  // 保険：3秒後もなお非表示の要素は強制表示（想定外のレイアウトでも本文が消えないように）
+  setTimeout(function () {
+    [].forEach.call(document.querySelectorAll('.rv-a:not(.rv-on)'), function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < (window.innerHeight || 0) && r.bottom > 0) el.classList.add('rv-on');
+    });
+  }, 3000);
 })();
