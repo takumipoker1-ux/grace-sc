@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* サイト共通ロゴ書体（全ページのヘッダーで統一） */
+  .brand-logo {
+    font-family: 'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', serif;
+    color: #d9a441;
+  }
+}
