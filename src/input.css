@@ -9,17 +9,19 @@
     color: #d9a441;
   }
 
-  /* サイト共通：スクロールリビール（reveal.jsがクラスを付与。JS無効時は常時表示） */
-  .rv-a {
-    opacity: 0;
-    transform: translateY(14px);
-    transition: opacity .7s ease var(--d, 0s), transform .7s ease var(--d, 0s);
-  }
-  .rv-a.rv-on {
-    opacity: 1;
-    transform: none;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .rv-a { opacity: 1; transform: none; transition: none; }
-  }
+}
+
+/* サイト共通：スクロールリビール（reveal.jsが実行時にクラス付与するため、
+   @layer外に置いてTailwindのパージ対象から外す。JS無効時は常時表示） */
+.rv-a {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .7s ease var(--d, 0s), transform .7s ease var(--d, 0s);
+}
+.rv-a.rv-on {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rv-a { opacity: 1; transform: none; transition: none; }
 }
