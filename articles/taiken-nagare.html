@@ -31,6 +31,13 @@
     .article-body ul{margin:1rem 0 1.25rem 1.25rem;list-style:disc}
     .article-body ul li{font-size:0.925rem;line-height:1.9;color:#d1d5db;margin-bottom:0.25rem}
     .article-body strong{color:#fff;font-weight:700}
+    .article-body h2{scroll-margin-top:5rem}
+    .toc { background:#141414; border:1px solid rgba(255,255,255,0.1); border-radius:0.75rem; padding:1rem 1.25rem; margin:1rem 0 2rem; }
+    .toc-title { font-size:0.75rem; font-weight:700; color:#34d399; margin-bottom:0.5rem; letter-spacing:0.1em; }
+    .toc ol { list-style:decimal; margin-left:1.25rem; }
+    .toc li { font-size:0.85rem; color:#d1d5db; margin:0.25rem 0; line-height:1.7; }
+    .toc a { color:#d1d5db; text-decoration:none; transition:color 0.2s; }
+    .toc a:hover { color:#c9a96e; }
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -122,7 +129,15 @@
         <p>体験入店（体入）は、正式入店前にお店の雰囲気・条件・自分との相性を確認できる機会です。しかし初めての場合、当日どう動けばいいか、何を確認すれば良いかがわからず、雰囲気に流されてしまうことが多い。</p>
         <p>この記事では体入の一連の流れを時系列で解説します。</p>
 
-        <h2>体入前日までに準備すること</h2>
+        <nav class="toc">
+          <p class="toc-title">目次</p>
+          <ol>
+          <li><a href="#s1">体入前日までに準備すること</a></li>
+          <li><a href="#s2">体入当日の流れ</a></li>
+          <li><a href="#s3">体入後の判断チェックリスト</a></li>
+          </ol>
+        </nav>
+        <h2 id="s1">体入前日までに準備すること</h2>
         <h3>服装・メイク</h3>
         <p>体入時の服装はお店によって指定がある場合とない場合があります。指定がなければ<strong>清潔感のあるワンピースやセットアップ</strong>が無難です。過度に露出が高い服や、反対にカジュアルすぎる服は避けてください。</p>
         <p>メイクは「華やか・でも下品に見えない」が基準。ナイトメイクに慣れていない場合は、お店のヘアメスタッフにお願いできる店も多いので、事前に確認しておきましょう。</p>
@@ -135,7 +150,7 @@
           <div class="flex items-center gap-3 text-sm"><span class="text-brand-mintDark font-bold">✓</span><span class="text-gray-300">メモ帳（条件を書き留めるため）</span></div>
         </div>
 
-        <h2>体入当日の流れ</h2>
+        <h2 id="s2">体入当日の流れ</h2>
         <h3>① 到着・受付（19:00〜20:00ごろ）</h3>
         <p>お店に着いたらスタッフに「体入で来ました」と伝えます。黒服または店長に案内され、ドレスの貸し出し・ヘアメの案内があります。着替えや準備に30分〜1時間ほどかかることが多いです。</p>
         <h3>② 条件の説明（フロアに出る前）</h3>
@@ -152,7 +167,7 @@
         <h3>④ 終了後・条件交渉</h3>
         <p>体入が終わると店側から「どうでしたか？」と聞かれます。その場で即決しなくて構いません。<strong>「持ち帰って考えます」は当然の権利</strong>です。その場の雰囲気に流されて返事をすると後悔するケースが多い。</p>
 
-        <h2>体入後の判断チェックリスト</h2>
+        <h2 id="s3">体入後の判断チェックリスト</h2>
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 my-4 space-y-3">
           <p class="text-sm font-bold text-white mb-2">以下を確認してから判断する</p>
           <div class="flex items-start gap-3 text-sm"><span class="text-brand-mintDark font-bold shrink-0">✓</span><span class="text-gray-300">聞いた条件（時給・保証・引かれもの）に納得できるか</span></div>

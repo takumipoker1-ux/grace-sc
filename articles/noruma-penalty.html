@@ -31,6 +31,13 @@
     .article-body ul{margin:1rem 0 1.25rem 1.25rem;list-style:disc}
     .article-body ul li{font-size:0.925rem;line-height:1.9;color:#d1d5db;margin-bottom:0.25rem}
     .article-body strong{color:#fff;font-weight:700}
+    .article-body h2{scroll-margin-top:5rem}
+    .toc { background:#141414; border:1px solid rgba(255,255,255,0.1); border-radius:0.75rem; padding:1rem 1.25rem; margin:1rem 0 2rem; }
+    .toc-title { font-size:0.75rem; font-weight:700; color:#34d399; margin-bottom:0.5rem; letter-spacing:0.1em; }
+    .toc ol { list-style:decimal; margin-left:1.25rem; }
+    .toc li { font-size:0.85rem; color:#d1d5db; margin:0.25rem 0; line-height:1.7; }
+    .toc a { color:#d1d5db; text-decoration:none; transition:color 0.2s; }
+    .toc a:hover { color:#c9a96e; }
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -122,7 +129,15 @@
         <p>求人サイトに「ノルマなし」と書いてある店でも、遅刻・当日欠勤・無断欠勤に対するペナルティは存在することがほとんどです。「ノルマ」という言葉を使っていないだけで、実質的な罰則体系がある。</p>
         <p>入店前にこれを把握しておかないと、<strong>思わぬ引かれが発生して手取りが大幅に減る</strong>ことになります。</p>
 
-        <h2>ペナルティの種類と相場</h2>
+        <nav class="toc">
+          <p class="toc-title">目次</p>
+          <ol>
+          <li><a href="#s1">ペナルティの種類と相場</a></li>
+          <li><a href="#s2">「ノルマなし」の店でも確認すべきこと</a></li>
+          <li><a href="#s3">ペナルティが重すぎる店の見分け方</a></li>
+          </ol>
+        </nav>
+        <h2 id="s1">ペナルティの種類と相場</h2>
 
         <h3>① 遅刻ペナルティ</h3>
         <div class="bg-white/[0.04] rounded-2xl p-5 border border-white/10 my-3">
@@ -158,7 +173,7 @@
         <p>「指名ノルマなし」という店でも、<strong>「1ヶ月指名0本の場合は全バックなし」</strong>という条件がついていることがあります。これはノルマという言葉を使っていませんが、実質的な指名ノルマです。</p>
         <p>また「月◯本以下は時給カット」という形で間接的にノルマが設定されているケースも多いです。</p>
 
-        <h2>「ノルマなし」の店でも確認すべきこと</h2>
+        <h2 id="s2">「ノルマなし」の店でも確認すべきこと</h2>
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 my-4 space-y-3">
           <div class="flex items-start gap-3 text-sm"><span class="text-brand-mintDark font-bold shrink-0">✓</span><span class="text-gray-300">指名0本の場合にバックはどうなるか</span></div>
           <div class="flex items-start gap-3 text-sm"><span class="text-brand-mintDark font-bold shrink-0">✓</span><span class="text-gray-300">イベント出勤の義務とペナルティ</span></div>
@@ -167,7 +182,7 @@
           <div class="flex items-start gap-3 text-sm"><span class="text-brand-mintDark font-bold shrink-0">✓</span><span class="text-gray-300">当欠・無欠のペナルティ額と適用条件</span></div>
         </div>
 
-        <h2>ペナルティが重すぎる店の見分け方</h2>
+        <h2 id="s3">ペナルティが重すぎる店の見分け方</h2>
         <p>ペナルティ体系が公開されている店は比較的クリーンです。<strong>「詳細は入ってから説明する」「細かいことは気にしなくていい」と曖昧にする店は要注意</strong>です。</p>
         <p>また、以下は業界的に「重すぎる」水準の目安です：</p>
         <ul>

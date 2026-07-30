@@ -32,6 +32,13 @@
     .article-body ul { margin:1rem 0 1.25rem 1.25rem; list-style:disc; }
     .article-body ul li { font-size:0.925rem; line-height:1.9; color:#d1d5db; margin-bottom:0.25rem; }
     .article-body strong { color:#fff; font-weight:700; }
+    .article-body h2{scroll-margin-top:5rem}
+    .toc { background:#141414; border:1px solid rgba(255,255,255,0.1); border-radius:0.75rem; padding:1rem 1.25rem; margin:1rem 0 2rem; }
+    .toc-title { font-size:0.75rem; font-weight:700; color:#34d399; margin-bottom:0.5rem; letter-spacing:0.1em; }
+    .toc ol { list-style:decimal; margin-left:1.25rem; }
+    .toc li { font-size:0.85rem; color:#d1d5db; margin:0.25rem 0; line-height:1.7; }
+    .toc a { color:#d1d5db; text-decoration:none; transition:color 0.2s; }
+    .toc a:hover { color:#c9a96e; }
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -129,7 +136,16 @@
           キャバクラを始めるにあたって、「どのお店がいいか」の前に「どのエリアが自分に合うか」を先に決めることが重要です。エリアによって客層・時給相場・競合の激しさ・雰囲気がまったく異なり、<strong>同じスペックの子でも稼げるエリアと稼げないエリアがある</strong>からです。
         </p>
 
-        <h2>六本木エリア：ハイクラス・競争激しい・単価が高い</h2>
+        <nav class="toc">
+          <p class="toc-title">目次</p>
+          <ol>
+          <li><a href="#s1">六本木エリア：ハイクラス・競争激しい・単価が高い</a></li>
+          <li><a href="#s2">新宿エリア：バランス型・稼ぎやすい・入りやすい</a></li>
+          <li><a href="#s3">上野エリア：安定・ノルマなし・地に足ついた稼ぎ方</a></li>
+          <li><a href="#s4">エリアを選ぶ前に確認したい3つの軸</a></li>
+          </ol>
+        </nav>
+        <h2 id="s1">六本木エリア：ハイクラス・競争激しい・単価が高い</h2>
 
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 my-4">
           <div class="grid grid-cols-2 gap-3 text-sm">
@@ -155,7 +171,7 @@
           <li>客単価の高い環境でブランディングしたい</li>
         </ul>
 
-        <h2>新宿エリア：バランス型・稼ぎやすい・入りやすい</h2>
+        <h2 id="s2">新宿エリア：バランス型・稼ぎやすい・入りやすい</h2>
 
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 my-4">
           <div class="grid grid-cols-2 gap-3 text-sm">
@@ -181,7 +197,7 @@
           <li>清楚系〜ワイワイ系まで幅広く対応できる</li>
         </ul>
 
-        <h2>上野エリア：安定・ノルマなし・地に足ついた稼ぎ方</h2>
+        <h2 id="s3">上野エリア：安定・ノルマなし・地に足ついた稼ぎ方</h2>
 
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 my-4">
           <div class="grid grid-cols-2 gap-3 text-sm">
@@ -207,7 +223,7 @@
           <li>アットホームな環境で長く働きたい</li>
         </ul>
 
-        <h2>エリアを選ぶ前に確認したい3つの軸</h2>
+        <h2 id="s4">エリアを選ぶ前に確認したい3つの軸</h2>
 
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 space-y-4 my-6">
           <div class="flex gap-4 items-start">

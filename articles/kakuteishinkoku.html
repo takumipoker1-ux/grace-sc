@@ -31,6 +31,13 @@
     .article-body ul{margin:1rem 0 1.25rem 1.25rem;list-style:disc}
     .article-body ul li{font-size:0.925rem;line-height:1.9;color:#d1d5db;margin-bottom:0.25rem}
     .article-body strong{color:#fff;font-weight:700}
+    .article-body h2{scroll-margin-top:5rem}
+    .toc { background:#141414; border:1px solid rgba(255,255,255,0.1); border-radius:0.75rem; padding:1rem 1.25rem; margin:1rem 0 2rem; }
+    .toc-title { font-size:0.75rem; font-weight:700; color:#34d399; margin-bottom:0.5rem; letter-spacing:0.1em; }
+    .toc ol { list-style:decimal; margin-left:1.25rem; }
+    .toc li { font-size:0.85rem; color:#d1d5db; margin:0.25rem 0; line-height:1.7; }
+    .toc a { color:#d1d5db; text-decoration:none; transition:color 0.2s; }
+    .toc a:hover { color:#c9a96e; }
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -122,7 +129,18 @@
         <p>「税金のことは後で考えよう」と放置していると、翌年に高額の追徴課税が来ることがあります。知識がなくても大丈夫ですが、<strong>最低限のルールだけは入店前に把握しておくべきです。</strong></p>
         <p>この記事では、キャバクラで働く方が知っておくべき税金の基本を、難しい言葉を使わずにまとめます。</p>
 
-        <h2>まず知っておくべき3つの基本</h2>
+        <nav class="toc">
+          <p class="toc-title">目次</p>
+          <ol>
+          <li><a href="#s1">まず知っておくべき3つの基本</a></li>
+          <li><a href="#s2">経費として計上できるもの</a></li>
+          <li><a href="#s3">青色申告で最大65万円控除</a></li>
+          <li><a href="#s4">住民税バレを防ぐ「普通徴収」の設定</a></li>
+          <li><a href="#s5">申告しないとどうなるか</a></li>
+          <li><a href="#s6">確定申告の時期と流れ</a></li>
+          </ol>
+        </nav>
+        <h2 id="s1">まず知っておくべき3つの基本</h2>
 
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 space-y-5 my-6">
           <div>
@@ -139,7 +157,7 @@
           </div>
         </div>
 
-        <h2>経費として計上できるもの</h2>
+        <h2 id="s2">経費として計上できるもの</h2>
         <p>キャバ収入から差し引ける「必要経費」があります。きちんと記録しておくと納税額が減ります。</p>
         <ul>
           <li>ドレス・衣装代</li>
@@ -151,11 +169,11 @@
         </ul>
         <p><strong>レシート・領収書は必ず保管してください。</strong>確定申告時に証明が必要になります。アプリ（Freee・マネーフォワードなど）で管理すると楽です。</p>
 
-        <h2>青色申告で最大65万円控除</h2>
+        <h2 id="s3">青色申告で最大65万円控除</h2>
         <p>キャバ専業（事業所得として申告する場合）なら<strong>青色申告</strong>で最大65万円の特別控除が使えます。白色申告よりも納税額を大きく減らせるため、年間の収入がある程度ある人はこちらを選ぶのがおすすめです。</p>
         <p>条件は①事前に「青色申告承認申請書」を税務署に提出（開業から2ヶ月以内 or 申告したい年の3月15日まで）、②複式簿記で帳簿をつける、③e-Tax提出 or 電子帳簿保存、の3つ。帳簿はFreeeやマネーフォワードが自動化してくれるので、実作業はそこまで大変ではありません。</p>
 
-        <h2>住民税バレを防ぐ「普通徴収」の設定</h2>
+        <h2 id="s4">住民税バレを防ぐ「普通徴収」の設定</h2>
         <p>Wワーカーが最も気をつけるべきなのが<strong>住民税による身バレ</strong>です。</p>
         <p>通常、会社員の住民税は「特別徴収」といって会社の給与から天引きされます。副業収入があると住民税が増額され、会社の経理担当に「なんか増えてる」と気づかれるリスクがあります。</p>
 
@@ -179,11 +197,11 @@
           <p class="text-xs text-gray-500 mt-2">※一部の自治体では、普通徴収を選択しても副業分が特別徴収に合算されるケースがあります。確実性を求める場合は事前にお住まいの自治体に確認してください。</p>
         </div>
 
-        <h2>申告しないとどうなるか</h2>
+        <h2 id="s5">申告しないとどうなるか</h2>
         <p>「バレないだろう」と放置するのは危険です。税務署は支払調書・金融機関の記録などをもとに調査することがあります。無申告が発覚すると<strong>本来の税額＋無申告加算税（原則15〜20%、2024年1月以降の申告では300万円超の部分は30%）＋延滞税</strong>が課されます。</p>
         <p>申告は面倒に感じますが、e-Tax（国税庁のオンライン申告）を使えば自宅で完結します。収入・経費を入力するだけで計算してくれるので、思ったより簡単です。</p>
 
-        <h2>確定申告の時期と流れ</h2>
+        <h2 id="s6">確定申告の時期と流れ</h2>
         <div class="bg-white/[0.04] rounded-2xl p-5 border border-white/10 my-4">
           <div class="space-y-2 text-sm">
             <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-gray-500">対象期間</span><span class="font-bold text-white">1月1日〜12月31日の1年分</span></div>

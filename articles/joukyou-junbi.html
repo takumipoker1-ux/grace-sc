@@ -31,6 +31,13 @@
     .article-body ul{margin:1rem 0 1.25rem 1.25rem;list-style:disc}
     .article-body ul li{font-size:0.925rem;line-height:1.9;color:#d1d5db;margin-bottom:0.25rem}
     .article-body strong{color:#fff;font-weight:700}
+    .article-body h2{scroll-margin-top:5rem}
+    .toc { background:#141414; border:1px solid rgba(255,255,255,0.1); border-radius:0.75rem; padding:1rem 1.25rem; margin:1rem 0 2rem; }
+    .toc-title { font-size:0.75rem; font-weight:700; color:#34d399; margin-bottom:0.5rem; letter-spacing:0.1em; }
+    .toc ol { list-style:decimal; margin-left:1.25rem; }
+    .toc li { font-size:0.85rem; color:#d1d5db; margin:0.25rem 0; line-height:1.7; }
+    .toc a { color:#d1d5db; text-decoration:none; transition:color 0.2s; }
+    .toc a:hover { color:#c9a96e; }
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -123,7 +130,16 @@
       <div class="article-body">
         <p>地方から東京に出てきて夜職を始める子、毎月のように相談が来ます。ただ、<strong>準備不足で出てくると初月で立ち行かなくなる</strong>ケースが一定あります。この記事では、現実的な金額・家探し・段取りをまとめます。</p>
         <p>「勢いで出てきた」だとリスクが高すぎる。最低限ここに書いてあることを整えてから出てくるのが安全。</p>
-        <h2>上京前に必要な金額</h2>
+        <nav class="toc">
+          <p class="toc-title">目次</p>
+          <ol>
+          <li><a href="#s1">上京前に必要な金額</a></li>
+          <li><a href="#s2">家探しと住まいの選択肢</a></li>
+          <li><a href="#s3">上京の段取り（時系列）</a></li>
+          <li><a href="#s4">地方から出る前にやっておくこと</a></li>
+          </ol>
+        </nav>
+        <h2 id="s1">上京前に必要な金額</h2>
         <p>上京してから夜職の売上が本格化するまでに2〜3ヶ月かかります。この期間を乗り切るための資金を事前に用意しておく必要があります。</p>
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 space-y-4 my-6">
           <div class="flex gap-3 items-start">
@@ -156,7 +172,7 @@
           </div>
         </div>
         <p><strong>合計：125〜195万円が現実的な上京前の必要資金</strong>。これより少ないと、初月〜2ヶ月目で資金ショートするリスクが急上昇します。</p>
-        <h2>家探しと住まいの選択肢</h2>
+        <h2 id="s2">家探しと住まいの選択肢</h2>
         <p>夜職で動くなら、<strong>勤務エリアから電車/タクシーで30分以内</strong>が基本。終電後のタクシー代が積み重なると想定より痛い。</p>
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 space-y-4 my-6">
           <div class="flex gap-3 items-start">
@@ -189,7 +205,7 @@
           </div>
         </div>
         <p><strong>最初の3ヶ月はマンスリー、慣れてから通常賃貸に移る</strong>のが安定した動き方。いきなり通常賃貸で2年契約を結ぶと、合わないと感じた時に動きにくい。</p>
-        <h2>上京の段取り（時系列）</h2>
+        <h2 id="s3">上京の段取り（時系列）</h2>
         <ul>
           <li><strong>3ヶ月前</strong>：資金計画の整理、目標金額到達に向けて貯金</li>
           <li><strong>2ヶ月前</strong>：スカウトに相談開始（複数人に）、エリア選定、ネットで物件調査</li>
@@ -200,7 +216,7 @@
           <li><strong>上京2週目〜</strong>：本入決定、生活リズムの構築</li>
           <li><strong>上京1ヶ月目</strong>：出勤ペースの安定化、2ヶ月目以降の売上カーブに備える</li>
         </ul>
-        <h2>地方から出る前にやっておくこと</h2>
+        <h2 id="s4">地方から出る前にやっておくこと</h2>
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 my-4 space-y-2">
           <div class="flex items-center gap-3 text-sm"><span class="text-brand-mintDark font-bold">✓</span><span class="text-gray-300">必要資金125〜195万円の確保</span></div>
           <div class="flex items-center gap-3 text-sm"><span class="text-brand-mintDark font-bold">✓</span><span class="text-gray-300">現職の退職手続き（夜職経験者なら円満退店）</span></div>

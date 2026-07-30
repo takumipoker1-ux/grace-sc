@@ -31,6 +31,13 @@
     .article-body ul{margin:1rem 0 1.25rem 1.25rem;list-style:disc}
     .article-body ul li{font-size:0.925rem;line-height:1.9;color:#d1d5db;margin-bottom:0.25rem}
     .article-body strong{color:#fff;font-weight:700}
+    .article-body h2{scroll-margin-top:5rem}
+    .toc { background:#141414; border:1px solid rgba(255,255,255,0.1); border-radius:0.75rem; padding:1rem 1.25rem; margin:1rem 0 2rem; }
+    .toc-title { font-size:0.75rem; font-weight:700; color:#34d399; margin-bottom:0.5rem; letter-spacing:0.1em; }
+    .toc ol { list-style:decimal; margin-left:1.25rem; }
+    .toc li { font-size:0.85rem; color:#d1d5db; margin:0.25rem 0; line-height:1.7; }
+    .toc a { color:#d1d5db; text-decoration:none; transition:color 0.2s; }
+    .toc a:hover { color:#c9a96e; }
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -123,7 +130,20 @@
         <p>路上やSNSで「スカウト」から声をかけられたとき、どう判断すればいいのか。「怪しいのはわかるけど、全員が悪いわけじゃないよね？」という感覚は正しいです。</p>
         <p>スカウトの質はピンキリで、<strong>女の子のことを本当に考えて動いているスカウトもいれば、数を捌くことだけを考えているスカウトもいます</strong>。この記事では現役スカウトの立場から、見極め方を解説します。</p>
 
-        <h2>信頼できるスカウトの特徴</h2>
+        <nav class="toc">
+          <p class="toc-title">目次</p>
+          <ol>
+          <li><a href="#s1">信頼できるスカウトの特徴</a></li>
+          <li><a href="#s2">怪しいスカウトが使う手口</a></li>
+          <li><a href="#s3">「紹介実績◯◯人」の数字、冷静に計算するとほぼ嘘</a></li>
+          <li><a href="#s4">「○○と仲いい」アピールは、癒着のシグナルでもある</a></li>
+          <li><a href="#s5">アフターケアの設計が崩れているスカウトは選ばない</a></li>
+          <li><a href="#s6">連絡しても返事が来ないスカウトは、それだけで使えない</a></li>
+          <li><a href="#s7">SNS経由と路上、どちらが安全か</a></li>
+          <li><a href="#s8">スカウトに連絡する前に確認すること</a></li>
+          </ol>
+        </nav>
+        <h2 id="s1">信頼できるスカウトの特徴</h2>
 
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 space-y-4 my-6">
           <div class="flex gap-3 items-start">
@@ -170,7 +190,7 @@
           </div>
         </div>
 
-        <h2>怪しいスカウトが使う手口</h2>
+        <h2 id="s2">怪しいスカウトが使う手口</h2>
 
         <h3>路上スカウトの場合</h3>
         <ul>
@@ -192,7 +212,7 @@
           <li>「自分が業界一番です」と自己誇示で押してくる</li>
         </ul>
 
-        <h2>「紹介実績◯◯人」の数字、冷静に計算するとほぼ嘘</h2>
+        <h2 id="s3">「紹介実績◯◯人」の数字、冷静に計算するとほぼ嘘</h2>
 
         <p>ナイトワーク業界では「5000人紹介しました」「業界トップの紹介実績」といった謳い文句がよく出てきます。ただ、この数字を冷静に計算すると、ほぼ全部が誇張だとわかります。</p>
 
@@ -211,7 +231,7 @@
 
         <p><strong>紹介数を売りにしているスカウトは、数字を盛っているか、1人ひとりに対応できていないかのどちらかです。</strong>「自分が業界一番」を強調する人も同じで、女の子側がこの数字を信じる前提で発信している時点で、判断力を舐められていると思った方がいいです。</p>
 
-        <h2>「○○と仲いい」アピールは、癒着のシグナルでもある</h2>
+        <h2 id="s4">「○○と仲いい」アピールは、癒着のシグナルでもある</h2>
 
         <p>「○○店の店長と仲いい」「○○グループに詳しい」という関係性アピールは、一見頼もしく聞こえます。ただ、店との関係が深いということは、<strong>その店に紹介する動機が強いということ</strong>でもあります。</p>
 
@@ -267,7 +287,7 @@
 
         <p>関係性で売るスカウトより、判断軸の透明性で売るスカウトを選ぶ。これが「自分にとって損しないスカウト」を見抜く、一番シンプルな方法です。</p>
 
-        <h2>アフターケアの設計が崩れているスカウトは選ばない</h2>
+        <h2 id="s5">アフターケアの設計が崩れているスカウトは選ばない</h2>
 
         <p>紹介して終わり、ではなく入店後のフォローが本来のスカウトの仕事です。条件と現場が違ったとき、人間関係でつまずいたとき、移籍を考えたときに動いてくれるかどうか。ここが本当の差です。</p>
 
@@ -275,7 +295,7 @@
 
         <p>パンクするほど抱えて、結果として連絡が来なくなる人を使う価値は、紹介の瞬間にしかありません。<strong>「アフターケアできる量しか顧客を持たない」というラインを引けているかどうかは、入店前に確認しておく価値があります。</strong></p>
 
-        <h2>連絡しても返事が来ないスカウトは、それだけで使えない</h2>
+        <h2 id="s6">連絡しても返事が来ないスカウトは、それだけで使えない</h2>
 
         <p>判断基準として一番シンプルなのが、<strong>こちらから連絡したときの返信スピード</strong>です。DMやLINEを送って24時間経っても返事が来ないスカウトは、その時点で使う対象から外していいです。</p>
 
@@ -283,11 +303,11 @@
 
         <p>はっきり言って、返信しないスカウトはその時点で使えません。連絡が返ってこなかったら、待ち続ける時間がもったいないので、<strong>すぐに次のスカウトに切り替えてください</strong>。「忙しい」「他の子の対応中」みたいな言い訳を許す必要は、女の子側には一切ありません。</p>
 
-        <h2>SNS経由と路上、どちらが安全か</h2>
+        <h2 id="s7">SNS経由と路上、どちらが安全か</h2>
         <p>どちらが絶対安全ということはありません。<strong>判断基準は「媒体」ではなく「その人自身の信頼性」</strong>です。SNS経由でも怪しいスカウトはいますし、路上スカウトでも誠実な人はいます。</p>
         <p>ただし、SNS経由の場合は過去の投稿・フォロワー数・発信内容を事前に確認できる分、判断材料が多いのは事実です。</p>
 
-        <h2>スカウトに連絡する前に確認すること</h2>
+        <h2 id="s8">スカウトに連絡する前に確認すること</h2>
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 my-4 space-y-2">
           <div class="flex items-center gap-3 text-sm"><span class="text-brand-mintDark font-bold">✓</span><span class="text-gray-300">SNS・サイトで継続的な活動実績があるか</span></div>
           <div class="flex items-center gap-3 text-sm"><span class="text-brand-mintDark font-bold">✓</span><span class="text-gray-300">面接同行をしているか</span></div>

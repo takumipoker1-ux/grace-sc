@@ -32,6 +32,13 @@
     .article-body ul { margin:1rem 0 1.25rem 1.25rem; list-style:disc; }
     .article-body ul li { font-size:0.925rem; line-height:1.9; color:#d1d5db; margin-bottom:0.25rem; }
     .article-body strong { color:#fff; font-weight:700; }
+    .article-body h2{scroll-margin-top:5rem}
+    .toc { background:#141414; border:1px solid rgba(255,255,255,0.1); border-radius:0.75rem; padding:1rem 1.25rem; margin:1rem 0 2rem; }
+    .toc-title { font-size:0.75rem; font-weight:700; color:#34d399; margin-bottom:0.5rem; letter-spacing:0.1em; }
+    .toc ol { list-style:decimal; margin-left:1.25rem; }
+    .toc li { font-size:0.85rem; color:#d1d5db; margin:0.25rem 0; line-height:1.7; }
+    .toc a { color:#d1d5db; text-decoration:none; transition:color 0.2s; }
+    .toc a:hover { color:#c9a96e; }
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -132,7 +139,16 @@
           この記事では、実際に起きやすいトラブルのパターンと、対処法を具体的にまとめます。
         </p>
 
-        <h2>よくあるトラブルのパターン</h2>
+        <nav class="toc">
+          <p class="toc-title">目次</p>
+          <ol>
+          <li><a href="#s1">よくあるトラブルのパターン</a></li>
+          <li><a href="#s2">トラブルを防ぐ、入店前の確認リスト</a></li>
+          <li><a href="#s3">トラブルが起きたときの対処フロー</a></li>
+          <li><a href="#s4">スカウト経由だとトラブルが減る理由</a></li>
+          </ol>
+        </nav>
+        <h2 id="s1">よくあるトラブルのパターン</h2>
 
         <h3>① 給与の計算が「話と違う」</h3>
         <p>
@@ -157,7 +173,7 @@
           退店を申し出ても「今月分のノルマを達成してから」「代わりの子を入れてから」と引き延ばされるケースです。ナイトワークの雇用関係は曖昧な部分が多く、<strong>辞める権利は常に労働者側にあります</strong>が、知識がないと言いくるめられてしまいます。
         </p>
 
-        <h2>トラブルを防ぐ、入店前の確認リスト</h2>
+        <h2 id="s2">トラブルを防ぐ、入店前の確認リスト</h2>
 
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 my-6 space-y-3">
           <p class="font-bold text-white text-sm mb-1">入店前に必ず書面・LINEで確認すること</p>
@@ -187,7 +203,7 @@
           </div>
         </div>
 
-        <h2>トラブルが起きたときの対処フロー</h2>
+        <h2 id="s3">トラブルが起きたときの対処フロー</h2>
 
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 space-y-4 my-6">
           <div class="flex gap-4 items-start">
@@ -220,7 +236,7 @@
           </div>
         </div>
 
-        <h2>スカウト経由だとトラブルが減る理由</h2>
+        <h2 id="s4">スカウト経由だとトラブルが減る理由</h2>
         <p>
           スカウト経由で入店すると、店側には「このスカウトとの関係を壊したくない」というインセンティブが生まれます。スカウトは複数の女の子を紹介できる立場にあるため、<strong>一人の子に理不尽な扱いをすれば、次の紹介が来なくなる</strong>リスクを店側は理解しています。
         </p>

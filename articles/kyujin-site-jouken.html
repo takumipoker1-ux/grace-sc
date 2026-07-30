@@ -62,6 +62,13 @@
       color: #111827;
       font-weight: 700;
     }
+    .article-body h2{scroll-margin-top:5rem}
+    .toc { background:#141414; border:1px solid rgba(255,255,255,0.1); border-radius:0.75rem; padding:1rem 1.25rem; margin:1rem 0 2rem; }
+    .toc-title { font-size:0.75rem; font-weight:700; color:#34d399; margin-bottom:0.5rem; letter-spacing:0.1em; }
+    .toc ol { list-style:decimal; margin-left:1.25rem; }
+    .toc li { font-size:0.85rem; color:#d1d5db; margin:0.25rem 0; line-height:1.7; }
+    .toc a { color:#d1d5db; text-decoration:none; transition:color 0.2s; }
+    .toc a:hover { color:#c9a96e; }
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -172,7 +179,16 @@
           これは「悪質な店が嘘をついている」という話ではありません。求人広告というビジネスの仕組み上、ほぼ必然的にそうなるという話です。
         </p>
 
-        <h2>求人サイトが「盛る」のは店の問題ではなく構造の問題</h2>
+        <nav class="toc">
+          <p class="toc-title">目次</p>
+          <ol>
+          <li><a href="#s1">求人サイトが「盛る」のは店の問題ではなく構造の問題</a></li>
+          <li><a href="#s2">具体的に「何が」盛られているのか</a></li>
+          <li><a href="#s3">じゃあどうすれば見極められるのか</a></li>
+          <li><a href="#s4">スカウト経由で入店するメリット</a></li>
+          </ol>
+        </nav>
+        <h2 id="s1">求人サイトが「盛る」のは店の問題ではなく構造の問題</h2>
 
         <p>
           求人サイトのビジネスモデルを理解すると、なぜ条件が実態と乖離するのかがわかります。
@@ -184,7 +200,7 @@
           となると、サイト側にとって「条件を良く見せること」はインセンティブになります。お店側も「他の店より目を引く条件を出さないと埋もれる」という競争にさらされている。その結果として、最大値・上限値・理想のケースが前面に出た表記になっていくのは、ある意味で当然の帰結です。
         </p>
 
-        <h2>具体的に「何が」盛られているのか</h2>
+        <h2 id="s2">具体的に「何が」盛られているのか</h2>
 
         <h3>① 時給</h3>
         <p>
@@ -218,7 +234,7 @@
           フォロー体制・黒服のサポートがどれほどあるかは、求人テキストからは一切わかりません。
         </p>
 
-        <h2>じゃあどうすれば見極められるのか</h2>
+        <h2 id="s3">じゃあどうすれば見極められるのか</h2>
 
         <p>
           求人サイトの情報だけを見て判断するのは、メニューの写真だけ見て注文するのと同じです。実態は入ってみないとわからない。でも、入ってからミスマッチに気づいても遅い。
@@ -251,7 +267,7 @@
           </div>
         </div>
 
-        <h2>スカウト経由で入店するメリット</h2>
+        <h2 id="s4">スカウト経由で入店するメリット</h2>
 
         <p>
           スカウト経由で入店することには、情報面以外にもメリットがあります。

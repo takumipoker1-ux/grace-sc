@@ -31,6 +31,13 @@
     .article-body ul{margin:1rem 0 1.25rem 1.25rem;list-style:disc}
     .article-body ul li{font-size:0.925rem;line-height:1.9;color:#d1d5db;margin-bottom:0.25rem}
     .article-body strong{color:#fff;font-weight:700}
+    .article-body h2{scroll-margin-top:5rem}
+    .toc { background:#141414; border:1px solid rgba(255,255,255,0.1); border-radius:0.75rem; padding:1rem 1.25rem; margin:1rem 0 2rem; }
+    .toc-title { font-size:0.75rem; font-weight:700; color:#34d399; margin-bottom:0.5rem; letter-spacing:0.1em; }
+    .toc ol { list-style:decimal; margin-left:1.25rem; }
+    .toc li { font-size:0.85rem; color:#d1d5db; margin:0.25rem 0; line-height:1.7; }
+    .toc a { color:#d1d5db; text-decoration:none; transition:color 0.2s; }
+    .toc a:hover { color:#c9a96e; }
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -121,11 +128,20 @@
       <div class="article-body">
         <p>「移籍って、逃げなんじゃないか」と思っている女の子、いませんか？</p>
         <p><strong>実は違います。</strong>移籍は普通に戦略の一つで、マイナスイメージを持つ必要はあまりありません。この記事では、移籍が効くタイミングと、動くのを少し待った方がいいサインを整理します。</p>
-        <h2>移籍は逃げ？いいえ、普通に戦略</h2>
+        <nav class="toc">
+          <p class="toc-title">目次</p>
+          <ol>
+          <li><a href="#s1">移籍は逃げ？いいえ、普通に戦略</a></li>
+          <li><a href="#s2">動くべき5つのパターン</a></li>
+          <li><a href="#s3">動くのを待った方がいいサイン</a></li>
+          <li><a href="#s4">移籍前にやるべき準備</a></li>
+          </ol>
+        </nav>
+        <h2 id="s1">移籍は逃げ？いいえ、普通に戦略</h2>
         <p>うまくいってる子ほど、移籍を戦略として使っています。<strong>1年に3〜4回動く子も珍しくなくて</strong>、それ自体はキャリアアップの過程として正常なサイクルです。ずっと同じ店に居続ける子のほうが、逆に成長機会を逃しているケースもあります。</p>
         <p>動く理由はプラスの方向だけじゃなくて大丈夫です。「その店で売上が作れなかった」「客層が合わなかった」みたいにマイナスに見える理由での移籍も、普通に有効です。エリアや業種を変えて試しながら、自分の型を探していくプロセスの一部と捉えるといいです。</p>
         <p>大事なのは「いつ動くか」。タイミングが合えば売上が一段上がるし、間違えると停滞することもあります。</p>
-        <h2>動くべき5つのパターン</h2>
+        <h2 id="s2">動くべき5つのパターン</h2>
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 space-y-4 my-6">
           <div class="flex gap-3 items-start">
             <span class="text-brand-mintDark font-bold text-lg shrink-0">◯</span>
@@ -163,7 +179,7 @@
             </div>
           </div>
         </div>
-        <h2>動くのを待った方がいいサイン</h2>
+        <h2 id="s3">動くのを待った方がいいサイン</h2>
         <div class="bg-white/[0.04] rounded-2xl p-6 border border-white/10 space-y-4 my-6">
           <div class="flex gap-3 items-start">
             <span class="text-red-400 font-bold text-lg shrink-0">✕</span>
@@ -194,7 +210,7 @@
             </div>
           </div>
         </div>
-        <h2>移籍前にやるべき準備</h2>
+        <h2 id="s4">移籍前にやるべき準備</h2>
         <ul>
           <li>スカウトに相談して次の店の候補を3〜5件比較</li>
           <li>新店舗の条件（給率・スライド・控除）を文書確認</li>
