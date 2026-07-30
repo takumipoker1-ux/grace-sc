@@ -127,7 +127,7 @@
 
     /* ===== 目次 ===== */
     /* 固定ヘッダー(h-14)の下に見出しが潜らないように */
-    section[id] { scroll-margin-top: 3.5rem; }
+    section[id], nav[id] { scroll-margin-top: 3.5rem; }
 
     .toc-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 1.25rem; }
     .toc-grid a {
@@ -242,19 +242,20 @@
     </div>
   </header>
 
-    <div id="mobile-menu" class="hidden sm:hidden fixed inset-0 z-[60] bg-[#07090e]" onclick="if(event.target.id==='mobile-menu')toggleMobileMenu()">
+    <div id="mobile-menu" class="hidden sm:hidden fixed inset-0 z-[60] overflow-y-auto bg-[#07090e]" onclick="if(event.target.id==='mobile-menu')toggleMobileMenu()">
       <div class="flex justify-end p-3">
         <button onclick="toggleMobileMenu()" class="text-gray-300 p-2" aria-label="閉じる">
           <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
-      <nav class="px-8 pt-4 flex flex-col gap-1 text-white text-base font-medium">
+      <nav class="px-8 pt-4 pb-10 flex flex-col gap-1 text-white text-base font-medium">
         <a href="/" class="py-4 border-b border-white/10 hover:text-[#d9a441] transition-colors">トップ</a>
+        <a href="#contents" onclick="toggleMobileMenu()" class="py-4 border-b border-white/10 hover:text-[#d9a441] transition-colors">目次</a>
         <a href="/stores/" class="py-4 border-b border-white/10 hover:text-[#d9a441] transition-colors">店舗・求人</a>
         <a href="/articles/" class="py-4 border-b border-white/10 hover:text-[#d9a441] transition-colors">記事</a>
         <a href="/about.html" class="py-4 border-b border-white/10 hover:text-[#d9a441] transition-colors">ぞのとは</a>
         <a href="/privacy.html" class="py-4 border-b border-white/10 text-gray-400 hover:text-[#d9a441] transition-colors text-sm">プライバシーポリシー</a>
-        <a href="/#cta" class="mt-6 bg-brand-line hover:bg-brand-lineDark text-white text-center font-bold py-4 rounded transition-colors">LINEで相談する</a>
+        <a href="#cta" onclick="toggleMobileMenu()" class="mt-6 bg-brand-line hover:bg-brand-lineDark text-white text-center font-bold py-4 rounded transition-colors">LINEで相談する</a>
       </nav>
     </div>
 
@@ -296,7 +297,7 @@
   </section>
 
   <!-- ========== CONTENTS / 目次 ========== -->
-  <nav id="contents" class="night-mid px-6 pt-14 pb-4 rv-group" aria-label="このページの目次">
+  <nav id="contents" class="px-6 pt-14 pb-4 rv-group" style="background:#10141d;" aria-label="このページの目次">
     <div class="max-w-2xl mx-auto">
       <p class="scene-label mb-2 rv rv-blur">CONTENTS ── 目次</p>
       <p class="text-xs mist mb-7 rv rv-blur" style="--d:.15s">気になるところから読んでください。</p>
