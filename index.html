@@ -124,6 +124,32 @@
     .mark-ok { color: #d9a441; font-weight: 700; }
     .mark-mid { color: #8d7a4e; font-weight: 700; }
     .mark-ng { color: #444c5c; font-weight: 700; }
+
+    /* ===== 目次 ===== */
+    /* 固定ヘッダー(h-14)の下に見出しが潜らないように */
+    section[id] { scroll-margin-top: 3.5rem; }
+
+    .toc-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 1.25rem; }
+    .toc-grid a {
+      display: flex; align-items: center; gap: .6rem;
+      padding: .8rem .1rem;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      color: #b7bcc6; font-size: .8rem; line-height: 1.5;
+      transition: color .2s, border-color .2s;
+    }
+    .toc-grid a:hover { color: #fff; border-bottom-color: rgba(217,164,65,.45); }
+    .toc-no {
+      font-family: 'Shippori Mincho', 'Noto Serif JP', serif; font-style: normal;
+      font-size: .7rem; letter-spacing: .08em; color: #d9a441;
+      min-width: 1.9em; flex-shrink: 0;
+    }
+    .toc-cta { grid-column: 1 / -1; }
+    .toc-cta a { justify-content: center; color: #f0e3c8; border-bottom-color: rgba(217,164,65,.28); }
+    @media (min-width: 640px) {
+      .toc-grid { column-gap: 2.5rem; }
+      .toc-grid a { font-size: .9rem; padding: .9rem .25rem; }
+      .toc-no { font-size: .75rem; }
+    }
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -269,8 +295,29 @@
     </div>
   </section>
 
+  <!-- ========== CONTENTS / 目次 ========== -->
+  <nav id="contents" class="night-mid px-6 pt-14 pb-4 rv-group" aria-label="このページの目次">
+    <div class="max-w-2xl mx-auto">
+      <p class="scene-label mb-2 rv rv-blur">CONTENTS ── 目次</p>
+      <p class="text-xs mist mb-7 rv rv-blur" style="--d:.15s">気になるところから読んでください。</p>
+      <ol class="toc-grid rv" style="--d:.3s">
+        <li><a href="#s02"><i class="toc-no">02</i>面接同行の記録</a></li>
+        <li><a href="#s03"><i class="toc-no">03</i>よくある不安</a></li>
+        <li><a href="#s04"><i class="toc-no">04</i>スカウトの種類</a></li>
+        <li><a href="#s05"><i class="toc-no">05</i>他との違い</a></li>
+        <li><a href="#s06"><i class="toc-no">06</i>3つの約束</a></li>
+        <li><a href="#s07"><i class="toc-no">07</i>お祝い・特典</a></li>
+        <li><a href="#s08"><i class="toc-no">08</i>相談する人たち</a></li>
+        <li><a href="#s09"><i class="toc-no">09</i>担当エージェント</a></li>
+        <li><a href="#s10"><i class="toc-no">10</i>ご利用の流れ</a></li>
+        <li><a href="#s11"><i class="toc-no">11</i>よくある質問</a></li>
+        <li class="toc-cta"><a href="#cta"><i class="toc-no">FIN</i>LINEで相談する</a></li>
+      </ol>
+    </div>
+  </nav>
+
   <!-- ========== SCENE 02 / 面接の記録 ========== -->
-  <section class="night-mid py-24 px-6 rv-group">
+  <section id="s02" class="night-mid py-24 px-6 rv-group">
     <div class="max-w-2xl mx-auto flex flex-col items-center">
       <p class="scene-label mb-9 rv rv-blur">SCENE 02 ── 面接の記録</p>
       <h2 class="subtitle text-xl md:text-2xl text-white text-center mb-3 rv rv-blur" style="--d:.25s; letter-spacing:.14em;">面接には、一緒に行きます。</h2>
@@ -300,7 +347,7 @@
   </section>
 
   <!-- ========== SCENE 03 / PAIN POINTS ========== -->
-  <section class="night-flat py-24 px-6 rv-group">
+  <section id="s03" class="night-flat py-24 px-6 rv-group">
     <div class="max-w-3xl mx-auto">
       <div class="mb-14">
         <p class="scene-label mb-4 rv rv-blur">SCENE 03 ── よくある不安</p>
@@ -370,7 +417,7 @@
   </section>
 
   <!-- ========== SCENE 04 / SCOUT TYPES ========== -->
-  <section class="night-soft py-24 rv-group">
+  <section id="s04" class="night-soft py-24 rv-group">
     <div class="max-w-5xl mx-auto">
       <div class="mb-8 px-6">
         <p class="scene-label mb-4 rv rv-blur">SCENE 04 ── スカウトの見分け方</p>
@@ -548,7 +595,7 @@
   </script>
 
   <!-- ========== SCENE 05 / COMPARISON ========== -->
-  <section class="night-flat py-24 px-6 rv-group">
+  <section id="s05" class="night-flat py-24 px-6 rv-group">
     <div class="max-w-4xl mx-auto">
       <div class="mb-14">
         <p class="scene-label mb-4 rv rv-blur">SCENE 05 ── 並べてみる</p>
@@ -619,7 +666,7 @@
   </section>
 
   <!-- ========== SCENE 06 / SOLUTIONS ========== -->
-  <section class="night-soft py-24 px-6 rv-group">
+  <section id="s06" class="night-soft py-24 px-6 rv-group">
     <div class="max-w-4xl mx-auto">
       <div class="mb-14">
         <p class="scene-label mb-4 rv rv-blur">SCENE 06 ── 約束</p>
@@ -659,7 +706,7 @@
   </section>
 
   <!-- ========== SCENE 07 / REWARD ========== -->
-  <section class="night-hero py-24 px-6 relative overflow-hidden rv-group">
+  <section id="s07" class="night-hero py-24 px-6 relative overflow-hidden rv-group">
     <div class="max-w-4xl mx-auto relative z-10">
       <div class="mb-14">
         <p class="scene-label mb-4 rv rv-blur">SCENE 07 ── お祝い</p>
@@ -704,7 +751,7 @@
   </section>
 
   <!-- ========== SCENE 08 / STATS / PIE CHART ========== -->
-  <section class="night-flat py-24 px-6 rv-group">
+  <section id="s08" class="night-flat py-24 px-6 rv-group">
     <div class="max-w-4xl mx-auto">
       <div class="mb-14">
         <p class="scene-label mb-4 rv rv-blur">SCENE 08 ── 相談する人たち</p>
@@ -781,7 +828,7 @@
   </script>
 
   <!-- ========== SCENE 09 / PROFILE ========== -->
-  <section class="night-soft py-24 px-6 rv-group">
+  <section id="s09" class="night-soft py-24 px-6 rv-group">
     <div class="max-w-3xl mx-auto">
       <div class="mb-14">
         <p class="scene-label mb-4 rv rv-blur">SCENE 09 ── 担当</p>
@@ -847,7 +894,7 @@
   </section>
 
   <!-- ========== SCENE 10 / FLOW ========== -->
-  <section class="night-flat py-24 px-6 rv-group">
+  <section id="s10" class="night-flat py-24 px-6 rv-group">
     <div class="max-w-4xl mx-auto">
       <div class="mb-14">
         <p class="scene-label mb-4 rv rv-blur">SCENE 10 ── 相談の流れ</p>
@@ -888,7 +935,7 @@
   </section>
 
   <!-- ========== SCENE 11 / FAQ ========== -->
-  <section class="night-soft py-24 px-6 rv-group">
+  <section id="s11" class="night-soft py-24 px-6 rv-group">
     <div class="max-w-2xl mx-auto">
       <div class="mb-14">
         <p class="scene-label mb-4 rv rv-blur">SCENE 11 ── よくある質問</p>
