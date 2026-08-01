@@ -57,12 +57,12 @@
     /* ヒーロー見出し：13文字×字間が320〜430px幅で溢れないようvw連動 */
     .hero-h1 { font-size: clamp(20px, 5.9vw, 42px); letter-spacing: .06em; line-height: 1.75; }
     @media (min-width: 768px) { .hero-h1 { letter-spacing: .14em; line-height: 2; } }
-    /* ヒーロー本文：スマホは左揃え＋一文ごとに塊で分ける（中央揃えの自動折返しは行末がガタつくため） */
-    .hero-lead { text-align: left; letter-spacing: .06em; line-height: 2.05; }
+    /* ヒーロー本文：一文ごとに塊で分け、wbrの文節位置でだけ折り返す */
+    .hero-lead { letter-spacing: .06em; line-height: 2.05; }
     .hero-lead .lead-line { display: block; }
     .hero-lead .lead-line + .lead-line { margin-top: .9em; }
     @media (min-width: 768px) {
-      .hero-lead { text-align: center; letter-spacing: .12em; line-height: 2.4; }
+      .hero-lead { letter-spacing: .12em; line-height: 2.4; }
       .hero-lead .lead-line + .lead-line { margin-top: 0; }
     }
 
@@ -278,7 +278,7 @@
       </h1>
 
       <p class="subtitle hero-lead jp-keep text-sm md:text-lg fog mb-12 rv rv-blur" style="--d:.6s;">
-        <span class="lead-line">「時給って高いの？」<wbr />「面接って何聞かれるの？」<wbr />くらいの状態で<wbr />来てもらって<wbr />大丈夫です。<wbr />8割がそうです。</span>
+        <span class="lead-line">「時給って高いの？」<wbr />「面接って何聞かれるの？」<wbr />くらいの状態で<wbr />来てもらって<wbr />大丈夫です。</span>
         <span class="lead-line"><span class="amber">300店以上</span>から<wbr />合いそうな店を<wbr />選んで、<wbr />時給や条件は<wbr />僕が先に<wbr />店と詰めておきます。</span>
         <span class="lead-line">女の子は<wbr />僕と<wbr />面接に行くだけです。</span>
       </p>
