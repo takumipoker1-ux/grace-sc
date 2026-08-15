@@ -64,6 +64,12 @@
       return;
     }
 
+    if (href.indexOf('tiktok.com') !== -1) {
+      params.link_url = href;
+      send('tiktok_outbound', params);
+      return;
+    }
+
     if (href.indexOf('mond.how') !== -1) {
       params.link_url = href;
       send('mond_outbound', params);
