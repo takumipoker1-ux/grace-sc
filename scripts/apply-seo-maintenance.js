@@ -297,8 +297,24 @@ function updateSitemap() {
   xml = xml.replace('https://grace-sc.com/index.html', 'https://grace-sc.com/');
   xml = xml.replace('https://grace-sc.com/stores/index.html', 'https://grace-sc.com/stores/');
   xml = xml.replace('https://grace-sc.com/articles/index.html', 'https://grace-sc.com/articles/');
+  // lastmod は「そのページの実ファイル更新日」を使う。
+  // 全URLを同じ固定日で上書きすると、Google に対して更新シグナルとして機能しない。
+  const existingLastmod = new Map();
+  for (const m of xml.matchAll(/<loc>([^<]+)<\/loc><lastmod>([^<]+)<\/lastmod>/g)) {
+    existingLastmod.set(m[1], m[2]);
+  }
   xml = xml.replace(/<lastmod>[^<]+<\/lastmod>/g, '');
-  xml = xml.replace(/(<loc>[^<]+<\/loc>)/g, `$1<lastmod>${UPDATE_DATE}</lastmod>`);
+  xml = xml.replace(/(<loc>([^<]+)<\/loc>)/g, (full, locTag, loc) => {
+    let rel = loc.replace('https://grace-sc.com/', '');
+    if (rel === '') rel = 'index.html';
+    else if (rel.endsWith('/')) rel += 'index.html';
+    let date = existingLastmod.get(loc);
+    try {
+      const stat = fs.statSync(path.join(ROOT, rel));
+      date = stat.mtime.toISOString().slice(0, 10);
+    } catch (e) { /* 実ファイルが無い場合は既存値を維持 */ }
+    return `${locTag}<lastmod>${date || UPDATE_DATE}</lastmod>`;
+  });
   xml = xml
     .replace(/<\/url>\s*<url>/g, '</url>\n  <url>')
     .replace(/\r\n/g, '\n');
