@@ -444,13 +444,12 @@
       <div class="flex gap-2 px-6 mb-5 overflow-x-auto" style="scrollbar-width:none;-ms-overflow-style:none;">
         <button onclick="scoutTab(0)" id="stab-0" class="stab active-stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#d9a441;color:#0b0f16;background:#d9a441;">路上</button>
         <button onclick="scoutTab(1)" id="stab-1" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">SNS</button>
-        <button onclick="scoutTab(2)" id="stab-2" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">色管</button>
-        <button onclick="scoutTab(3)" id="stab-3" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">高還元</button>
-        <button onclick="scoutTab(4)" id="stab-4" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">GRACE</button>
+        <button onclick="scoutTab(2)" id="stab-2" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">高還元</button>
+        <button onclick="scoutTab(3)" id="stab-3" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">GRACE</button>
       </div>
 
       <!-- カルーセル（モバイル横スワイプ / デスクトップはグリッド） -->
-      <div id="scout-carousel" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 overflow-x-auto px-6 pb-4 rv" style="--d:.3s; scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;">
+      <div id="scout-carousel" class="flex md:grid md:grid-cols-2 gap-5 overflow-x-auto px-6 pb-4 rv" style="--d:.3s; scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;">
 
         <!-- ①路上スカウト -->
         <div class="card-n p-7 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
@@ -500,34 +499,10 @@
           </div>
         </div>
 
-        <!-- ③色管スカウト -->
+        <!-- ③高還元スカウト -->
         <div class="card-n p-7 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
           <div class="flex items-center gap-3 mb-5">
             <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center shrink-0 text-xs font-bold mist">03</div>
-            <h3 class="font-bold text-white">色管スカウト</h3>
-          </div>
-          <div class="space-y-4 text-sm flex-1">
-            <div>
-              <p class="text-xs font-bold amber mb-2 tracking-wide uppercase">Merit</p>
-              <ul class="space-y-1.5 fog">
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>親身に相談に乗ってくれる・孤独を感じにくい</li>
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>精神的に頼れる存在になってくれることもある</li>
-              </ul>
-            </div>
-            <div>
-              <p class="text-xs font-bold mist mb-2 tracking-wide uppercase">Demerit</p>
-              <ul class="space-y-1.5 text-gray-500">
-                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>恋愛・肉体関係で感情的に依存させる構造</li>
-                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>断れなくなる・辞めたくても辞められないケースも</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- ④高還元スカウト -->
-        <div class="card-n p-7 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center shrink-0 text-xs font-bold mist">04</div>
             <h3 class="font-bold text-white">高還元スカウト</h3>
           </div>
           <div class="space-y-4 text-sm flex-1">
@@ -554,23 +529,23 @@
             <span class="inline-block text-[11px] font-bold px-2.5 py-1 rounded tracking-widest" style="background:#d9a441;color:#0b0f16;">当サービス</span>
           </div>
           <div class="flex items-center gap-3 mb-5">
-            <div class="w-8 h-8 rounded flex items-center justify-center shrink-0 text-xs font-bold amber" style="background:rgba(217,164,65,.15);">05</div>
+            <div class="w-8 h-8 rounded flex items-center justify-center shrink-0 text-xs font-bold amber" style="background:rgba(217,164,65,.15);">04</div>
             <h3 class="font-bold text-white jp-keep">GRACE SELECTION<br/><span class="text-xs font-sans font-normal amber">専属エージェント型</span></h3>
           </div>
           <div class="space-y-4 text-sm flex-1">
             <div>
               <p class="text-xs font-bold amber mb-2 tracking-wide uppercase">Merit</p>
               <ul class="space-y-1.5 text-gray-300">
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>女の子ファーストで条件・店舗を厳選</li>
                 <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>面接同行・入店後のトラブル対応まで一貫サポート</li>
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>指名・ブランディングのコンサルあり</li>
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>色管なし・還元なし</li>
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>指名・ブランディングのコンサルあり（編集者も抱えているのでSNSごと任せられる）</li>
+                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>340店舗以上を自分で見た独自データから店を選ぶ</li>
               </ul>
             </div>
             <div>
               <p class="text-xs font-bold mist mb-2 tracking-wide uppercase">Demerit</p>
               <ul class="space-y-1.5 text-gray-500">
-                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">–</span>丁寧にヒアリングする分、即決型の紹介に比べると少し時間がかかります</li>
+                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">–</span>いい話だけをしないので、夢のある提案には聞こえないかもしれません</li>
+                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">–</span>面接同行は関東エリアが中心。それ以外は紹介とオンラインのみになります</li>
               </ul>
             </div>
           </div>
