@@ -7,7 +7,7 @@
   python -X utf8 scripts/sync_stores.py --apply --commit  # 反映＋git commit/push
 
 やること:
-  1. xlsx（context/一次情報/店舗情報まとめ最新.xlsx）を読む
+  1. xlsx（context/一次情報/店舗情報まとめ_2026-08.xlsx）を読む
   2. stores/index.html のエリアセクション内カードを解析（店名・時給表示・data-rate）
   3. 突き合わせて差分レポートを C:/仕事/outputs/store_sync/ に保存
      - 新規（xlsxにあってサイトに無い）→ 貼り付け用カードHTML付き
@@ -27,7 +27,7 @@ import openpyxl
 
 SITE = Path(__file__).resolve().parent.parent
 INDEX = SITE / "stores" / "index.html"
-XLSX = Path(r"C:\仕事\context\一次情報\店舗情報まとめ最新.xlsx")
+XLSX = Path(r"C:\仕事\context\一次情報\店舗情報まとめ_2026-08.xlsx")
 SLUG_MAP = Path(r"C:\仕事\outputs\xlsx_to_slug.json")
 REPORT_DIR = Path(r"C:\仕事\outputs\store_sync")
 # xlsx店名 → サイトカード店名 の表記ゆれ辞書。誤マッチ/取りこぼしが出たらここに足す
