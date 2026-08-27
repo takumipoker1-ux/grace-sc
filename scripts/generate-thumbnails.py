@@ -11,6 +11,7 @@ META = {
     "roppongi-guide":         ("六", "エリアガイド"),
     "ginza-guide":            ("銀", "エリアガイド"),
     "nansai-made":            ("齢", "働き方とキャリア"),
+    "18sai-19sai":            ("十", "働き方とキャリア"),
     "daigakusei-scout-kachi": ("選", "スカウトの見極め"),
     "joukyou-junbi":          ("都", "はじめての夜職"),
     "iseki-timing":           ("移", "移籍・キャリア"),
