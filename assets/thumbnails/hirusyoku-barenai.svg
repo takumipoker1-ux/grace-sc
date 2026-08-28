@@ -30,13 +30,14 @@
   <rect x="42" y="42" width="1116" height="546" fill="none" stroke="#C9A96E" stroke-opacity="0.34" stroke-width="1.5"/>
 
   <!-- カテゴリ -->
-  <rect x="96" y="210" width="10" height="10" transform="rotate(45 101 215)" fill="url(#foil)"/>
-  <text x="122" y="224" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="24" letter-spacing="7" font-weight="500" fill="#C9A96E">働き方</text>
+  <rect x="96" y="144" width="10" height="10" transform="rotate(45 101 149)" fill="url(#foil)"/>
+  <text x="122" y="158" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="24" letter-spacing="7" font-weight="500" fill="#C9A96E">働き方</text>
 
   <!-- タイトル -->
-  <text x="96" y="348" font-family="'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','BIZ UDPMincho',serif" font-size="64" font-weight="600" fill="#F6F1E6" letter-spacing="2">昼職にバレないための注意点</text>
+  <text x="96" y="302" font-family="'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','BIZ UDPMincho',serif" font-size="84" font-weight="600" fill="#F6F1E6" letter-spacing="2">キャバクラの副業は</text>
+  <text x="96" y="414" font-family="'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','BIZ UDPMincho',serif" font-size="84" font-weight="600" fill="#F6F1E6" letter-spacing="2">昼職にバレる？</text>
 
   <!-- ブランド -->
-  <rect x="96" y="452" width="104" height="2" fill="url(#foilrule)"/>
-  <text x="96" y="496" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="19" letter-spacing="4" font-weight="500" fill="url(#foil)">GRACE SELECTION<tspan fill="#A79E8C" letter-spacing="2" font-weight="400">　grace-sc.com</tspan></text>
+  <rect x="96" y="476" width="104" height="2" fill="url(#foilrule)"/>
+  <text x="96" y="520" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="19" letter-spacing="4" font-weight="500" fill="url(#foil)">GRACE SELECTION<tspan fill="#A79E8C" letter-spacing="2" font-weight="400">　grace-sc.com</tspan></text>
 </svg>

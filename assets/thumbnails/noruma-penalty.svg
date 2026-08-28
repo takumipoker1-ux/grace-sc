@@ -30,12 +30,11 @@
   <rect x="42" y="42" width="1116" height="546" fill="none" stroke="#C9A96E" stroke-opacity="0.34" stroke-width="1.5"/>
 
   <!-- カテゴリ -->
-  <rect x="96" y="164" width="10" height="10" transform="rotate(45 101 169)" fill="url(#foil)"/>
-  <text x="122" y="178" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="24" letter-spacing="7" font-weight="500" fill="#C9A96E">お金と制度</text>
+  <rect x="96" y="210" width="10" height="10" transform="rotate(45 101 215)" fill="url(#foil)"/>
+  <text x="122" y="224" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="24" letter-spacing="7" font-weight="500" fill="#C9A96E">お金と制度</text>
 
   <!-- タイトル -->
-  <text x="96" y="302" font-family="'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','BIZ UDPMincho',serif" font-size="64" font-weight="600" fill="#F6F1E6" letter-spacing="2">キャバクラのノルマ・</text>
-  <text x="96" y="387" font-family="'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','BIZ UDPMincho',serif" font-size="64" font-weight="600" fill="#F6F1E6" letter-spacing="2">ペナルティの相場と見極め方</text>
+  <text x="96" y="348" font-family="'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','BIZ UDPMincho',serif" font-size="64" font-weight="600" fill="#F6F1E6" letter-spacing="2">キャバクラにノルマはある？</text>
 
   <!-- ブランド -->
   <rect x="96" y="452" width="104" height="2" fill="url(#foilrule)"/>
