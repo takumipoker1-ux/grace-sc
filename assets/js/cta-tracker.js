@@ -75,4 +75,12 @@
       send('mond_outbound', params);
     }
   }, { capture: true });
+
+  // LINEのQRを開いた ＝ LINEリンクが開けなかった人。toggleはバブリングしないのでcaptureで拾う
+  document.addEventListener('toggle', function (e) {
+    var d = e.target;
+    if (!d || d.tagName !== 'DETAILS' || !d.open) return;
+    if (!d.hasAttribute('data-track-qr')) return;
+    send('line_qr_open', { page_path: location.pathname });
+  }, { capture: true });
 })();
