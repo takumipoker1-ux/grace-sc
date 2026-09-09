@@ -18,6 +18,9 @@
   // CTAがページのどこに置かれていたか
   function position(a) {
     if (!a.closest) return 'body';
+    // data-cta-pos="lead" など、置き場所を明示したリンクはそれを優先
+    var tagged = a.closest('[data-cta-pos]');
+    if (tagged) return tagged.getAttribute('data-cta-pos') || 'body';
     if (a.closest('#mobile-menu')) return 'mobile_menu';
     if (a.closest('header')) return 'header';
     if (a.closest('footer')) return 'footer';

@@ -69,6 +69,13 @@
     .toc li { font-size:0.85rem; color:#d1d5db; margin:0.25rem 0; line-height:1.7; }
     .toc a { color:#d1d5db; text-decoration:none; transition:color 0.2s; }
     .toc a:hover { color:#c9a96e; }
+  
+    /* 導入直後の1行LINE導線 */
+    .lead-cta{margin:1.25rem 0 1.5rem}
+    .lead-cta a{display:flex;align-items:center;gap:.6rem;padding:.8rem 1rem;border-radius:.75rem;background:rgba(6,199,85,.08);border:1px solid rgba(6,199,85,.35);color:#fff;font-size:.85rem;font-weight:700;text-decoration:none;line-height:1.5;transition:background .2s}
+    .lead-cta a:hover{background:rgba(6,199,85,.16)}
+    .lead-cta svg{width:18px;height:18px;flex-shrink:0;color:#06C755}
+    .lead-cta .arrow{margin-left:auto;color:#06C755;font-weight:400;white-space:nowrap}
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -168,6 +175,10 @@
       <div class="article-body">
         <p><strong>求人サイトに載っている時給は、額面通りには受け取れません。</strong>最大値・上限値・理想のケースが前面に出た表記になっているためです。悪質な店が嘘をついているという話ではなく、求人広告というビジネスの仕組み上、ほぼ必然的にそうなります。</p>
         <p>「時給3万円」「未経験月収100万可能」「完全日払い対応」。並んでいる条件を見ていると、夜の仕事がものすごく稼げるものに見える。ただ、<strong>あの数字を額面通りに受け取ると、高確率でミスマッチが起きます。</strong>この記事では、具体的に何が盛られやすいのかと、その見極め方を整理します。</p>
+
+                <aside class="lead-cta">
+          <a href="https://line.me/ti/p/_7nv0bKuRC" target="_blank" rel="noopener" data-cta-pos="lead"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg><span>求人に書いてある条件が本当か、LINEで確認できます</span><span class="arrow">LINEで聞く →</span></a>
+        </aside>
 
         <nav class="toc">
           <p class="toc-title">目次</p>
@@ -297,16 +308,7 @@
       </div>
 
       <!-- 前後の記事 -->
-      <div class="mt-10 grid grid-cols-2 gap-4">
-        <a href="/articles/" class="bg-white/[0.04] rounded-xl p-4 border border-white/10 text-xs text-gray-500 hover:border-brand-mintDark transition-colors">
-          <span class="block text-gray-400 mb-1">← 記事一覧へ</span>
-          <span class="font-bold text-white">すべての記事を見る</span>
-        </a>
-        <a href="#" class="bg-white/[0.04] rounded-xl p-4 border border-white/10 text-xs text-gray-500 hover:border-brand-mintDark transition-colors text-right">
-          <span class="block text-gray-400 mb-1">次の記事 →</span>
-          <span class="font-bold text-white">エリア別の特徴と向いている人</span>
-        </a>
-      </div>
+      
 
     </div>
   </section>
@@ -326,6 +328,20 @@
         </svg>
         LINEで相談する
       </a>
+    </div>
+  </section>
+  <section class="px-6 pb-10 bg-[#0d0d0d]">
+    <div class="max-w-2xl mx-auto">
+      <div class="grid grid-cols-2 gap-4">
+        <a href="/articles/" class="bg-white/[0.04] rounded-xl p-4 border border-white/10 text-xs text-gray-500 hover:border-brand-mintDark transition-colors">
+          <span class="block text-gray-400 mb-1">← 記事一覧へ</span>
+          <span class="font-bold text-white">すべての記事を見る</span>
+        </a>
+        <a href="#" class="bg-white/[0.04] rounded-xl p-4 border border-white/10 text-xs text-gray-500 hover:border-brand-mintDark transition-colors text-right">
+          <span class="block text-gray-400 mb-1">次の記事 →</span>
+          <span class="font-bold text-white">エリア別の特徴と向いている人</span>
+        </a>
+      </div>
     </div>
   </section>
 

@@ -38,6 +38,13 @@
     .toc li { font-size:0.85rem; color:#d1d5db; margin:0.25rem 0; line-height:1.7; }
     .toc a { color:#d1d5db; text-decoration:none; transition:color 0.2s; }
     .toc a:hover { color:#c9a96e; }
+  
+    /* 導入直後の1行LINE導線 */
+    .lead-cta{margin:1.25rem 0 1.5rem}
+    .lead-cta a{display:flex;align-items:center;gap:.6rem;padding:.8rem 1rem;border-radius:.75rem;background:rgba(6,199,85,.08);border:1px solid rgba(6,199,85,.35);color:#fff;font-size:.85rem;font-weight:700;text-decoration:none;line-height:1.5;transition:background .2s}
+    .lead-cta a:hover{background:rgba(6,199,85,.16)}
+    .lead-cta svg{width:18px;height:18px;flex-shrink:0;color:#06C755}
+    .lead-cta .arrow{margin-left:auto;color:#06C755;font-weight:400;white-space:nowrap}
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -129,6 +136,10 @@
       <div class="article-body">
         <p><strong>スカウトの質はピンキリです。</strong>女の子のことを本当に考えて動いている人もいれば、数を捌くことだけを考えている人もいます。「怪しいのはわかるけど、全員が悪いわけじゃないよね？」という感覚は、そのまま正しいです。</p>
         <p>判断材料になるのは、「紹介実績◯◯人」の数字が計算に合うか、特定の店ばかり推していないか、連絡がちゃんと返ってくるか。この記事では現役スカウトの立場から、見極め方を具体的に書きます。</p>
+
+                <aside class="lead-cta">
+          <a href="https://line.me/ti/p/_7nv0bKuRC" target="_blank" rel="noopener" data-cta-pos="lead"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg><span>疑問があればLINEで直接聞いてください。実績も出します</span><span class="arrow">LINEで聞く →</span></a>
+        </aside>
 
         <nav class="toc">
           <p class="toc-title">目次</p>
@@ -343,16 +354,7 @@
           <p class="text-xs text-gray-500 mt-0.5">大学4年生・ブランド論専攻。ナイトワーク専属エージェントとして活動中。</p>
         </div>
       </div>
-      <div class="mt-10 grid grid-cols-2 gap-4">
-        <a href="/articles/mensetsu-ukaru.html" class="bg-white/[0.04] rounded-xl p-4 border border-white/10 text-xs text-gray-500 hover:border-brand-mintDark transition-colors">
-          <span class="block text-gray-400 mb-1">← 前の記事</span>
-          <span class="font-bold text-white">面接で落ちることはある？受かる子との違い</span>
-        </a>
-        <a href="/articles/noruma-penalty.html" class="bg-white/[0.04] rounded-xl p-4 border border-white/10 text-xs text-gray-500 hover:border-brand-mintDark transition-colors text-right">
-          <span class="block text-gray-400 mb-1">次の記事 →</span>
-          <span class="font-bold text-white">ノルマはある？ペナルティの相場と「ノルマなし」の中身</span>
-        </a>
-      </div>
+      
     </div>
   </section>
 
@@ -364,6 +366,20 @@
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
         LINEで相談する
       </a>
+    </div>
+  </section>
+  <section class="px-6 pb-10 bg-[#0d0d0d]">
+    <div class="max-w-2xl mx-auto">
+      <div class="grid grid-cols-2 gap-4">
+        <a href="/articles/mensetsu-ukaru.html" class="bg-white/[0.04] rounded-xl p-4 border border-white/10 text-xs text-gray-500 hover:border-brand-mintDark transition-colors">
+          <span class="block text-gray-400 mb-1">← 前の記事</span>
+          <span class="font-bold text-white">面接で落ちることはある？受かる子との違い</span>
+        </a>
+        <a href="/articles/noruma-penalty.html" class="bg-white/[0.04] rounded-xl p-4 border border-white/10 text-xs text-gray-500 hover:border-brand-mintDark transition-colors text-right">
+          <span class="block text-gray-400 mb-1">次の記事 →</span>
+          <span class="font-bold text-white">ノルマはある？ペナルティの相場と「ノルマなし」の中身</span>
+        </a>
+      </div>
     </div>
   </section>
     <!-- AUTHOR_BIO_BLOCK_v1 -->

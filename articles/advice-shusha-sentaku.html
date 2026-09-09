@@ -63,6 +63,13 @@
     .toc a { color:#d1d5db; text-decoration:none; transition:color 0.2s; }
     .toc a:hover { color:#c9a96e; }
     .article-body h2{scroll-margin-top:5rem}
+  
+    /* 導入直後の1行LINE導線 */
+    .lead-cta{margin:1.25rem 0 1.5rem}
+    .lead-cta a{display:flex;align-items:center;gap:.6rem;padding:.8rem 1rem;border-radius:.75rem;background:rgba(6,199,85,.08);border:1px solid rgba(6,199,85,.35);color:#fff;font-size:.85rem;font-weight:700;text-decoration:none;line-height:1.5;transition:background .2s}
+    .lead-cta a:hover{background:rgba(6,199,85,.16)}
+    .lead-cta svg{width:18px;height:18px;flex-shrink:0;color:#06C755}
+    .lead-cta .arrow{margin-left:auto;color:#06C755;font-weight:400;white-space:nowrap}
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -218,7 +225,11 @@
     <p>黒服やスカウトのアドバイス、内容としては大体正しいです。現場で長年見ている人たちの言うことなので、業界のロジックとしてズレていることはほとんどありません。</p>
     <p>それでも、すべてのアドバイスを採用するわけではない。むしろ、採用しないほうがいいケースも普通にあります。<strong>取捨選択は「正しいかどうか」だけでは決まらず、4つのモノサシで決まる</strong>からです。</p>
 
-    <nav class="toc">
+            <aside class="lead-cta">
+          <a href="https://line.me/ti/p/_7nv0bKuRC" target="_blank" rel="noopener" data-cta-pos="lead"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg><span>今もらっているアドバイスが合っているか、第三者の目で見ます</span><span class="arrow">LINEで聞く →</span></a>
+        </aside>
+
+        <nav class="toc">
       <p class="toc-title">目次</p>
       <ol>
         <li><a href="#m1">アドバイスを測る4つのモノサシ</a></li>
