@@ -1,0 +1,119 @@
+/* =====================================================================
+   home.css — トップページ（index.html）の見た目。A案「夜の記録」
+   記事ページ（article.css）と同じ調子：暖色の黒・明朝の見出し・罫線・金だけ。
+   既存のインライン <style>（night-* / card-n / scene-label など）の後に読み込む。
+   ===================================================================== */
+:root{
+  --ink-0:#0b0a08; --ink-1:#14120e; --ink-2:#1a1712;
+  --rule:rgba(214,196,160,.16); --rule-strong:rgba(214,196,160,.32);
+  --text:#ddd7c9; --text-2:#a49b87; --text-3:#7d7563; --head:#f2ecdf;
+  --gold:#c9a96e; --gold-2:#e3cc9a; --line:#06C755;
+  --mincho:"Shippori Mincho","Noto Serif JP",serif;
+}
+
+/* ---------- 地色：青みの夜 → 暖色の黒 ---------- */
+body{background:var(--ink-0)!important;color:var(--text)}
+.night-hero,.night-flat,.night-final{background:var(--ink-0)!important}
+.night-mid,.night-soft{background:var(--ink-1)!important}
+#contents{background:var(--ink-1)!important}
+footer{background:var(--ink-1)!important;border-color:var(--rule)!important}
+.film-bar{display:none!important}
+header,[class*="bg-[#0d0d0d]"],[class*="bg-[#0a0a0a]"],[class*="bg-[#07090e]"],[class*="bg-[#10141d]"]{background-color:var(--ink-0)!important}
+[class*="border-white/10"],[class*="border-white/5"]{border-color:var(--rule)!important}
+.amber{color:var(--gold)!important}
+.fog{color:var(--text)!important}
+.mist{color:var(--text-2)!important}
+.text-gray-400{color:var(--text-2)!important}
+
+/* 場面ラベル：英字の「SCENE 0X」はやめ、明朝の小さな見出しに */
+.scene-label{font-family:var(--mincho);font-size:12px!important;letter-spacing:.14em!important;color:var(--gold)!important;font-weight:600}
+
+/* 見出し：明朝 */
+h2,h3.mincho,h4.mincho{font-family:var(--mincho)!important;font-weight:600!important;color:var(--head)!important}
+section h2{letter-spacing:.02em}
+
+/* ---------- ヒーロー：左寄せ・明朝・金の短い罫 ---------- */
+.night-hero.min-h-screen{min-height:0!important;align-items:flex-start!important;text-align:left!important;padding-top:7.5rem!important;padding-bottom:3.5rem!important;border-bottom:1px solid var(--rule)}
+.night-hero > .max-w-2xl{margin-left:0!important;margin-right:auto!important}
+@media (min-width:768px){.night-hero > .max-w-2xl{margin-left:auto!important;margin-right:auto!important}}
+.hero-h1,.subtitle.hero-h1{
+  font-family:var(--mincho)!important;font-weight:600!important;
+  font-size:clamp(24px,6.2vw,36px)!important;line-height:1.5!important;letter-spacing:.01em!important;
+  position:relative;padding-top:1.1rem;margin-bottom:1.2rem!important;color:var(--head)!important;
+}
+.hero-h1::before{content:"";position:absolute;top:0;left:0;width:2rem;height:2px;background:var(--gold)}
+.hero-h1 .amber{color:var(--head)!important}          /* 見出し内の一語だけ色を変える癖をやめる */
+.hero-h1 br{display:none}
+.hero-lead,.subtitle.hero-lead{font-family:"Noto Sans JP",sans-serif!important;font-weight:400!important;font-size:15px!important;line-height:1.95!important;letter-spacing:0!important;color:var(--text)!important;text-align:left!important;max-width:38rem}
+.hero-lead .lead-line{display:block;margin:0 0 .75em!important}
+.hero-lead .amber{color:var(--text)!important;font-weight:700}
+.hero-kicker{font-family:var(--mincho);font-size:12px;letter-spacing:.14em;color:var(--gold);font-weight:600;margin-bottom:.4rem}
+.night-hero .text-xs.mist{letter-spacing:0!important;text-align:left!important}
+.night-hero .rv > a[href*="line.me"]{display:flex!important;width:100%;max-width:26rem;justify-content:center;border-radius:6px!important;box-shadow:none!important}
+.night-hero .rv > p.mist{text-align:left!important}
+.night-hero .absolute.bottom-8{display:none!important}
+
+/* ---------- 目次 ---------- */
+.toc-grid{display:flex;flex-wrap:wrap;gap:.35rem 1.4rem;border-top:1px solid var(--rule-strong);padding-top:1rem}
+.toc-grid li{list-style:none}
+.toc-grid a{font-family:var(--mincho);font-size:.9rem;color:var(--text-2);text-decoration:none}
+.toc-grid a:hover{color:var(--gold)}
+.toc-grid .toc-no{display:none}
+.toc-grid .toc-cta a{color:var(--gold)}
+
+/* ---------- 面接の記録：紙の帳簿はそのまま、周りだけ整える ---------- */
+.kiroku-glow{padding:0!important}
+.kiroku-glow::before{display:none!important}
+.kiroku{box-shadow:0 10px 40px rgba(0,0,0,.45)!important;border-color:#cfc7b2!important}
+#s02 h2{text-align:left!important}
+#s02 .flex-col.items-center{align-items:stretch!important}
+#s02 p.text-center{text-align:left!important}
+#s02 .scene-label.mt-10{color:var(--text-2)!important;font-family:"Noto Sans JP",sans-serif;letter-spacing:0!important;font-weight:400}
+
+/* ---------- カード類 → 罫線のブロック ---------- */
+.card-n{background:none!important;border:0!important;border-top:1px solid var(--rule-strong)!important;border-radius:0!important}
+.card-n.p-8,.card-n.p-7{padding:1.1rem 0 1.2rem!important}
+.card-n .amber.text-xs{display:none}                   /* 01/02/03 の番号は順番ではないので外す */
+.card-n h3,.card-n h4{font-family:var(--mincho)!important;font-size:1.05rem!important}
+.card-n.text-center{text-align:left!important}
+.card-n .mx-auto{margin-left:0!important}
+.grid.md\:grid-cols-3.gap-5,.grid.md\:grid-cols-4.gap-5{gap:0 2.5rem!important}
+.grid.md\:grid-cols-4.gap-5 .w-9{width:1.6rem!important;height:1.6rem!important;font-family:var(--mincho);border-width:1px!important;border-color:var(--gold)!important;color:var(--gold)!important;margin-bottom:.6rem!important}
+
+/* ---------- 相談する人たち：棒グラフ ---------- */
+.share-rows{display:flex;flex-direction:column;gap:.6rem;max-width:30rem}
+.share-row{display:grid;grid-template-columns:5.2rem 1fr 3rem;gap:.7rem;align-items:center}
+.share-row .lab{font-size:.85rem;color:var(--text-2)}
+.share-row .bar{height:6px;background:rgba(214,196,160,.12)}
+.share-row .bar > i{display:block;height:6px;background:var(--gold)}
+.share-row .bar > i.dim{background:var(--text-3)}
+.share-row .val{font-size:.85rem;color:var(--text);text-align:right;font-variant-numeric:tabular-nums}
+
+/* ---------- 記事（新設） ---------- */
+.home-articles{display:flex;flex-direction:column;border-top:1px solid var(--rule-strong);max-width:42rem}
+.home-articles a{display:flex;flex-direction:column;gap:.3rem;padding:.9rem 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.home-articles .cat{font-family:var(--mincho);font-size:11px;letter-spacing:.12em;color:var(--gold)}
+.home-articles .ttl{font-family:var(--mincho);font-size:1rem;line-height:1.55;color:var(--head);font-weight:600}
+.home-articles a:hover .ttl{color:var(--gold)}
+.home-articles-more{font-family:var(--mincho);font-size:.9rem;color:var(--gold);text-decoration:none}
+
+/* ---------- FAQ ---------- */
+#faq-list .card-n{border-top:1px solid var(--rule)!important}
+#faq-list button{padding-left:0!important;padding-right:0!important}
+#faq-list button:hover{background:none!important}
+#faq-list .faq-answer{padding-left:0!important;padding-right:0!important;border-top:0!important}
+#faq-list span.font-medium{font-family:var(--mincho);color:var(--head)!important}
+
+/* ---------- 最終CTA ---------- */
+#cta .max-w-xl{text-align:left!important}
+#cta h2{font-size:1.6rem!important;line-height:1.5!important}
+#cta h2 br{display:none}
+#cta .rv > a[href*="line.me"]{display:flex!important;width:100%;max-width:26rem;justify-content:center;border-radius:6px!important;box-shadow:none!important}
+#cta .flex-wrap.justify-center{justify-content:flex-start!important}
+#cta a.rounded-full{background:none!important;border:1px solid var(--rule-strong);color:var(--text)!important;border-radius:4px!important}
+
+/* 演出は残すが、ぼかしは外す（重い） */
+html.rv-init .rv-blur{filter:none!important}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
