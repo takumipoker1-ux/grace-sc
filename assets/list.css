@@ -45,3 +45,8 @@
 @media (max-width:420px){#article-grid > a{grid-template-columns:1fr 72px}#article-grid > a .kanji{width:72px;height:72px;font-size:36px}}
 
 #no-results{color:var(--text-2)!important}
+/* keep-all の見出しが右にあふれないように */
+#article-grid h2,#article-grid p,.list-hero h1,.list-hero p{word-break:normal!important;line-break:strict!important;overflow-wrap:anywhere!important}
+#article-grid h2 br{display:none}
+#article-grid > a{min-width:0}
+#article-grid > a > .p-6{min-width:0}

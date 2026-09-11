@@ -53,10 +53,16 @@ section h2{letter-spacing:.02em}
 .night-hero .rv > p.mist{text-align:left!important}
 .night-hero .absolute.bottom-8{display:none!important}
 
+/* keep-all だと折り返し位置が無くて右にあふれるので、ヒーロー内は自然改行に */
+.night-hero h1,.night-hero p,.night-hero .lead-line,.night-hero .jp-keep{word-break:normal!important;line-break:strict!important;overflow-wrap:anywhere!important;white-space:normal!important}
+@media (max-width:767px){.night-hero > .max-w-2xl{max-width:100%!important;width:100%}}
+@media (min-width:768px){.night-hero > .max-w-2xl{max-width:42rem!important;width:100%}}
+#s02 h2,#s02 p,#cta h2,#cta p,section h2,section h3,section p{word-break:normal!important;line-break:strict!important;overflow-wrap:anywhere!important}
+
 /* ---------- 目次 ---------- */
 .toc-grid{display:flex;flex-wrap:wrap;gap:.35rem 1.4rem;border-top:1px solid var(--rule-strong);padding-top:1rem}
 .toc-grid li{list-style:none}
-.toc-grid a{font-family:var(--mincho);font-size:.9rem;color:var(--text-2);text-decoration:none}
+.toc-grid a{font-family:var(--mincho);font-size:.9rem;color:var(--text-2);text-decoration:none;border:0!important;padding:0!important;background:none!important}
 .toc-grid a:hover{color:var(--gold)}
 .toc-grid .toc-no{display:none}
 .toc-grid .toc-cta a{color:var(--gold)}
@@ -65,6 +71,8 @@ section h2{letter-spacing:.02em}
 .kiroku-glow{padding:0!important}
 .kiroku-glow::before{display:none!important}
 .kiroku{box-shadow:0 10px 40px rgba(0,0,0,.45)!important;border-color:#cfc7b2!important}
+.kiroku h3,.kiroku h3.mincho{color:#57523f!important;font-weight:600!important}
+.kiroku .k-no,.kiroku .k-note{color:#8c8577!important}
 #s02 h2{text-align:left!important}
 #s02 .flex-col.items-center{align-items:stretch!important}
 #s02 p.text-center{text-align:left!important}
