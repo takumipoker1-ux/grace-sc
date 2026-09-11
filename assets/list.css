@@ -1,0 +1,47 @@
+/* =====================================================================
+   list.css — 記事一覧（articles/index.html）。A案：罫線のリスト＋一字の札
+   article.css の後に読み込む（地色・見出しの共通ルールはそちら）。
+   ===================================================================== */
+:root{
+  --ink-0:#0b0a08; --ink-1:#14120e;
+  --rule:rgba(214,196,160,.16); --rule-strong:rgba(214,196,160,.32);
+  --text:#ddd7c9; --text-2:#a49b87; --text-3:#7d7563; --head:#f2ecdf;
+  --gold:#c9a96e; --gold-2:#e3cc9a; --mincho:"Shippori Mincho","Noto Serif JP",serif;
+}
+
+/* 見出し部 */
+.list-hero{padding-top:7rem!important;padding-bottom:1.5rem!important;border-bottom:0!important}
+.list-hero .list-rule{width:2rem;height:2px;background:var(--gold);margin-bottom:1rem}
+.list-hero h1{font-family:var(--mincho)!important;font-weight:600!important;font-size:1.8rem!important;color:var(--head)!important;margin:0 0 .8rem!important;padding-top:0!important}
+.list-hero h1::before{display:none!important}
+.list-hero p{color:var(--text-2)!important;font-size:.95rem!important;line-height:1.9!important;max-width:38rem}
+
+/* フィルタ：ボタンの列 → 明朝の文字列＋下線 */
+.filter-row{display:flex;flex-wrap:wrap;gap:0 1.25rem;border-bottom:1px solid var(--rule-strong)!important;margin-bottom:0!important;padding:0!important}
+.filter-btn{font-family:var(--mincho);font-size:.9rem!important;font-weight:600!important;padding:.55rem 0 .7rem!important;border:0!important;border-bottom:2px solid transparent!important;border-radius:0!important;background:none!important;cursor:pointer;margin-bottom:-1px}
+.filter-inactive{color:var(--text-2)!important}
+.filter-inactive:hover{color:var(--head)!important}
+.filter-active{color:var(--head)!important;background:none!important;border-bottom-color:var(--gold)!important}
+
+/* 一覧：2列カード → 罫線のリスト */
+#article-grid{display:flex!important;flex-direction:column;gap:0!important;max-width:44rem}
+#article-grid > a{
+  display:grid!important;grid-template-columns:1fr 88px;gap:1rem;align-items:start;
+  background:none!important;border:0!important;border-bottom:1px solid var(--rule)!important;border-radius:0!important;
+  padding:1.3rem 0!important;overflow:visible!important;
+}
+#article-grid > a.hidden{display:none!important}
+#article-grid > a .thumb-ratio{display:none!important}
+#article-grid > a > .p-6{padding:0!important;display:flex;flex-direction:column;gap:.35rem;order:1}
+#article-grid > a .flex.gap-2.mb-3{margin:0!important}
+#article-grid > a .flex.gap-2.mb-3 span{background:none!important;padding:0!important;border-radius:0!important;font-family:var(--mincho);font-size:11px!important;letter-spacing:.12em;color:var(--gold)!important;font-weight:600}
+#article-grid > a h2{font-family:var(--mincho)!important;font-weight:600!important;font-size:1.08rem!important;line-height:1.55!important;color:var(--head)!important;margin:0!important}
+#article-grid > a:hover h2{color:var(--gold)!important}
+#article-grid > a p.text-xs{color:var(--text-2)!important;font-size:.85rem!important;line-height:1.7!important;margin:0!important}
+#article-grid > a p.mt-4{color:var(--text-3)!important;font-size:.75rem!important;margin-top:.15rem!important}
+/* 一字の札 */
+#article-grid > a .kanji{order:2;width:88px;height:88px;display:flex;align-items:center;justify-content:center;background:var(--ink-1);border:1px solid var(--rule);font-family:var(--mincho);font-size:44px;line-height:1;color:rgba(201,169,110,.55);font-weight:600}
+#article-grid > a:hover .kanji{color:var(--gold)}
+@media (max-width:420px){#article-grid > a{grid-template-columns:1fr 72px}#article-grid > a .kanji{width:72px;height:72px;font-size:36px}}
+
+#no-results{color:var(--text-2)!important}

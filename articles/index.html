@@ -44,6 +44,8 @@
     gtag('config', 'G-E0HBTZW846');
   </script>
   <script src="/assets/js/cta-tracker.js" defer></script>
+  <link rel="stylesheet" href="/assets/article.css" />
+  <link rel="stylesheet" href="/assets/list.css" />
 </head>
 <body class="font-sans text-gray-200 bg-[#0d0d0d]">
 
@@ -81,10 +83,10 @@
     </div>
 
   <!-- ========== PAGE HERO ========== -->
-  <section class="pt-28 pb-12 px-6 bg-[#0f0f0f] border-b border-white/10">
+  <section class="list-hero pt-28 pb-12 px-6 bg-[#0f0f0f] border-b border-white/10">
     <div class="max-w-4xl mx-auto">
-      <span class="text-[#c9a96e] text-xs font-bold tracking-widest">ARTICLES</span>
-      <h1 class="text-2xl md:text-3xl font-bold text-white mt-2 mb-3">記事一覧</h1>
+      <div class="list-rule"></div>
+      <h1 class="text-2xl md:text-3xl font-bold text-white mt-2 mb-3">記事</h1>
       <p class="text-sm text-gray-400 leading-relaxed">
         未経験からの始め方・お店の選び方・稼ぎ方まで、業界のリアルを発信しています。<br />
         求人サイトには載らない情報を、現役スカウトの視点で書いています。
@@ -97,7 +99,7 @@
     <div class="max-w-4xl mx-auto">
 
       <!-- カテゴリフィルター -->
-      <div class="flex gap-2 mb-10 flex-wrap">
+      <div class="filter-row flex gap-2 mb-10 flex-wrap">
         <button data-filter="すべて"          class="filter-btn filter-active text-xs font-bold px-4 py-2 rounded-full border transition-colors duration-150 cursor-pointer">すべて</button>
         <button data-filter="未経験ガイド"     class="filter-btn filter-inactive text-xs font-bold px-4 py-2 rounded-full border transition-colors duration-150 cursor-pointer">未経験ガイド</button>
         <button data-filter="エリア・店舗選び" class="filter-btn filter-inactive text-xs font-bold px-4 py-2 rounded-full border transition-colors duration-150 cursor-pointer">エリア・店舗選び</button>
@@ -113,6 +115,7 @@
         <!-- 記事（最新） -->
         <a href="/articles/18sai-19sai.html" data-category="業界の構造"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">十</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/18sai-19sai.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">業界の構造</span></div>
@@ -124,6 +127,7 @@
 
         <a href="/articles/ginza-guide.html" data-category="エリア・店舗選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">銀</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/ginza-guide.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">エリア・店舗選び</span></div>
@@ -135,6 +139,7 @@
 
         <a href="/articles/gakureki.html" data-category="業界の構造"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">学</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/gakureki.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">業界の構造</span></div>
@@ -145,6 +150,7 @@
         </a>
         <a href="/articles/nansai-made.html" data-category="業界の構造"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">齢</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/nansai-made.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">業界の構造</span></div>
@@ -156,6 +162,7 @@
 
         <a href="/articles/advice-shusha-sentaku.html" data-category="マインド"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">択</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/advice-shusha-sentaku.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -170,6 +177,7 @@
         <!-- 記事（新） -->
         <a href="/articles/daigakusei-scout-kachi.html" data-category="スカウト選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">選</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/daigakusei-scout-kachi.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -184,6 +192,7 @@
         <!-- 記事（新） -->
         <a href="/articles/joukyou-junbi.html" data-category="未経験ガイド 給与・お金"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">都</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/joukyou-junbi.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -199,6 +208,7 @@
         <!-- 記事（新） -->
         <a href="/articles/iseki-timing.html" data-category="エリア・店舗選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">移</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/iseki-timing.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -213,6 +223,7 @@
         <!-- 記事（新） -->
         <a href="/articles/hyakuman-kabe.html" data-category="売上・指名術"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">壁</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/hyakuman-kabe.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -227,6 +238,7 @@
         <!-- 記事（新） -->
         <a href="/articles/hosho-ake-kyuritsu.html" data-category="給与・お金"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">率</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/hosho-ake-kyuritsu.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -241,6 +253,7 @@
         <!-- 記事（新） -->
         <a href="/articles/fuuzoku-cabaret-tenkou.html" data-category="エリア・店舗選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">転</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/fuuzoku-cabaret-tenkou.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -255,6 +268,7 @@
         <!-- 記事（新） -->
         <a href="/articles/chokin-shukan.html" data-category="給与・お金"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">貯</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/chokin-shukan.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -269,6 +283,7 @@
         <!-- 記事1 -->
         <a href="/articles/miken-yarubekikoto.html" data-category="未経験ガイド"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">備</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/miken-yarubekikoto.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -283,6 +298,7 @@
         <!-- 記事2 -->
         <a href="/articles/kyujin-site-jouken.html" data-category="未経験ガイド 業界の構造"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">求</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/kyujin-site-jouken.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -298,6 +314,7 @@
         <!-- 記事3 -->
         <a href="/articles/area-tokuchou.html" data-category="エリア・店舗選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">街</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/area-tokuchou.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -312,6 +329,7 @@
         <!-- 記事4 -->
         <a href="/articles/tsuki-hyakuman.html" data-category="売上・指名術"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">百</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/tsuki-hyakuman.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -326,6 +344,7 @@
         <!-- 記事5 -->
         <a href="/articles/toraburu-taisei.html" data-category="業界の構造"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">守</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/toraburu-taisei.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -340,6 +359,7 @@
         <!-- 記事6 -->
         <a href="/articles/wwork.html" data-category="未経験ガイド"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">兼</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/wwork.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -354,6 +374,7 @@
         <!-- 記事7 -->
         <a href="/articles/taiken-nagare.html" data-category="未経験ガイド"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">体</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/taiken-nagare.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-[#c9a96e]/10 text-[#c9a96e] font-bold px-2 py-0.5 rounded-full">未経験ガイド</span></div>
@@ -366,6 +387,7 @@
         <!-- 記事8 -->
         <a href="/articles/mensetsu-ukaru.html" data-category="未経験ガイド"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">面</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/mensetsu-ukaru.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-[#c9a96e]/10 text-[#c9a96e] font-bold px-2 py-0.5 rounded-full">未経験ガイド</span></div>
@@ -378,6 +400,7 @@
         <!-- 記事9 -->
         <a href="/articles/scout-mikiburi.html" data-category="スカウト選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">見</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/scout-mikiburi.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-brand-line/10 text-[#C13584] font-bold px-2 py-0.5 rounded-full">スカウト選び</span></div>
@@ -390,6 +413,7 @@
         <!-- 記事10 -->
         <a href="/articles/noruma-penalty.html" data-category="業界の構造"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">制</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/noruma-penalty.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">業界の構造</span></div>
@@ -402,6 +426,7 @@
         <!-- 記事11 -->
         <a href="/articles/shimei-3months.html" data-category="売上・指名術"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">指</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/shimei-3months.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-[#c9a96e]/10 text-[#c9a96e] font-bold px-2 py-0.5 rounded-full">売上・指名術</span></div>
@@ -414,6 +439,7 @@
         <!-- 記事12 -->
         <a href="/articles/kakuteishinkoku.html" data-category="給与・お金"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">税</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/kakuteishinkoku.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-brand-line/10 text-[#C13584] font-bold px-2 py-0.5 rounded-full">給与・お金</span></div>
@@ -426,6 +452,7 @@
         <!-- 記事13 -->
         <a href="/articles/cabaret-vs-lounge.html" data-category="未経験ガイド エリア・店舗選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">比</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/cabaret-vs-lounge.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -441,6 +468,7 @@
         <!-- 記事14 -->
         <a href="/articles/uriage-ageru-mindset.html" data-category="売上・指名術 マインド"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">売</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/uriage-ageru-mindset.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -456,6 +484,7 @@
         <!-- 記事15 -->
         <a href="/articles/ueno-guide.html" data-category="エリア・店舗選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">上</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/ueno-guide.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">エリア・店舗選び</span></div>
@@ -468,6 +497,7 @@
         <!-- 記事16 -->
         <a href="/articles/kabukicho-guide.html" data-category="エリア・店舗選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">歌</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/kabukicho-guide.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">エリア・店舗選び</span></div>
@@ -480,6 +510,7 @@
         <!-- 記事17 -->
         <a href="/articles/ikebukuro-guide.html" data-category="エリア・店舗選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">池</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/ikebukuro-guide.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">エリア・店舗選び</span></div>
@@ -492,6 +523,7 @@
         <!-- 記事18 -->
         <a href="/articles/shimei-tips.html" data-category="売上・指名術"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">客</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/shimei-tips.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-[#c9a96e]/10 text-[#c9a96e] font-bold px-2 py-0.5 rounded-full">売上・指名術</span></div>
@@ -504,6 +536,7 @@
         <!-- 記事19 -->
         <a href="/articles/ijyu-checklist.html" data-category="エリア・店舗選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">確</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/ijyu-checklist.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">エリア・店舗選び</span></div>
@@ -516,6 +549,7 @@
         <!-- 記事20 -->
         <a href="/articles/hosho-shikumi.html" data-category="給与・お金"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">保</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/hosho-shikumi.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-brand-line/10 text-[#C13584] font-bold px-2 py-0.5 rounded-full">給与・お金</span></div>
@@ -528,6 +562,7 @@
         <!-- 記事21 -->
         <a href="/articles/hirusyoku-barenai.html" data-category="未経験ガイド 業界の構造"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">秘</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/hirusyoku-barenai.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3">
@@ -543,6 +578,7 @@
         <!-- 記事: 六本木ガイド -->
         <a href="/articles/roppongi-guide.html" data-category="エリア・店舗選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">六</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/roppongi-guide.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">エリア・店舗選び</span></div>
@@ -555,6 +591,7 @@
         <!-- 記事22 -->
         <a href="/articles/kinshicho-guide.html" data-category="エリア・店舗選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">錦</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/kinshicho-guide.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">エリア・店舗選び</span></div>
@@ -567,6 +604,7 @@
         <!-- 記事23 -->
         <a href="/articles/saitama-guide.html" data-category="エリア・店舗選び"
           class="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-white/10 hover:border-[#c9a96e]/60 transition-colors duration-200 block group">
+          <span class="kanji" aria-hidden="true">埼</span>
           <div class="h-36 overflow-hidden thumb-ratio"><img src="/assets/thumbnails/saitama-guide.svg" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
           <div class="p-6">
             <div class="flex gap-2 mb-3"><span class="text-xs bg-white/10 text-gray-300 font-bold px-2 py-0.5 rounded-full">エリア・店舗選び</span></div>
