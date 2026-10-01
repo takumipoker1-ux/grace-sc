@@ -14,7 +14,6 @@ META = {
     "nansai-made":            ("齢", "働き方とキャリア"),
     "gakureki":               ("学", "働き方とキャリア"),
     "18sai-19sai":            ("十", "働き方とキャリア"),
-    "daigakusei-scout-kachi": ("選", "スカウトの見極め"),
     "joukyou-junbi":          ("都", "はじめての夜職"),
     "iseki-timing":           ("移", "移籍・キャリア"),
     "hyakuman-kabe":          ("壁", "売上と指名"),
