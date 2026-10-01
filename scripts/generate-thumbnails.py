@@ -33,7 +33,6 @@ META = {
     "noruma-penalty":         ("制", "お金と制度"),
     "shimei-3months":         ("指", "売上と指名"),
     "kakuteishinkoku":        ("税", "お金と制度"),
-    "cabaret-vs-lounge":      ("比", "業種の選び方"),
     "uriage-ageru-mindset":   ("売", "売上と指名"),
     "ueno-guide":             ("上", "エリアガイド"),
     "kabukicho-guide":        ("歌", "エリアガイド"),
