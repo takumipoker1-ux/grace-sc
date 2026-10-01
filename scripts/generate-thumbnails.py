@@ -20,6 +20,7 @@ META = {
     "hyakuman-kabe":          ("壁", "売上と指名"),
     "hosho-ake-kyuritsu":     ("率", "お金と制度"),
     "fuuzoku-cabaret-tenkou": ("転", "移籍・キャリア"),
+    "fuuzoku-cabaret-kakemochi": ("兼", "働き方"),
     "chokin-shukan":          ("貯", "お金と制度"),
     "miken-yarubekikoto":     ("備", "はじめての夜職"),
     "kyujin-site-jouken":     ("求", "求人の読み方"),
