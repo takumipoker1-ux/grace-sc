@@ -25,6 +25,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 <title>億女シミュレーター｜キャバ嬢の成り上がりゲーム</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=DotGothic16&display=swap">
@@ -79,6 +80,16 @@ p { margin: 0; }
 .links { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; font-family: var(--dot); font-size: 14px; }
 .links button { background: none; border: 0; color: var(--mute); cursor: pointer; padding: 4px; text-decoration: underline; text-underline-offset: 3px; }
 .foot { text-align: center; font-size: 11px; color: var(--mute); line-height: 1.6; margin-top: 8px; }
+/* 生まれる前の言葉と、最後の言葉 */
+.intro { min-height: 56vh; display: flex; flex-direction: column; justify-content: center; text-align: center; font-family: var(--dot); font-size: 18px; line-height: 1.9; cursor: pointer; }
+.intro p { margin: 0; opacity: 0; animation: introIn 1.1s ease forwards; text-wrap: balance; }
+.intro p.gap { height: 1.4em; }
+#born { opacity: 0; animation: introIn .8s ease forwards; }
+.intro.all p, .intro.all ~ #born { animation: none; opacity: 1; }
+@keyframes introIn { to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .intro p, #born { animation: none; opacity: 1; } }
+.closing { text-align: center; font-family: var(--dot); font-size: 17px; line-height: 1.9; margin: 26px 0 22px; }
+.closing p { margin: 0; text-wrap: balance; }
 .cur { display: inline-block; animation: blink .8s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 .choices { display: flex; flex-direction: column; gap: 9px; }
@@ -3708,10 +3719,21 @@ ol.les li + li { margin-top: 4px; }
     const inp = $('#nm');
     $('#rnd').onclick = () => { inp.value = pick(); inp.focus(); };
     $('#back').onclick = title;
-    const go = () => { NAME = (inp.value || '').trim().slice(0, 8) || pick(); start(G.newGame(NAME)); };
+    const go = () => { NAME = (inp.value || '').trim().slice(0, 8) || pick(); intro(() => start(G.newGame(NAME))); };
     $('#ok').onclick = go;
     inp.addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
     inp.focus();
+  }
+  // 生まれる前の言葉（ぞの「スタートで始めるんじゃなくて、深い言葉入れたい」2026-10-23・README の224）。1行ずつ出る。画面を押すと全部出る
+  const INTRO = ['生まれる場所も、顔も、選べない。', '選べるのは、どの店で、どう働くかだけ。', '', '夜の仕事は、いつか終わる。', 'そのとき、手元に何が残っているだろう。'];
+  function intro(next) {
+    RUN++;
+    let d = 0.3;
+    app.innerHTML = `<div class="intro" id="intro">${INTRO.map(t => { if (!t) { d += 0.5; return '<p class="gap"></p>'; } const h = `<p style="animation-delay:${d.toFixed(1)}s">${esc(t)}</p>`; d += 1.2; return h; }).join('')}</div>
+      <button class="btn main" id="born" type="button" style="animation-delay:${d.toFixed(1)}s"><span class="cur">▶</span> 生まれる</button>`;
+    $('#intro').onclick = () => $('#intro').classList.add('all');
+    $('#born').onclick = next;
+    window.scrollTo(0, 0);
   }
   function start(s, same) {
     S = s; AN = null; FEEDALL = false; AUTO = false; PAUSED = false; LS.set('lives', lives() + 1); // おまかせは人生ごとに OFF から（方針は覚えておく）
@@ -4713,6 +4735,15 @@ ol.les li + li { margin-top: 4px; }
   }
 
   // ── 結果 ──
+  // 最後の言葉：始めた理由と、残ったもの（ぞの 2026-10-23・README の224）。生まれる前の「手元に何が残っているだろう」への答え
+  const REASON_TXT = { お金を貯めたい: 'お金を貯めるために始めた夜だった。', 学費: '学費のために始めた夜だった。', 実家に仕送り: '実家に仕送りするために始めた夜だった。', 自分の夢の資金: '夢の資金のために始めた夜だった。', なんとなく: 'なんとなく始めた夜だった。' };
+  function closingHtml(sm, tenure) {
+    const yen = v => (v >= 0.05 ? `${man(v)}円` : '0円');
+    const sold = sm.totalSales > 0 ? `${tenure}で売ったのは${yen(sm.totalSales)}。` : '';
+    const left = sm.save >= 0 ? `手元に残ったのは${yen(sm.save)}。` : `手元のお金は、マイナス${yen(-sm.save)}だった。`;
+    const loan = sm.loan > 0 ? `ローンが${yen(sm.loan)}残った。` : '';
+    return `<div class="closing">${[REASON_TXT[S.e0.reason] || '夜の仕事を始めた。', sold, left, loan].filter(Boolean).map(t => `<p>${esc(t)}</p>`).join('')}</div>`; // 1文ずつ行を分ける（文の途中で折り返さない）
+  }
   function result() {
     RUN++;
     const sm = G.summary(S), t = S.t0, e = S.e0;
@@ -4788,6 +4819,7 @@ ol.les li + li { margin-top: 4px; }
         ${sm.fol ? `<div class="prow"><span>SNSのフォロワー</span><b>${sm.fol.toLocaleString('ja-JP')}人</b></div>` : ''}
         <div class="pnote">売上の約半分がお給料の元になる。そこから源泉徴収・確定申告の税金・生活費・美容代などが出ていく。税金は経費を給料の25%として計算した、ざっくりの目安。</div>
       </div>
+      ${closingHtml(sm, tenure)}
 
       <div class="row2"><button class="btn main" type="button" id="again">生まれ直す</button><button class="btn" type="button" id="same2">同じ生まれで<br>もう一度</button></div>
       <button class="btn ghost" type="button" id="totitle">タイトルへ</button>
