@@ -25,7 +25,6 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 <title>億女シミュレーター｜キャバ嬢の成り上がりゲーム</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=DotGothic16&display=swap">
@@ -3657,7 +3656,7 @@ ol.les li + li { margin-top: 4px; }
   // スマホで、結果の画像を付けたまま共有の画面（X・LINE・インスタなど）を開けるか。開けるときは結果画面のいちばん上に「画像つきでシェア」を出す
   const PHONE_SHARE = (() => { try { return TOP && matchMedia('(pointer: coarse)').matches && !!navigator.canShare && navigator.canShare({ files: [new File([new Blob()], 'a.png', { type: 'image/png' })] }); } catch (e) { return false; } })();
   // つくった人（ぞの）がゲームを紹介したXの投稿のID（投稿のURLの /status/ のあとの数字）。入れると、遊んだ人みんなの結果画面に「つくった人の投稿にリプで送る」を出す。空のあいだは出さない
-  const REPLY_TO = '';
+  const REPLY_TO = '2113631472523636837'; // ぞのの紹介の投稿（2026-10-23・https://x.com/zono_grace/status/2113631472523636837）
   const POLS = { ken: ['堅実', '体とメンタルを守る。休む・断る・通りやすい店を選びやすい'], bal: ['ふつう', 'よくある選び方。少しランダムに選ぶ'], uri: ['売上優先', '面接・おねだり・追加の出勤・上の店など、攻める選択をする'] };
 
   let S = null, AN = null, PART = null, NAME = ''; // AN＝結果の解析（全部）・PART＝分かれ道より先に出す分
