@@ -3498,7 +3498,14 @@ ol.les li + li { margin-top: 4px; }
   const ALL_Q = /*ALL_Q*/[1, 3, 4, 5, 6, 7, 7, 8, 8, 9, 9, 10, 11, 12, 12, 13, 14, 15, 16, 17, 19, 22, 25, 28, 32, 36, 42, 48, 55, 62, 70, 79, 86, 94, 103, 111, 120, 128, 136, 146, 155, 164, 172, 182, 192, 202, 212, 222, 231, 240, 251, 261, 271, 282, 293, 305, 319, 330, 343, 357, 373, 387, 403, 419, 437, 456, 476, 494, 515, 538, 559, 585, 610, 636, 665, 696, 728, 768, 802, 842, 884, 937, 1000, 1063, 1131, 1215, 1305, 1421, 1537, 1702, 1902, 2118, 2411, 2898, 3409, 4102, 4954, 6047, 7707, 10392, 42017]/*END*/;
   const ALL_N = /*ALL_N*/16000/*END*/; // ALL_Q を作った人数
   const ALL_OKU = /*ALL_OKU*/1.1/*END*/;
-  function allTop(v) { if (ALL_Q.length < 101) return 50; let k = 0; while (k < 100 && ALL_Q[k] < v) k++; return Math.max(0.5, 100 - k); }
+  const ALL_QT = /*ALL_QT*/[10837, 11446, 11923, 12504, 12949, 13621, 15070, 16998, 21187]/*END*/; // 上位1%の中を0.1%きざみで分けるための売上（売上の低いほうから99.1〜99.9%の位置）
+  function allTop(v) {
+    if (ALL_Q.length < 101) return 50;
+    let k = 0; while (k < 100 && ALL_Q[k] < v) k++;
+    if (k < 100 || ALL_QT.length < 9) return Math.max(0.5, 100 - k);
+    let j = 0; while (j < 9 && ALL_QT[j] < v) j++; // 上位1%未満は「上位0.◯%」まで出す
+    return Math.max(1, 9 - j) / 10;
+  }
   // 夜の型（16×2）：生まれ 恵／逆 × 運 吉／凶 × 選択 賢／迷 × 努力 努／怠。[うまくいった, いかなかった]
   const TYPE = {
     恵吉賢努: ['生まれながらの看板', '惜しかった看板候補'], 恵吉賢怠: ['週3の女王', '余裕をこきすぎた女'], 恵吉迷努: ['力ずくのエース', '走る方向をまちがえた女'], 恵吉迷怠: ['持ってるお嬢', 'ぬるま湯のお嬢'],
@@ -3568,7 +3575,7 @@ ol.les li + li { margin-top: 4px; }
     mnActs, eigyoView, setEigyo, togglePush, endShimei, wallEst, auraNote, longCusts, lessons, NUMBER_TEATE, teateOf, ENJO_SEI, EG_HINT, hoshoKeepView, KEEP_CUST, RUNWAY_FOL,
     begin, second, choose, finish, autoChoice, autoPace, autoSearch, autoFirst, retire, restMonth, quitHiru, play, runLife, runFrom, analyze, analyzeSteps, allTop, taxOf, contactScout, distOf, areaOf, AREA, FACE_MAX, procName, kindOf,
     analysisPlan, sameRun, headOf, forkCands, forkEval, pickForks, forksOut, forkCheck, checkPlan,
-    shopView, seikeiPlan, seikeiState, kName, doSeikei, buy, loanLeft, HINTS, HAIR, HAIR_NG, summary, acceptOffer, declineOffer, negotiate, offerView, quote, dietView, dangers, guide, known, habits, resetHabit, goalOf, ACHV, ALL_N, JOUKYOU_COST, wallNow, uraStatus, custName, bestMonth, seedOf, recentAvg, salesWall, ALL_Q,
+    shopView, seikeiPlan, seikeiState, kName, doSeikei, buy, loanLeft, HINTS, HAIR, HAIR_NG, summary, acceptOffer, declineOffer, negotiate, offerView, quote, dietView, dangers, guide, known, habits, resetHabit, goalOf, ACHV, ALL_N, ALL_QT, JOUKYOU_COST, wallNow, uraStatus, custName, bestMonth, seedOf, recentAvg, salesWall, ALL_Q,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = G;
   else root.OKU = G;
@@ -4569,7 +4576,7 @@ ol.les li + li { margin-top: 4px; }
         ${x.detail ? `<div class="pnote">${esc(x.detail)}</div>` : ''}
         ${x.goal ? `<div class="prow"><span>お金の目的</span><span>${esc(x.goal.label)}<br><small>${x.goal.done ? '達成' : `届かなかった（${x.goal.of ? `${esc(x.goal.of)}で` : ''}${x.goal.unit === 'か月' ? x.goal.val + 'か月' : man(x.goal.val) + '円'}）`}</small></span></div>` : ''}
         <div class="big">${r.oku ? `<div class="num oku">億女 達成</div><div class="sub2">月間売上 ${man(r.best)}円</div>` : `<div class="lab">いちばん売れた月${r.store ? `（${esc(r.store)}）` : ''}</div><div class="num">月${man(r.best)}円</div>`}
-          <div class="rank">一般的な女の子の中で <b>上位${topTxt(x.allTop)}</b></div></div>
+          <div class="rank">一般的な女の子の中で <b>上位${x.v >= 9 || x.allTop >= 1 ? topTxt(x.allTop) : '1%未満'}</b></div></div>
         <div class="type"><div class="t1">夜の型</div><div class="t2">${esc(r.type || '（分析の前に閉じた）')}</div></div>
         ${an ? `${axesHtml(an.score, an.top, x.auto || 0)}${an.why ? `<div class="axnote">${esc(an.why)}${esc(autoNote(x.auto || 0))}</div>` : ''}` : ''}
       </div>
@@ -4627,7 +4634,7 @@ ol.les li + li { margin-top: 4px; }
   function record() { // 記録には、あとで結果を開き直せるだけの中身も残す
     const sm = G.summary(S), recs = LS.get('recs2', []), e = S.e0, t = S.t0;
     recs.push({ life: S.life, name: S.name, best: Math.round(sm.bestMonth * 10) / 10, oku: sm.oku, store: sm.bestMonthStore || '', d: Date.now(),
-      x: { v: 8, auto: Math.round(autoShare(S) * 100) / 100, m: S.ended.m, age0: S.age0, why: S.ended.text, detail: S.ended.detail || '', birth: `${e.by}年${e.bm}月${e.bd}日・${G.homeName(e)}`, life: `${e.sumai === '実家' ? '実家' : '一人暮らし'}・${e.hiru}・${e.keiken}・${e.reason}`,
+      x: { v: 9, auto: Math.round(autoShare(S) * 100) / 100, m: S.ended.m, age0: S.age0, why: S.ended.text, detail: S.ended.detail || '', birth: `${e.by}年${e.bm}月${e.bd}日・${G.homeName(e)}`, life: `${e.sumai === '実家' ? '実家' : '一人暮らし'}・${e.hiru}・${e.keiken}・${e.reason}`,
         t: [t.face, t.style, t.sake, t.seikaku, `${t.height}cm・${t.weight}kg・${t.cup}カップ`], ura: G.uraStatus(t, S.t), allTop: sm.allTop,
         sales: S.hist.map(h => Math.round(h.sales * 10) / 10), m0: S.hist.length ? S.hist[0].m : 0, moves: S.stores.slice(1).map(x => x.from),
         stores: sm.stores.map(x => [x.from, x.label, x.route, x.name]), ach: sm.ach, goal: sm.goal } });
@@ -4783,7 +4790,7 @@ ol.les li + li { margin-top: 4px; }
     renderShare();
     if (AN || PART) onAnalysis();
   }
-  const topTxt = v => (v < 1 ? '1%未満' : `${Math.round(v)}%`); // ほかの生まれ全体の中での位置
+  const topTxt = v => (v < 1 ? `${v.toFixed(1)}%` : `${Math.round(v)}%`); // ほかの生まれ全体の中での位置。上位1%未満は0.1%きざみ（0.1%がいちばん上）
   const rankTxt = v => (v <= 50 ? `上位${topTxt(v)}` : `下位${topTxt(Math.max(1, 100 - v))}`); // シェアの文と画像：下のほうは「下位◯%」（「上位87%」はいい結果に読まれやすい）
   function lessonsHtml() { // 結果の先頭：次の人生で変えるとよさそうなこと（分かれ道の計算が終わると、くわしくなる）
     const L = G.lessons(S, AN || PART);
