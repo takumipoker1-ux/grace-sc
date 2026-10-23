@@ -458,21 +458,22 @@ ol.les li + li { margin-top: 4px; }
   // ── 店（名前は架空）──
   // guar＝保証時給の幅・floor＝保証明けの最低時給・cap＝これより上は折半・mul＝お客さんの使う額の倍率・free＝フリー席の回りやすさ
   // top＝その店のNo.1の月の売上（万円）・cast＝在籍の目安（大きい店ほど多い。店ごとに±2割）・minPace＝求められる出勤（週）・fit＝受けやすい系統・look＝面接の目安（見た目1〜100）
+  // one＝1人のお客さんが1か月に使える額の目安（万円）。これを超えると、ほとんど伸びない。書いていない店（上位店）は上限なし
   const STORE = {
-    machi: { tier: 0, guar: [2000, 3000], floor: 1800, cap: 6000, mul: 0.45, free: 0.75, top: 150, cast: 18, minPace: 2, fit: 'かわいい系', look: 1 },
-    toshi: { tier: 1, guar: [2500, 4500], floor: 2200, cap: 10000, mul: 0.65, free: 1.0, top: 450, cast: 35, minPace: 2, fit: '派手め', look: 30 },
-    cityMid: { tier: 2, guar: [3000, 6000], floor: 2800, cap: 18000, mul: 0.9, free: 1.25, top: 800, cast: 50, minPace: 3, fit: '派手め', look: 40 },
+    machi: { tier: 0, guar: [2000, 3000], floor: 1800, cap: 6000, mul: 0.45, free: 0.75, top: 150, cast: 18, minPace: 2, fit: 'かわいい系', look: 1, one: 500 },
+    toshi: { tier: 1, guar: [2500, 4500], floor: 2200, cap: 10000, mul: 0.65, free: 1.0, top: 450, cast: 35, minPace: 2, fit: '派手め', look: 30, one: 1500 },
+    cityMid: { tier: 2, guar: [3000, 6000], floor: 2800, cap: 18000, mul: 0.9, free: 1.25, top: 800, cast: 50, minPace: 3, fit: '派手め', look: 40, one: 4000 },
     cityTop: { tier: 3, guar: [4500, 9000], floor: 3800, cap: 25000, mul: 1.2, free: 1.15, top: 2000, cast: 70, minPace: 5, fit: '派手め', look: 54 },
     shinchi: { tier: 4, guar: [7000, 14000], floor: 5500, cap: 50000, mul: 1.75, free: 0.6, top: 2600, cast: 40, minPace: 5, fit: '綺麗め', look: 60 },
-    kougai: { tier: 0, guar: [2500, 3500], floor: 2000, cap: 8000, mul: 0.55, free: 0.8, top: 250, cast: 25, minPace: 2, fit: 'かわいい系', look: 1 },
-    local: { tier: 1, guar: [3000, 5500], floor: 2500, cap: 12000, mul: 0.75, free: 1.0, top: 600, cast: 40, minPace: 2, fit: 'かわいい系', look: 38 },
-    kabuki: { tier: 2, guar: [3500, 6500], floor: 3000, cap: 20000, mul: 1.0, free: 1.35, top: 900, cast: 60, minPace: 3, fit: '派手め', look: 42 },
-    otona: { tier: 2, guar: [4000, 7000], floor: 3500, cap: 20000, mul: 1.1, free: 0.9, top: 900, cast: 30, minPace: 3, fit: '綺麗め', look: 40 },
+    kougai: { tier: 0, guar: [2500, 3500], floor: 2000, cap: 8000, mul: 0.55, free: 0.8, top: 250, cast: 25, minPace: 2, fit: 'かわいい系', look: 1, one: 600 },
+    local: { tier: 1, guar: [3000, 5500], floor: 2500, cap: 12000, mul: 0.75, free: 1.0, top: 600, cast: 40, minPace: 2, fit: 'かわいい系', look: 38, one: 1500 },
+    kabuki: { tier: 2, guar: [3500, 6500], floor: 3000, cap: 20000, mul: 1.0, free: 1.35, top: 900, cast: 60, minPace: 3, fit: '派手め', look: 42, one: 4000 },
+    otona: { tier: 2, guar: [4000, 7000], floor: 3500, cap: 20000, mul: 1.1, free: 0.9, top: 900, cast: 30, minPace: 3, fit: '綺麗め', look: 40, one: 4000 },
     kabukiTop: { tier: 3, guar: [5000, 10000], floor: 4000, cap: 25000, mul: 1.3, free: 1.2, top: 2500, cast: 90, minPace: 5, fit: '派手め', look: 55 },
     roppongi: { tier: 4, guar: [8000, 16000], floor: 6000, cap: 60000, mul: 1.9, free: 1.0, top: 3500, cast: 110, minPace: 5, fit: '綺麗め', look: 66 },
     ginza: { tier: 4, guar: [8000, 15000], floor: 6000, cap: 50000, mul: 2.0, free: 0.6, top: 3000, cast: 40, minPace: 5, fit: '綺麗め', look: 60 },
     // ガールズバー：だれでも入りやすく、クビになりにくい。時給も単価も低いが、ここで作ったお客さんは近くのキャバクラについてきてくれることがある
-    galba: { tier: -1, gb: 1, guar: [1200, 2000], floor: 1100, cap: 3500, mul: 0.22, free: 1.4, top: 60, cast: 12, minPace: 1, fit: 'かわいい系', look: 1 },
+    galba: { tier: -1, gb: 1, guar: [1200, 2000], floor: 1100, cap: 3500, mul: 0.22, free: 1.4, top: 60, cast: 12, minPace: 1, fit: 'かわいい系', look: 1, one: 150 },
   };
   const TOKYO = ['kougai', 'local', 'kabuki', 'otona', 'kabukiTop', 'roppongi', 'ginza']; // 東京の店の種類（ガールズバーは地元にも東京にもある）
   // 東京とその近くの夜の街。t23＝23区・tama＝多摩・kana＝神奈川・chiba＝千葉・sai＝埼玉
@@ -2807,6 +2808,7 @@ ol.les li + li { margin-top: 4px; }
         } else a *= 1 + (0.5 + 0.8 * prep) * (0.3 + 0.7 * c.heat / 100) * bdMul;
         if (c.id === bdTop) a = 0;
       }
+      if (st.one && a > st.one) a = st.one * (1 + 0.3 * Math.log(a / st.one)); // 1人のお客さんが使える額は、店の格で決まる。中級店の億女は、太いお客さんが何人も重なったときだけ
       if (tmp.rest) a = 0;
       c.last = a; raw += a;
     }
@@ -2814,7 +2816,7 @@ ol.les li + li { margin-top: 4px; }
       for (let i = r.pois(Math.min(8, s.fol / 4000)); i > 0; i--) { const c = s.flags.joshiFan && r.ok(0.5) ? addGirlFan(s, r) : addCust(s, r, 'SNS', 0); if (c) { c.last = c.spend * 1.3; raw += c.last; bdSnsN++; } }
     }
     s.flags.bdaySns = 0;
-    const K = salesWall(s) * (isBday ? 8.5 : 1);
+    const K = salesWall(s) * (isBday ? 8.5 * (st.tier >= 3 ? 1.1 : 1) : 1); // 誕生日の月は壁が上がる。上位店はさらに上がる
     const capped = raw > K ? K * (1 + 0.5 * Math.log(raw / K)) : raw;
     if (raw > 0) for (const c of s.cust) c.last = r1(c.last * capped / raw);
     if (!s.sim) for (const c of s.cust) if (c.last > 0) c.sum = r1((c.sum || 0) + c.last); // そのお客さんがこれまでに使ってくれた額
@@ -3495,10 +3497,10 @@ ol.les li + li { margin-top: 4px; }
   }
   function analyze(s, opt) { const it = analyzeSteps(s, opt); let x; do { x = it.next(); } while (!x.done); return x.value; }
   // ほかの生まれ（ランダムな生まれ×オート）の最高月間売上の分布。0〜100パーセンタイル。calib.js で作りなおす
-  const ALL_Q = /*ALL_Q*/[1, 3, 4, 5, 6, 7, 7, 8, 8, 9, 9, 10, 11, 12, 12, 13, 14, 15, 16, 17, 19, 22, 25, 28, 32, 36, 42, 48, 55, 62, 70, 79, 86, 94, 103, 111, 120, 128, 136, 146, 155, 164, 172, 182, 192, 202, 212, 222, 231, 240, 251, 261, 271, 282, 293, 305, 319, 330, 343, 357, 373, 387, 403, 419, 437, 456, 476, 494, 515, 538, 559, 585, 610, 636, 665, 696, 728, 768, 802, 842, 884, 937, 1000, 1063, 1131, 1215, 1305, 1421, 1537, 1702, 1902, 2118, 2411, 2898, 3409, 4102, 4954, 6047, 7707, 10392, 42017]/*END*/;
+  const ALL_Q = /*ALL_Q*/[1, 3, 4, 5, 6, 7, 7, 8, 8, 9, 9, 10, 11, 12, 12, 13, 14, 15, 16, 17, 19, 22, 25, 28, 32, 36, 42, 48, 55, 62, 70, 79, 86, 94, 103, 111, 120, 128, 136, 146, 155, 164, 172, 182, 192, 202, 212, 222, 231, 240, 251, 261, 271, 282, 293, 305, 319, 330, 343, 357, 373, 387, 403, 419, 437, 456, 476, 494, 515, 538, 559, 585, 610, 636, 665, 695, 728, 767, 801, 840, 882, 932, 995, 1060, 1127, 1213, 1301, 1415, 1526, 1696, 1882, 2105, 2396, 2836, 3337, 4003, 4749, 5618, 7088, 10093, 43259]/*END*/;
   const ALL_N = /*ALL_N*/16000/*END*/; // ALL_Q を作った人数
-  const ALL_OKU = /*ALL_OKU*/1.1/*END*/;
-  const ALL_QT = /*ALL_QT*/[10837, 11446, 11923, 12504, 12949, 13621, 15070, 16998, 21187]/*END*/; // 上位1%の中を0.1%きざみで分けるための売上（売上の低いほうから99.1〜99.9%の位置）
+  const ALL_OKU = /*ALL_OKU*/1/*END*/;
+  const ALL_QT = /*ALL_QT*/[10497, 10860, 11668, 12350, 13003, 13511, 14902, 17383, 22324]/*END*/; // 上位1%の中を0.1%きざみで分けるための売上（売上の低いほうから99.1〜99.9%の位置）
   function allTop(v) {
     if (ALL_Q.length < 101) return 50;
     let k = 0; while (k < 100 && ALL_Q[k] < v) k++;
