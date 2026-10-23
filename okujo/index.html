@@ -507,7 +507,7 @@ ol.les li + li { margin-top: 4px; }
   function SL(s, id, area) { // 店の見せ方
     const a = areaOf(s, id, area);
     return { machi: '地元の小さなキャバクラ', toshi: `${a}のキャバクラ`, cityMid: `${a}の中級店`, cityTop: `${a}の上位店`, shinchi: '北新地のクラブ', kougai: `${a}のキャバクラ`, local: `${a}のキャバクラ`,
-      kabuki: `${a}の中級店`, otona: `${a}の20代後半からのキャバクラ`, kabukiTop: `${a}の上位店`, roppongi: '六本木の高級店', ginza: '銀座のクラブ', galba: `${a}のガールズバー` }[id];
+      kabuki: `${a}の中級店`, otona: `${a}の20代後半からの中級店`, kabukiTop: `${a}の上位店`, roppongi: '六本木の高級店', ginza: '銀座のクラブ', galba: `${a}のガールズバー` }[id];
   }
   const SA = (s, id, area) => areaOf(s, id, area); // 店のエリア
   // 店さがし・声かけで出す名前（六本木の別の高級店）。街の名前に「の」が入っていても（すすきの）、街の名前のあとに「別の」を入れる
