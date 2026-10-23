@@ -480,8 +480,13 @@ ol.les li + li { margin-top: 4px; }
   const AREA = { 歌舞伎町: 't23', 池袋: 't23', 上野: 't23', 錦糸町: 't23', 新橋: 't23', 五反田: 't23', 中野: 't23', 新宿: 't23', 赤坂: 't23', 六本木: 't23', 銀座: 't23',
     吉祥寺: 'tama', 立川: 'tama', 八王子: 'tama', 町田: 'tama', 関内: 'kana', 横浜西口: 'kana', 川崎: 'kana', 藤沢: 'kana', 千葉: 'chiba', 船橋: 'chiba', 西船橋: 'chiba', 柏: 'chiba', 大宮: 'sai', 川口: 'sai', 川越: 'sai' };
   // 店の種類ごとに、ある街（店さがしには毎月いくつかが混ざって出る）
-  const TYPE_AREA = { kougai: ['立川', '八王子', '町田'], local: ['池袋', '上野', '錦糸町', '新橋', '五反田', '中野', '吉祥寺'], kabuki: ['歌舞伎町', '池袋', '上野', '錦糸町'],
+  const TYPE_AREA = { kougai: ['立川', '八王子', '町田'], local: ['池袋', '上野', '錦糸町', '新橋', '五反田', '中野', '吉祥寺'], kabuki: ['歌舞伎町', '池袋', '上野', '錦糸町', '六本木', '銀座'],
     otona: ['新橋', '赤坂', '上野', '池袋'], kabukiTop: ['歌舞伎町', '池袋'], roppongi: ['六本木'], ginza: ['銀座'] };
+  // 億女の出やすさは街で決まる（ぞの 2026-10-23）：六本木 ＞ 歌舞伎町の上位店・銀座・北新地 ＞ 池袋・中洲・すすきのなどの上位店 ＞ 六本木・歌舞伎町・銀座の中級店 ＞ ほかの街（ケタ違いのお客さんが1人で大きく使ったときだけ）
+  // bd＝誕生日の月に、売上の壁がふつうの月の何倍まで上がるか・tw＝誕生日のシャンパンタワーの大きさの倍率・one＝1人のお客さんが1か月に使える額の目安（万円）。店の種類（STORE）の値を、街ごとに上書きする
+  const OKU_AREA = { roppongi: { bd: 11, tw: 1.4 }, ginza: { bd: 8.5 }, shinchi: { bd: 9 }, kabukiTop: { bd: 11, tw: 2.5 }, 'kabukiTop@歌舞伎町': { bd: 16, tw: 4.5 }, cityTop: { bd: 11, tw: 2.5 },
+    'kabuki@歌舞伎町': { one: 10000, bd: 10, tw: 2 }, 'kabuki@六本木': { one: 10000, bd: 10, tw: 2 }, 'kabuki@銀座': { one: 10000, bd: 10, tw: 2 } };
+  function okuOf(s) { const id = s.store.id; return Object.assign({ one: STORE[id].one, bd: 8.5, tw: 1 }, OKU_AREA[id], OKU_AREA[id + '@' + areaOf(s, id)]); }
   const GB_TOKYO = ['新宿', '池袋', '上野', '錦糸町', '中野', '吉祥寺', '立川', '新橋'];
   const NEAR_AREA = { 埼玉県: ['大宮', '川口', '川越'], 千葉県: ['千葉', '船橋', '西船橋', '柏'], 神奈川県: ['関内', '横浜西口', '川崎', '藤沢'] };
   const NEAR_REGION = { 埼玉県: 'sai', 千葉県: 'chiba', 神奈川県: 'kana' };
@@ -1415,7 +1420,8 @@ ol.les li + li { margin-top: 4px; }
       t: (s, r) => {
         const sp = clamp(Math.exp(Math.log(80 * STORE[s.store.id].mul) + 0.7 * r.n() + (lookOf(s) - 55) / 60), 30, 900);
         const c = addCust(s, r, '太客', 2, sp); c.heat = 60; s.tmp.who = c.id;
-        return [`${custName(c)}が、あなたを気に入ったようだ。使う額のケタが違うお客さんだ。`];
+        if (okuOf(s).one && r.ok(0.2)) c.oo = 1; // 店の格の上限をこえて使うお客さん（一本釣り）。上限のない店では関係ない
+        return [`${custName(c)}が、あなたを気に入ったようだ。使う額のケタが違うお客さんだ。`].concat(c.oo ? ['この街で、ここまで使う人はめったにいない。'] : []);
       },
       c: [
         { l: '特別扱いしすぎず、いつも通りに接する', auto: 2, f: s => { const c = W(s); if (c) c.heat = clamp(c.heat + 8); return say('いつも通りに接した。それが心地よかったらしい。'); } },
@@ -2749,7 +2755,7 @@ ol.les li + li { margin-top: 4px; }
     const r = s.luck, tmp = s.tmp, cal = calOf(s.m);
     s.paceHist[s.m] = s.pace;
     if (s.flags.noStore || !s.store) return idleMonth(s);
-    const st = STORE[s.store.id], E = eg(s), ef = egFit(s);
+    const st = STORE[s.store.id], E = eg(s), ef = egFit(s), ok = okuOf(s);
     const wd = worldNow(s), save0 = s.save; // save0＝月のおわりの計算の前の貯金（家計簿：ここまでが「月のあいだ」）
     const shimei = !!s.flags.shimei && !st.gb; // 指名のお客さんが来る日だけ出る働き方（フリーの席はほとんどつかない）
     const days = tmp.rest ? 0 : clamp(Math.round((Math.round(s.pace * 4.3) + tmp.extra - tmp.off) * (wd.days || 1)), 0, 26);
@@ -2803,12 +2809,12 @@ ol.les li + li { margin-top: 4px; }
         const hf = 0.4 + 0.6 * c.heat / 100, top1 = s.flags.bdayTop === c.id ? 1.5 : 1;
         if (c.spend >= 40) {
           a += c.spend * Math.exp(r.n(Math.log(1.6), 0.8)) * hf * (0.6 + prep) * top1 * bdMul;
-          if (c.spend >= 160 && bdBad !== 'tower' && r.ok(0.2 + 0.45 * c.heat / 100)) { a += c.spend * Math.exp(r.n(Math.log(8), 1.0)) * (0.6 + prep) * top1 * bdMul; if (c.id !== bdTop) bdTower = bdTower || c.id; } // シャンパンタワー
-          else if (c.spend >= 120 && r.ok(0.1 + 0.2 * c.heat / 100)) { a += c.spend * Math.exp(r.n(Math.log(3), 0.9)) * (0.6 + prep) * top1 * bdMul; if (c.id !== bdTop) bdChamp = bdChamp || c.id; }
+          if (c.spend >= 160 && bdBad !== 'tower' && r.ok(0.2 + 0.45 * c.heat / 100)) { a += c.spend * Math.exp(r.n(Math.log(8), 1.0)) * (0.6 + prep) * top1 * bdMul * ok.tw; if (c.id !== bdTop) bdTower = bdTower || c.id; } // シャンパンタワー
+          else if (c.spend >= 120 && r.ok(0.1 + 0.2 * c.heat / 100)) { a += c.spend * Math.exp(r.n(Math.log(3), 0.9)) * (0.6 + prep) * top1 * bdMul * ok.tw; if (c.id !== bdTop) bdChamp = bdChamp || c.id; }
         } else a *= 1 + (0.5 + 0.8 * prep) * (0.3 + 0.7 * c.heat / 100) * bdMul;
         if (c.id === bdTop) a = 0;
       }
-      if (st.one && a > st.one) a = st.one * (1 + 0.3 * Math.log(a / st.one)); // 1人のお客さんが使える額は、店の格で決まる。中級店の億女は、太いお客さんが何人も重なったときだけ
+      if (ok.one && !c.oo && a > ok.one) a = ok.one * (1 + 0.3 * Math.log(a / ok.one)); // 1人のお客さんが使える額は、店の格と街で決まる。中級店の億女は、太いお客さんが何人も重なったときか、一本釣りのときだけ
       if (tmp.rest) a = 0;
       c.last = a; raw += a;
     }
@@ -2816,7 +2822,7 @@ ol.les li + li { margin-top: 4px; }
       for (let i = r.pois(Math.min(8, s.fol / 4000)); i > 0; i--) { const c = s.flags.joshiFan && r.ok(0.5) ? addGirlFan(s, r) : addCust(s, r, 'SNS', 0); if (c) { c.last = c.spend * 1.3; raw += c.last; bdSnsN++; } }
     }
     s.flags.bdaySns = 0;
-    const K = salesWall(s) * (isBday ? 8.5 * (st.tier >= 3 ? 1.1 : 1) : 1); // 誕生日の月は壁が上がる。上位店はさらに上がる
+    const K = salesWall(s) * (isBday ? ok.bd : 1); // 誕生日の月は壁が上がる。どこまで上がるかは街しだい（OKU_AREA）
     const capped = raw > K ? K * (1 + 0.5 * Math.log(raw / K)) : raw;
     if (raw > 0) for (const c of s.cust) c.last = r1(c.last * capped / raw);
     if (!s.sim) for (const c of s.cust) if (c.last > 0) c.sum = r1((c.sum || 0) + c.last); // そのお客さんがこれまでに使ってくれた額
@@ -3497,10 +3503,10 @@ ol.les li + li { margin-top: 4px; }
   }
   function analyze(s, opt) { const it = analyzeSteps(s, opt); let x; do { x = it.next(); } while (!x.done); return x.value; }
   // ほかの生まれ（ランダムな生まれ×オート）の最高月間売上の分布。0〜100パーセンタイル。calib.js で作りなおす
-  const ALL_Q = /*ALL_Q*/[1, 3, 4, 5, 6, 7, 7, 8, 8, 9, 9, 10, 11, 12, 12, 13, 14, 15, 16, 17, 19, 22, 25, 28, 32, 36, 42, 48, 55, 62, 70, 79, 86, 94, 103, 111, 120, 128, 136, 146, 155, 164, 172, 182, 192, 202, 212, 222, 231, 240, 251, 261, 271, 282, 293, 305, 319, 330, 343, 357, 373, 387, 403, 419, 437, 456, 476, 494, 515, 538, 559, 585, 610, 636, 665, 695, 728, 767, 801, 840, 882, 932, 995, 1060, 1127, 1213, 1301, 1415, 1526, 1696, 1882, 2105, 2396, 2836, 3337, 4003, 4749, 5618, 7088, 10093, 43259]/*END*/;
+  const ALL_Q = /*ALL_Q*/[1, 3, 4, 5, 6, 6, 7, 8, 8, 9, 10, 10, 11, 12, 12, 13, 14, 15, 16, 17, 19, 21, 24, 27, 31, 35, 41, 47, 55, 63, 71, 79, 87, 94, 102, 109, 117, 126, 134, 144, 152, 161, 170, 178, 189, 199, 211, 218, 229, 239, 249, 262, 274, 285, 297, 310, 323, 336, 349, 363, 376, 389, 406, 422, 440, 459, 476, 495, 514, 541, 562, 583, 607, 633, 663, 695, 727, 763, 805, 849, 895, 946, 999, 1063, 1128, 1210, 1301, 1424, 1559, 1722, 1960, 2227, 2604, 3195, 3863, 4629, 5454, 6742, 8685, 12223, 48498]/*END*/;
   const ALL_N = /*ALL_N*/16000/*END*/; // ALL_Q を作った人数
-  const ALL_OKU = /*ALL_OKU*/1/*END*/;
-  const ALL_QT = /*ALL_QT*/[10497, 10860, 11668, 12350, 13003, 13511, 14902, 17383, 22324]/*END*/; // 上位1%の中を0.1%きざみで分けるための売上（売上の低いほうから99.1〜99.9%の位置）
+  const ALL_OKU = /*ALL_OKU*/1.5/*END*/;
+  const ALL_QT = /*ALL_QT*/[12860, 13738, 14177, 15114, 16094, 17866, 20222, 23805, 28028]/*END*/; // 上位1%の中を0.1%きざみで分けるための売上（売上の低いほうから99.1〜99.9%の位置）
   function allTop(v) {
     if (ALL_Q.length < 101) return 50;
     let k = 0; while (k < 100 && ALL_Q[k] < v) k++;
