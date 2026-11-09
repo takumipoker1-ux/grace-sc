@@ -32,6 +32,7 @@ META = {
     "taiken-nagare":          ("体", "はじめての夜職"),
     "mensetsu-ukaru":         ("面", "はじめての夜職"),
     "scout-mikiburi":         ("見", "スカウトの見極め"),
+    "scout-kangen-kiken":     ("還", "スカウト選び"),
     "noruma-penalty":         ("制", "お金と制度"),
     "shimei-3months":         ("指", "売上と指名"),
     "kakuteishinkoku":        ("税", "お金と制度"),
