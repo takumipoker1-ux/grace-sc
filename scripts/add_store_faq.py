@@ -49,7 +49,7 @@ def build(page):
     m = H1.search(page)
     if not m:
         return None, []
-    name = text(m.group(1))
+    name = text(re.sub(r'<span[^>]*>.*?</span>', '', m.group(1), flags=re.S))  # 見出し内のバッジ（「ぞの激推し」等）は店名に含めない
     d = {}
     for k, v in TILE.findall(page) + ROW.findall(page):
         k, v = text(k), text(v)
