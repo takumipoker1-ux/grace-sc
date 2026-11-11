@@ -20,8 +20,8 @@
   <link rel="stylesheet" href="/assets/tailwind.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" /></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&display=optional" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&display=optional" rel="stylesheet" /></noscript>
   <style>
     html { scroll-behavior: smooth; }
     h1, h2, h3 { font-family: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif; }
@@ -35,11 +35,10 @@
     }
     .section-dark { background: #111; }
     .gold-line { border-color: #c9a96e; }
-    /* 読みやすさ：暗い地の灰色文字と、明るい地の金文字を4.5:1以上に（2026-11-11） */
+    /* 読みやすさ：暗い地の灰色文字を4.5:1以上に（2026-11-11）。白地の金文字は元の金のまま */
     section.bg-brand-dark .text-gray-500, section.bg-brand-charcoal .text-gray-500, section.hero-bg .text-gray-500, section.hero-bg .text-gray-600, footer .text-gray-500, footer .text-gray-600 { color: #8f8773; }
     footer a.text-gray-500:hover { color: #d1d5db; }
     footer a { display: inline-block; padding: .75rem .25rem; }
-    section.bg-white .text-brand-gold, section.bg-gray-50 .text-brand-gold { color: #7d6230; }
   </style>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
