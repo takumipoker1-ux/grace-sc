@@ -149,3 +149,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
   .article-body p,.article-body li{font-size:.97rem;line-height:1.9}
   .article-body h2{font-size:1.22rem;margin-top:2.6rem}
 }
+
+/* ---------- 読みやすさ：灰色の補足文字を地色に対して4.5:1以上に（2026-11-11） ---------- */
+.text-gray-500,.text-gray-600{color:var(--text-3)!important}
+a.text-gray-500:hover{color:var(--text)!important}

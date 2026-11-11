@@ -125,3 +125,9 @@ html.rv-init .rv-blur{filter:none!important}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---------- 読みやすさ：灰色の補足文字を地色に対して4.5:1以上に（2026-11-11） ---------- */
+.text-gray-500,.text-gray-600,.text-gray-700{color:var(--text-3)!important}
+a.text-gray-500:hover{color:var(--text)!important}
+.mark-ng{color:#7a8191!important}
+.kiroku .k-no,.k-table th,.k-note{color:#665f50!important}
