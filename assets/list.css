@@ -5,7 +5,7 @@
 :root{
   --ink-0:#0b0a08; --ink-1:#14120e;
   --rule:rgba(214,196,160,.16); --rule-strong:rgba(214,196,160,.32);
-  --text:#ddd7c9; --text-2:#a49b87; --text-3:#7d7563; --head:#f2ecdf;
+  --text:#ddd7c9; --text-2:#a49b87; --text-3:#8f8773; --head:#f2ecdf;
   --gold:#c9a96e; --gold-2:#e3cc9a; --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
 }
 

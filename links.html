@@ -22,7 +22,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" /></noscript>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
@@ -30,7 +32,7 @@
     .jp-nobreak { display: inline-block; }
 
     body {
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic UI', Meiryo, sans-serif;
       background: linear-gradient(180deg, #07090e 0%, #0c1017 55%, #10141d 100%);
       min-height: 100vh;
       color: #b7bcc6;

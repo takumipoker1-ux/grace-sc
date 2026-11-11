@@ -21,10 +21,12 @@
   <title>GRACE SELECTION｜キャバクラ・ラウンジ専属スカウト</title>
   <link rel="stylesheet" href="/assets/tailwind.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" /></noscript>
   <style>
     html { scroll-behavior: smooth; }
-    h1, h2, h3 { font-family: 'Shippori Mincho', 'Noto Serif JP', serif; }
+    h1, h2, h3 { font-family: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif; }
     /* 日本語の不自然な改行を防ぐ */
     h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
     .jp-keep { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
@@ -32,7 +34,7 @@
 
     /* ===== 夜の記録：デザイントークン ===== */
     body { background: #0b0f16; }
-    .mincho { font-family: 'Shippori Mincho', 'Noto Serif JP', serif; }
+    .mincho { font-family: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif; }
     .amber { color: #d9a441; }
     .mist { color: #6e7686; }
     .fog { color: #b7bcc6; }
@@ -54,7 +56,7 @@
     .film-bar { height: clamp(22px, 3.5vw, 40px); background: #000; }
 
     .scene-label { font-size: 11px; letter-spacing: .34em; color: #6e7686; }
-    .subtitle { font-family: 'Shippori Mincho', 'Noto Serif JP', serif; font-weight: 500; letter-spacing: .12em; }
+    .subtitle { font-family: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif; font-weight: 500; letter-spacing: .12em; }
     /* ヒーロー見出し：13文字×字間が320〜430px幅で溢れないようvw連動 */
     .hero-h1 { font-size: clamp(20px, 5.9vw, 42px); letter-spacing: .06em; line-height: 1.75; }
     @media (min-width: 768px) { .hero-h1 { letter-spacing: .14em; line-height: 2; } }
@@ -148,7 +150,7 @@
     }
     .toc-grid a:hover { color: #fff; border-bottom-color: rgba(217,164,65,.45); }
     .toc-no {
-      font-family: 'Shippori Mincho', 'Noto Serif JP', serif; font-style: normal;
+      font-family: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif; font-style: normal;
       font-size: .7rem; letter-spacing: .08em; color: #d9a441;
       min-width: 1.9em; flex-shrink: 0;
     }
@@ -270,12 +272,12 @@
     </div>
 
   <!-- ========== SCENE 01 / HERO ========== -->
-  <section class="night-hero min-h-screen flex flex-col justify-center items-center px-6 py-24 pt-32 text-center relative overflow-hidden rv-group">
+  <section class="night-hero min-h-screen flex flex-col justify-center items-center px-6 py-24 pt-32 text-center relative overflow-hidden rv-group on">
     <div class="film-bar absolute top-14 left-0 right-0"></div>
 
     <div class="max-w-2xl mx-auto relative z-10">
       <p class="hero-kicker rv rv-blur">キャバクラ・ラウンジ専属エージェント</p>
-      <h1 class="subtitle hero-h1 text-white mb-4 rv rv-blur">340店舗以上を自分の足で見てきたスカウトが、店選びから面接まで一緒に行きます。</h1>
+      <h1 class="subtitle hero-h1 text-white mb-4 rv rv-blur"><span class="jp-nobreak">340店舗以上を</span><span class="jp-nobreak">自分の足で</span><span class="jp-nobreak">見てきた</span><span class="jp-nobreak">スカウトが、</span><span class="jp-nobreak">店選びから</span><span class="jp-nobreak">面接まで</span><span class="jp-nobreak">一緒に</span><span class="jp-nobreak">行きます。</span></h1>
 
       <p class="subtitle hero-lead jp-keep text-sm md:text-lg fog mb-6 rv rv-blur" style="--d:.6s;">
           <span class="lead-line">未経験でも大丈夫です。「時給って高いの？」の状態で来てもらって構いません。店選びから指名の取り方・SNSの使い方まで、<span class="amber">1から10まで</span>教えます。</span>

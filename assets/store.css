@@ -1,0 +1,58 @@
+/* =====================================================================
+   store.css — 店舗ページ（stores/*.html）共通の見た目（2026-11-11）
+   各店舗ページの <head> 末尾で読み込む。トップ（home.css）・記事（article.css）と
+   同じ調子に揃える：暖色の黒・明朝の見出し・差し色は金だけ。緑はLINEボタンにのみ残す。
+   HTML側のクラスは変えず、ここで上書きする。
+   ===================================================================== */
+:root{
+  --ink-0:#0b0a08; --ink-1:#14120e; --ink-2:#1a1712;
+  --rule:rgba(214,196,160,.16); --rule-strong:rgba(214,196,160,.32);
+  --text:#ddd7c9; --text-2:#a49b87; --text-3:#8f8773; --head:#f2ecdf;
+  --gold:#c9a96e; --gold-2:#e3cc9a; --line:#06C755;
+  --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+}
+
+/* ---------- 地色・罫線 ---------- */
+body{background:var(--ink-0)!important;color:var(--text)}
+[class*="bg-[#0d0d0d]"],[class*="bg-[#0f0f0f]"],[class*="bg-[#0a0a0a]"]{background-color:var(--ink-0)!important}
+[class*="bg-[#111111]"],[class*="bg-[#111]"]{background-color:var(--ink-1)!important}
+[class*="bg-[#1a1a1a]"]{background-color:var(--ink-2)!important}
+[class*="border-white/10"]{border-color:var(--rule)!important}
+[class*="border-white/20"]{border-color:var(--rule-strong)!important}
+
+/* ---------- 文字色：灰色を暖色の3段に ---------- */
+.text-gray-400{color:var(--text-2)!important}
+.text-gray-500,.text-gray-600{color:var(--text-3)!important}
+
+/* ---------- 見出し：明朝 ---------- */
+h1,h2{font-family:var(--mincho);font-weight:600!important;color:var(--head)!important;letter-spacing:.02em}
+section h3,aside h3{font-family:var(--mincho);font-weight:600!important;color:var(--head)!important}
+
+/* ---------- 緑の差し色 → 金 ---------- */
+.text-brand-mintDark,.text-brand-mint,.text-green-700{color:var(--gold)!important}
+/* エリア・業態のピル → 小さな明朝の一行（記事ページのカテゴリ表記と同じ） */
+span[class*="bg-green-50"][class*="rounded-full"]{
+  background:none!important;border:0!important;padding:0!important;border-radius:0!important;
+  font-family:var(--mincho);font-weight:600;letter-spacing:.1em;color:var(--gold)!important;font-size:.8rem!important;
+}
+span[class*="bg-green-50"][class*="rounded-full"] + span[class*="bg-green-50"][class*="rounded-full"]::before{content:"／";margin-right:.5rem;color:var(--text-3)}
+/* 「体入・面接サポート」の明るい箱 → 金の罫の暗い箱 */
+div[class*="bg-green-50"]{background:var(--ink-2)!important;border-color:rgba(201,169,110,.4)!important}
+div[class*="bg-green-50"] h3{color:var(--head)!important}
+div[class*="bg-green-50"] p{color:var(--text-2)!important}
+[class*="bg-green-100"]{background:rgba(201,169,110,.12)!important}
+[class*="border-green-100"],[class*="border-green-200"]{border-color:rgba(201,169,110,.4)!important}
+
+/* ---------- LINEボタン：角を他ページと同じに ---------- */
+a[href*="line.me"]{border-radius:6px!important;box-shadow:none!important}
+
+/* ---------- パンくず・フッター：押しやすさ ---------- */
+[class*="pt-14"] a{color:var(--text-3);display:inline-block;padding:.9rem 0;margin:-.9rem 0}
+[class*="pt-14"] a:hover{color:var(--gold)}
+footer{background:var(--ink-1)!important;border-top:1px solid var(--rule);margin-top:0!important}
+footer p.font-bold{font-family:var(--mincho);font-weight:600!important;letter-spacing:.16em;color:#d9a441!important}
+footer a{display:inline-block;padding:.75rem .25rem!important}
+
+/* ---------- 品質の下限 ---------- */
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
