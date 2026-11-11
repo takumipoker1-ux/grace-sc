@@ -79,6 +79,8 @@
   </script>
   <script src="/assets/js/cta-tracker.js" defer></script>
   <link rel="stylesheet" href="/assets/article.css" />
+  <!-- BREADCRUMB_JSONLD_v1 -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://grace-sc.com/"}, {"@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://grace-sc.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "歌舞伎町の実態", "item": "https://grace-sc.com/articles/kabukicho-guide.html"}]}</script>
 </head>
 <body class="font-sans text-gray-200 bg-[#0d0d0d]">
 
@@ -114,8 +116,16 @@
       </nav>
     </div>
 
-    <section class="pt-24 pb-10 px-6 bg-[#0d0d0d] border-b border-white/10">
-    <div class="max-w-2xl mx-auto">
+    <div class="pt-14 bg-[#111111] border-b border-white/10">
+    <nav aria-label="パンくずリスト" class="max-w-2xl mx-auto px-6 py-3 text-xs text-gray-500 flex gap-2">
+      <a href="/" class="hover:text-[#c9a96e] shrink-0">トップ</a><span class="shrink-0" aria-hidden="true">/</span>
+      <a href="/articles/" class="hover:text-[#c9a96e] shrink-0">記事一覧</a><span class="shrink-0" aria-hidden="true">/</span>
+      <span class="text-gray-400" aria-current="page" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">歌舞伎町の実態</span>
+    </nav>
+  </div>
+
+  <section class="pb-10 px-6 bg-[#0d0d0d] border-b border-white/10">
+    <div class="max-w-2xl mx-auto pt-8">
       <div class="flex gap-2 mb-4">
         <span class="text-xs bg-white/10 text-gray-300 font-bold px-3 py-1 rounded-full border border-white/20">エリア・店舗選び</span>
       </div>
@@ -142,6 +152,7 @@
           <li><a href="#s3">競争の激しさ</a></li>
           <li><a href="#s4">歌舞伎町が向いている人</a></li>
           <li><a href="#s5">歌舞伎町から移籍を考えている人へ</a></li>
+            <li><a href="#area-stores">新宿・歌舞伎町の掲載店舗</a></li>
           </ol>
         </nav>
     <h2 id="s1">歌舞伎町の客層</h2>
@@ -189,6 +200,50 @@
       </div>
     </div>
   </section>
+  <!-- AREA_STORES_v1 -->
+  <section id="area-stores" class="py-10 px-6 bg-[#0d0d0d] border-t border-white/10" style="scroll-margin-top:5rem">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-lg font-bold text-white mb-3">新宿・歌舞伎町の掲載店舗</h2>
+      <p class="text-sm text-gray-400 leading-relaxed mb-5">店舗ページには、時給・ノルマ・ペナルティ・送りなどの条件を載せています。店舗訪問・面接同行・聞き取りで集めた情報で、条件は変わることがあるため、最新の条件は相談のときに確認しています。</p>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/kingdom-queen.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">キングダムクイーン</a>
+        <a href="/stores/dearest.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ディアレスト</a>
+        <a href="/stores/velluge.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ヴェルージュ （元ディアレスト）</a>
+        <a href="/stores/cellix.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">セリュックス</a>
+        <a href="/stores/poseidon-shinjuku.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ポセイドン新宿</a>
+        <a href="/stores/bene-tokyo.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ベネ東京</a>
+        <a href="/stores/fabric-lounge-shinjuku.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ファブリックラウンジ新宿</a>
+        <a href="/stores/gentlemans-club.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ジェントルマンズクラブ</a>
+        <a href="/stores/asian-club.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">アジアンクラブ</a>
+        <a href="/stores/solomon.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ソロモン（元フォーセンス）</a>
+        <a href="/stores/bacheron.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">club BACHERON（バシュロン）</a>
+        <a href="/stores/orange-terrace.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">オレンジテラス（新宿）</a>
+        <a href="/stores/vixy.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ヴィクシー（元ドンフィン）</a>
+        <a href="/stores/lealys.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">LEALYS TOKYO（リアリストウキョウ）</a>
+        <a href="/stores/wave-shinjuku.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ウェーブ（元イロハ）</a>
+        <a href="/stores/otto.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">otto（オット）</a>
+        <a href="/stores/now-shinjuku.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ナウ（元アンジュ）</a>
+        <a href="/stores/eterna.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ETERNA（エテルナ）</a>
+        <a href="/stores/club-aoi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">クラブアオイ</a>
+        <a href="/stores/kalmia-night.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">夜カルミア（元:夜スパークル）</a>
+        <a href="/stores/club-r-shinjuku.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">R（アール）</a>
+        <a href="/stores/selene-shinjuku.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">セレネ（新宿）</a>
+        <a href="/stores/guest-morning.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ゲストモーニング（元レヴューモーニング）</a>
+        <a href="/stores/anela.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">アネラ（元ソムニオ）</a>
+        <a href="/stores/rinno-kaze.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">倫乃風（りんのかぜ）</a>
+        <a href="/stores/nexus-shinjuku.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">NEXUS（ネクサス）</a>
+        <a href="/stores/globe-shinjuku.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">グローブ</a>
+        <a href="/stores/kalmia-morning.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">朝KALMIA（カルミア）（元朝アネラ）</a>
+        <a href="/stores/charme.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Charme（シャルム）（元デザイア）</a>
+        <a href="/stores/now-morning.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">朝ナウ（元朝シェルター）</a>
+        <a href="/stores/highschool-nana.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ハイスクールナナプラザ</a>
+        <a href="/stores/bene.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ベネ</a>
+        <a href="/stores/fabric-shinjuku.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ファブリック（新宿）</a>
+        <a href="/stores/poseidon.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ポセイドン</a>
+      </div>
+    </div>
+  </section>
+
     <!-- AUTHOR_BIO_BLOCK_v1 -->
   <section class="py-12 px-6 bg-[#0d0d0d] border-y border-white/10">
     <div class="max-w-2xl mx-auto">

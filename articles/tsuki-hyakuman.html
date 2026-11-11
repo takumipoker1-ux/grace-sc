@@ -79,6 +79,8 @@
   </script>
   <script src="/assets/js/cta-tracker.js" defer></script>
   <link rel="stylesheet" href="/assets/article.css" />
+  <!-- BREADCRUMB_JSONLD_v1 -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://grace-sc.com/"}, {"@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://grace-sc.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "月100万稼げる子と稼げない子、何が違うのか", "item": "https://grace-sc.com/articles/tsuki-hyakuman.html"}]}</script>
 </head>
 <body class="font-sans text-gray-200 bg-[#0d0d0d]">
 
@@ -114,8 +116,16 @@
       </nav>
     </div>
 
-  <section class="pt-24 pb-10 px-6 bg-[#0d0d0d] border-b border-white/10">
-    <div class="max-w-2xl mx-auto">
+  <div class="pt-14 bg-[#111111] border-b border-white/10">
+    <nav aria-label="パンくずリスト" class="max-w-2xl mx-auto px-6 py-3 text-xs text-gray-500 flex gap-2">
+      <a href="/" class="hover:text-[#c9a96e] shrink-0">トップ</a><span class="shrink-0" aria-hidden="true">/</span>
+      <a href="/articles/" class="hover:text-[#c9a96e] shrink-0">記事一覧</a><span class="shrink-0" aria-hidden="true">/</span>
+      <span class="text-gray-400" aria-current="page" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">月100万稼げる子と稼げない子、何が違うのか</span>
+    </nav>
+  </div>
+
+  <section class="pb-10 px-6 bg-[#0d0d0d] border-b border-white/10">
+    <div class="max-w-2xl mx-auto pt-8">
       <div class="flex gap-2 mb-4">
         <span class="text-xs bg-[#c9a96e]/10 text-[#c9a96e] font-bold px-3 py-1 rounded-full border border-[#c9a96e]/20">売上・指名術</span>
       </div>

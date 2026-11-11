@@ -79,6 +79,8 @@
   </script>
   <script src="/assets/js/cta-tracker.js" defer></script>
   <link rel="stylesheet" href="/assets/article.css" />
+  <!-- BREADCRUMB_JSONLD_v1 -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://grace-sc.com/"}, {"@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://grace-sc.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "池袋で稼ぐための条件整理", "item": "https://grace-sc.com/articles/ikebukuro-guide.html"}]}</script>
 </head>
 <body class="font-sans text-gray-200 bg-[#0d0d0d]">
 
@@ -114,8 +116,16 @@
       </nav>
     </div>
 
-    <section class="pt-24 pb-10 px-6 bg-[#0d0d0d] border-b border-white/10">
-    <div class="max-w-2xl mx-auto">
+    <div class="pt-14 bg-[#111111] border-b border-white/10">
+    <nav aria-label="パンくずリスト" class="max-w-2xl mx-auto px-6 py-3 text-xs text-gray-500 flex gap-2">
+      <a href="/" class="hover:text-[#c9a96e] shrink-0">トップ</a><span class="shrink-0" aria-hidden="true">/</span>
+      <a href="/articles/" class="hover:text-[#c9a96e] shrink-0">記事一覧</a><span class="shrink-0" aria-hidden="true">/</span>
+      <span class="text-gray-400" aria-current="page" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">池袋で稼ぐための条件整理</span>
+    </nav>
+  </div>
+
+  <section class="pb-10 px-6 bg-[#0d0d0d] border-b border-white/10">
+    <div class="max-w-2xl mx-auto pt-8">
       <div class="flex gap-2 mb-4">
         <span class="text-xs bg-white/10 text-gray-300 font-bold px-3 py-1 rounded-full border border-white/20">エリア・店舗選び</span>
       </div>
@@ -142,6 +152,7 @@
           <li><a href="#s3">時給相場の目安</a></li>
           <li><a href="#s4">池袋が向いている人</a></li>
           <li><a href="#s5">気をつけること</a></li>
+            <li><a href="#area-stores">池袋の掲載店舗</a></li>
           </ol>
         </nav>
     <h2 id="s1">池袋の客層の特徴</h2>
@@ -206,6 +217,32 @@
       </div>
     </div>
   </section>
+  <!-- AREA_STORES_v1 -->
+  <section id="area-stores" class="py-10 px-6 bg-[#0d0d0d] border-t border-white/10" style="scroll-margin-top:5rem">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-lg font-bold text-white mb-3">池袋の掲載店舗</h2>
+      <p class="text-sm text-gray-400 leading-relaxed mb-5">店舗ページには、時給・ノルマ・ペナルティ・送りなどの条件を載せています。店舗訪問・面接同行・聞き取りで集めた情報で、条件は変わることがあるため、最新の条件は相談のときに確認しています。</p>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/fairy-ikebukuro.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">フェアリー（池袋）</a>
+        <a href="/stores/angel-feather.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">エンジェルフェザー池袋</a>
+        <a href="/stores/seaside-ikebukuro.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">池袋SEASIDE</a>
+        <a href="/stores/red-shoes.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">red shoes（レッドシューズ）</a>
+        <a href="/stores/grande-ikebukuro.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">池袋グランデ</a>
+        <a href="/stores/patina.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">パティーナ（元マチルダ）</a>
+        <a href="/stores/nox.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ノックス（元イブ）</a>
+        <a href="/stores/ferris.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">池袋CLUB Ferris（元クラブゼロ）</a>
+        <a href="/stores/gran-class.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">GRAN CLASS -TOKYO-（元クラブハマー）</a>
+        <a href="/stores/kanaloa.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Kanaloa（カナロア）</a>
+        <a href="/stores/hyakka.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">百華（元フォックス）</a>
+        <a href="/stores/airport-ikb.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">エアポートIKBビジネス</a>
+        <a href="/stores/mezm.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">mezm（元キューブ）</a>
+        <a href="/stores/edition.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Edition（エディション）</a>
+        <a href="/stores/venus-ikebukuro.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Club Venus（ビーナス）</a>
+        <a href="/stores/bize-ikebukuro.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ビゼ（池袋）</a>
+      </div>
+    </div>
+  </section>
+
     <!-- AUTHOR_BIO_BLOCK_v1 -->
   <section class="py-12 px-6 bg-[#0d0d0d] border-y border-white/10">
     <div class="max-w-2xl mx-auto">

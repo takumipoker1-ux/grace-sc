@@ -80,6 +80,8 @@
   </script>
   <script src="/assets/js/cta-tracker.js" defer></script>
   <link rel="stylesheet" href="/assets/article.css" />
+  <!-- BREADCRUMB_JSONLD_v1 -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://grace-sc.com/"}, {"@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://grace-sc.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "六本木エリアガイド", "item": "https://grace-sc.com/articles/roppongi-guide.html"}]}</script>
 </head>
 <body class="font-sans text-gray-200 bg-[#0d0d0d]">
 
@@ -116,11 +118,11 @@
     </div>
 
   <div class="pt-14 bg-[#111111] border-b border-white/10">
-    <div class="max-w-2xl mx-auto px-6 py-3 text-xs text-gray-500 flex gap-2">
-      <a href="/" class="hover:text-[#c9a96e]">トップ</a><span>/</span>
-      <a href="/articles/" class="hover:text-[#c9a96e]">記事一覧</a><span>/</span>
-      <span class="text-gray-400">六本木エリアガイド</span>
-    </div>
+    <nav aria-label="パンくずリスト" class="max-w-2xl mx-auto px-6 py-3 text-xs text-gray-500 flex gap-2">
+      <a href="/" class="hover:text-[#c9a96e] shrink-0">トップ</a><span class="shrink-0" aria-hidden="true">/</span>
+      <a href="/articles/" class="hover:text-[#c9a96e] shrink-0">記事一覧</a><span class="shrink-0" aria-hidden="true">/</span>
+      <span class="text-gray-400" aria-current="page" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">六本木エリアガイド</span>
+    </nav>
   </div>
 
   <section class="pb-10 px-6 bg-[#0f0f0f] border-b border-white/10">
@@ -170,6 +172,7 @@
           <li><a href="#s4">六本木で選ぶべき店の条件</a></li>
           <li><a href="#s5">六本木が向いている人・向いていない人</a></li>
           <li><a href="#s6">六本木で実際に働くなら</a></li>
+            <li><a href="#area-stores">六本木の掲載店舗</a></li>
           </ol>
         </nav>
         <h2 id="s1">六本木という街の特性</h2>
@@ -358,6 +361,45 @@
         </svg>
         LINEで相談する
       </a>
+    </div>
+  </section>
+
+  <!-- AREA_STORES_v1 -->
+  <section id="area-stores" class="py-10 px-6 bg-[#0d0d0d] border-t border-white/10" style="scroll-margin-top:5rem">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-lg font-bold text-white mb-3">六本木の掲載店舗</h2>
+      <p class="text-sm text-gray-400 leading-relaxed mb-5">店舗ページには、時給・ノルマ・ペナルティ・送りなどの条件を載せています。店舗訪問・面接同行・聞き取りで集めた情報で、条件は変わることがあるため、最新の条件は相談のときに確認しています。</p>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/fabric7.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ファブリック7（セブン）</a>
+        <a href="/stores/hisui.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">妃翠（ヒスイ）</a>
+        <a href="/stores/bourj.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ブルジュ</a>
+        <a href="/stores/lyric.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">リリック東京</a>
+        <a href="/stores/ariel-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">アリエル</a>
+        <a href="/stores/bene-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ヴェネ東京六本木</a>
+        <a href="/stores/chic-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">チック</a>
+        <a href="/stores/daytona-morning.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">朝デイトナ</a>
+        <a href="/stores/daytona-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">DAYTONA</a>
+        <a href="/stores/fabric-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ファブリック</a>
+        <a href="/stores/jungle-second.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ジャングルセカンド</a>
+        <a href="/stores/jungle-tokyo.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ジャングルトウキョウ</a>
+        <a href="/stores/lucra-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ルクラ</a>
+        <a href="/stores/muselerva.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ミュゼルヴァ</a>
+        <a href="/stores/nova-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">NOVA roppongi</a>
+        <a href="/stores/nrg-morning.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">朝NRG</a>
+        <a href="/stores/nrg-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">NRG</a>
+        <a href="/stores/poseidon-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ポセイドン</a>
+        <a href="/stores/prima-tokyo.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">prima tokyo（プリマトウキョウ）</a>
+        <a href="/stores/red-dragon.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">レッドドラゴン</a>
+        <a href="/stores/smile-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">SMILE</a>
+        <a href="/stores/sweet-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">スイート</a>
+        <a href="/stores/unjour-tokyo.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">UNJOUR東京（アンジュール）</a>
+        <a href="/stores/xee-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">XEE（ジー）</a>
+        <a href="/stores/zoo-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ZOO</a>
+        <a href="/stores/lalah-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ララァ</a>
+        <a href="/stores/rio-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">リオ六本木店</a>
+        <a href="/stores/bijinchaya-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">美人茶屋</a>
+        <a href="/stores/baron-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">バロン</a>
+      </div>
     </div>
   </section>
 

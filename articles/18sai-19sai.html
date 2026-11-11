@@ -80,6 +80,8 @@
   </script>
   <script src="/assets/js/cta-tracker.js" defer></script>
   <link rel="stylesheet" href="/assets/article.css" />
+  <!-- BREADCRUMB_JSONLD_v1 -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://grace-sc.com/"}, {"@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://grace-sc.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "18歳・19歳の受け入れ", "item": "https://grace-sc.com/articles/18sai-19sai.html"}]}</script>
 </head>
 <body class="font-sans text-gray-200 bg-[#0d0d0d]">
 
@@ -116,11 +118,11 @@
     </div>
 
   <div class="pt-14 bg-[#111111] border-b border-white/10">
-    <div class="max-w-2xl mx-auto px-6 py-3 text-xs text-gray-500 flex gap-2">
-      <a href="/" class="hover:text-[#c9a96e]">トップ</a><span>/</span>
-      <a href="/articles/" class="hover:text-[#c9a96e]">記事一覧</a><span>/</span>
-      <span class="text-gray-400">18歳・19歳の受け入れ</span>
-    </div>
+    <nav aria-label="パンくずリスト" class="max-w-2xl mx-auto px-6 py-3 text-xs text-gray-500 flex gap-2">
+      <a href="/" class="hover:text-[#c9a96e] shrink-0">トップ</a><span class="shrink-0" aria-hidden="true">/</span>
+      <a href="/articles/" class="hover:text-[#c9a96e] shrink-0">記事一覧</a><span class="shrink-0" aria-hidden="true">/</span>
+      <span class="text-gray-400" aria-current="page" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">18歳・19歳の受け入れ</span>
+    </nav>
   </div>
 
   <section class="pb-10 px-6 bg-[#0f0f0f] border-b border-white/10">
@@ -170,6 +172,7 @@
           <li><a href="#s3">エリア別の受け入れ率</a></li>
           <li><a href="#s4">なぜ10代NGの店が多いのか</a></li>
           <li><a href="#s5">10代で店を探すときの進め方</a></li>
+            <li><a href="#teen-stores">20歳未満でも働ける掲載店</a></li>
           </ol>
         </nav>
 
@@ -363,6 +366,75 @@
           <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
         </svg>
         LINEで相談する
+      </a>
+    </div>
+  </section>
+
+  <!-- TEEN_STORES_v1 -->
+  <section id="teen-stores" class="py-10 px-6 bg-[#0d0d0d] border-t border-white/10" style="scroll-margin-top:5rem">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-lg font-bold text-white mb-3">20歳未満でも働ける掲載店</h2>
+      <p class="text-sm text-gray-400 leading-relaxed mb-5">この記事の数字は、2026年8月時点の掲載85店を集計したものです。下の一覧は、いま店舗ページを出している店のうち、20歳未満でも働ける店です。年齢の条件は店ごとに違い、変わることもあるため、最新の条件は相談のときに確認しています。</p>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">六本木</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/fabric-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ファブリック</a>
+        <a href="/stores/nrg-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">NRG</a>
+        <a href="/stores/smile-roppongi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">SMILE</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">新宿・歌舞伎町</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/kalmia-night.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">夜カルミア（元:夜スパークル）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">上野</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/epic-ueno.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">エピック</a>
+        <a href="/stores/capone-ueno.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">上野club Capone（クラブ カポネ）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">銀座</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/chic-ginza.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">銀座チック</a>
+        <a href="/stores/luxsa-ginza.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">銀座ルクサ</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">大宮</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/lalah-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ララァ（大宮）</a>
+        <a href="/stores/dragon-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ドラゴンクラブ</a>
+        <a href="/stores/lupan-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">クラブルパン</a>
+        <a href="/stores/luclub-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ルクラブ</a>
+        <a href="/stores/lege-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">大宮レジェ</a>
+        <a href="/stores/ai-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ai（アイ）</a>
+        <a href="/stores/proud-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">プラウド（元グランデ）</a>
+        <a href="/stores/spacia-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">スペーシア大宮</a>
+        <a href="/stores/modern-times-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">モダンタイムス大宮</a>
+        <a href="/stores/larme-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Lounge LARME（ラウンジラルム）（元クラブラルム）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">川越</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/jill-kawagoe.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">CLUB JILL（クラブジル）</a>
+        <a href="/stores/loulou-kawagoe.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">CLUB Lou Lou（クラブルル）</a>
+        <a href="/stores/innocence-kawagoe.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">club Innocence（イノセンス）</a>
+        <a href="/stores/any-kawagoe.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Club Any（エニー）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">蕨</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/is-warabi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Club I's（クラブアイズ）</a>
+        <a href="/stores/gentlemans-warabi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Gentleman's Club（ジェントルマンズクラブ）</a>
+        <a href="/stores/tantra-warabi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">蕨 TANTRA（タントラ）</a>
+        <a href="/stores/ms-warabi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Club M's（クラブエムズ）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">草加</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/visconti-soka.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">VISCONTI（ヴィスコンティ）</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE_LINK_v1 -->
+  <section class="py-8 px-6 bg-[#0d0d0d] border-t border-white/10">
+    <div class="max-w-2xl mx-auto">
+      <a href="/articles/miken-hajimekata.html" class="block bg-[#1a1a1a] rounded-xl p-5 border border-[#c9a96e]/30 hover:border-[#c9a96e]/60 transition-colors">
+        <span class="block text-xs font-bold text-[#c9a96e] mb-1">はじめての人へ</span>
+        <span class="block text-sm font-bold text-white leading-snug">キャバクラ未経験の始め方。読む順番と、ぞのが一緒にやること</span>
       </a>
     </div>
   </section>

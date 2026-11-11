@@ -80,6 +80,8 @@
   </script>
   <script src="/assets/js/cta-tracker.js" defer></script>
   <link rel="stylesheet" href="/assets/article.css" />
+  <!-- BREADCRUMB_JSONLD_v1 -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://grace-sc.com/"}, {"@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://grace-sc.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "埼玉エリアガイド", "item": "https://grace-sc.com/articles/saitama-guide.html"}]}</script>
 </head>
 <body class="font-sans text-gray-200 bg-[#0d0d0d]">
 
@@ -116,11 +118,11 @@
     </div>
 
   <div class="pt-14 bg-[#111111] border-b border-white/10">
-    <div class="max-w-2xl mx-auto px-6 py-3 text-xs text-gray-500 flex gap-2">
-      <a href="/" class="hover:text-[#c9a96e]">トップ</a><span>/</span>
-      <a href="/articles/" class="hover:text-[#c9a96e]">記事一覧</a><span>/</span>
-      <span class="text-gray-400">埼玉エリアガイド</span>
-    </div>
+    <nav aria-label="パンくずリスト" class="max-w-2xl mx-auto px-6 py-3 text-xs text-gray-500 flex gap-2">
+      <a href="/" class="hover:text-[#c9a96e] shrink-0">トップ</a><span class="shrink-0" aria-hidden="true">/</span>
+      <a href="/articles/" class="hover:text-[#c9a96e] shrink-0">記事一覧</a><span class="shrink-0" aria-hidden="true">/</span>
+      <span class="text-gray-400" aria-current="page" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">埼玉エリアガイド</span>
+    </nav>
   </div>
 
   <section class="pb-10 px-6 bg-[#0f0f0f] border-b border-white/10">
@@ -169,6 +171,7 @@
           <li><a href="#s3">川越エリア：週末需要が強い観光×繁華街</a></li>
           <li><a href="#s4">東京 vs 埼玉：どちらを選ぶべきか</a></li>
           <li><a href="#s5">埼玉で稼ぐためのポイント</a></li>
+            <li><a href="#area-stores">埼玉の掲載店舗</a></li>
           </ol>
         </nav>
         <h2 id="s1">大宮エリア：埼玉最大の繁華街</h2>
@@ -316,6 +319,107 @@
         </svg>
         LINEで相談する
       </a>
+    </div>
+  </section>
+
+  <!-- AREA_STORES_v1 -->
+  <section id="area-stores" class="py-10 px-6 bg-[#0d0d0d] border-t border-white/10" style="scroll-margin-top:5rem">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-lg font-bold text-white mb-3">埼玉の掲載店舗</h2>
+      <p class="text-sm text-gray-400 leading-relaxed mb-5">店舗ページには、時給・ノルマ・ペナルティ・送りなどの条件を載せています。店舗訪問・面接同行・聞き取りで集めた情報で、条件は変わることがあるため、最新の条件は相談のときに確認しています。</p>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">西川口</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/asian-ritz-nishikawaguchi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ASIAN CLUB Ritz（アジアンクラブリッツ）（元バードオブパラダイス）</a>
+        <a href="/stores/el-queens-nishikawaguchi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">エルクイーンズ（元ネフェルティティ）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">大宮</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/rio-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Rio（リオ、 大宮）</a>
+        <a href="/stores/kagura-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">神楽</a>
+        <a href="/stores/reign-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">CLUB REIGN（クラブレイン）</a>
+        <a href="/stores/gold-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">大宮 GOLD（ゴールド）（キャバクラ）</a>
+        <a href="/stores/lalah-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ララァ（大宮）</a>
+        <a href="/stores/dragon-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ドラゴンクラブ</a>
+        <a href="/stores/lupan-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">クラブルパン</a>
+        <a href="/stores/shiki-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">詩季（しき）</a>
+        <a href="/stores/luclub-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ルクラブ</a>
+        <a href="/stores/tantra-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">大宮 TANTRA（タントラ）</a>
+        <a href="/stores/globe-z-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">グローブＺ</a>
+        <a href="/stores/lege-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">大宮レジェ</a>
+        <a href="/stores/ai-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ai（アイ）</a>
+        <a href="/stores/proud-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">プラウド（元グランデ）</a>
+        <a href="/stores/spacia-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">スペーシア大宮</a>
+        <a href="/stores/modern-times-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">モダンタイムス大宮</a>
+        <a href="/stores/noil-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ノイル</a>
+        <a href="/stores/eight-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">CLUB エイト（クラブエイト）</a>
+        <a href="/stores/giselle-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ジゼル</a>
+        <a href="/stores/larme-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Lounge LARME（ラウンジラルム）（元クラブラルム）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">南越谷</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/planb-minamikoshigaya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Plan b（プランビー）</a>
+        <a href="/stores/leger-minamikoshigaya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">南越谷 club Leger（クラブレジェ）⭐ ぞの激推し</a>
+        <a href="/stores/president-minamikoshigaya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">プレジデント</a>
+        <a href="/stores/amon-minamikoshigaya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">アモン</a>
+        <a href="/stores/serene-minamikoshigaya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">セレネ（元ビビスタイル）</a>
+        <a href="/stores/aqua-minamikoshigaya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">アクア ☆ レーベル</a>
+        <a href="/stores/fineplus-minamikoshigaya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">南越谷ファインプラス</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">川越</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/jill-kawagoe.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">CLUB JILL（クラブジル）</a>
+        <a href="/stores/gracia-kawagoe.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">川越 GRACIA（グラシア）</a>
+        <a href="/stores/loulou-kawagoe.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">CLUB Lou Lou（クラブルル）</a>
+        <a href="/stores/innocence-kawagoe.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">club Innocence（イノセンス）</a>
+        <a href="/stores/any-kawagoe.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Club Any（エニー）</a>
+        <a href="/stores/regina-kawagoe.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Club Regina（レジーナ）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">蕨</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/is-warabi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Club I's（クラブアイズ）</a>
+        <a href="/stores/gentlemans-warabi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Gentleman's Club（ジェントルマンズクラブ）</a>
+        <a href="/stores/tantra-warabi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">蕨 TANTRA（タントラ）</a>
+        <a href="/stores/ms-warabi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Club M's（クラブエムズ）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">志木</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/luxe-shiki.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Luxury Lounge LUXE（志木リュクス）</a>
+        <a href="/stores/mellow-shiki.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">メローメロー（元エグゼクティブコレクション）</a>
+        <a href="/stores/elm-shiki.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">エルムガーデン</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">所沢</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/gaia-tokorozawa.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ガイアジャスパー（元ガイア）</a>
+        <a href="/stores/babylon-tokorozawa.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">BABYLON-TOKOROZAWA-（バビロン）</a>
+        <a href="/stores/forever-tokorozawa.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">フォーエバー</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">川口</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/biblos-kawaguchi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">川口ビブロス</a>
+        <a href="/stores/lege-kawaguchi.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">クラブレジェ川口（元ナイトカフェレジェ）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">せんげん台</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/platinum-sengendai.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">PLATINUM（プラチナム）</a>
+        <a href="/stores/madonna-sengendai.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ニューマドンナ</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">草加</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/visconti-soka.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">VISCONTI（ヴィスコンティ）</a>
+        <a href="/stores/sakura-soka.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">CLUB SAKURA（クラブサクラ）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">上福岡</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/sky-kamifukuoka.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">Lounge SKY（ラウンジスカイ）（元リップ）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">南浦和</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/reine-minamiurawa.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">CLUB REINE（クラブレーヌ）</a>
+      </div>
+      <h3 class="text-sm font-bold text-gray-200 mt-6 mb-2">八潮</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/passion-yashio.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">CLUB PASSION（クラブパッション）</a>
+      </div>
     </div>
   </section>
 

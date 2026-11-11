@@ -80,6 +80,8 @@
   </script>
   <script src="/assets/js/cta-tracker.js" defer></script>
   <link rel="stylesheet" href="/assets/article.css" />
+  <!-- BREADCRUMB_JSONLD_v1 -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://grace-sc.com/"}, {"@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://grace-sc.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "錦糸町エリアガイド", "item": "https://grace-sc.com/articles/kinshicho-guide.html"}]}</script>
 </head>
 <body class="font-sans text-gray-200 bg-[#0d0d0d]">
 
@@ -116,11 +118,11 @@
     </div>
 
   <div class="pt-14 bg-[#111111] border-b border-white/10">
-    <div class="max-w-2xl mx-auto px-6 py-3 text-xs text-gray-500 flex gap-2">
-      <a href="/" class="hover:text-[#c9a96e]">トップ</a><span>/</span>
-      <a href="/articles/" class="hover:text-[#c9a96e]">記事一覧</a><span>/</span>
-      <span class="text-gray-400">錦糸町エリアガイド</span>
-    </div>
+    <nav aria-label="パンくずリスト" class="max-w-2xl mx-auto px-6 py-3 text-xs text-gray-500 flex gap-2">
+      <a href="/" class="hover:text-[#c9a96e] shrink-0">トップ</a><span class="shrink-0" aria-hidden="true">/</span>
+      <a href="/articles/" class="hover:text-[#c9a96e] shrink-0">記事一覧</a><span class="shrink-0" aria-hidden="true">/</span>
+      <span class="text-gray-400" aria-current="page" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">錦糸町エリアガイド</span>
+    </nav>
   </div>
 
   <section class="pb-10 px-6 bg-[#0f0f0f] border-b border-white/10">
@@ -165,6 +167,7 @@
           <li><a href="#s2">錦糸町で稼ぎやすい子の特徴</a></li>
           <li><a href="#s3">錦糸町で選ぶべき店の条件</a></li>
           <li><a href="#s4">錦糸町で実際に働くなら</a></li>
+            <li><a href="#area-stores">錦糸町の掲載店舗</a></li>
           </ol>
         </nav>
         <h2 id="s1">錦糸町という街の特性</h2>
@@ -288,6 +291,23 @@
         </svg>
         LINEで相談する
       </a>
+    </div>
+  </section>
+
+  <!-- AREA_STORES_v1 -->
+  <section id="area-stores" class="py-10 px-6 bg-[#0d0d0d] border-t border-white/10" style="scroll-margin-top:5rem">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-lg font-bold text-white mb-3">錦糸町の掲載店舗</h2>
+      <p class="text-sm text-gray-400 leading-relaxed mb-5">店舗ページには、時給・ノルマ・ペナルティ・送りなどの条件を載せています。店舗訪問・面接同行・聞き取りで集めた情報で、条件は変わることがあるため、最新の条件は相談のときに確認しています。</p>
+      <div class="grid grid-cols-2 gap-2">
+        <a href="/stores/ren-kinshicho.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">クラブ蓮（レン）錦糸町</a>
+        <a href="/stores/victoria.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ビクトリア</a>
+        <a href="/stores/regalia.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">クラブレガリア</a>
+        <a href="/stores/rebel.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">レブル</a>
+        <a href="/stores/garimpo.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">GARIMPO（ガリンポ）</a>
+        <a href="/stores/viola.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ヴィオラ</a>
+        <a href="/stores/bianca.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">club Bianca（クラブビアンカ）</a>
+      </div>
     </div>
   </section>
 
