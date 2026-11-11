@@ -42,6 +42,8 @@ html{scroll-behavior:smooth}.card-shadow{box-shadow:0 2px 20px rgba(0,0,0,0.5)}<
   </script>
   <script src="/assets/js/cta-tracker.js" defer></script>
   <link rel="stylesheet" href="/assets/store.css" />
+  <!-- BREADCRUMB_JSONLD_v1 -->
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://grace-sc.com/"}, {"@type": "ListItem", "position": 2, "name": "店舗・求人一覧", "item": "https://grace-sc.com/stores/"}, {"@type": "ListItem", "position": 3, "name": "ララァ（大宮）", "item": "https://grace-sc.com/stores/lalah-omiya.html"}]}</script>
 </head>
 <body class="font-sans text-gray-200 bg-[#0d0d0d]">
 
@@ -77,7 +79,17 @@ html{scroll-behavior:smooth}.card-shadow{box-shadow:0 2px 20px rgba(0,0,0,0.5)}<
       </nav>
     </div>
 
-  <section class="bg-[#0f0f0f] pt-20 pb-8 px-6 border-b border-white/10">
+  <div class="pt-14 bg-[#111111] border-b border-white/10">
+    <nav aria-label="パンくずリスト" class="max-w-4xl mx-auto px-6 py-3 text-xs text-gray-400 flex items-center gap-2">
+      <a href="/" class="hover:text-[#c9a96e] shrink-0">トップ</a>
+      <span class="shrink-0" aria-hidden="true">›</span>
+      <a href="/stores/" class="hover:text-[#c9a96e] shrink-0">店舗・求人一覧</a>
+      <span class="shrink-0" aria-hidden="true">›</span>
+      <span class="text-gray-300" aria-current="page" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0">ララァ（大宮）</span>
+    </nav>
+  </div>
+
+  <section class="bg-[#0f0f0f] pb-8 px-6 border-b border-white/10">
     <div class="max-w-4xl mx-auto pt-8">
       <div class="flex items-start justify-between flex-wrap gap-4 mb-6">
         <div>
@@ -88,9 +100,9 @@ html{scroll-behavior:smooth}.card-shadow{box-shadow:0 2px 20px rgba(0,0,0,0.5)}<
           <h1 class="text-2xl md:text-3xl font-bold text-white mb-2">ララァ（大宮）</h1>
           <p class="text-sm text-gray-400"> 　営業時間：19時～25時</p>
         </div>
-        <a href="https://line.me/ti/p/_7nv0bKuRC" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold px-6 py-3 rounded-full shadow transition-colors shrink-0">
+        <a href="https://line.me/ti/p/_7nv0bKuRC" data-cta-pos="store_top" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold px-6 py-3 rounded-full shadow transition-colors shrink-0">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-          LINEで相談する
+          この店のことをLINEで聞く
         </a>
       </div>
 
@@ -166,10 +178,31 @@ html{scroll-behavior:smooth}.card-shadow{box-shadow:0 2px 20px rgba(0,0,0,0.5)}<
     <div class="max-w-xl mx-auto text-center">
       <h2 class="text-xl font-bold text-white mb-2">体入・面接のサポート</h2>
       <p class="text-sm text-gray-400 mb-7">条件交渉・同行対応まで一貫対応。まずはLINEでご相談ください。</p>
-      <a href="https://line.me/ti/p/_7nv0bKuRC" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold px-8 py-4 rounded-full shadow-lg transition-all">
+      <a href="https://line.me/ti/p/_7nv0bKuRC" data-cta-pos="store_bottom" target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-brand-line hover:bg-brand-lineDark text-white text-sm font-bold px-8 py-4 rounded-full shadow-lg transition-all">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-        LINEで相談する
-      </a>
+          ララァの面接に一緒に行けるか、LINEで聞く
+        </a>
+    </div>
+  </section>
+
+      <!-- AREA_LINKS_v1 -->
+  <section class="py-10 px-6 border-t border-white/10">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-base font-bold text-white mb-4">大宮の他の店舗</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mb-8">
+        <a href="/stores/dragon-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ドラゴンクラブ</a>
+        <a href="/stores/lupan-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">クラブルパン</a>
+        <a href="/stores/shiki-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">詩季（しき）</a>
+        <a href="/stores/luclub-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">ルクラブ</a>
+        <a href="/stores/tantra-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">大宮 TANTRA（タントラ）</a>
+        <a href="/stores/globe-z-omiya.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">グローブＺ</a>
+      </div>
+      <h2 class="text-base font-bold text-white mb-4">埼玉で働く前に読む記事</h2>
+      <div class="space-y-2">
+        <a href="/articles/saitama-guide.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">埼玉キャバクラ 完全ガイド｜大宮・南越谷・川越のエリア特性と稼ぎ方</a>
+        <a href="/articles/taiken-nagare.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">キャバクラの体入って何をするの？当日の流れと持ち物</a>
+        <a href="/articles/mensetsu-ukaru.html" class="block text-sm text-gray-300 hover:text-brand-mintDark py-2 border-b border-white/10">キャバクラの面接で落ちることはある？受かる子との違い</a>
+      </div>
     </div>
   </section>
 
