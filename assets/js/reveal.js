@@ -12,6 +12,8 @@
     if (section.classList.contains('rv-group')) return;
     // 最初の区間（ページ冒頭の見出し）は演出しない：一度隠すと最初の表示が遅れる（2026-11-11）
     if (idx === 0) return;
+    // 開いた時点で画面内に入っている区間も演出しない：冒頭の本文が隠れると LCP が遅れる（2026-11-11）
+    if (section.getBoundingClientRect().top < (window.innerHeight || 0)) return;
 
     // セクション直下が単一ラッパーならその子要素を時間差で、そうでなければ直下の子を対象に
     var wrap = section.children.length === 1 ? section.children[0] : section;
