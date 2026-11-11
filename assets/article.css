@@ -153,3 +153,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 /* ---------- 読みやすさ：灰色の補足文字を地色に対して4.5:1以上に（2026-11-11） ---------- */
 .text-gray-500,.text-gray-600{color:var(--text-3)!important}
 a.text-gray-500:hover{color:var(--text)!important}
+
+/* ---------- 押しやすさ：著者欄の導線（2026-11-11） ---------- */
+section[class*="border-y"] div.flex-wrap > a{padding:.85rem 0}
+section[class*="border-y"] div.flex-wrap > a:not(.flex){display:inline-block}

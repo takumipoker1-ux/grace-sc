@@ -52,6 +52,10 @@ a[href*="line.me"]{border-radius:6px!important;box-shadow:none!important}
 footer{background:var(--ink-1)!important;border-top:1px solid var(--rule);margin-top:0!important}
 footer p.font-bold{font-family:var(--mincho);font-weight:600!important;letter-spacing:.16em;color:#d9a441!important}
 footer a{display:inline-block;padding:.75rem .25rem!important}
+/* 一覧の「詳細」「相談」、エリア・時給の切替ボタン、関連記事への導線 */
+a[class*="flex-1"][class*="text-center"],section button{min-height:44px}
+a[class*="flex-1"][class*="text-center"]{display:flex;align-items:center;justify-content:center}
+a[href^="/articles/"][class*="text-xs"]{display:inline-block;padding:.8rem 0;margin:-.8rem 0}
 
 /* ---------- 品質の下限 ---------- */
 a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}

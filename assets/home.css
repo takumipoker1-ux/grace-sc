@@ -130,4 +130,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offse
 .text-gray-500,.text-gray-600,.text-gray-700{color:var(--text-3)!important}
 a.text-gray-500:hover{color:var(--text)!important}
 .mark-ng{color:#7a8191!important}
-.kiroku .k-no,.k-table th,.k-note{color:#665f50!important}
+.kiroku .k-no,.kiroku .k-note,.kiroku .k-table th{color:#665f50!important}
+
+/* ---------- 押しやすさ：タブ・文中の導線・フッターのリンクを44px前後に（2026-11-11） ---------- */
+button[onclick^="scoutTab"]{min-height:44px}
+footer a{display:inline-block;padding:.75rem .25rem}
+.home-articles-more{display:inline-block;padding:.7rem 0}

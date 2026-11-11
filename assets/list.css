@@ -9,6 +9,9 @@
   --gold:#c9a96e; --gold-2:#e3cc9a; --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
 }
 
+/* 押しやすさ：絞り込みボタンを44pxに（2026-11-11） */
+.filter-btn{min-height:44px}
+
 /* 見出し部 */
 .list-hero{padding-top:7rem!important;padding-bottom:1.5rem!important;border-bottom:0!important}
 .list-hero .list-rule{width:2rem;height:2px;background:var(--gold);margin-bottom:1rem}
