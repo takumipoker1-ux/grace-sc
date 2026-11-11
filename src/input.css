@@ -25,3 +25,6 @@
 @media (prefers-reduced-motion: reduce) {
   .rv-a { opacity: 1; transform: none; transition: none; }
 }
+
+/* 押しやすさ：スマホのメニューボタンを44px四方に（2026-11-11） */
+#mobile-menu-btn { min-width: 44px; min-height: 44px; }

@@ -8,7 +8,7 @@
   --rule:rgba(214,196,160,.16); --rule-strong:rgba(214,196,160,.32);
   --text:#ddd7c9; --text-2:#a49b87; --text-3:#7d7563; --head:#f2ecdf;
   --gold:#c9a96e; --gold-2:#e3cc9a; --line:#06C755;
-  --mincho:"Shippori Mincho","Noto Serif JP",serif;
+  --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
 }
 
 /* ---------- 地色：青みの夜 → 暖色の黒 ---------- */
@@ -44,7 +44,7 @@ section h2{letter-spacing:.02em}
 .hero-h1::before{content:"";position:absolute;top:0;left:0;width:2rem;height:2px;background:var(--gold)}
 .hero-h1 .amber{color:var(--head)!important}          /* 見出し内の一語だけ色を変える癖をやめる */
 .hero-h1 br{display:none}
-.hero-lead,.subtitle.hero-lead{font-family:"Noto Sans JP",sans-serif!important;font-weight:400!important;font-size:15px!important;line-height:1.95!important;letter-spacing:0!important;color:var(--text)!important;text-align:left!important;max-width:38rem}
+.hero-lead,.subtitle.hero-lead{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic UI",Meiryo,sans-serif!important;font-weight:400!important;font-size:15px!important;line-height:1.95!important;letter-spacing:0!important;color:var(--text)!important;text-align:left!important;max-width:38rem}
 .hero-lead .lead-line{display:block;margin:0 0 .75em!important}
 .hero-lead .amber{color:var(--text)!important;font-weight:700}
 .hero-kicker{font-family:var(--mincho);font-size:12px;letter-spacing:.14em;color:var(--gold);font-weight:600;margin-bottom:.4rem}
@@ -76,7 +76,7 @@ section h2{letter-spacing:.02em}
 #s02 h2{text-align:left!important}
 #s02 .flex-col.items-center{align-items:stretch!important}
 #s02 p.text-center{text-align:left!important}
-#s02 .scene-label.mt-10{color:var(--text-2)!important;font-family:"Noto Sans JP",sans-serif;letter-spacing:0!important;font-weight:400}
+#s02 .scene-label.mt-10{color:var(--text-2)!important;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic UI",Meiryo,sans-serif;letter-spacing:0!important;font-weight:400}
 
 /* ---------- カード類 → 罫線のブロック ---------- */
 .card-n{background:none!important;border:0!important;border-top:1px solid var(--rule-strong)!important;border-radius:0!important}

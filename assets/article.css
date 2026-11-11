@@ -3,11 +3,11 @@
    各記事の <head> 末尾で読み込む。既存の Tailwind ユーティリティと
    インライン <style> の後に効かせる前提。方針：
      - 面（カード・角丸・枠線）を減らし、罫線と余白で区切る
-     - 見出しは Shippori Mincho、本文は Noto Sans JP
+     - 見出しは Shippori Mincho、本文はOS標準のゴシック
      - 差し色は金（#c9a96e）だけ。緑はLINEボタンにのみ残す
      - 黒は暖色寄り（紙・革の色味）に寄せる
    ===================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&display=swap');
+/* 書体は各HTMLの <link> で読む（@import は表示を止めるので使わない・2026-11-11） */
 
 :root{
   --ink-0:#0b0a08;          /* ページ地 */
@@ -22,8 +22,8 @@
   --gold:#c9a96e;
   --gold-2:#e3cc9a;
   --line:#06C755;
-  --mincho:"Shippori Mincho","Noto Serif JP",serif;
-  --sans:"Noto Sans JP",sans-serif;
+  --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic UI",Meiryo,sans-serif;
 }
 
 /* ---------- 地色：Tailwind の任意値クラスを暖色に置き換え ---------- */

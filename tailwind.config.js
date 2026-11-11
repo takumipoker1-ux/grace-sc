@@ -24,8 +24,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans:  ['"Noto Sans JP"', 'sans-serif'],
-        serif: ['"Noto Serif JP"', 'serif'],
+        // 本文はOS標準の書体（Webフォントを読まない＝表示が速い）。明朝は Shippori Mincho の1書体だけ読む
+        sans:  ['-apple-system', 'BlinkMacSystemFont', '"Hiragino Sans"', '"Hiragino Kaku Gothic ProN"', '"Noto Sans JP"', '"Yu Gothic UI"', 'Meiryo', 'sans-serif'],
+        serif: ['"Shippori Mincho"', '"Hiragino Mincho ProN"', '"Yu Mincho"', 'serif'],
       },
     },
   },
