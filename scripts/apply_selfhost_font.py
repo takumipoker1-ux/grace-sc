@@ -14,9 +14,12 @@ import io, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIR = {'node_modules', '.git', 'okujo'}
+# 太さごとに2つ。先に書いた「予備」（集めた文字に無い漢字）は、その字がページに出たときだけ読まれる。
 FACE = ''.join(
     "@font-face{font-family:'Shippori Mincho';font-style:normal;font-weight:%s;font-display:optional;"
-    "src:url(/assets/fonts/ShipporiMincho-%s.woff2) format('woff2')}" % (w, w) for w in ('500', '600', '700'))
+    "src:url(/assets/fonts/ShipporiMincho-%s-ext.woff2) format('woff2');unicode-range:U+4E00-9FFF}"
+    "@font-face{font-family:'Shippori Mincho';font-style:normal;font-weight:%s;font-display:optional;"
+    "src:url(/assets/fonts/ShipporiMincho-%s.woff2) format('woff2')}" % (w, w, w, w) for w in ('500', '600', '700'))
 BLOCK = '<style>/* SELF_FONT_v1 */' + FACE + '</style>'
 PRE = re.compile(r'[ \t]*<link rel="preconnect" href="https://fonts\.(?:googleapis|gstatic)\.com"[^>]*>\r?\n')
 LINK = re.compile(r'<link href="https://fonts\.googleapis\.com/css2\?family=Shippori\+Mincho[^"]*" rel="stylesheet" media="print" onload="this\.media=\'all\'" ?/?>')

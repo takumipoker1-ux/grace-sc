@@ -32,6 +32,34 @@ def always():
     return s
 
 
+def jis1_kanji():
+    # JIS 第1水準の漢字（2965字）。よく使う漢字はほぼここに入る
+    out = set()
+    for ku in range(16, 48):
+        for ten in range(1, 95):
+            try:
+                out.add(bytes([0xA0 + ku, 0xA0 + ten]).decode('euc_jp'))
+            except UnicodeDecodeError:
+                pass
+    return out
+
+
+def write_subset(src, dst, chars):
+    opt = subset.Options()
+    opt.flavor = 'woff2'
+    opt.layout_features = ['*']
+    opt.name_IDs = [1, 2, 3, 4, 6, 13, 14]   # 名前とライセンスの記載は残す
+    opt.notdef_outline = True
+    font = subset.load_font(src, opt)
+    cmap = font.getBestCmap()
+    missing = [c for c in chars if ord(c) not in cmap]
+    sub = subset.Subsetter(opt)
+    sub.populate(unicodes=[ord(c) for c in chars])
+    sub.subset(font)
+    subset.save_font(font, dst, opt)
+    return missing
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--src', required=True, help='元の ttf があるフォルダ')
@@ -55,19 +83,13 @@ def main():
         src = os.path.join(a.src, fname)
         if not os.path.exists(src):
             sys.exit('元のファイルが無い: ' + src)
-        opt = subset.Options()
-        opt.flavor = 'woff2'
-        opt.layout_features = ['*']
-        opt.name_IDs = [1, 2, 3, 4, 6, 13, 14]   # 名前とライセンスの記載は残す
-        opt.notdef_outline = True
-        font = subset.load_font(src, opt)
-        cmap = font.getBestCmap()
-        missing = [c for c in chars if ord(c) not in cmap]
-        sub = subset.Subsetter(opt)
-        sub.populate(unicodes=[ord(c) for c in chars])
-        sub.subset(font)
         dst = os.path.join(a.out, 'ShipporiMincho-%s.woff2' % w)
-        subset.save_font(font, dst, opt)
+        missing = write_subset(src, dst, chars)
+        # 予備：集めた文字に無い第1水準の漢字。ページにその字が出たときだけ読まれる（unicode-range で指定）
+        ext = sorted(jis1_kanji() - set(chars))
+        ext_dst = os.path.join(a.out, 'ShipporiMincho-%s-ext.woff2' % w)
+        write_subset(src, ext_dst, ext)
+        print('  予備 %s: %d 字（%.1f KB）' % (os.path.basename(ext_dst), len(ext), os.path.getsize(ext_dst) / 1024.0))
         print('%s: %d 字 → %s（%.1f KB）/ 元の書体に無い字 %d: %s' % (
             w, len(chars) - len(missing), os.path.basename(dst), os.path.getsize(dst) / 1024.0, len(missing), ''.join(missing)[:60]))
     io.open(os.path.join(a.out, 'chars.txt'), 'w', encoding='utf-8', newline='\n').write('\n'.join(listing) + '\n')
