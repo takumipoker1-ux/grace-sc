@@ -12,6 +12,7 @@
         1. push から2分以上たった（＝公開に反映された）変更ページを IndexNow（Bing など）に送る
         2. Google にサイトマップを送り直す（鍵が無ければ保留して、鍵が置かれたら送る）
         3. 1日1回、Google の登録状況を全ページ調べ、外れたページなどがあれば通知する（鍵が必要）
+  python scripts/search_auto.py resync       コミット済みの履歴から <lastmod> を直す（取りこぼしの修正）
   python scripts/search_auto.py check        3 だけを今すぐ行う
   python scripts/search_auto.py status       いまの状態を表示する（鍵の中身は表示しない）
   python scripts/search_auto.py test-notify  通知のテスト
@@ -149,10 +150,23 @@ def file_to_loc(p):
     return p
 
 
-def body_of(html):
-    html = html.replace("\r\n", "\n")
-    m = re.search(r"<body.*?</body>", html, re.S | re.I)
-    return m.group(0) if m else html
+HEAD_PARTS = (r"<title\b[^>]*>.*?</title>",
+              r"<meta\b[^>]*name=[\"'](?:description|robots)[\"'][^>]*>",
+              r"<link\b[^>]*rel=[\"']canonical[\"'][^>]*>",
+              r"<script\b[^>]*application/ld\+json[^>]*>.*?</script>")
+
+
+def signature(html):
+    """検索エンジンが読む部分だけを取り出す：本文の文字・リンク先・画像、title・description・canonical・robots・構造化データ。
+    CSS・フォント・class・JavaScript の変更は数えない（Google は大事な変更だけを lastmod にするよう求めている）"""
+    h = html.replace("\r\n", "\n")
+    m = re.search(r"<body.*?</body>", h, re.S | re.I)
+    b = re.sub(r"<(script|style|noscript)\b[^>]*>.*?</\1>", " ", m.group(0) if m else h, flags=re.S | re.I)
+    links = re.findall(r"<a\b[^>]*href=[\"']([^\"']*)", b, re.I)
+    imgs = [re.findall(r"(?:src|alt)=[\"']([^\"']*)", t, re.I) for t in re.findall(r"<img\b[^>]*>", b, re.I)]
+    text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", b)).strip()
+    head = [re.sub(r"\s+", " ", x) for pat in HEAD_PARTS for x in re.findall(pat, h, re.S | re.I)]
+    return json.dumps([text, links, imgs, head], ensure_ascii=False)
 
 
 def indexable(html, loc):
@@ -199,7 +213,7 @@ def cmd_sitemap():
             html = f.read()
         if loc in entries:
             rc, old = run_git("show", "HEAD:" + p)
-            if (rc != 0 or body_of(old) != body_of(html)) and entries[loc] != day:
+            if (rc != 0 or signature(old) != signature(html)) and entries[loc] != day:
                 updated.append(loc)
         else:
             top = p.split("/", 1)[0] if "/" in p else ""
@@ -239,6 +253,38 @@ def cmd_sitemap():
         f.write(text)
     os.replace(tmp, path)
     log(msg)
+
+
+def cmd_resync():
+    """コミット済みの履歴から <lastmod> を直す（フックを通らずに入った変更の取りこぼしを拾う）。
+    サイトマップの日付より後のコミットを新しい順に見て、検索に効く部分が変わった最後の日にする"""
+    path = os.path.join(ROOT, "sitemap.xml")
+    mtime = os.path.getmtime(path)
+    with open(path, encoding="utf-8", newline="") as f:
+        text = f.read()
+    fixed = []
+    for m in list(ENTRY.finditer(text)):
+        loc, lm = m.group(1), m.group(2)
+        f = "index.html" if loc == "" else (loc + "index.html" if loc.endswith("/") else loc)
+        for line in git("log", "--format=%H %cs", "--since=" + lm + "T23:59:59+09:00", "--", f).splitlines():
+            h, d = line.split()
+            rc_new, new = run_git("show", h + ":" + f)
+            rc_old, old = run_git("show", h + "~1:" + f)
+            if rc_new == 0 and (rc_old != 0 or signature(old) != signature(new)):
+                if d > lm:
+                    text = text.replace("<loc>%s%s</loc><lastmod>%s</lastmod>" % (SITE, loc, lm),
+                                        "<loc>%s%s</loc><lastmod>%s</lastmod>" % (SITE, loc, d), 1)
+                    fixed.append("%s %s→%s" % (label(loc), lm, d))
+                break
+    log("resync: %d 件%s" % (len(fixed), ("（" + "、".join(fixed[:8]) + ("ほか" if len(fixed) > 8 else "") + "）") if fixed else ""))
+    if fixed and not DRY:
+        if os.path.getmtime(path) != mtime:
+            log("resync: 途中で別の作業が sitemap.xml を変えたので見送り")
+            return
+        tmp = path + ".tmp"
+        with open(tmp, "w", encoding="utf-8", newline="") as f:
+            f.write(text)
+        os.replace(tmp, path)
 
 
 # ---------------------------------------------------------------- 通知
@@ -454,8 +500,13 @@ def notify_changes(st):
         if not p.endswith(".html"):
             continue
         loc = file_to_loc(p)
-        if (stc == "D" and loc in prev) or (stc != "D" and loc in cur):
-            urls.append(SITE + loc)
+        if stc == "D":
+            if loc in prev:
+                urls.append(SITE + loc)
+        elif loc in cur:
+            rc, old = run_git("show", base + ":" + p)
+            if stc != "M" or rc != 0 or signature(old) != signature(git("show", target + ":" + p)):
+                urls.append(SITE + loc)  # CSS・フォントだけの変更は送らない
     if urls and not indexnow_send(urls):
         fails = st.get("indexnow_fails", 0) + 1
         st["indexnow_fails"] = fails
@@ -593,6 +644,8 @@ def main():
     cmd = args[0] if args else ""
     if cmd == "sitemap":
         cmd_sitemap()
+    elif cmd == "resync":
+        cmd_resync()
     elif cmd == "tick":
         cmd_tick()
     elif cmd == "check":
