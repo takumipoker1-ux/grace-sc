@@ -48,6 +48,7 @@ HISTORY = os.path.join(DATA, "index_history.jsonl")
 LOG = os.path.join(DATA, "log.txt")
 SLACK = os.path.join(DATA, "slack-webhook.txt")
 REPORT = os.path.join(DATA, "last_report.txt")
+REQUEST_QUEUE = os.path.join(DATA, "request_queue.txt")  # Search Console で「インデックス登録をリクエスト」したいURL（APIが無いので Claude がブラウザで押す）
 
 SITE = "https://grace-sc.com/"
 GSC_SITE = "sc-domain:grace-sc.com"
@@ -631,6 +632,16 @@ def index_check(st):
         lines.append("公開から%d日たっても未登録：%s" % (NEW_PAGE_DAYS, short([label(l) for l in stale])))
     if gained:
         lines.append("新しく登録された：" + short([label(l) for l in gained]))
+    if dropped or stale:
+        try:
+            with open(REQUEST_QUEUE, encoding="utf-8") as f:
+                queue = [l.strip() for l in f if l.strip()]
+        except OSError:
+            queue = []
+        queue += [SITE + l for l in dropped + stale if SITE + l not in queue]
+        with open(REQUEST_QUEUE, "w", encoding="utf-8") as f:
+            f.write("\n".join(queue) + "\n")
+        lines.append("Claude に「登録リクエストして」と言えば、Search Console から送ります（%d件）" % len(queue))
     if first_run or dropped or stale or gained or weekly:
         if weekly:
             st["last_weekly"] = day
@@ -676,6 +687,10 @@ def cmd_status():
     pages = cst.get("pages", {})
     if pages:
         print("登録               : %d / %d" % (sum(1 for p in pages.values() if p.get("on")), len(pages)))
+    if os.path.exists(REQUEST_QUEUE):
+        with open(REQUEST_QUEUE, encoding="utf-8") as f:
+            q = [l.strip() for l in f if l.strip()]
+        print("登録リクエスト待ち :", len(q), "件", short(q))
     if os.path.exists(LOG):
         with open(LOG, encoding="utf-8", errors="replace") as f:
             tail = f.read().splitlines()[-8:]
