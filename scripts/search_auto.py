@@ -7,10 +7,12 @@
       Stop フックがコミットの直前に呼ぶ。本文（<body>）が変わったページの <lastmod> を今日にし、
       新しい記事・店舗ページ（noindex でなく、canonical が自分のURL）を足し、消えたページを外す。
       head だけの変更（書体・色など）では日付を変えない。
-  python scripts/search_auto.py tick
-      タスク スケジューラが15分ごとに呼ぶ。
+  python scripts/search_auto.py send
+      Stop フックが毎回呼ぶ（数秒で終わる）。
         1. push から2分以上たった（＝公開に反映された）変更ページを IndexNow（Bing など）に送る
         2. Google にサイトマップを送り直す（鍵が無ければ保留して、鍵が置かれたら送る）
+  python scripts/search_auto.py tick
+      タスク スケジューラが15分ごとに呼ぶ。send と同じことに加えて、
         3. 1日1回、Google の登録状況を全ページ調べ、外れたページなどがあれば通知する（鍵が必要）
   python scripts/search_auto.py resync       コミット済みの履歴から <lastmod> を直す（取りこぼしの修正）
   python scripts/search_auto.py check        3 だけを今すぐ行う
@@ -21,7 +23,7 @@
 鍵・記録・ログは ~/.grace-sc/ に置く（サイトのフォルダに置くと Stop フックで公開されるため）。
   gsc-key.json       Google のサービスアカウントの鍵。Search Console に「フル」の権限で追加しておく
   slack-webhook.txt  あれば通知を Slack に送る。無ければ Windows の通知に出す
-  state.json / index_history.jsonl / log.txt / last_report.txt  記録（自動で作る）
+  state.json / check_state.json / index_history.jsonl / log.txt / last_report.txt  記録（自動で作る）
 """
 import base64
 import datetime
@@ -40,7 +42,8 @@ import urllib.request
 ROOT = os.environ.get("GRACE_SC_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.environ.get("GRACE_SC_DATA") or os.path.join(os.path.expanduser("~"), ".grace-sc")
 KEY = os.path.join(DATA, "gsc-key.json")
-STATE = os.path.join(DATA, "state.json")
+STATE = os.path.join(DATA, "state.json")              # 送信の記録
+CHECK_STATE = os.path.join(DATA, "check_state.json")  # 登録チェックの記録（送信と同時に動いても上書きし合わないよう別ファイル）
 HISTORY = os.path.join(DATA, "index_history.jsonl")
 LOG = os.path.join(DATA, "log.txt")
 SLACK = os.path.join(DATA, "slack-webhook.txt")
@@ -57,6 +60,7 @@ NEW_PAGE_DAYS = 7           # 新しいページがこの日数たっても未�
 CHECK_HOUR = 9              # 1日1回の登録チェックは、この時刻以降の最初の tick で行う
 DRY = "--dry-run" in sys.argv
 NOWIN = 0x08000000 if os.name == "nt" else 0  # 子プロセスの黒い窓を出さない
+sys.dont_write_bytecode = True  # scripts/__pycache__ を作らない（作ると Stop フックで公開される）
 GIT = shutil.which("git") or r"C:\Program Files\Git\cmd\git.exe"
 
 if sys.stdout is not None:  # pythonw では None
@@ -93,22 +97,47 @@ def log(msg):
         pass
 
 
-def load_state():
+def load_state(path=STATE):
     try:
-        with open(STATE, encoding="utf-8") as f:
+        with open(path, encoding="utf-8") as f:
             return json.load(f)
     except (OSError, ValueError):
         return {}
 
 
-def save_state(st):
+def save_state(st, path=STATE):
     if DRY:
         return
     os.makedirs(DATA, exist_ok=True)
-    tmp = STATE + ".tmp"
+    tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(st, f, ensure_ascii=False, indent=1)
-    os.replace(tmp, STATE)
+    os.replace(tmp, path)
+
+
+class Lock:
+    """Stop フックとタスク スケジューラが同時に動いたとき、片方だけが進むようにする"""
+
+    def __init__(self, name, stale=1800):
+        self.path, self.stale, self.ok = os.path.join(DATA, name + ".lock"), stale, False
+
+    def __enter__(self):
+        try:
+            os.makedirs(DATA, exist_ok=True)
+            if os.path.exists(self.path) and time.time() - os.path.getmtime(self.path) > self.stale:
+                os.remove(self.path)  # 途中で落ちた跡
+            os.close(os.open(self.path, os.O_CREAT | os.O_EXCL | os.O_WRONLY))
+            self.ok = True
+        except OSError:
+            self.ok = False
+        return self.ok
+
+    def __exit__(self, *exc):
+        if self.ok:
+            try:
+                os.remove(self.path)
+            except OSError:
+                pass
 
 
 def run_git(*args):
@@ -609,19 +638,33 @@ def index_check(st):
 
 
 # ---------------------------------------------------------------- コマンド
-def cmd_tick():
-    st = load_state()
-    notify_changes(st)
-    if os.path.exists(KEY):
-        if st.get("google_pending"):
+def cmd_send():
+    """公開に反映された変更を IndexNow と Google に送る（Stop フックとタスクの両方から呼ぶ・数秒で終わる）"""
+    with Lock("send", stale=600) as ok:
+        if not ok:
+            return
+        st = load_state()
+        notify_changes(st)
+        if st.get("google_pending") and os.path.exists(KEY):
             google_sitemap(st)
-        if st.get("last_check") != today() and now_jst().hour >= CHECK_HOUR:
-            index_check(st)
-    save_state(st)
+        save_state(st)
+
+
+def cmd_tick():
+    cmd_send()
+    if not os.path.exists(KEY):
+        return
+    with Lock("check") as ok:
+        if not ok:
+            return
+        cst = load_state(CHECK_STATE)
+        if cst.get("last_check") != today() and now_jst().hour >= CHECK_HOUR:
+            index_check(cst)
+            save_state(cst, CHECK_STATE)
 
 
 def cmd_status():
-    st = load_state()
+    st, cst = load_state(), load_state(CHECK_STATE)
     sent = st.get("google_sent_at")
     print("記録の置き場       :", DATA)
     print("Google の鍵        :", "あり" if os.path.exists(KEY) else "なし（%s に置く）" % KEY)
@@ -629,8 +672,8 @@ def cmd_status():
     print("IndexNow の起点    :", (st.get("notified_head") or "未設定")[:7])
     print("Google サイトマップ:", datetime.datetime.fromtimestamp(sent, JST).strftime("%m-%d %H:%M に送信")
           if sent else "まだ送っていない", "（保留あり）" if st.get("google_pending") else "")
-    print("登録チェック       :", st.get("last_check") or "まだ")
-    pages = st.get("pages", {})
+    print("登録チェック       :", cst.get("last_check") or "まだ")
+    pages = cst.get("pages", {})
     if pages:
         print("登録               : %d / %d" % (sum(1 for p in pages.values() if p.get("on")), len(pages)))
     if os.path.exists(LOG):
@@ -646,15 +689,19 @@ def main():
         cmd_sitemap()
     elif cmd == "resync":
         cmd_resync()
+    elif cmd == "send":
+        cmd_send()
     elif cmd == "tick":
         cmd_tick()
     elif cmd == "check":
-        st = load_state()
         if not os.path.exists(KEY):
             print("Google の鍵が無い（%s に置く）" % KEY)
             return
-        index_check(st)
-        save_state(st)
+        with Lock("check") as ok:
+            if ok:
+                cst = load_state(CHECK_STATE)
+                index_check(cst)
+                save_state(cst, CHECK_STATE)
     elif cmd == "status":
         cmd_status()
     elif cmd == "test-notify":
