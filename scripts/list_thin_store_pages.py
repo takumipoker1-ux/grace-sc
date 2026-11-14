@@ -26,7 +26,7 @@ def text(s):
 
 
 def analyze(page):
-    name = text(re.sub(r'<span[^>]*>.*?</span>', '', (re.search(r'<h1[^>]*>(.*?)</h1>', page, re.S) or [None, ''])[1], flags=re.S))
+    name = text(re.sub(r'<span(?![^>]*jp-nobreak)[^>]*>.*?</span>', '', (re.search(r'<h1[^>]*>(.*?)</h1>', page, re.S) or [None, ''])[1], flags=re.S))  # 文節の囲み（jp-nobreak）は店名なので残す（2026-11-15）
     d = {}
     for k, v in TILE.findall(page) + ROW.findall(page):
         k, v = text(k), text(v)

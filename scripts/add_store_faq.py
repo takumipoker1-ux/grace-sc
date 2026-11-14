@@ -6,15 +6,20 @@
 - 何度実行しても同じ結果になる（既にある Q&A は作り直す）。
 - 3問に満たないページには入れない。
 
+- 「ページ更新日」は、Q&A の中身が変わったページだけ今日の日付にする（2026-11-15 から。前は全ページを 11/11 にしていた）。
+
 使い方:
-  PYTHONIOENCODING=utf-8 python scripts/add_store_faq.py          # 全店舗ページ
-  PYTHONIOENCODING=utf-8 python scripts/add_store_faq.py --dry    # 書き込まずに件数だけ
+  PYTHONIOENCODING=utf-8 python -B scripts/add_store_faq.py          # 全店舗ページ
+  PYTHONIOENCODING=utf-8 python -B scripts/add_store_faq.py --dry    # 書き込まずに件数だけ
+  PYTHONIOENCODING=utf-8 python -B scripts/add_store_faq.py --files capone-ueno.html   # そのページだけ
 """
-import glob, html, io, json, os, re, sys
+import datetime, glob, html, io, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DRY = '--dry' in sys.argv
-TODAY_JP = '2026年11月11日'
+FILES = sys.argv[sys.argv.index('--files') + 1].split(',') if '--files' in sys.argv else None
+_today = datetime.date.today()
+TODAY_JP = '%d年%d月%d日' % (_today.year, _today.month, _today.day)
 
 ROW = re.compile(r'<span class="text-gray-500 shrink-0 pr-3">(.*?)</span>\s*<span[^>]*>(.*?)</span>', re.S)
 TILE = re.compile(r'<div class="text-xs text-gray-500 mb-1">(.*?)</div>\s*<div[^>]*>(.*?)</div>', re.S)
@@ -49,7 +54,7 @@ def build(page):
     m = H1.search(page)
     if not m:
         return None, []
-    name = text(re.sub(r'<span[^>]*>.*?</span>', '', m.group(1), flags=re.S))  # 見出し内のバッジ（「ぞの激推し」等）は店名に含めない
+    name = text(re.sub(r'<span(?![^>]*jp-nobreak)[^>]*>.*?</span>', '', m.group(1), flags=re.S))  # 見出し内のバッジ（「ぞの激推し」等）は店名に含めない。文節の囲み（jp-nobreak）は店名なので残す
     d = {}
     for k, v in TILE.findall(page) + ROW.findall(page):
         k, v = text(k), text(v)
@@ -81,6 +86,16 @@ def build(page):
         else:
             a = '未成年は%sです。' % v
         qa.append(('%sは18歳・19歳でも働けますか？' % name, a))
+    v = pick(d, '未経験')
+    if v:  # 2026-11-15 から。値が分かった店だけ（ほとんどの店は「要問い合わせ」で出ない）
+        inner = re.sub(r'^[（(](.*)[）)]$', r'\1', v[1:].strip()) if v[:1] in '可不' else ''
+        if v.startswith('不可'):
+            a = '働けません。'
+        elif v.startswith('可'):
+            a = '働けます。' + (inner.rstrip('。') + '。' if inner else '')
+        else:
+            a = '未経験は%sです。' % v
+        qa.append(('%sは未経験でも働けますか？' % name, a))
 
     # 日払い
     v = pick(d, '日払い上限', '日払い')
@@ -161,17 +176,24 @@ def build(page):
     return name, qa
 
 
+def nobreak(name):
+    """店名を、本体と（読み）に分けて、文節の途中で折れないように囲む（2026-11-15。スマホで「よく／ある質問」のように折れていた）"""
+    m = re.match(r'^(.*?)(（[^（）]*）)$', name)
+    parts = [m.group(1), m.group(2)] if m and m.group(1) else [name]
+    return ''.join('<span class="jp-nobreak">%s</span>' % p for p in parts)
+
+
 def render(name, qa):
     rows = '\n'.join('        <dt>%s</dt>\n        <dd>%s</dd>' % (q, a) for q, a in qa)
     return ('  <!-- STORE_FAQ_v1 -->\n'
             '  <section class="py-10 px-6 border-t border-white/10">\n'
             '    <div class="max-w-4xl mx-auto">\n'
-            '      <h2 class="text-base font-bold text-white mb-4">%sのよくある質問</h2>\n'
+            '      <h2 class="text-base font-bold text-white mb-4">%s<span class="jp-nobreak">のよくある質問</span></h2>\n'
             '      <dl class="store-faq">\n%s\n      </dl>\n'
             '      <p class="store-faq-note">条件は変わることがあります。最新の内容は相談のときに確認しています。</p>\n'
             '    </div>\n'
             '  </section>\n'
-            '  <!-- /STORE_FAQ_v1 -->\n') % (name, rows)
+            '  <!-- /STORE_FAQ_v1 -->\n') % (nobreak(name), rows)
 
 
 def render_ld(qa):
@@ -185,9 +207,13 @@ def main():
     for p in sorted(glob.glob(os.path.join(ROOT, 'stores', '*.html'))):
         if os.path.basename(p) == 'index.html':
             continue
+        if FILES and os.path.basename(p) not in FILES:
+            continue
         raw = io.open(p, encoding='utf-8', newline='').read()
         nl = '\r\n' if '\r\n' in raw else '\n'
         s = raw.replace('\r\n', '\n')
+        m_old = FAQ_BLOCK.search(s)
+        old_block = m_old.group(0).strip() if m_old else ''
         s = FAQ_BLOCK.sub('', s)
         s = FAQ_LD.sub('', s)
         name, qa = build(s)
@@ -201,9 +227,11 @@ def main():
                 skipped.append((os.path.basename(p), 'no anchor'))
                 continue
             i = s.rfind('\n', 0, i) + 1
-            s = s[:i] + render(name, qa) + '\n' + s[i:]
+            block = render(name, qa)
+            s = s[:i] + block + '\n' + s[i:]
             s = s.replace('</head>', render_ld(qa) + '</head>', 1)
-            s = re.sub(r'ページ更新日：\d+年\d+月\d+日', 'ページ更新日：' + TODAY_JP, s)
+            if block.strip() != old_block:  # Q&A が変わったページだけ、更新日を今日にする
+                s = re.sub(r'ページ更新日：\d+年\d+月\d+日', 'ページ更新日：' + TODAY_JP, s)
             done += 1
             counts.append(len(qa))
         out = s.replace('\n', nl)
