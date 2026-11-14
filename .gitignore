@@ -3,3 +3,12 @@ node_modules/
 .DS_Store
 __pycache__/
 *.pyc
+
+# 控え・作業の残り（置くとサイトで誰でも開けてしまうので出さない。2026-11-15）
+*.bak
+*.bak[0-9]*
+*.bak_*
+*.orig
+*.tmp
+*~
+.playwright-mcp/
