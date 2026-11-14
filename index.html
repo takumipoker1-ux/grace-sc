@@ -28,7 +28,7 @@
     html { scroll-behavior: smooth; }
     h1, h2, h3 { font-family: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif; }
     /* 日本語の不自然な改行を防ぐ */
-    h1, h2, h3, h4, h5, h6 { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
+    h1, h2, h3, h4, h5, h6 { word-break: normal; overflow-wrap: anywhere; line-break: strict; }
     .jp-keep { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
     .jp-nobreak { display: inline-block; }
 
@@ -705,7 +705,7 @@
       <div class="mb-10 flex items-baseline justify-between gap-6">
         <div>
           <p class="scene-label mb-4 rv rv-blur">記事</p>
-          <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">求人サイトに載らない数字を、記事にしています。</h2>
+          <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s"><span class="jp-nobreak">求人サイトに</span><span class="jp-nobreak">載らない</span><span class="jp-nobreak">数字を、</span><span class="jp-nobreak">記事に</span><span class="jp-nobreak">しています。</span></h2>
         </div>
       </div>
       <div class="home-articles rv" style="--d:.3s">
@@ -723,7 +723,7 @@
     <div class="max-w-4xl mx-auto relative z-10">
       <div class="mb-14">
         <p class="scene-label mb-4 rv rv-blur">お祝い</p>
-        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">頑張った分だけ、返ってくる。</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s"><span class="jp-nobreak">頑張った</span><span class="jp-nobreak">分だけ、</span><span class="jp-nobreak">返ってくる。</span></h2>
         <p class="text-gray-400 text-sm mt-3 rv rv-blur" style="--d:.3s">GRACE SELECTION では、結果を出している女の子に対して具体的なお祝いを用意しています。</p>
       </div>
 
@@ -768,7 +768,7 @@
     <div class="max-w-4xl mx-auto">
       <div class="mb-14">
         <p class="scene-label mb-4 rv rv-blur">相談する人たち</p>
-        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">相談に来る人の8割は、未経験〜経験2年以内です。</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s"><span class="jp-nobreak">相談に</span><span class="jp-nobreak">来る人の</span><span class="jp-nobreak">8割は、</span><span class="jp-nobreak">未経験〜</span><span class="jp-nobreak">経験2年以内です。</span></h2>
         <p class="mist text-sm mt-3 rv rv-blur" style="--d:.3s">ご依頼者の経験年数の割合（実績データ）</p>
       </div>
 
@@ -1067,7 +1067,7 @@
     <div class="max-w-xl mx-auto text-center relative z-10">
       <p class="scene-label mb-8 rv rv-blur">あなたの番</p>
       <h2 class="subtitle text-2xl md:text-3xl text-white mb-6 rv rv-blur" style="--d:.3s; line-height:2.1;">
-        次にここに書くのは、<br />あなたの面接です。
+        <span class="jp-nobreak">次に</span><span class="jp-nobreak">ここに</span><span class="jp-nobreak">書くのは、</span><br /><span class="jp-nobreak">あなたの</span><span class="jp-nobreak">面接です。</span>
       </h2>
       <p class="text-gray-400 text-sm leading-relaxed mb-10 rv rv-blur" style="--d:.6s">
         まずは一言、送ってもらうだけで大丈夫です。<br />
