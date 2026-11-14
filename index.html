@@ -318,15 +318,13 @@
       <ol class="toc-grid rv" style="--d:.3s">
         <li><a href="#s02"><i class="toc-no">02</i>面接同行の記録</a></li>
         <li><a href="#s03"><i class="toc-no">03</i>よくある不安</a></li>
-        <li><a href="#s04"><i class="toc-no">04</i>スカウトの種類</a></li>
-        <li><a href="#s05"><i class="toc-no">05</i>他との違い</a></li>
-        <li><a href="#s06"><i class="toc-no">06</i>3つの約束</a></li>
-        <li><a href="#s06b"><i class="toc-no">06</i>記事</a></li>
-        <li><a href="#s07"><i class="toc-no">07</i>お祝い・特典</a></li>
-        <li><a href="#s08"><i class="toc-no">08</i>相談する人たち</a></li>
-        <li><a href="#s09"><i class="toc-no">09</i>担当エージェント</a></li>
-        <li><a href="#s10"><i class="toc-no">10</i>ご利用の流れ</a></li>
-        <li><a href="#s11"><i class="toc-no">11</i>よくある質問</a></li>
+        <li><a href="#s06"><i class="toc-no">04</i>3つの約束</a></li>
+        <li><a href="#s06b"><i class="toc-no">05</i>記事</a></li>
+        <li><a href="#s07"><i class="toc-no">06</i>お祝い・特典</a></li>
+        <li><a href="#s08"><i class="toc-no">07</i>相談する人たち</a></li>
+        <li><a href="#s09"><i class="toc-no">08</i>担当エージェント</a></li>
+        <li><a href="#s10"><i class="toc-no">09</i>ご利用の流れ</a></li>
+        <li><a href="#s11"><i class="toc-no">10</i>よくある質問</a></li>
         <li class="toc-cta"><a href="#cta"><i class="toc-no">FIN</i>LINEで相談する</a></li>
       </ol>
     </div>
@@ -374,7 +372,7 @@
         </h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-5 rv" style="--d:.3s">
+      <div class="grid gap-5 rv" style="--d:.3s">
         <!-- 求人サイト -->
         <div class="card-n p-8">
           <div class="flex items-center gap-3 mb-5">
@@ -400,260 +398,11 @@
             </li>
           </ul>
         </div>
-
-        <!-- 路上スカウト -->
-        <div class="card-n p-8">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-9 h-9 rounded bg-white/5 flex items-center justify-center shrink-0">
-              <svg class="w-4 h-4 mist" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-              </svg>
-            </div>
-            <h3 class="font-bold text-white">路上スカウトは<wbr />怖い…</h3>
-          </div>
-          <ul class="space-y-3 text-sm fog">
-            <li class="flex items-start gap-2.5">
-              <span class="amber mt-0.5 shrink-0 font-bold">—</span>
-              実績もSNSもなく、信頼できるか判断できない
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="amber mt-0.5 shrink-0 font-bold">—</span>
-              強引に丸め込まれて、後で後悔しそうで不安
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="amber mt-0.5 shrink-0 font-bold">—</span>
-              入店後に問題が起きても、誰も守ってくれなかった
-            </li>
-          </ul>
-        </div>
       </div>
 
       <p class="mt-10 fog text-sm leading-relaxed border-l-2 pl-4 rv" style="--d:.45s; border-color:#d9a441;">
         時給や条件は、面接の前に<span class="font-bold text-white">ぞのが店と話しておきます</span>。入店してから困ったときも、LINEで相談を受けます。
       </p>
-    </div>
-  </section>
-
-  <!-- ========== SCENE 04 / SCOUT TYPES ========== -->
-  <section id="s04" class="night-soft py-24 rv-group">
-    <div class="max-w-5xl mx-auto">
-      <div class="mb-8 px-6">
-        <p class="scene-label mb-4 rv rv-blur">スカウトの見分け方</p>
-        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">スカウトの種類と特徴</h2>
-        <p class="mist text-sm mt-3 rv rv-blur" style="--d:.3s">どのスカウトにも良い面・悪い面があります。違いを知った上で、選んでください。</p>
-      </div>
-
-      <!-- タブナビ（モバイルでスキップ用） -->
-      <div class="flex gap-2 px-6 mb-5 overflow-x-auto" style="scrollbar-width:none;-ms-overflow-style:none;">
-        <button onclick="scoutTab(0)" id="stab-0" class="stab active-stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#d9a441;color:#0b0f16;background:#d9a441;">路上</button>
-        <button onclick="scoutTab(1)" id="stab-1" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">SNS</button>
-        <button onclick="scoutTab(2)" id="stab-2" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">高還元</button>
-        <button onclick="scoutTab(3)" id="stab-3" class="stab shrink-0 text-xs font-bold px-4 py-2 rounded-full border transition-all" style="border-color:#2a3140;color:#9aa1af;background:transparent;">GRACE</button>
-      </div>
-
-      <!-- カルーセル（モバイル横スワイプ / デスクトップはグリッド） -->
-      <div id="scout-carousel" class="flex md:grid md:grid-cols-2 gap-5 overflow-x-auto px-6 pb-4 rv" style="--d:.3s; scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;">
-
-        <!-- ①路上スカウト -->
-        <div class="card-n p-7 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center shrink-0 text-xs font-bold mist">01</div>
-            <h3 class="font-bold text-white">路上スカウト</h3>
-          </div>
-          <div class="space-y-4 text-sm flex-1">
-            <div>
-              <p class="text-xs font-bold amber mb-2 tracking-wide uppercase">Merit</p>
-              <ul class="space-y-1.5 fog">
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>フットワークが軽く、即日動いてくれることも多い</li>
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>直接会って話せるので人柄が見えやすい</li>
-              </ul>
-            </div>
-            <div>
-              <p class="text-xs font-bold mist mb-2 tracking-wide uppercase">Demerit</p>
-              <ul class="space-y-1.5 text-gray-500">
-                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>入店後は関係が切れる場合が多い</li>
-                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>実績・信頼の担保がなく強引なケースも</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- ②SNSスカウト -->
-        <div class="card-n p-7 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center shrink-0 text-xs font-bold mist">02</div>
-            <h3 class="font-bold text-white">SNSスカウト（DM型）</h3>
-          </div>
-          <div class="space-y-4 text-sm flex-1">
-            <div>
-              <p class="text-xs font-bold amber mb-2 tracking-wide uppercase">Merit</p>
-              <ul class="space-y-1.5 fog">
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>気軽に始められる・自宅から相談可能</li>
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>SNSの投稿で人柄・実績をある程度確認できる</li>
-              </ul>
-            </div>
-            <div>
-              <p class="text-xs font-bold mist mb-2 tracking-wide uppercase">Demerit</p>
-              <ul class="space-y-1.5 text-gray-500">
-                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>身元・実績が不明なアカウントも多い</li>
-                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>突然連絡が途絶えるリスクがある</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- ③高還元スカウト -->
-        <div class="card-n p-7 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start;">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center shrink-0 text-xs font-bold mist">03</div>
-            <h3 class="font-bold text-white">高還元スカウト</h3>
-          </div>
-          <div class="space-y-4 text-sm flex-1">
-            <div>
-              <p class="text-xs font-bold amber mb-2 tracking-wide uppercase">Merit</p>
-              <ul class="space-y-1.5 fog">
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>キャッシュバックで初月の手取りが増えやすい</li>
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>目に見えるお得感があるので比較しやすい</li>
-              </ul>
-            </div>
-            <div>
-              <p class="text-xs font-bold mist mb-2 tracking-wide uppercase">Demerit</p>
-              <ul class="space-y-1.5 text-gray-500">
-                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>採算のため時給・条件が低い店を紹介されがち</li>
-                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">✗</span>還元してもらっても月収が下がるケースもある</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- ⑤GRACE SELECTION -->
-        <div class="rounded-xl p-7 flex flex-col shrink-0 w-4/5 md:w-auto" style="scroll-snap-align:start; background:rgba(217,164,65,.07); border:1px solid rgba(217,164,65,.35);">
-          <div class="mb-4">
-            <span class="inline-block text-[11px] font-bold px-2.5 py-1 rounded tracking-widest" style="background:#d9a441;color:#0b0f16;">当サービス</span>
-          </div>
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-8 h-8 rounded flex items-center justify-center shrink-0 text-xs font-bold amber" style="background:rgba(217,164,65,.15);">04</div>
-            <h3 class="font-bold text-white jp-keep">GRACE SELECTION<br/><span class="text-xs font-sans font-normal amber">専属エージェント型</span></h3>
-          </div>
-          <div class="space-y-4 text-sm flex-1">
-            <div>
-              <p class="text-xs font-bold amber mb-2 tracking-wide uppercase">Merit</p>
-              <ul class="space-y-1.5 text-gray-300">
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>面接に同行し、入店後のトラブルにも対応する</li>
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>指名の取り方・SNSの使い方も教える</li>
-                <li class="flex items-start gap-2"><span class="amber shrink-0 mt-0.5">◯</span>340店舗以上を自分で見た独自データから店を選ぶ</li>
-              </ul>
-            </div>
-            <div>
-              <p class="text-xs font-bold mist mb-2 tracking-wide uppercase">Demerit</p>
-              <ul class="space-y-1.5 text-gray-500">
-                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">–</span>いい話だけをしないので、夢のある提案には聞こえないかもしれません</li>
-                <li class="flex items-start gap-2"><span class="mist shrink-0 mt-0.5">–</span>面接の同行は関東エリアが中心で、ほかのエリアは紹介とオンラインでの相談だけです</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <script>
-    (function(){
-      var car = document.getElementById('scout-carousel');
-      var tabs = document.querySelectorAll('.stab');
-      function setTab(i){
-        tabs.forEach(function(t,j){
-          if(i===j){
-            t.style.background='#d9a441'; t.style.color='#0b0f16'; t.style.borderColor='#d9a441';
-          } else {
-            t.style.background='transparent'; t.style.color='#9aa1af'; t.style.borderColor='#2a3140';
-          }
-        });
-      }
-      window.scoutTab = function(i){
-        var cards = car.querySelectorAll(':scope > div');
-        if(window.innerWidth < 768 && cards[i]){
-          car.scrollTo({left: cards[i].offsetLeft - 24, behavior:'smooth'});
-        }
-        setTab(i);
-      };
-      car.addEventListener('scroll', function(){
-        var cards = car.querySelectorAll(':scope > div');
-        if(!cards.length) return;
-        var cw = cards[0].offsetWidth + 20;
-        var active = Math.min(Math.round(car.scrollLeft / cw), cards.length-1);
-        setTab(active);
-      });
-    })();
-  </script>
-
-  <!-- ========== SCENE 05 / COMPARISON ========== -->
-  <section id="s05" class="night-flat py-24 px-6 rv-group">
-    <div class="max-w-4xl mx-auto">
-      <div class="mb-14">
-        <p class="scene-label mb-4 rv rv-blur">並べてみる</p>
-        <h2 class="text-2xl md:text-3xl font-bold text-white rv rv-blur" style="--d:.15s">何が違うのか</h2>
-      </div>
-
-      <p class="md:hidden text-xs mist text-right mb-2">← スワイプして比較 →</p>
-      <div class="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0 rv" style="--d:.3s">
-        <table class="w-full text-sm border-separate" style="border-spacing: 0; min-width: 600px;">
-          <thead>
-            <tr>
-              <th class="text-left px-5 py-4 mist font-normal w-2/5"></th>
-              <th class="cmp-head px-4 py-4 text-center font-bold rounded-tl-lg">求人サイト</th>
-              <th class="cmp-head px-4 py-4 text-center font-bold">路上スカウト</th>
-              <th class="cmp-head cmp-head-g px-4 py-4 text-center font-bold rounded-tr-lg">GRACE SELECTION</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="cmp-label px-5 py-4 font-medium">裏情報・実態の把握</td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-mid text-base">△</span></td>
-              <td class="cmp-cell-g px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
-            </tr>
-            <tr>
-              <td class="cmp-label px-5 py-4 font-medium">面接への同行</td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
-              <td class="cmp-cell-g px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
-            </tr>
-            <tr>
-              <td class="cmp-label px-5 py-4 font-medium">給与未払い・理不尽な扱いの防止</td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-mid text-base">△</span></td>
-              <td class="cmp-cell-g px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
-            </tr>
-            <tr>
-              <td class="cmp-label px-5 py-4 font-medium">入店後のトラブル対応</td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-mid text-base">△</span></td>
-              <td class="cmp-cell-g px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
-            </tr>
-            <tr>
-              <td class="cmp-label px-5 py-4 font-medium">強引な紹介がない</td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
-              <td class="cmp-cell-g px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
-            </tr>
-            <tr>
-              <td class="cmp-label px-5 py-4 font-medium">個人情報の安全管理</td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
-              <td class="cmp-cell-g px-4 py-4 text-center"><span class="mark-ok text-base">◯</span></td>
-            </tr>
-            <tr>
-              <td class="cmp-label px-5 py-4 font-medium rounded-bl-lg">指名・ブランディングのサポート</td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
-              <td class="cmp-cell px-4 py-4 text-center"><span class="mark-ng text-base">✗</span></td>
-              <td class="cmp-cell-g px-4 py-4 text-center rounded-br-lg"><span class="mark-ok text-base">◯</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p class="mt-6 text-xs mist">◯ = 対応あり　△ = 場合による・ばらつきあり　✗ = 対応なし</p>
     </div>
   </section>
 
@@ -773,7 +522,7 @@
       <div class="share-rows rv" style="--d:.3s">
         <div class="share-row"><span class="lab">未経験</span><span class="bar"><i style="width:20%"></i></span><span class="val">20%</span></div>
         <div class="share-row"><span class="lab">半年以内</span><span class="bar"><i style="width:30%"></i></span><span class="val">30%</span></div>
-        <div class="share-row"><span class="lab">1年以内</span><span class="bar"><i style="width:30%"></i></span><span class="val">30%</span></div>
+        <div class="share-row"><span class="lab">2年以内</span><span class="bar"><i style="width:30%"></i></span><span class="val">30%</span></div>
         <div class="share-row"><span class="lab">3年以内</span><span class="bar"><i class="dim" style="width:10%"></i></span><span class="val">10%</span></div>
         <div class="share-row"><span class="lab">それ以上</span><span class="bar"><i class="dim" style="width:10%"></i></span><span class="val">10%</span></div>
         <p class="text-xs mist pt-3 leading-relaxed">未経験・経験浅めの方が全体の<span class="font-bold fog">80%</span>を占めています。はじめての方からの相談が多いです。</p>
