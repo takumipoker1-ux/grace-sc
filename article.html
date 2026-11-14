@@ -28,6 +28,7 @@
     h1, h2, h3 { font-family: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif; }
     h1, h2, h3, h4, h5, h6 { word-break: normal; overflow-wrap: anywhere; line-break: strict; }
     .jp-keep { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
+    .jp-nobreak { display: inline-block; }
     .article-body h1 { font-size:1.5rem; font-weight:700; color:#fff; margin-top:2rem; margin-bottom:1.25rem; }
     .article-body h2 { font-size:1.2rem; font-weight:700; color:#fff; margin-top:2.5rem; margin-bottom:1rem; padding-left:0.75rem; border-left:3px solid #c9a96e; }
     .article-body h3 { font-size:1rem; font-weight:700; color:#e5e5e5; margin-top:1.75rem; margin-bottom:0.75rem; }
@@ -290,7 +291,7 @@
       const articleId = getQueryParam('id');
       if (!articleId) {
         showLocked();
-        $('locked-title').textContent = '記事IDが指定されていません';
+        $('locked-title').innerHTML = '<span class="jp-nobreak">記事IDが</span><span class="jp-nobreak">指定されていません</span>';
         $('locked-subtitle').innerHTML = 'URLが正しくない可能性があります。<a href="/articles/" class="text-[#c9a96e] underline">記事一覧へ戻る →</a>';
         $('unlock-cta').classList.add('hidden');
         $('teaser-body').classList.remove('pb-32');

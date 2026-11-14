@@ -23,9 +23,9 @@ TODAY_JP = '%d年%d月%d日' % (_today.year, _today.month, _today.day)
 
 ROW = re.compile(r'<span class="text-gray-500 shrink-0 pr-3">(.*?)</span>\s*<span[^>]*>(.*?)</span>', re.S)
 TILE = re.compile(r'<div class="text-xs text-gray-500 mb-1">(.*?)</div>\s*<div[^>]*>(.*?)</div>', re.S)
-NORMA = re.compile(r'<h[23][^>]*>\s*ノルマ・ペナルティ\s*</h[23]>\s*<p[^>]*>(.*?)</p>', re.S)
+NORMA = re.compile(r'<h[23][^>]*>\s*(?:<span[^>]*>\s*)*ノルマ・ペナルティ\s*(?:</span>\s*)*</h[23]>\s*<p[^>]*>(.*?)</p>', re.S)  # 見出しが文節で囲まれていても読む
 H1 = re.compile(r'<h1[^>]*>(.*?)</h1>', re.S)
-FAQ_BLOCK = re.compile(r'[ \t]*<!-- STORE_FAQ_v1 -->.*?<!-- /STORE_FAQ_v1 -->\n?', re.S)
+FAQ_BLOCK = re.compile(r'[ \t]*<!-- STORE_FAQ_v1 -->.*?<!-- /STORE_FAQ_v1 -->\n?(?:[ \t]*\n)?', re.S)  # 後ろの空行1つも一緒に外す（回すたびに空行が増えないように）
 FAQ_LD = re.compile(r'[ \t]*<script type="application/ld\+json" data-faq="1">.*?</script>\n?', re.S)
 
 SKIP = {'', '-', '―', 'ー', '要問い合わせ', '要相談', '応相談', '要確認', '不明', '店舗による'}
@@ -178,8 +178,7 @@ def build(page):
 
 def nobreak(name):
     """店名を、本体と（読み）に分けて、文節の途中で折れないように囲む（2026-11-15。スマホで「よく／ある質問」のように折れていた）"""
-    m = re.match(r'^(.*?)(（[^（）]*）)$', name)
-    parts = [m.group(1), m.group(2)] if m and m.group(1) else [name]
+    parts = re.findall(r'（[^（）]*）|[^（]+', name) or [name]  # 本体と、（読み）（元の店名）などの（）ごとに分ける
     return ''.join('<span class="jp-nobreak">%s</span>' % p for p in parts)
 
 
@@ -230,7 +229,7 @@ def main():
             block = render(name, qa)
             s = s[:i] + block + '\n' + s[i:]
             s = s.replace('</head>', render_ld(qa) + '</head>', 1)
-            if block.strip() != old_block:  # Q&A が変わったページだけ、更新日を今日にする
+            if re.sub(r'<[^>]+>|\s+', '', block) != re.sub(r'<[^>]+>|\s+', '', old_block):  # Q&A の文字が変わったページだけ、更新日を今日にする（囲みのタグだけの違いでは変えない）
                 s = re.sub(r'ページ更新日：\d+年\d+月\d+日', 'ページ更新日：' + TODAY_JP, s)
             done += 1
             counts.append(len(qa))

@@ -41,7 +41,7 @@ def analyze(page):
     paras = [text(p) for p in re.findall(r'<p[^>]*>(.*?)</p>', body, re.S)]
     paras = [p for p in paras if p and 'GRACE SELECTIONでは' not in p and '条件交渉・同行対応' not in p and '詳細な条件はLINE' not in p]
     # 条件表の値をそのまま段落にしたもの（ノルマ・ペナルティ）は説明に数えない
-    norma = re.search(r'<h[23][^>]*>\s*ノルマ・ペナルティ\s*</h[23]>\s*<p[^>]*>(.*?)</p>', body, re.S)
+    norma = re.search(r'<h[23][^>]*>\s*(?:<span[^>]*>\s*)*ノルマ・ペナルティ\s*(?:</span>\s*)*</h[23]>\s*<p[^>]*>(.*?)</p>', body, re.S)
     if norma and text(norma.group(1)) in paras:
         paras.remove(text(norma.group(1)))
         if text(norma.group(1)) not in SKIP:

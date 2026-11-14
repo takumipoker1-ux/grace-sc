@@ -130,16 +130,17 @@ def parse_index():
     for (s, sec_id), (e, _) in zip(sections, sections[1:]):
         seg = html[s:e]
         # サブエリア見出し位置（「○○エリア 全店舗一覧」）
-        heads = [(m.start(), re.sub(r"エリア.*", "", m.group(1)).strip())
-                 for m in re.finditer(r'<h3 class="text-sm[^"]*">([^<]+)</h3>', seg)]
+        # 見出し・店名は、文節の囲み（<span class="jp-nobreak"> など）が入っていても、タグを外して読む（2026-11-15）
+        heads = [(m.start(), re.sub(r"エリア.*", "", re.sub(r"<[^>]+>", "", m.group(1))).strip())
+                 for m in re.finditer(r'<h3 class="text-sm[^"]*">(.*?)</h3>', seg, re.S)]
         card_starts = [m.start() for m in re.finditer(r'<div class="store-card', seg)]
         card_starts.append(len(seg))
         for cs, ce in zip(card_starts, card_starts[1:]):
             chunk = seg[cs:ce]
-            m_name = re.search(r"<h3[^>]*>([^<]+)</h3>", chunk)
+            m_name = re.search(r"<h3[^>]*>(.*?)</h3>", chunk, re.S)
             if not m_name:
                 continue
-            name = m_name.group(1).replace("⭐", "").strip()
+            name = re.sub(r"<[^>]+>", "", m_name.group(1)).replace("⭐", "").strip()
             m_rate = re.search(r"時給([\d,]+)円〜", chunk)
             rate = int(m_rate.group(1).replace(",", "")) if m_rate else None
             m_band = re.search(r'data-rate="(\w+)"', chunk)
