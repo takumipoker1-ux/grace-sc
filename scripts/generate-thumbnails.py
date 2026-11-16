@@ -117,8 +117,14 @@ def font_size(n):
 def esc(s):
     return html.escape(s, quote=True)
 
+# 自動の折り方だと意味の途中で切れる題名だけ、改行の位置を手で決める（題名 → (1行目, 2行目)）
+SPLIT_OVERRIDE = {
+    "キャバクラで細客ほど連絡も店外の誘いも多いのはなぜ？": ("キャバクラで細客ほど", "連絡も店外の誘いも多いのはなぜ？"),
+}
+
 def make_svg(title, kanji, category):
-    l1, l2 = split_title(clean_title(title))
+    t = clean_title(title)
+    l1, l2 = SPLIT_OVERRIDE.get(t) or split_title(t)
     fs = font_size(max(len(l1), len(l2)))
     while fs > 40 and max(est_width(l1, fs), est_width(l2, fs)) > 1000:
         fs -= 4
