@@ -34,8 +34,8 @@
   <text x="122" y="178" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic','Meiryo',sans-serif" font-size="24" letter-spacing="7" font-weight="500" fill="#C9A96E">考え方</text>
 
   <!-- タイトル -->
-  <text x="96" y="302" font-family="'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','BIZ UDPMincho',serif" font-size="64" font-weight="600" fill="#F6F1E6" letter-spacing="2">アドバイスを</text>
-  <text x="96" y="387" font-family="'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','BIZ UDPMincho',serif" font-size="64" font-weight="600" fill="#F6F1E6" letter-spacing="2">取捨選択する4つのモノサシ</text>
+  <text x="96" y="302" font-family="'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','BIZ UDPMincho',serif" font-size="64" font-weight="600" fill="#F6F1E6" letter-spacing="2">黒服のアドバイスを</text>
+  <text x="96" y="387" font-family="'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho','BIZ UDPMincho',serif" font-size="64" font-weight="600" fill="#F6F1E6" letter-spacing="2">取り入れるか決める4つの基準</text>
 
   <!-- ブランド -->
   <rect x="96" y="452" width="104" height="2" fill="url(#foilrule)"/>

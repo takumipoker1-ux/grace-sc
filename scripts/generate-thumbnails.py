@@ -48,6 +48,12 @@ META = {
     "hirusyoku-barenai":      ("秘", "働き方"),
     "kinshicho-guide":        ("錦", "エリアガイド"),
     "saitama-guide":          ("埼", "エリアガイド"),
+    # 2026-11-16: 4月の古い作り方の画像（題名の文字入りの jpg/webp）から、題名を変えたときにこちらへ揃えた
+    "tsuzukeru-chikara":      ("続", "考え方"),
+    "iwaikin-kangen-wana":    ("祝", "お金と制度"),
+    "seko-mindset":           ("感", "売上と指名"),
+    "menhera-kouzou":         ("心", "考え方"),
+    "nightwork-3types":       ("三", "業種の選び方"),
 }
 
 BREAK_CHARS = set("、。｜・ ,—」】？")   # この直後で改行OK（閉じ括弧含む）
