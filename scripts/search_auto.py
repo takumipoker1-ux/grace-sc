@@ -575,14 +575,17 @@ def index_check(st):
     for loc in locs:
         req = {"inspectionUrl": SITE + loc, "siteUrl": GSC_SITE, "languageCode": "ja"}
         url = "https://searchconsole.googleapis.com/v1/urlInspection/index:inspect"
-        code, raw = api("POST", url, token, req)
-        if code == 429:
-            time.sleep(60)
+        try:
             code, raw = api("POST", url, token, req)
+            if code == 429:
+                time.sleep(60)
+                code, raw = api("POST", url, token, req)
+        except Exception as e:  # 時間切れなどで止めない（止まると同じ日にやり直して1日の回数を使い切る）
+            code, raw = 0, "%s: %s" % (type(e).__name__, e)
         if code != 200:
             fails += 1
             log("check: %s で HTTP %s %s" % (label(loc), code, raw[:200]))
-            if code in (401, 403) or fails >= 10:
+            if code in (401, 403, 429) or fails >= 10:  # 429 は1日の回数の上限。翌日まで待つ
                 alert_once(st, "google_inspect", "Google の登録チェックが止まった",
                            "HTTP %s。Search Console の権限を確認。詳細は %s" % (code, LOG))
                 return
@@ -670,8 +673,10 @@ def cmd_tick():
             return
         cst = load_state(CHECK_STATE)
         if cst.get("last_check") != today() and now_jst().hour >= CHECK_HOUR:
-            index_check(cst)
-            save_state(cst, CHECK_STATE)
+            try:
+                index_check(cst)
+            finally:  # 途中で止まっても「今日は調べた」を残す
+                save_state(cst, CHECK_STATE)
 
 
 def cmd_status():
